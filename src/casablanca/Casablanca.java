@@ -20,6 +20,7 @@ public class Casablanca
     {
         System.out.println("Jakob");
         System.out.println("Damjan");
+        System.out.println("jeg er sindssyg");
     }
     
 }
