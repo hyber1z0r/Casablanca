@@ -1,5 +1,11 @@
 package casablanca;
 
+import domain.Controller;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
 /**
  *
  * @author hyber
@@ -9,10 +15,18 @@ public class Casablanca
 
     public static void main(String[] args)
     {
-        System.out.println("Jakob");
-        System.out.println("Damjan");
-        System.out.println("jeg er sindssyg");
-        System.out.println("Driver added");
+        Controller con = Controller.getInstance();
+        
+        ArrayList<String> freelist = con.getRooms("Free");
+   
+        
+        for (String string : freelist)
+        {
+            System.out.println(string);
+        }
+        
+        
+        
     }
     
 }
