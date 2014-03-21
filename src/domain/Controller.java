@@ -28,9 +28,15 @@ public class Controller
         return instance;
     }
 
-    public ArrayList<String> getRooms(String type)
+    public ArrayList<String> getAllFreeRooms(String sDate, String eDate)
     {
-        currentList = dbf.getRooms(type);
+        currentList = dbf.getAllFreeRooms(sDate, eDate);
+        return currentList;
+    }
+    
+    public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize)
+    {
+        currentList = dbf.getSizeFreeRooms(sDate, eDate, rSize);
         return currentList;
     }
 }
