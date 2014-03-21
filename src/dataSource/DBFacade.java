@@ -1,7 +1,6 @@
 package dataSource;
 import java.sql.Connection;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class DBFacade {
@@ -29,9 +28,14 @@ public class DBFacade {
     }
     //== Singleton end
     
-    public ArrayList<String> getRooms(String type)
+    public ArrayList<String> getAllFreeRooms(String sDate, String eDate)
     {
-        return rm.getRooms(type, con);
+        return rm.getAllFreeRooms(sDate, eDate, con);
+    }
+    
+    public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize)
+    {
+        return rm.getSizeFreeRooms(sDate, eDate, rSize, con);
     }
 }
 
