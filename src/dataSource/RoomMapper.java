@@ -22,28 +22,73 @@ public class RoomMapper
 {
     //== load an order and the associated order details
 
-    public ArrayList<String> getRooms(String type, Connection con)
+    public ArrayList<String> getAllFreeRooms(String sDate, String eDate, Connection con)
     {
         ArrayList<String> rooms = new ArrayList();
-        String SQLString1 = "SELECT r.roomnumber, r.roomsize, re.startdate, re.enddate, rs.status "
-                + "from Rooms r join RESERVATION re"
-                + " on r.ROOMNUMBER = re.ROOMNUMBER JOIN RESERVATIONSTATUS rs"
-                + " on re.STATUS = rs.ID"
-                + " where rs.status = ?"
-                + " order by r.roomnumber";
+        String SQLString1 = "SELECT * FROM ROOMS r Where room_id not in "
+                + "(SELECT room_id from bookings b where "
+                + "(b.START_date < ? and b.End_date > ?) "
+                + "or (b.Start_date > ? and b.Start_date < ?)) "
+                + "order by room_id";
         PreparedStatement statement = null;
 
         try
         {
             //=== get order
             statement = con.prepareStatement(SQLString1);
-            statement.setString(1, type);     // primary key value
+            statement.setString(1, sDate);
+            statement.setString(2, eDate);
+            statement.setString(3, sDate);
+            statement.setString(4, eDate);     // primary key value
             ResultSet rs = statement.executeQuery();
             
             while (rs.next())
             {
-                rooms.add(rs.getInt(1)+ "\t" + rs.getInt(2) + "\t" + rs.getDate(3) + 
-                       "\t" + rs.getDate(4) + "\t" + rs.getString(5));
+                rooms.add(rs.getInt(1) + rs.getInt(2) + "");
+            }
+
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in RoomMapper - getRooms");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in RoomMapper - getRooms");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rooms;
+    }
+     public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize, Connection con)
+    {
+        ArrayList<String> rooms = new ArrayList();
+        String SQLString1 = "SELECT * FROM ROOMS r Where room_size = ? and room_id not in "
+                + "(SELECT room_id from bookings b where "
+                + "(b.START_date < ? and b.End_date > ?) "
+                + "or (b.Start_date > ? and b.Start_date < ?)) "
+                + "order by room_id";
+        PreparedStatement statement = null;
+
+        try
+        {
+            //=== get order
+            statement = con.prepareStatement(SQLString1);
+            statement.setInt(1, rSize);
+            statement.setString(2, sDate);
+            statement.setString(3, eDate);
+            statement.setString(4, sDate);
+            statement.setString(5, eDate);
+            // primary key value
+            ResultSet rs = statement.executeQuery();
+            
+            while (rs.next())
+            {
+                rooms.add(rs.getInt(1) + rs.getInt(2) + "");
             }
 
         } catch (SQLException e)
