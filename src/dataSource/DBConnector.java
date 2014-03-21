@@ -4,13 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//Encapsulates code to connect to DB
-//hau
 public class DBConnector
 {
 
-    private static final String id = "cphja130";	//Insert ORACLE id and password
-    private static final String pw = "cphja130";
+    private static final String id = "SEM2_TEST_GR01";
+    private static final String pw = "SEM2_TEST_GR01";
 
     public Connection getConnection()
     {

@@ -12,7 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -20,7 +19,6 @@ import java.util.List;
  */
 public class RoomMapper
 {
-    //== load an order and the associated order details
 
     public ArrayList<String> getAllFreeRooms(String sDate, String eDate, Connection con)
     {
@@ -34,22 +32,21 @@ public class RoomMapper
 
         try
         {
-            //=== get order
             statement = con.prepareStatement(SQLString1);
             statement.setString(1, sDate);
             statement.setString(2, eDate);
             statement.setString(3, sDate);
-            statement.setString(4, eDate);     // primary key value
+            statement.setString(4, eDate);
             ResultSet rs = statement.executeQuery();
             
             while (rs.next())
             {
-                rooms.add(rs.getInt(1) + rs.getInt(2) + "");
+                rooms.add(rs.getInt(1) + "\t" +  rs.getInt(2));
             }
 
         } catch (SQLException e)
         {
-            System.out.println("Fail in RoomMapper - getRooms");
+            System.out.println("Fail in RoomMapper - getAllRooms");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
@@ -58,7 +55,7 @@ public class RoomMapper
                 statement.close();
             } catch (SQLException e)
             {
-                System.out.println("Fail in RoomMapper - getRooms");
+                System.out.println("Fail in RoomMapper.getAllFreeRooms - Closing statement ");
                 System.out.println(e.getMessage());
             }
         }
@@ -76,19 +73,18 @@ public class RoomMapper
 
         try
         {
-            //=== get order
+            
             statement = con.prepareStatement(SQLString1);
             statement.setInt(1, rSize);
             statement.setString(2, sDate);
             statement.setString(3, eDate);
             statement.setString(4, sDate);
             statement.setString(5, eDate);
-            // primary key value
             ResultSet rs = statement.executeQuery();
             
             while (rs.next())
             {
-                rooms.add(rs.getInt(1) + rs.getInt(2) + "");
+                rooms.add(rs.getInt(1) + "\t" + rs.getInt(2));
             }
 
         } catch (SQLException e)

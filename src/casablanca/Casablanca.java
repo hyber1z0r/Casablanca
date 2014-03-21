@@ -1,8 +1,12 @@
 package casablanca;
 
 import domain.Controller;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 
@@ -18,8 +22,8 @@ public class Casablanca
         Controller con = Controller.getInstance();
         
 
-        String sDate = "20-03-2014";
-        String eDate = "01-06-2014";
+        String sDate = "21-03-14";
+        String eDate = "01-06-14";
         int rSize = 5;
         ArrayList<String> list = con.getAllFreeRooms(sDate, eDate);
         
@@ -27,13 +31,14 @@ public class Casablanca
         {
             System.out.println(string);
         }
+
+        System.out.println("\n\n");
+        ArrayList<String> list2 = con.getSizeFreeRooms(sDate, eDate, rSize);
         
-//        ArrayList<String> list2 = con.getSizeFreeRooms(sDate, eDate, rSize);
-//        
-//        for (String string : list2)
-//        {
-//            System.out.println(string);
-//        }
+        for (String string : list2)
+        {
+            System.out.println(string);
+        }
         
         
         

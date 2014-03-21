@@ -8,14 +8,12 @@ public class DBFacade {
     
     private final RoomMapper rm;
     private final Connection con;
-//    private static OrderMapperInterface om; 
     private static DBFacade instance;
     
     private DBFacade()
     {
         rm = new RoomMapper();
-        con = new DBConnector().getConnection();  // the connection will be released upon program 
-        // termination by the garbage collector		  
+        con = new DBConnector().getConnection();  	  
     }
     
     public static DBFacade getInstance()
@@ -26,7 +24,6 @@ public class DBFacade {
         }
         return instance;
     }
-    //== Singleton end
     
     public ArrayList<String> getAllFreeRooms(String sDate, String eDate)
     {
