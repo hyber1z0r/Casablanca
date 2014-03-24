@@ -7,6 +7,7 @@
 package dataSource;
 
 
+import domain.Room;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,11 +22,11 @@ import java.util.ArrayList;
 public class RoomMapper
 {
 
-    public ArrayList<String> getAllFreeRooms(String sDate, String eDate, Connection con)
+    public ArrayList<Room> getAllFreeRooms(String sDate, String eDate, Connection con)
     {
-        ArrayList<String> rooms = new ArrayList();
+        ArrayList<Room> rooms = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
-        Statement statementFix = null;
+        Statement statementFix;
         
         String SQLString1 = "SELECT * FROM ROOMS r where room_id not in ("
                 + "SELECT ROOM_ID FROM BOOKINGS b where ("
@@ -56,7 +57,7 @@ public class RoomMapper
             
             while (rs.next())
             {
-                rooms.add(rs.getInt(1) + "                           " +  rs.getInt(2));
+                rooms.add(new Room(rs.getInt(1),rs.getInt(2)));
             }
 
         } catch (SQLException e)
@@ -76,9 +77,9 @@ public class RoomMapper
         }
         return rooms;
     }
-     public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize, Connection con)
+     public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize, Connection con)
     {
-        ArrayList<String> rooms = new ArrayList();
+        ArrayList<Room> rooms = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
         Statement statementFix;
         String SQLString1 = "SELECT * FROM ROOMS r where room_size = ? and room_id not in ("
@@ -110,7 +111,7 @@ public class RoomMapper
             
             while (rs.next())
             {
-                rooms.add(rs.getInt(1) + "                           " + rs.getInt(2));
+                rooms.add(new Room(rs.getInt(1),rs.getInt(2)));
             }
 
         } catch (SQLException e)

@@ -31,18 +31,9 @@ public class Casablanca extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
-        CREATEUSERPANEL = new javax.swing.JPanel();
-        LABEL1 = new javax.swing.JLabel();
-        CREATEUSERFULLNAME = new javax.swing.JTextField();
-        CREATEUSERGENERATEBUTTON = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        CREATEUSERUSERNAME = new javax.swing.JTextField();
-        CREATEUSERPASSWORD = new javax.swing.JTextField();
-        CREATEUSERSAVEUSER = new javax.swing.JButton();
-        CREATEUSERBACKBUTTON = new javax.swing.JButton();
         CHOOSEDATE = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -62,6 +53,16 @@ public class Casablanca extends javax.swing.JFrame {
         AVAILABLEROOMSBACKBUTTON = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         SHOWAVAILABLELIST = new javax.swing.JList();
+        CREATEUSERPANEL = new javax.swing.JPanel();
+        LABEL1 = new javax.swing.JLabel();
+        CREATEUSERFULLNAME = new javax.swing.JTextField();
+        CREATEUSERGENERATEBUTTON = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        CREATEUSERUSERNAME = new javax.swing.JTextField();
+        CREATEUSERPASSWORD = new javax.swing.JTextField();
+        CREATEUSERSAVEUSER = new javax.swing.JButton();
+        CREATEUSERBACKBUTTON = new javax.swing.JButton();
         LOGIN = new javax.swing.JPanel();
         USERNAME = new javax.swing.JTextField();
         PASSWORD = new javax.swing.JTextField();
@@ -160,108 +161,16 @@ public class Casablanca extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        LABEL1.setText("FULL NAME");
-
-        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CREATEUSERFULLNAMEActionPerformed(evt);
-            }
-        });
-
-        CREATEUSERGENERATEBUTTON.setText("GENERATE ");
-        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CREATEUSERGENERATEBUTTONActionPerformed(evt);
-            }
-        });
-
-        jLabel13.setText("USERNAME");
-
-        jLabel14.setText("PASSWORD");
-
-        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CREATEUSERUSERNAMEActionPerformed(evt);
-            }
-        });
-
-        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CREATEUSERPASSWORDActionPerformed(evt);
-            }
-        });
-
-        CREATEUSERSAVEUSER.setText("SAVE USER");
-
-        CREATEUSERBACKBUTTON.setText("BACK");
-        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CREATEUSERBACKBUTTONActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout CREATEUSERPANELLayout = new javax.swing.GroupLayout(CREATEUSERPANEL);
-        CREATEUSERPANEL.setLayout(CREATEUSERPANELLayout);
-        CREATEUSERPANELLayout.setHorizontalGroup(
-            CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CREATEUSERPANELLayout.createSequentialGroup()
-                            .addGap(66, 66, 66)
-                            .addComponent(LABEL1))))
-                .addGap(18, 18, 18)
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CREATEUSERGENERATEBUTTON)
-                    .addComponent(CREATEUSERFULLNAME, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                    .addComponent(CREATEUSERUSERNAME)
-                    .addComponent(CREATEUSERPASSWORD))
-                .addContainerGap(230, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CREATEUSERPANELLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CREATEUSERSAVEUSER, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                    .addComponent(CREATEUSERBACKBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(86, 86, 86))
-        );
-        CREATEUSERPANELLayout.setVerticalGroup(
-            CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LABEL1)
-                    .addComponent(CREATEUSERFULLNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(CREATEUSERGENERATEBUTTON)
-                .addGap(18, 18, 18)
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CREATEUSERUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addGap(29, 29, 29)
-                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CREATEUSERPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(CREATEUSERSAVEUSER)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CREATEUSERBACKBUTTON)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(CREATEUSERPANEL, "card10");
-
         jLabel6.setText("START DATE");
 
         jLabel7.setText("END DATE");
 
         jLabel8.setText("ROOM SIZE");
 
-        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 CHOOSEDATESTARTDATEActionPerformed(evt);
             }
         });
@@ -269,8 +178,10 @@ public class Casablanca extends javax.swing.JFrame {
         CHOOSEDATEBACKBUTTON.setText("BACK");
 
         CHOOSEDATEBOOKBUTTON.setText("SEARCH");
-        CHOOSEDATEBOOKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        CHOOSEDATEBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 CHOOSEDATEBOOKBUTTONActionPerformed(evt);
             }
         });
@@ -343,20 +254,25 @@ public class Casablanca extends javax.swing.JFrame {
         jLabel18.setText("SHOW AVAILABLE ROOMS");
 
         AVAILABLEROOMSBOOKBUTTON.setText("BOOK");
-        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 AVAILABLEROOMSBOOKBUTTONActionPerformed(evt);
             }
         });
 
         AVAILABLEROOMSBACKBUTTON.setText("BACK");
-        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 AVAILABLEROOMSBACKBUTTONActionPerformed(evt);
             }
         });
 
-        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel() {
+        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel()
+        {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -408,8 +324,114 @@ public class Casablanca extends javax.swing.JFrame {
 
         getContentPane().add(SHOWAVAILABLEROOMS, "card7");
 
-        USERNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LABEL1.setText("FULL NAME");
+
+        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CREATEUSERFULLNAMEActionPerformed(evt);
+            }
+        });
+
+        CREATEUSERGENERATEBUTTON.setText("GENERATE ");
+        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CREATEUSERGENERATEBUTTONActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("USERNAME");
+
+        jLabel14.setText("PASSWORD");
+
+        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CREATEUSERUSERNAMEActionPerformed(evt);
+            }
+        });
+
+        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CREATEUSERPASSWORDActionPerformed(evt);
+            }
+        });
+
+        CREATEUSERSAVEUSER.setText("SAVE USER");
+
+        CREATEUSERBACKBUTTON.setText("BACK");
+        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CREATEUSERBACKBUTTONActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CREATEUSERPANELLayout = new javax.swing.GroupLayout(CREATEUSERPANEL);
+        CREATEUSERPANEL.setLayout(CREATEUSERPANELLayout);
+        CREATEUSERPANELLayout.setHorizontalGroup(
+            CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, CREATEUSERPANELLayout.createSequentialGroup()
+                            .addGap(66, 66, 66)
+                            .addComponent(LABEL1))))
+                .addGap(18, 18, 18)
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CREATEUSERGENERATEBUTTON)
+                    .addComponent(CREATEUSERFULLNAME, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                    .addComponent(CREATEUSERUSERNAME)
+                    .addComponent(CREATEUSERPASSWORD))
+                .addContainerGap(230, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CREATEUSERPANELLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CREATEUSERSAVEUSER, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                    .addComponent(CREATEUSERBACKBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(86, 86, 86))
+        );
+        CREATEUSERPANELLayout.setVerticalGroup(
+            CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CREATEUSERPANELLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LABEL1)
+                    .addComponent(CREATEUSERFULLNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(CREATEUSERGENERATEBUTTON)
+                .addGap(18, 18, 18)
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CREATEUSERUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(29, 29, 29)
+                .addGroup(CREATEUSERPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CREATEUSERPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(CREATEUSERSAVEUSER)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(CREATEUSERBACKBUTTON)
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(CREATEUSERPANEL, "card10");
+
+        USERNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 USERNAMEActionPerformed(evt);
             }
         });
@@ -534,15 +556,19 @@ public class Casablanca extends javax.swing.JFrame {
         jLabel11.setText("END DATE");
 
         DELETERESERVATION.setText("DELETE RESERVATION");
-        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 DELETERESERVATIONActionPerformed(evt);
             }
         });
 
         SHOWREGINFOBUTTON.setText("SHOW REGISTRAION INFO");
-        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 SHOWREGINFOBUTTONActionPerformed(evt);
             }
         });
@@ -631,8 +657,10 @@ public class Casablanca extends javax.swing.JFrame {
         jLabel47.setText("PASSWORD");
 
         REGINFOFIRSTNAME.setEditable(false);
-        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 REGINFOFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -783,8 +811,10 @@ public class Casablanca extends javax.swing.JFrame {
 
         getContentPane().add(SHOWREGINFO, "card9");
 
-        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKROOMFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -845,7 +875,7 @@ public class Casablanca extends javax.swing.JFrame {
                                             .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
+                                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 79, Short.MAX_VALUE))
                                             .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addGroup(BOOKROOMLayout.createSequentialGroup()
                                                     .addGap(10, 10, 10)
@@ -1071,7 +1101,7 @@ public class Casablanca extends javax.swing.JFrame {
     private void CHOOSEDATEBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSEDATEBOOKBUTTONActionPerformed
     {//GEN-HEADEREND:event_CHOOSEDATEBOOKBUTTONActionPerformed
         // my boookk button = search
-        ArrayList<String> rooms = new ArrayList();
+        ArrayList<Room> rooms = new ArrayList();
         String sDate = CHOOSEDATESTARTDATE.getText();
         String eDate = CHOOSEDATEENDDATE.getText();
         if(CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
@@ -1295,7 +1325,7 @@ public class Casablanca extends javax.swing.JFrame {
         CHOOSEDATECOMBOBOX.addItem("All");
     }
 
-    private void fillAvailList(ArrayList<String> rooms)
+    private void fillAvailList(ArrayList<Room> rooms)
     {
         SHOWAVAILABLELIST.removeAll();
         Object[] o = rooms.toArray(new Object[0]);

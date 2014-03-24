@@ -1,6 +1,7 @@
 package casablanca;
 
 import domain.Controller;
+import domain.Room;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -25,19 +26,19 @@ public class Casablanca
         String sDate = "26-03-14";
         String eDate = "30-03-14";
         int rSize = 1;
-        ArrayList<String> list = con.getAllFreeRooms(sDate, eDate);
+        ArrayList<Room> list = con.getAllFreeRooms(sDate, eDate);
         
-        for (String string : list)
+        for (Room r : list)
         {
-            System.out.println(string);
+            System.out.println(r.toString());
         }
 
         System.out.println("\n\n");
-        ArrayList<String> list2 = con.getSizeFreeRooms(sDate, eDate, rSize);
+        ArrayList<Room> list2 = con.getSizeFreeRooms(sDate, eDate, rSize);
         
-        for (String string : list2)
+        for (Room r : list2)
         {
-            System.out.println(string);
+            System.out.println(r.toString());
         }
         
         

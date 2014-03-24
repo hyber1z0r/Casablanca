@@ -11,7 +11,7 @@ public class Controller
 {
     private final DBFacade dbf;
     private static Controller instance = null;
-    private ArrayList<String> currentList;
+    private ArrayList<Room> currentList;
     
     private Controller()
     {
@@ -27,13 +27,13 @@ public class Controller
         return instance;
     }
 
-    public ArrayList<String> getAllFreeRooms(String sDate, String eDate)
+    public ArrayList<Room> getAllFreeRooms(String sDate, String eDate)
     {
         currentList = dbf.getAllFreeRooms(sDate, eDate);
         return currentList;
     }
     
-    public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize)
+    public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize)
     {
         currentList = dbf.getSizeFreeRooms(sDate, eDate, rSize);
         return currentList;

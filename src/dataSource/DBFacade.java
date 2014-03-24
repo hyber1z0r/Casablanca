@@ -1,4 +1,5 @@
 package dataSource;
+import domain.Room;
 import java.sql.Connection;
 import java.util.ArrayList;
 
@@ -25,12 +26,12 @@ public class DBFacade {
         return instance;
     }
     
-    public ArrayList<String> getAllFreeRooms(String sDate, String eDate)
+    public ArrayList<Room> getAllFreeRooms(String sDate, String eDate)
     {
         return rm.getAllFreeRooms(sDate, eDate, con);
     }
     
-    public ArrayList<String> getSizeFreeRooms(String sDate, String eDate, int rSize)
+    public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize)
     {
         return rm.getSizeFreeRooms(sDate, eDate, rSize, con);
     }
