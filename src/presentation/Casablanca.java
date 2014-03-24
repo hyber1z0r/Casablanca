@@ -1119,26 +1119,33 @@ public class Casablanca extends javax.swing.JFrame
 
         if (dv.isDateValid(sDate, dateFormat) && dv.isDateValid(eDate, dateFormat))
         {
-            
-            if (CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+
+
+            if (dv.isDateHigher(sDate, eDate, dateFormat))
             {
-                rooms = con.getAllFreeRooms(sDate, eDate);
-            } else
-            {
-                int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
-                rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
-            }
-            if (!rooms.isEmpty())
-            {
-                fillAvailList(rooms);
-                CHOOSEDATE.setVisible(false);
-                SHOWAVAILABLEROOMS.setVisible(true);
-            } else
+                if (CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+                {
+                    rooms = con.getAllFreeRooms(sDate, eDate);
+                } else
+                {
+                    int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
+                    rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
+                }
+                if (!rooms.isEmpty())
+                {
+                    fillAvailList(rooms);
+                    CHOOSEDATE.setVisible(false);
+                    SHOWAVAILABLEROOMS.setVisible(true);
+                }else
             {
                 CHOOSEDATEFEEDBACKLABEL.setText("No available apartments!");
             }
+            } else
+            {
+                CHOOSEDATEFEEDBACKLABEL.setText("End date is before start date!");
+            }
 
-        }else
+        } else
         {
             CHOOSEDATEFEEDBACKLABEL.setText("Please enter a valid date.");
         }
@@ -1176,8 +1183,6 @@ public class Casablanca extends javax.swing.JFrame
     }//GEN-LAST:event_CREATEUSERGENERATEBUTTONActionPerformed
 
     private void CREATEUSERFULLNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CREATEUSERFULLNAMEActionPerformed
-
-
     }//GEN-LAST:event_CREATEUSERFULLNAMEActionPerformed
 
     /**
@@ -1224,7 +1229,6 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AVAILABLEROOMSBACKBUTTON;
     private javax.swing.JButton AVAILABLEROOMSBOOKBUTTON;
