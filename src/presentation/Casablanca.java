@@ -3,24 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package presentation;
+
 import domain.*;
 import java.util.ArrayList;
+
 /**
  *
  * @author Youssef
  */
-public class Casablanca extends javax.swing.JFrame {
+public class Casablanca extends javax.swing.JFrame
+{
 
     /**
      * Creates new form Casablanca
      */
-    
     Controller con;
-    public Casablanca() {
+    DateValidator dv;
+
+    public Casablanca()
+    {
         initComponents();
         con = Controller.getInstance();
+        dv = new DateValidator();
         fillChooseCombo();
     }
 
@@ -41,10 +46,11 @@ public class Casablanca extends javax.swing.JFrame {
         CHOOSEDATEENDDATE = new javax.swing.JTextField();
         CHOOSEDATESTARTDATE = new javax.swing.JTextField();
         CHOOSEDATEBACKBUTTON = new javax.swing.JButton();
-        CHOOSEDATEBOOKBUTTON = new javax.swing.JButton();
+        CHOOSEDATESEARCHBUTTON = new javax.swing.JButton();
         CHOOSEDATECOMBOBOX = new javax.swing.JComboBox();
         CHOOSEDATEDATEFORMAT = new javax.swing.JLabel();
         CHOOSEDATEDATEFORMAT2 = new javax.swing.JLabel();
+        CHOOSEDATEFEEDBACKLABEL = new javax.swing.JLabel();
         SHOWAVAILABLEROOMS = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -177,12 +183,12 @@ public class Casablanca extends javax.swing.JFrame {
 
         CHOOSEDATEBACKBUTTON.setText("BACK");
 
-        CHOOSEDATEBOOKBUTTON.setText("SEARCH");
-        CHOOSEDATEBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        CHOOSEDATESEARCHBUTTON.setText("SEARCH");
+        CHOOSEDATESEARCHBUTTON.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                CHOOSEDATEBOOKBUTTONActionPerformed(evt);
+                CHOOSEDATESEARCHBUTTONActionPerformed(evt);
             }
         });
 
@@ -201,24 +207,27 @@ public class Casablanca extends javax.swing.JFrame {
                     .addGroup(CHOOSEDATELayout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(49, 49, 49)
-                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CHOOSEDATESTARTDATE)
-                            .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(CHOOSEDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CHOOSEDATEDATEFORMAT)
-                            .addComponent(CHOOSEDATEDATEFORMAT2)))
+                            .addGroup(CHOOSEDATELayout.createSequentialGroup()
+                                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))
+                                .addGap(49, 49, 49)
+                                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(CHOOSEDATESTARTDATE)
+                                    .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                                    .addComponent(CHOOSEDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(31, 31, 31)
+                                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CHOOSEDATEDATEFORMAT)
+                                    .addComponent(CHOOSEDATEDATEFORMAT2)))
+                            .addComponent(CHOOSEDATEFEEDBACKLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(CHOOSEDATELayout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(CHOOSEDATEBACKBUTTON)
                         .addGap(101, 101, 101)
-                        .addComponent(CHOOSEDATEBOOKBUTTON)))
-                .addContainerGap(221, Short.MAX_VALUE))
+                        .addComponent(CHOOSEDATESEARCHBUTTON)))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         CHOOSEDATELayout.setVerticalGroup(
             CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -240,8 +249,10 @@ public class Casablanca extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CHOOSEDATEBACKBUTTON)
-                    .addComponent(CHOOSEDATEBOOKBUTTON))
-                .addContainerGap(184, Short.MAX_VALUE))
+                    .addComponent(CHOOSEDATESEARCHBUTTON))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addComponent(CHOOSEDATEFEEDBACKLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
 
         getContentPane().add(CHOOSEDATE, "card4");
@@ -1098,32 +1109,46 @@ public class Casablanca extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BOOKROOMFIRSTNAMEActionPerformed
 
-    private void CHOOSEDATEBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSEDATEBOOKBUTTONActionPerformed
-    {//GEN-HEADEREND:event_CHOOSEDATEBOOKBUTTONActionPerformed
+    private void CHOOSEDATESEARCHBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSEDATESEARCHBUTTONActionPerformed
+    {//GEN-HEADEREND:event_CHOOSEDATESEARCHBUTTONActionPerformed
         // my boookk button = search
         ArrayList<Room> rooms = new ArrayList();
         String sDate = CHOOSEDATESTARTDATE.getText();
         String eDate = CHOOSEDATEENDDATE.getText();
-        if(CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+        String dateFormat = "dd-MM-yy";
+
+        if (dv.isDateValid(sDate, dateFormat) && dv.isDateValid(eDate, dateFormat))
         {
-            rooms = con.getAllFreeRooms(sDate, eDate);
+            
+            if (CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+            {
+                rooms = con.getAllFreeRooms(sDate, eDate);
+            } else
+            {
+                int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
+                rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
+            }
+            if (!rooms.isEmpty())
+            {
+                fillAvailList(rooms);
+                CHOOSEDATE.setVisible(false);
+                SHOWAVAILABLEROOMS.setVisible(true);
+            } else
+            {
+                CHOOSEDATEFEEDBACKLABEL.setText("No available apartments!");
+            }
+
         }else
         {
-            int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
-            rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
+            CHOOSEDATEFEEDBACKLABEL.setText("Please enter a valid date.");
         }
-        fillAvailList(rooms);
-        
-        CHOOSEDATE.setVisible(false);
-        SHOWAVAILABLEROOMS.setVisible(true);
-        
-    }//GEN-LAST:event_CHOOSEDATEBOOKBUTTONActionPerformed
+    }//GEN-LAST:event_CHOOSEDATESEARCHBUTTONActionPerformed
 
     private void AVAILABLEROOMSBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_AVAILABLEROOMSBACKBUTTONActionPerformed
     {//GEN-HEADEREND:event_AVAILABLEROOMSBACKBUTTONActionPerformed
         SHOWAVAILABLEROOMS.setVisible(false);
         CHOOSEDATE.setVisible(true);
-       
+
     }//GEN-LAST:event_AVAILABLEROOMSBACKBUTTONActionPerformed
 
     private void AVAILABLEROOMSBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AVAILABLEROOMSBOOKBUTTONActionPerformed
@@ -1143,48 +1168,58 @@ public class Casablanca extends javax.swing.JFrame {
     }//GEN-LAST:event_CREATEUSERBACKBUTTONActionPerformed
 
     private void CREATEUSERGENERATEBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CREATEUSERGENERATEBUTTONActionPerformed
-      
+
         String fullName = CREATEUSERFULLNAME.getText();
-      CreateUserStaff cus = new CreateUserStaff(fullName);
-      CREATEUSERUSERNAME.setText(cus.getuserName());
-      CREATEUSERPASSWORD.setText(cus.getPassword());
+        CreateUserStaff cus = new CreateUserStaff(fullName);
+        CREATEUSERUSERNAME.setText(cus.getuserName());
+        CREATEUSERPASSWORD.setText(cus.getPassword());
     }//GEN-LAST:event_CREATEUSERGENERATEBUTTONActionPerformed
 
     private void CREATEUSERFULLNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CREATEUSERFULLNAMEActionPerformed
-      
-       
+
+
     }//GEN-LAST:event_CREATEUSERFULLNAMEActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex)
+        {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        } catch (InstantiationException ex)
+        {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex)
+        {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new Casablanca().setVisible(true);
             }
         });
@@ -1211,11 +1246,12 @@ public class Casablanca extends javax.swing.JFrame {
     private javax.swing.JTextField BOOKROOMTRAVELAGENCY;
     private javax.swing.JPanel CHOOSEDATE;
     private javax.swing.JButton CHOOSEDATEBACKBUTTON;
-    private javax.swing.JButton CHOOSEDATEBOOKBUTTON;
     private javax.swing.JComboBox CHOOSEDATECOMBOBOX;
     private javax.swing.JLabel CHOOSEDATEDATEFORMAT;
     private javax.swing.JLabel CHOOSEDATEDATEFORMAT2;
     private javax.swing.JTextField CHOOSEDATEENDDATE;
+    private javax.swing.JLabel CHOOSEDATEFEEDBACKLABEL;
+    private javax.swing.JButton CHOOSEDATESEARCHBUTTON;
     private javax.swing.JTextField CHOOSEDATESTARTDATE;
     private javax.swing.JButton CREATEUSERBACKBUTTON;
     private javax.swing.JButton CREATEUSERBUTTON;
@@ -1330,6 +1366,6 @@ public class Casablanca extends javax.swing.JFrame {
         SHOWAVAILABLELIST.removeAll();
         Object[] o = rooms.toArray(new Object[0]);
         SHOWAVAILABLELIST.setListData(o);
-        
+
     }
 }
