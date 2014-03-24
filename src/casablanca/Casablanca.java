@@ -22,9 +22,9 @@ public class Casablanca
         Controller con = Controller.getInstance();
         
 
-        String sDate = "21-03-14";
-        String eDate = "01-06-14";
-        int rSize = 5;
+        String sDate = "26-03-14";
+        String eDate = "30-03-14";
+        int rSize = 1;
         ArrayList<String> list = con.getAllFreeRooms(sDate, eDate);
         
         for (String string : list)
