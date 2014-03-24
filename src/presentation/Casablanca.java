@@ -5,7 +5,8 @@
  */
 
 package presentation;
-
+import domain.*;
+import java.util.ArrayList;
 /**
  *
  * @author Youssef
@@ -15,8 +16,11 @@ public class Casablanca extends javax.swing.JFrame {
     /**
      * Creates new form Casablanca
      */
+    Controller con;
     public Casablanca() {
         initComponents();
+        con = Controller.getInstance();
+        fillChooseCombo();
     }
 
     /**
@@ -26,8 +30,28 @@ public class Casablanca extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
+        CHOOSEDATE = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        CHOOSEDATEENDDATE = new javax.swing.JTextField();
+        CHOOSEDATESTARTDATE = new javax.swing.JTextField();
+        CHOOSEDATEBACKBUTTON = new javax.swing.JButton();
+        CHOOSEDATEBOOKBUTTON = new javax.swing.JButton();
+        CHOOSEDATECOMBOBOX = new javax.swing.JComboBox();
+        CHOOSEDATEDATEFORMAT = new javax.swing.JLabel();
+        CHOOSEDATEDATEFORMAT2 = new javax.swing.JLabel();
+        SHOWAVAILABLEROOMS = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        AVAILABLEROOMSBOOKBUTTON = new javax.swing.JButton();
+        AVAILABLEROOMSBACKBUTTON = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        SHOWAVAILABLELIST = new javax.swing.JList();
         LOGIN = new javax.swing.JPanel();
         USERNAME = new javax.swing.JTextField();
         PASSWORD = new javax.swing.JTextField();
@@ -80,23 +104,6 @@ public class Casablanca extends javax.swing.JFrame {
         REGINFOURSERNAME = new javax.swing.JTextField();
         REGINFOBACKBUTTON = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
-        CHOOSEDATE = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        CHOOSEDATEROOMSIZE = new javax.swing.JTextField();
-        CHOOSEDATEENDDATE = new javax.swing.JTextField();
-        CHOOSEDATESTARTDATE = new javax.swing.JTextField();
-        CHOOSEDATEBACKBUTTON = new javax.swing.JButton();
-        CHOOSEDATEBOOKBUTTON = new javax.swing.JButton();
-        SHOWAVAILABLEROOMS = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        AVAILABLEROOMSTEXTAREA = new javax.swing.JTextArea();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        AVAILABLEROOMSBOOKBUTTON = new javax.swing.JButton();
-        AVAILABLEROOMSBACKBUTTON = new javax.swing.JButton();
         BOOKROOM = new javax.swing.JPanel();
         BOOKROOMFIRSTNAME = new javax.swing.JTextField();
         BOOKROOMPHONE = new javax.swing.JTextField();
@@ -142,8 +149,166 @@ public class Casablanca extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        USERNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jLabel6.setText("START DATE");
+
+        jLabel7.setText("END DATE");
+
+        jLabel8.setText("ROOM SIZE");
+
+        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CHOOSEDATESTARTDATEActionPerformed(evt);
+            }
+        });
+
+        CHOOSEDATEBACKBUTTON.setText("BACK");
+
+        CHOOSEDATEBOOKBUTTON.setText("SEARCH");
+        CHOOSEDATEBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CHOOSEDATEBOOKBUTTONActionPerformed(evt);
+            }
+        });
+
+        CHOOSEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        CHOOSEDATEDATEFORMAT.setText("DD-MM-YY");
+
+        CHOOSEDATEDATEFORMAT2.setText("DD-MM-YY");
+
+        javax.swing.GroupLayout CHOOSEDATELayout = new javax.swing.GroupLayout(CHOOSEDATE);
+        CHOOSEDATE.setLayout(CHOOSEDATELayout);
+        CHOOSEDATELayout.setHorizontalGroup(
+            CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CHOOSEDATELayout.createSequentialGroup()
+                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CHOOSEDATELayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addGap(49, 49, 49)
+                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CHOOSEDATESTARTDATE)
+                            .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                            .addComponent(CHOOSEDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CHOOSEDATEDATEFORMAT)
+                            .addComponent(CHOOSEDATEDATEFORMAT2)))
+                    .addGroup(CHOOSEDATELayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(CHOOSEDATEBACKBUTTON)
+                        .addGap(101, 101, 101)
+                        .addComponent(CHOOSEDATEBOOKBUTTON)))
+                .addContainerGap(221, Short.MAX_VALUE))
+        );
+        CHOOSEDATELayout.setVerticalGroup(
+            CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CHOOSEDATELayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(CHOOSEDATEDATEFORMAT))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(CHOOSEDATEDATEFORMAT2))
+                .addGap(43, 43, 43)
+                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(CHOOSEDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CHOOSEDATEBACKBUTTON)
+                    .addComponent(CHOOSEDATEBOOKBUTTON))
+                .addContainerGap(184, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(CHOOSEDATE, "card4");
+
+        jLabel16.setText("ROOM#");
+
+        jLabel17.setText("ROOM SIZE");
+
+        jLabel18.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel18.setText("SHOW AVAILABLE ROOMS");
+
+        AVAILABLEROOMSBOOKBUTTON.setText("BOOK");
+
+        AVAILABLEROOMSBACKBUTTON.setText("BACK");
+        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                AVAILABLEROOMSBACKBUTTONActionPerformed(evt);
+            }
+        });
+
+        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel()
+        {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(SHOWAVAILABLELIST);
+
+        javax.swing.GroupLayout SHOWAVAILABLEROOMSLayout = new javax.swing.GroupLayout(SHOWAVAILABLEROOMS);
+        SHOWAVAILABLEROOMS.setLayout(SHOWAVAILABLEROOMSLayout);
+        SHOWAVAILABLEROOMSLayout.setHorizontalGroup(
+            SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(88, 88, 88)
+                                .addComponent(jLabel17))
+                            .addComponent(jScrollPane2))
+                        .addGap(81, 81, 81)
+                        .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AVAILABLEROOMSBOOKBUTTON)
+                            .addComponent(AVAILABLEROOMSBACKBUTTON)))
+                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jLabel18)))
+                .addContainerGap(230, Short.MAX_VALUE))
+        );
+        SHOWAVAILABLEROOMSLayout.setVerticalGroup(
+            SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel18)
+                .addGap(18, 18, 18)
+                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(AVAILABLEROOMSBOOKBUTTON)
+                        .addGap(18, 18, 18)
+                        .addComponent(AVAILABLEROOMSBACKBUTTON))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE))
+                .addGap(60, 60, 60))
+        );
+
+        getContentPane().add(SHOWAVAILABLEROOMS, "card7");
+
+        USERNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 USERNAMEActionPerformed(evt);
             }
         });
@@ -175,7 +340,7 @@ public class Casablanca extends javax.swing.JFrame {
                     .addComponent(USERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
-                .addContainerGap(251, Short.MAX_VALUE)
+                .addContainerGap(314, Short.MAX_VALUE)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,7 +366,7 @@ public class Casablanca extends javax.swing.JFrame {
                 .addComponent(GETFEEDBACK)
                 .addGap(18, 18, 18)
                 .addComponent(LOGINBUTTON)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         getContentPane().add(LOGIN, "card2");
@@ -232,7 +397,7 @@ public class Casablanca extends javax.swing.JFrame {
                             .addComponent(STANDBYBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(SHOWBOOKEDBUTTON)
                             .addComponent(BOOKROOMBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(LOGOUT)
@@ -243,7 +408,7 @@ public class Casablanca extends javax.swing.JFrame {
             .addGroup(WELCOMELayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                 .addComponent(SHOWBOOKEDBUTTON)
                 .addGap(18, 18, 18)
                 .addComponent(STANDBYBUTTON)
@@ -263,15 +428,19 @@ public class Casablanca extends javax.swing.JFrame {
         jLabel11.setText("END DATE");
 
         DELETERESERVATION.setText("DELETE RESERVATION");
-        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 DELETERESERVATIONActionPerformed(evt);
             }
         });
 
         SHOWREGINFOBUTTON.setText("SHOW REGISTRAION INFO");
-        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 SHOWREGINFOBUTTONActionPerformed(evt);
             }
         });
@@ -289,7 +458,7 @@ public class Casablanca extends javax.swing.JFrame {
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addContainerGap(379, Short.MAX_VALUE))
             .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
                     .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,14 +476,14 @@ public class Casablanca extends javax.swing.JFrame {
                             .addComponent(jLabel10)
                             .addGap(33, 33, 33)
                             .addComponent(jLabel11)))
-                    .addContainerGap(134, Short.MAX_VALUE)))
+                    .addContainerGap(155, Short.MAX_VALUE)))
         );
         SHOWBOOKEDROOMSLayout.setVerticalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(159, Short.MAX_VALUE))
             .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
                     .addGap(22, 22, 22)
@@ -328,7 +497,7 @@ public class Casablanca extends javax.swing.JFrame {
                     .addComponent(SHOWREGINFOBUTTON)
                     .addGap(148, 148, 148)
                     .addComponent(BACKBUTTONBOOKEDROOMS)
-                    .addContainerGap(110, Short.MAX_VALUE)))
+                    .addContainerGap(156, Short.MAX_VALUE)))
         );
 
         getContentPane().add(SHOWBOOKEDROOMS, "card5");
@@ -360,8 +529,10 @@ public class Casablanca extends javax.swing.JFrame {
         jLabel47.setText("PASSWORD");
 
         REGINFOFIRSTNAME.setEditable(false);
-        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 REGINFOFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -436,7 +607,7 @@ public class Casablanca extends javax.swing.JFrame {
                                                     .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(REGINFOCHECKINDATE, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(REGINFONUMBERNIGHTS, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                                                 .addGroup(SHOWREGINFOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(jLabel42)
                                                     .addComponent(jLabel43)
@@ -451,7 +622,7 @@ public class Casablanca extends javax.swing.JFrame {
                                             .addComponent(REGINFOEMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(REGINFOPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(REGINFOURSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addContainerGap(96, Short.MAX_VALUE))))
+                                .addContainerGap(101, Short.MAX_VALUE))))
                     .addGroup(SHOWREGINFOLayout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addComponent(jLabel48)
@@ -507,140 +678,15 @@ public class Casablanca extends javax.swing.JFrame {
                     .addComponent(REGINFOROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(REGINFOBACKBUTTON)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(SHOWREGINFO, "card9");
 
-        jLabel6.setText("START DATE");
-
-        jLabel7.setText("END DATE");
-
-        jLabel8.setText("ROOM SIZE");
-
-        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CHOOSEDATESTARTDATEActionPerformed(evt);
-            }
-        });
-
-        CHOOSEDATEBACKBUTTON.setText("BACK");
-
-        CHOOSEDATEBOOKBUTTON.setText("BOOK");
-
-        javax.swing.GroupLayout CHOOSEDATELayout = new javax.swing.GroupLayout(CHOOSEDATE);
-        CHOOSEDATE.setLayout(CHOOSEDATELayout);
-        CHOOSEDATELayout.setHorizontalGroup(
-            CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(49, 49, 49)
-                        .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CHOOSEDATESTARTDATE)
-                            .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(CHOOSEDATEROOMSIZE)))
-                    .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(CHOOSEDATEBACKBUTTON)
-                        .addGap(101, 101, 101)
-                        .addComponent(CHOOSEDATEBOOKBUTTON)))
-                .addContainerGap(280, Short.MAX_VALUE))
-        );
-        CHOOSEDATELayout.setVerticalGroup(
-            CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CHOOSEDATEENDDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(41, 41, 41)
-                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CHOOSEDATEROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(39, 39, 39)
-                .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CHOOSEDATEBACKBUTTON)
-                    .addComponent(CHOOSEDATEBOOKBUTTON))
-                .addContainerGap(147, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(CHOOSEDATE, "card4");
-
-        AVAILABLEROOMSTEXTAREA.setColumns(20);
-        AVAILABLEROOMSTEXTAREA.setRows(5);
-        jScrollPane3.setViewportView(AVAILABLEROOMSTEXTAREA);
-
-        jLabel16.setText("ROOM#");
-
-        jLabel17.setText("ROOM SIZE");
-
-        jLabel18.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel18.setText("SHOW AVAILABLE ROOMS");
-
-        AVAILABLEROOMSBOOKBUTTON.setText("BOOK");
-
-        AVAILABLEROOMSBACKBUTTON.setText("BACK");
-
-        javax.swing.GroupLayout SHOWAVAILABLEROOMSLayout = new javax.swing.GroupLayout(SHOWAVAILABLEROOMS);
-        SHOWAVAILABLEROOMS.setLayout(SHOWAVAILABLEROOMSLayout);
-        SHOWAVAILABLEROOMSLayout.setHorizontalGroup(
-            SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(88, 88, 88)
-                                .addComponent(jLabel17))
-                            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(63, 63, 63)
-                                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(AVAILABLEROOMSBOOKBUTTON)
-                                    .addComponent(AVAILABLEROOMSBACKBUTTON)))))
-                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel18)))
-                .addContainerGap(185, Short.MAX_VALUE))
-        );
-        SHOWAVAILABLEROOMSLayout.setVerticalGroup(
-            SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel18)
-                .addGap(18, 18, 18)
-                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
-                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(50, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AVAILABLEROOMSBOOKBUTTON)
-                        .addGap(18, 18, 18)
-                        .addComponent(AVAILABLEROOMSBACKBUTTON)
-                        .addGap(60, 60, 60))))
-        );
-
-        getContentPane().add(SHOWAVAILABLEROOMS, "card7");
-
-        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKROOMFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -701,7 +747,7 @@ public class Casablanca extends javax.swing.JFrame {
                                             .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
+                                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 79, Short.MAX_VALUE))
                                             .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                 .addGroup(BOOKROOMLayout.createSequentialGroup()
                                                     .addGap(10, 10, 10)
@@ -722,7 +768,7 @@ public class Casablanca extends javax.swing.JFrame {
                                                 .addComponent(jLabel23))
                                             .addGroup(BOOKROOMLayout.createSequentialGroup()
                                                 .addComponent(BOOKROOMCHECKINDATE, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 9, Short.MAX_VALUE))))))
+                                                .addGap(0, 0, Short.MAX_VALUE))))))
                             .addGroup(BOOKROOMLayout.createSequentialGroup()
                                 .addGap(55, 55, 55)
                                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -761,7 +807,7 @@ public class Casablanca extends javax.swing.JFrame {
                 .addComponent(jLabel32)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FROMROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKROOMLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BOOKROOMCANCELBUTTON)
@@ -859,7 +905,7 @@ public class Casablanca extends javax.swing.JFrame {
                         .addComponent(jLabel57)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel58)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel59))
                     .addComponent(jScrollPane5))
                 .addGap(28, 28, 28)
@@ -892,7 +938,7 @@ public class Casablanca extends javax.swing.JFrame {
                         .addGap(36, 36, 36))
                     .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(75, Short.MAX_VALUE))))
+                        .addContainerGap(139, Short.MAX_VALUE))))
         );
 
         getContentPane().add(SHOWSTANDBYROOMS, "card6");
@@ -923,6 +969,34 @@ public class Casablanca extends javax.swing.JFrame {
     private void BOOKROOMFIRSTNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOOKROOMFIRSTNAMEActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BOOKROOMFIRSTNAMEActionPerformed
+
+    private void CHOOSEDATEBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSEDATEBOOKBUTTONActionPerformed
+    {//GEN-HEADEREND:event_CHOOSEDATEBOOKBUTTONActionPerformed
+        // my boookk button = search
+        ArrayList<String> rooms = new ArrayList();
+        String sDate = CHOOSEDATESTARTDATE.getText();
+        String eDate = CHOOSEDATEENDDATE.getText();
+        if(CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+        {
+            rooms = con.getAllFreeRooms(sDate, eDate);
+        }else
+        {
+            int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
+            rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
+        }
+        fillAvailList(rooms);
+        
+        CHOOSEDATE.setVisible(false);
+        SHOWAVAILABLEROOMS.setVisible(true);
+        
+    }//GEN-LAST:event_CHOOSEDATEBOOKBUTTONActionPerformed
+
+    private void AVAILABLEROOMSBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_AVAILABLEROOMSBACKBUTTONActionPerformed
+    {//GEN-HEADEREND:event_AVAILABLEROOMSBACKBUTTONActionPerformed
+        SHOWAVAILABLEROOMS.setVisible(false);
+        CHOOSEDATE.setVisible(true);
+       
+    }//GEN-LAST:event_AVAILABLEROOMSBACKBUTTONActionPerformed
 
     /**
      * @param args the command line arguments
@@ -962,7 +1036,6 @@ public class Casablanca extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AVAILABLEROOMSBACKBUTTON;
     private javax.swing.JButton AVAILABLEROOMSBOOKBUTTON;
-    private javax.swing.JTextArea AVAILABLEROOMSTEXTAREA;
     private javax.swing.JButton BACKBUTTONBOOKEDROOMS;
     private javax.swing.JPanel BOOKROOM;
     private javax.swing.JTextField BOOKROOMADRESS;
@@ -982,8 +1055,10 @@ public class Casablanca extends javax.swing.JFrame {
     private javax.swing.JPanel CHOOSEDATE;
     private javax.swing.JButton CHOOSEDATEBACKBUTTON;
     private javax.swing.JButton CHOOSEDATEBOOKBUTTON;
+    private javax.swing.JComboBox CHOOSEDATECOMBOBOX;
+    private javax.swing.JLabel CHOOSEDATEDATEFORMAT;
+    private javax.swing.JLabel CHOOSEDATEDATEFORMAT2;
     private javax.swing.JTextField CHOOSEDATEENDDATE;
-    private javax.swing.JTextField CHOOSEDATEROOMSIZE;
     private javax.swing.JTextField CHOOSEDATESTARTDATE;
     private javax.swing.JButton DELETERESERVATION;
     private javax.swing.JTextField FROMROOMNUMBER;
@@ -1007,19 +1082,14 @@ public class Casablanca extends javax.swing.JFrame {
     private javax.swing.JTextField REGINFOROOMSIZE;
     private javax.swing.JTextField REGINFOTRAVELAGENCY;
     private javax.swing.JTextField REGINFOURSERNAME;
+    private javax.swing.JList SHOWAVAILABLELIST;
     private javax.swing.JPanel SHOWAVAILABLEROOMS;
     private javax.swing.JButton SHOWBOOKEDBUTTON;
     private javax.swing.JPanel SHOWBOOKEDROOMS;
-    private javax.swing.JPanel SHOWBOOKEDROOMS1;
-    private javax.swing.JPanel SHOWBOOKEDROOMS2;
-    private javax.swing.JPanel SHOWBOOKEDROOMS4;
-    private javax.swing.JPanel SHOWBOOKEDROOMS5;
     private javax.swing.JTextArea SHOWBOOKEDROOMSTEXTAREA;
     private javax.swing.JPanel SHOWREGINFO;
     private javax.swing.JButton SHOWREGINFOBUTTON;
     private javax.swing.JPanel SHOWSTANDBYROOMS;
-    private javax.swing.JPanel SHOWSTANDBYROOMS1;
-    private javax.swing.JPanel SHOWSTANDBYROOMS2;
     private javax.swing.JButton STANDBYBUTTON;
     private javax.swing.JButton STANDBYROOMACCEPTBUTTON;
     private javax.swing.JButton STANDBYROOMBACKBUTTON;
@@ -1027,25 +1097,9 @@ public class Casablanca extends javax.swing.JFrame {
     private javax.swing.JTextArea STANDBYROOMTEXTAREA;
     private javax.swing.JTextField USERNAME;
     private javax.swing.JPanel WELCOME;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton30;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -1081,40 +1135,33 @@ public class Casablanca extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollBar jScrollBar2;
-    private javax.swing.JScrollBar jScrollBar3;
-    private javax.swing.JScrollBar jScrollBar5;
-    private javax.swing.JScrollBar jScrollBar6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextArea jTextArea7;
     // End of variables declaration//GEN-END:variables
+
+    private void fillChooseCombo()
+    {
+        CHOOSEDATECOMBOBOX.removeAllItems();
+        CHOOSEDATECOMBOBOX.addItem("1");
+        CHOOSEDATECOMBOBOX.addItem("2");
+        CHOOSEDATECOMBOBOX.addItem("5");
+        CHOOSEDATECOMBOBOX.addItem("All");
+    }
+
+    private void fillAvailList(ArrayList<String> rooms)
+    {
+        SHOWAVAILABLELIST.removeAll();
+        Object[] o = rooms.toArray(new Object[0]);
+        SHOWAVAILABLELIST.setListData(o);
+        
+    }
 }
