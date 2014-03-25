@@ -12,6 +12,8 @@ public class Controller
     private final DBFacade dbf;
     private static Controller instance = null;
     private ArrayList<Room> currentList;
+    private Guest currentGuest;
+    private Booking currentBooking;
     
     private Controller()
     {
@@ -37,5 +39,32 @@ public class Controller
     {
         currentList = dbf.getSizeFreeRooms(sDate, eDate, rSize);
         return currentList;
+    }
+    
+    public Guest createNewGuest(String firstname, String familyname, String address, 
+            String country, int phone, String email, int travel_agency, String username, String password)
+    {
+        //== create guest object with guest id = 0
+        currentGuest = new Guest(0, firstname, familyname, address, country, phone, email, travel_agency, username, password);
+
+        //== save and get DB-generated unique guest id
+        boolean status = dbf.saveNewGuest(currentGuest);
+        if (!status) //fail!
+        {
+            currentGuest = null;
+        }
+        return currentGuest;
+    }
+    
+    public Booking createNewBooking(String start_date, String end_date, int room_id, int guest_id)
+    {
+        currentBooking = new Booking(0, start_date, end_date, room_id, guest_id);
+        
+        boolean status = dbf.saveNewBooking(currentBooking);
+        if(!status)
+        {
+            currentBooking = null;
+        }
+        return currentBooking;
     }
 }

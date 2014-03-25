@@ -1,4 +1,6 @@
 package dataSource;
+import domain.Booking;
+import domain.Guest;
 import domain.Room;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -34,6 +36,16 @@ public class DBFacade {
     public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize)
     {
         return rm.getSizeFreeRooms(sDate, eDate, rSize, con);
+    }
+    
+    public boolean saveNewGuest(Guest g)
+    {
+        return rm.saveNewGuest(g, con);
+    }
+    
+    public boolean saveNewBooking(Booking b)
+    {
+        return rm.saveNewBooking(b, con);
     }
 }
 

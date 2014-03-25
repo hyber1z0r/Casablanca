@@ -38,7 +38,6 @@ public class DateValidator
         } catch (ParseException e)
         {
 
-            e.printStackTrace();
             return false;
         }
 
