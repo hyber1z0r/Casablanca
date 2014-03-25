@@ -27,6 +27,8 @@ public class Casablanca extends javax.swing.JFrame
         con = Controller.getInstance();
         dv = new DateValidator();
         fillChooseCombo();
+        showMenuHideOthers();
+        setTitle("Casablanca administration system");
     }
 
     /**
@@ -1414,5 +1416,18 @@ public class Casablanca extends javax.swing.JFrame
         Object[] o = rooms.toArray(new Object[0]);
         SHOWAVAILABLELIST.setListData(o);
 
+    }
+
+    private void showMenuHideOthers()
+    {
+        WELCOME.setVisible(true);
+        CHOOSEDATE.setVisible(false);
+        SHOWAVAILABLEROOMS.setVisible(false);
+        BOOKROOM.setVisible(false);
+        SHOWREGINFO.setVisible(false);
+        LOGIN.setVisible(false);
+        CREATEUSERPANEL.setVisible(false);
+        SHOWBOOKEDROOMS.setVisible(false);
+        SHOWSTANDBYROOMS.setVisible(false);
     }
 }
