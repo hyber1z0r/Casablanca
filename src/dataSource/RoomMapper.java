@@ -30,10 +30,10 @@ public class RoomMapper
 
         String SQLString1 = "SELECT * FROM ROOMS r where room_id not in ("
                 + "SELECT ROOM_ID FROM BOOKINGS b where ("
-                + "(b.start_date < ? and b.end_date < ? and b.end_date > ?)"
-                + "or (b.start_date > ? and b.start_date < ? and b.end_date > ?)"
-                + "or (b.start_date < ? and b.end_date > ?)"
-                + "or (b.start_date > ? and b.end_date < ?)))"
+                + "(b.start_date <= ? and b.end_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date >= ? and b.start_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date >= ? and b.end_date <= ?)))"
                 + "order by room_id";
         PreparedStatement statement = null;
 
@@ -84,10 +84,10 @@ public class RoomMapper
         Statement statementFix;
         String SQLString1 = "SELECT * FROM ROOMS r where room_size = ? and room_id not in ("
                 + "SELECT ROOM_ID FROM BOOKINGS b where ("
-                + "(b.start_date < ? and b.end_date < ? and b.end_date > ?)"
-                + "or (b.start_date > ? and b.start_date < ? and b.end_date > ?)"
-                + "or (b.start_date < ? and b.end_date > ?)"
-                + "or (b.start_date > ? and b.end_date < ?)))"
+                + "(b.start_date <= ? and b.end_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date >= ? and b.start_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date <= ? and b.end_date >= ?)"
+                + "or (b.start_date >= ? and b.end_date <= ?)))"
                 + "order by room_id";
         PreparedStatement statement = null;
 
