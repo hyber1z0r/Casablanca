@@ -108,8 +108,8 @@ public class Casablanca extends javax.swing.JFrame
         BOOKROOMCONFIRMBUTTON = new javax.swing.JButton();
         BOOKROOMFeedback = new javax.swing.JLabel();
         TRAVELAGENCYBOX = new javax.swing.JComboBox();
-        jButton2 = new javax.swing.JButton();
-        BOOKROOMFEEDBACK = new javax.swing.JLabel();
+        BOOKROOMADDGUESTBUTTON = new javax.swing.JButton();
+        BOOKROOMCOUNTGUEST = new javax.swing.JLabel();
         GETFEEDBACKFORBOOKING = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -612,9 +612,9 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jButton2.setText("ADD GUEST");
+        BOOKROOMADDGUESTBUTTON.setText("ADD GUEST");
 
-        BOOKROOMFEEDBACK.setText("            ");
+        BOOKROOMCOUNTGUEST.setText("            ");
 
         javax.swing.GroupLayout BOOKROOMLayout = new javax.swing.GroupLayout(BOOKROOM);
         BOOKROOM.setLayout(BOOKROOMLayout);
@@ -659,9 +659,9 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(BOOKROOMFeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BOOKROOMLayout.createSequentialGroup()
                         .addGap(159, 159, 159)
-                        .addComponent(BOOKROOMFEEDBACK, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOOKROOMCOUNTGUEST, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
-                        .addComponent(jButton2)
+                        .addComponent(BOOKROOMADDGUESTBUTTON)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BOOKROOMCANCELBUTTON)
                         .addGap(18, 18, 18)
@@ -716,8 +716,8 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(TRAVELAGENCYBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BOOKROOMFEEDBACK)
-                    .addComponent(jButton2)
+                    .addComponent(BOOKROOMCOUNTGUEST)
+                    .addComponent(BOOKROOMADDGUESTBUTTON)
                     .addComponent(BOOKROOMCANCELBUTTON)
                     .addComponent(BOOKROOMCONFIRMBUTTON))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1362,13 +1362,14 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JButton AVAILABLEROOMSBOOKBUTTON;
     private javax.swing.JButton BACKBUTTONBOOKEDROOMS;
     private javax.swing.JPanel BOOKROOM;
+    private javax.swing.JButton BOOKROOMADDGUESTBUTTON;
     private javax.swing.JTextField BOOKROOMADRESS;
     private javax.swing.JButton BOOKROOMBUTTON;
     private javax.swing.JButton BOOKROOMCANCELBUTTON;
     private javax.swing.JButton BOOKROOMCONFIRMBUTTON;
+    private javax.swing.JLabel BOOKROOMCOUNTGUEST;
     private javax.swing.JTextField BOOKROOMCOUNTRY;
     private javax.swing.JTextField BOOKROOMEMAIL;
-    private javax.swing.JLabel BOOKROOMFEEDBACK;
     private javax.swing.JTextField BOOKROOMFIRSTNAME;
     private javax.swing.JLabel BOOKROOMFeedback;
     private javax.swing.JTextField BOOKROOMLASTNAME;
@@ -1429,7 +1430,6 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JTextField USERNAME;
     private javax.swing.JPanel WELCOME;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

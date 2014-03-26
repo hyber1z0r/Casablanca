@@ -679,9 +679,9 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-                          <Component id="BOOKROOMFEEDBACK" min="-2" pref="97" max="-2" attributes="0"/>
+                          <Component id="BOOKROOMCOUNTGUEST" min="-2" pref="97" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="BOOKROOMADDGUESTBUTTON" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="BOOKROOMCANCELBUTTON" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -752,8 +752,8 @@
                   </Group>
                   <EmptySpace pref="134" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="BOOKROOMFEEDBACK" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BOOKROOMCOUNTGUEST" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BOOKROOMADDGUESTBUTTON" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BOOKROOMCANCELBUTTON" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BOOKROOMCONFIRMBUTTON" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -879,12 +879,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TRAVELAGENCYBOXActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="BOOKROOMADDGUESTBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="ADD GUEST"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="BOOKROOMFEEDBACK">
+        <Component class="javax.swing.JLabel" name="BOOKROOMCOUNTGUEST">
           <Properties>
             <Property name="text" type="java.lang.String" value="            "/>
           </Properties>
