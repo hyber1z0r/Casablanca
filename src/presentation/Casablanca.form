@@ -962,9 +962,8 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="REGINFOBACKBUTTON" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel34" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -974,27 +973,37 @@
                                       <Component id="jLabel40" alignment="1" min="-2" pref="91" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel34" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="jLabel41" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Component id="REGINFOROOMSIZE" min="-2" pref="89" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel41" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="REGINFOROOMNUMBER" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" min="-2" pref="57" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="REGINFOTRAVELAGENCY" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="REGINFOROOMNUMBER" min="-2" pref="89" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="REGINFOTRAVELAGENCY" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="REGINFOFIRSTNAME" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                                       <Component id="REGINFOPHONE" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                                       <Component id="REGINFOADRESS" alignment="0" min="-2" pref="89" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="63" max="32767" attributes="0"/>
+                                  <EmptySpace pref="54" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabel42" alignment="1" min="-2" pref="96" max="-2" attributes="0"/>
                                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -1002,17 +1011,19 @@
                                           <Component id="jLabel43" alignment="1" pref="85" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="REGINFOLASTNAME" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="REGINFOCOUNTRY" min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="REGINFOEMAIL" min="-2" pref="89" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="REGINFOLASTNAME" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="REGINFOCOUNTRY" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="REGINFOEMAIL" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="REGINFOUSERNAME" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="SHOWREGINFOPASSWORD" min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="124" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1060,17 +1071,24 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="REGINFOTRAVELAGENCY" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="REGINFOUSERNAME" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="REGINFOROOMSIZE" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel12" alignment="3" max="32767" attributes="0"/>
+                      <Component id="SHOWREGINFOPASSWORD" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="REGINFOROOMNUMBER" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="REGINFOROOMSIZE" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                  <EmptySpace pref="96" max="32767" attributes="0"/>
                   <Component id="REGINFOBACKBUTTON" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="111" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1162,6 +1180,9 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOROOMNUMBERActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="REGINFOLASTNAME">
           <Properties>
@@ -1177,6 +1198,9 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOEMAILActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON">
           <Properties>
@@ -1192,6 +1216,26 @@
               <Font name="Tw Cen MT Condensed Extra Bold" size="18" style="2"/>
             </Property>
             <Property name="text" type="java.lang.String" value="REGISTRATION INFORMATION"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="REGINFOUSERNAME">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="SHOWREGINFOPASSWORD">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="USERNAME"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="PASSWORD"/>
           </Properties>
         </Component>
       </SubComponents>
