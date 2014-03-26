@@ -9,17 +9,18 @@ import java.util.ArrayList;
  */
 public class Controller
 {
+
     private final DBFacade dbf;
     private static Controller instance = null;
     private ArrayList<Room> currentList;
     private Guest currentGuest;
     private Booking currentBooking;
-    
+
     private Controller()
     {
         dbf = DBFacade.getInstance();
     }
-    
+
     public static Controller getInstance()
     {
         if (instance == null)
@@ -34,14 +35,14 @@ public class Controller
         currentList = dbf.getAllFreeRooms(sDate, eDate);
         return currentList;
     }
-    
+
     public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize)
     {
         currentList = dbf.getSizeFreeRooms(sDate, eDate, rSize);
         return currentList;
     }
-    
-    public Guest createNewGuest(String firstname, String familyname, String address, 
+
+    public Guest createNewGuest(String firstname, String familyname, String address,
             String country, int phone, String email, int travel_agency, String username, String password)
     {
         //== create guest object with guest id = 0
@@ -55,13 +56,13 @@ public class Controller
         }
         return currentGuest;
     }
-    
-    public Booking createNewBooking(String start_date, String end_date, int room_id, int guest_id)
+
+    public Booking createNewBooking(String start_date, String end_date, int room_id, String deposit_paid, String reg_date)
     {
-        currentBooking = new Booking(0, start_date, end_date, room_id, guest_id);
-        
+        currentBooking = new Booking(0, start_date, end_date, room_id, deposit_paid, reg_date);
+
         boolean status = dbf.saveNewBooking(currentBooking);
-        if(!status)
+        if (!status)
         {
             currentBooking = null;
         }

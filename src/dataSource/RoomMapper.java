@@ -195,10 +195,10 @@ public class RoomMapper
         String SQLString1
                 = "select bookingseq.nextval  "
                 + "from dual";
-
+        // (ID, START_DATE, END_DATE, ROOM_ID, DEPOSIT_PAID, REG_DATE)
         String SQLString2
                 = "insert into bookings "
-                + "values (?,?,?,?,?)";
+                + "values (?,?,?,?,?,?)";
         PreparedStatement statement = null;
 
         try
@@ -217,7 +217,8 @@ public class RoomMapper
             statement.setString(2, b.getStart_date());
             statement.setString(3, b.getEnd_date());
             statement.setInt(4, b.getRoom_id());
-            statement.setInt(5, b.getGuest_id());
+            statement.setString(5, b.getDeposit_Paid());
+            statement.setString(6, b.getReg_date());
 
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
