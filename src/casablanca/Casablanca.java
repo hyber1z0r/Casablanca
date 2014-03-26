@@ -20,9 +20,9 @@ public class Casablanca
 
         
         
-        String asd = "104      5";
-        String room_size = asd.substring(asd.length()-1, asd.length());
-        System.out.println(room_size);
+        
+        String s = "asdjlk";
+        int a = Integer.parseInt(s);
     }
     
 }

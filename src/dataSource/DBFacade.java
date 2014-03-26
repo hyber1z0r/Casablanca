@@ -1,5 +1,6 @@
 package dataSource;
 import domain.Booking;
+import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
 import java.sql.Connection;
@@ -46,6 +47,11 @@ public class DBFacade {
     public boolean saveNewBooking(Booking b)
     {
         return rm.saveNewBooking(b, con);
+    }
+    
+    public boolean saveNewBookingsGuests(Bookings_Guests bg)
+    {
+        return rm.saveNewBookingsGuests(bg, con);
     }
 }
 

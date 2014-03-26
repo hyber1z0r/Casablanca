@@ -6,6 +6,7 @@
 package dataSource;
 
 import domain.Booking;
+import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
 import java.sql.Connection;
@@ -140,7 +141,7 @@ public class RoomMapper
                 = "select guestseq.nextval  "
                 + "from dual";
 
-     //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, Travelagency, user, pass
+        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, Travelagency, user, pass
         String SQLString2
                 = "insert into guests "
                 + "values (?,?,?,?,?,?,?,?,?,?)";
@@ -148,6 +149,7 @@ public class RoomMapper
 
         try
         {
+            con.setAutoCommit(false);
             //== get unique guestId
             statement = con.prepareStatement(SQLString1);
             ResultSet rs = statement.executeQuery();
@@ -172,6 +174,13 @@ public class RoomMapper
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
         {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in roommapper - save new guest rollback");
+            }
             System.out.println("Fail in Roommapper - save new guest");
             System.out.println(e.getMessage());
         } finally // must close statement
@@ -187,7 +196,7 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
-    
+
     public boolean saveNewBooking(Booking b, Connection con)
     {
         int rowsInserted = 0;
@@ -203,6 +212,7 @@ public class RoomMapper
 
         try
         {
+            con.setAutoCommit(false);
             //== get unique bookingId
             statement = con.prepareStatement(SQLString1);
             ResultSet rs = statement.executeQuery();
@@ -223,6 +233,13 @@ public class RoomMapper
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
         {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback save new booking");
+            }
             System.out.println("Fail in Roommapper - save new booking");
             System.out.println(e.getMessage());
         } finally // must close statement
@@ -238,4 +255,59 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
+
+    public boolean saveNewBookingsGuests(Bookings_Guests bg, Connection con)
+    {
+        int rowsInserted = 0;
+
+        String SQLString1
+                = "select max(id) from bookings";
+
+        String SQLString2
+                = "insert into bookings_guests "
+                + "values (?,?)";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next())
+            {
+                bg.setBooking_id(rs.getInt(1));
+            }
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, bg.getBooking_id());
+            statement.setInt(2, bg.getGuest_id());
+
+            rowsInserted = statement.executeUpdate();
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback save new booking_guests");
+            }
+            System.out.println("Fail in Roommapper - save new booking_guests");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - close statement save new booking_guests");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
+
 }

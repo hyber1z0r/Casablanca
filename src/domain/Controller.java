@@ -15,6 +15,7 @@ public class Controller
     private ArrayList<Room> currentList;
     private Guest currentGuest;
     private Booking currentBooking;
+    private Bookings_Guests currentBG;
 
     private Controller()
     {
@@ -57,9 +58,9 @@ public class Controller
         return currentGuest;
     }
 
-    public Booking createNewBooking(String start_date, String end_date, int room_id, String deposit_paid, String reg_date)
+    public Booking createNewBooking(String start_date, String end_date, int room_id, String reg_date)
     {
-        currentBooking = new Booking(0, start_date, end_date, room_id, deposit_paid, reg_date);
+        currentBooking = new Booking(0, start_date, end_date, room_id, "No", reg_date);
 
         boolean status = dbf.saveNewBooking(currentBooking);
         if (!status)
@@ -67,5 +68,17 @@ public class Controller
             currentBooking = null;
         }
         return currentBooking;
+    }
+
+    public Bookings_Guests createNewBookingsGuests(int guestid)
+    {
+        currentBG = new Bookings_Guests(0, guestid);
+
+        boolean status = dbf.saveNewBookingsGuests(currentBG);
+        if (!status)
+        {
+            currentBG = null;
+        }
+        return currentBG;
     }
 }
