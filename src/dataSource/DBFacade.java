@@ -53,5 +53,10 @@ public class DBFacade {
     {
         return rm.saveNewBookingsGuests(bg, con);
     }
+    
+    public ArrayList<Booking> getBookedRooms(String type)
+    {
+        return rm.getBookedRooms(type, con);
+    }
 }
 

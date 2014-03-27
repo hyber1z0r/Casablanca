@@ -90,5 +90,11 @@ public class Booking
         this.room_id = room_id;
     }
 
+    @Override
+    public String toString()
+    {
+        return id + "\t" + start_date + "\t" + end_date + "\t" + room_id + "\t" + deposit_Paid + "\t" + reg_date;
+    }
+
    
 }

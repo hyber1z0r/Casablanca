@@ -14,7 +14,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -308,6 +313,51 @@ public class RoomMapper
             }
         }
         return rowsInserted == 1;
+    }
+
+    public ArrayList<Booking> getBookedRooms(String type, Connection con)
+    {
+        ArrayList<Booking> bookings = new ArrayList();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
+        Statement statementFix;
+
+        String SQLString1 = "select * from bookings where deposit_paid = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            statement = con.prepareStatement(SQLString1);
+            statement.setString(1, type);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                String sDate = rs.getString(2);
+                String eDate = rs.getString(3);
+                String rDate = rs.getString(6);
+
+
+                bookings.add(new Booking(rs.getInt(1), sDate, eDate, rs.getInt(4), rs.getString(5), rDate));
+            }
+
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in RoomMapper - getBookedRooms");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in RoomMapper.getBookedRooms - Closing statement ");
+                System.out.println(e.getMessage());
+            }
+        }
+        return bookings;
     }
 
 }

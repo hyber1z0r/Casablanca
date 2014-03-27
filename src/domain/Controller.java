@@ -16,6 +16,7 @@ public class Controller
     private Guest currentGuest;
     private Booking currentBooking;
     private Bookings_Guests currentBG;
+    private ArrayList<Booking> currentBList;
 
     private Controller()
     {
@@ -80,5 +81,11 @@ public class Controller
             currentBG = null;
         }
         return currentBG;
+    }
+    
+    public ArrayList<Booking> getBookedRooms(String type)
+    {
+        currentBList = dbf.getBookedRooms(type);
+        return currentBList;
     }
 }
