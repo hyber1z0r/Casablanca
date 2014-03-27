@@ -44,8 +44,7 @@ public class Casablanca extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         LOGIN = new javax.swing.JPanel();
         USERNAME = new javax.swing.JTextField();
@@ -156,6 +155,7 @@ public class Casablanca extends javax.swing.JFrame
         BACKBUTTONBOOKEDROOMS = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         SHOWBOOKEDROOMSTEXTAREA = new javax.swing.JTextArea();
+        jLabel15 = new javax.swing.JLabel();
         SHOWSTANDBYROOMS = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         STANDBYROOMTEXTAREA = new javax.swing.JTextArea();
@@ -170,10 +170,8 @@ public class Casablanca extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        USERNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        USERNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 USERNAMEActionPerformed(evt);
             }
         });
@@ -243,19 +241,15 @@ public class Casablanca extends javax.swing.JFrame
 
         LABEL1.setText("FULL NAME");
 
-        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERFULLNAMEActionPerformed(evt);
             }
         });
 
         CREATEUSERGENERATEBUTTON.setText("GENERATE ");
-        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERGENERATEBUTTONActionPerformed(evt);
             }
         });
@@ -264,18 +258,14 @@ public class Casablanca extends javax.swing.JFrame
 
         jLabel14.setText("PASSWORD");
 
-        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERUSERNAMEActionPerformed(evt);
             }
         });
 
-        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERPASSWORDActionPerformed(evt);
             }
         });
@@ -283,10 +273,8 @@ public class Casablanca extends javax.swing.JFrame
         CREATEUSERSAVEUSER.setText("SAVE USER");
 
         CREATEUSERBACKBUTTON.setText("BACK");
-        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERBACKBUTTONActionPerformed(evt);
             }
         });
@@ -348,10 +336,8 @@ public class Casablanca extends javax.swing.JFrame
         LOGOUT.setText("LOG OUT");
 
         BOOKROOMBUTTON.setText("BOOK ROOM");
-        BOOKROOMBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMBUTTONActionPerformed(evt);
             }
         });
@@ -411,37 +397,29 @@ public class Casablanca extends javax.swing.JFrame
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("ROOM SIZE");
 
-        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATESTARTDATEActionPerformed(evt);
             }
         });
 
         CHOOSEDATEBACKBUTTON.setText("BACK");
-        CHOOSEDATEBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATEBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATEBACKBUTTONActionPerformed(evt);
             }
         });
 
         CHOOSEDATESEARCHBUTTON.setText("SEARCH");
-        CHOOSEDATESEARCHBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATESEARCHBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATESEARCHBUTTONActionPerformed(evt);
             }
         });
 
         CHOOSEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        CHOOSEDATECOMBOBOX.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATECOMBOBOX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATECOMBOBOXActionPerformed(evt);
             }
         });
@@ -521,25 +499,20 @@ public class Casablanca extends javax.swing.JFrame
         jLabel18.setText("SHOW AVAILABLE ROOMS");
 
         AVAILABLEROOMSBOOKBUTTON.setText("BOOK");
-        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AVAILABLEROOMSBOOKBUTTONActionPerformed(evt);
             }
         });
 
         AVAILABLEROOMSBACKBUTTON.setText("BACK");
-        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AVAILABLEROOMSBACKBUTTONActionPerformed(evt);
             }
         });
 
-        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel()
-        {
+        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -598,10 +571,8 @@ public class Casablanca extends javax.swing.JFrame
 
         getContentPane().add(SHOWAVAILABLEROOMS, "card7");
 
-        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -638,37 +609,29 @@ public class Casablanca extends javax.swing.JFrame
         jLabel30.setText("EMAIL");
 
         BOOKROOMCANCELBUTTON.setText("CANCEL");
-        BOOKROOMCANCELBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMCANCELBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMCANCELBUTTONActionPerformed(evt);
             }
         });
 
         BOOKROOMCONFIRMBUTTON.setText("CONFIRM");
-        BOOKROOMCONFIRMBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMCONFIRMBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMCONFIRMBUTTONActionPerformed(evt);
             }
         });
 
         TRAVELAGENCYBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        TRAVELAGENCYBOX.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        TRAVELAGENCYBOX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TRAVELAGENCYBOXActionPerformed(evt);
             }
         });
 
         BOOKROOMADDGUESTBUTTON.setText("ADD GUEST");
-        BOOKROOMADDGUESTBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMADDGUESTBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMADDGUESTBUTTONActionPerformed(evt);
             }
         });
@@ -849,10 +812,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel44.setText("EMAIL");
 
         REGINFOFIRSTNAME.setEditable(false);
-        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -866,10 +827,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE.setEditable(false);
 
         REGINFOROOMNUMBER.setEditable(false);
-        REGINFOROOMNUMBER.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBERActionPerformed(evt);
             }
         });
@@ -879,19 +838,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY.setEditable(false);
 
         REGINFOEMAIL.setEditable(false);
-        REGINFOEMAIL.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAILActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON.setText("BACK");
-        REGINFOBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTONActionPerformed(evt);
             }
         });
@@ -1028,19 +983,15 @@ public class Casablanca extends javax.swing.JFrame
         jLabel11.setText("END DATE");
 
         DELETERESERVATION.setText("DELETE RESERVATION");
-        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        DELETERESERVATION.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DELETERESERVATIONActionPerformed(evt);
             }
         });
 
         SHOWREGINFOBUTTON.setText("SHOW REGISTRAION INFO");
-        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SHOWREGINFOBUTTONActionPerformed(evt);
             }
         });
@@ -1051,51 +1002,59 @@ public class Casablanca extends javax.swing.JFrame
         SHOWBOOKEDROOMSTEXTAREA.setRows(5);
         jScrollPane1.setViewportView(SHOWBOOKEDROOMSTEXTAREA);
 
+        jLabel15.setText("REG DATE");
+
         javax.swing.GroupLayout SHOWBOOKEDROOMSLayout = new javax.swing.GroupLayout(SHOWBOOKEDROOMS);
         SHOWBOOKEDROOMS.setLayout(SHOWBOOKEDROOMSLayout);
         SHOWBOOKEDROOMSLayout.setHorizontalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(483, Short.MAX_VALUE))
+                .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(DELETERESERVATION, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SHOWREGINFOBUTTON)))
+                    .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10)
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel11)
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel15)))
+                .addContainerGap(212, Short.MAX_VALUE))
             .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                    .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                            .addGap(263, 263, 263)
-                            .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SHOWREGINFOBUTTON)
-                                    .addComponent(DELETERESERVATION, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(BACKBUTTONBOOKEDROOMS)))
-                        .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                            .addGap(31, 31, 31)
-                            .addComponent(jLabel9)
-                            .addGap(21, 21, 21)
-                            .addComponent(jLabel10)
-                            .addGap(33, 33, 33)
-                            .addComponent(jLabel11)))
+                    .addGap(367, 367, 367)
+                    .addComponent(BACKBUTTONBOOKEDROOMS)
                     .addContainerGap(259, Short.MAX_VALUE)))
         );
         SHOWBOOKEDROOMSLayout.setVerticalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(DELETERESERVATION)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SHOWREGINFOBUTTON)))
                 .addContainerGap(202, Short.MAX_VALUE))
             .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                    .addGap(22, 22, 22)
-                    .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9)
-                        .addComponent(jLabel10)
-                        .addComponent(jLabel11))
-                    .addGap(18, 18, 18)
-                    .addComponent(DELETERESERVATION)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(SHOWREGINFOBUTTON)
-                    .addGap(148, 148, 148)
+                    .addGap(259, 259, 259)
                     .addComponent(BACKBUTTONBOOKEDROOMS)
                     .addContainerGap(199, Short.MAX_VALUE)))
         );
@@ -1585,6 +1544,7 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
