@@ -101,12 +101,15 @@ public class GuestBooking extends javax.swing.JFrame {
 
         jLabel2.setText("PASSWORD");
 
+        GUESTFEEDBACK.setForeground(new java.awt.Color(255, 0, 0));
         GUESTFEEDBACK.setText("GET FEEDBACK");
 
         GUESTLOGIN.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        GUESTLOGIN.setForeground(new java.awt.Color(102, 102, 0));
         GUESTLOGIN.setText("LOGIN");
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 0));
         jLabel5.setText("PLEASE LOGIN AS A GUEST");
 
         javax.swing.GroupLayout LOGINLayout = new javax.swing.GroupLayout(LOGIN);
@@ -148,15 +151,17 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(GUESTFEEDBACK)
                 .addGap(18, 18, 18)
                 .addComponent(GUESTLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(LOGIN, "card2");
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 102, 0));
         jLabel6.setText("WELCOME");
 
         BOOKFACILITYBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        BOOKFACILITYBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         BOOKFACILITYBUTTON.setText("BOOK FACILITY");
         BOOKFACILITYBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +170,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         CHECKBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        CHECKBOOKINGBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         CHECKBOOKINGBUTTON.setText("DELETE BOOKING");
         CHECKBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +179,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         LOGOUTBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        LOGOUTBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         LOGOUTBUTTON.setText("LOGOUT");
         LOGOUTBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,17 +215,19 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(BOOKFACILITYBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(CHECKBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(LOGOUTBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
         getContentPane().add(WELCOME, "card3");
 
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("AngsanaUPC", 2, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 102, 0));
         jLabel7.setText("BOOK FACILITY");
 
         VOLLEYBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VOLLEYBALL.setForeground(new java.awt.Color(102, 102, 0));
         VOLLEYBALL.setText("VOLLEYBALL");
         VOLLEYBALL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -227,6 +236,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         BADMINTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        BADMINTON.setForeground(new java.awt.Color(102, 102, 0));
         BADMINTON.setText("BADMINTON");
         BADMINTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +245,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         TENNIS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        TENNIS.setForeground(new java.awt.Color(102, 102, 0));
         TENNIS.setText("TENNIS");
         TENNIS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,6 +254,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         GOLF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        GOLF.setForeground(new java.awt.Color(102, 102, 0));
         GOLF.setText("GOLF");
         GOLF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +263,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         HANDBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        HANDBALL.setForeground(new java.awt.Color(102, 102, 0));
         HANDBALL.setText("HANDBALL");
         HANDBALL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,6 +272,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         SWIMMING.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        SWIMMING.setForeground(new java.awt.Color(102, 102, 0));
         SWIMMING.setText("SWIMMING");
         SWIMMING.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,6 +281,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         FITNESS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        FITNESS.setForeground(new java.awt.Color(102, 102, 0));
         FITNESS.setText("FITNESS");
         FITNESS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,6 +290,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         PINGPONG.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PINGPONG.setForeground(new java.awt.Color(102, 102, 0));
         PINGPONG.setText("PING PONG");
         PINGPONG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,6 +299,7 @@ public class GuestBooking extends javax.swing.JFrame {
         });
 
         HILLYGROUND.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        HILLYGROUND.setForeground(new java.awt.Color(102, 102, 0));
         HILLYGROUND.setText("HILLY GROUND");
         HILLYGROUND.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,12 +314,16 @@ public class GuestBooking extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(102, 204, 0));
         jLabel4.setText("INSTRUCTOR IS AVAILABLE");
 
+        jLabel9.setForeground(new java.awt.Color(102, 255, 0));
         jLabel9.setText("INSTRUCTOR IS AVAILABLE");
 
+        jLabel11.setForeground(new java.awt.Color(102, 204, 0));
         jLabel11.setText("INSTRUCTOR IS AVAILABLE");
 
+        jLabel12.setForeground(new java.awt.Color(51, 204, 0));
         jLabel12.setText("INSTRUCTOR IS AVAILABLE");
 
         javax.swing.GroupLayout BOOKFACILITYLayout = new javax.swing.GroupLayout(BOOKFACILITY);
@@ -352,8 +373,8 @@ public class GuestBooking extends javax.swing.JFrame {
                                     .addComponent(BADMINTON, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(65, 65, 65))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKFACILITYLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(184, 184, 184))))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95))))
         );
         BOOKFACILITYLayout.setVerticalGroup(
             BOOKFACILITYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,7 +397,7 @@ public class GuestBooking extends javax.swing.JFrame {
                     .addComponent(FITNESS, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(BOOKFACILITYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(HILLYGROUND, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(VOLLEYBALL, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -390,13 +411,16 @@ public class GuestBooking extends javax.swing.JFrame {
 
         getContentPane().add(BOOKFACILITY, "card4");
 
-        jLabel13.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 102, 0));
         jLabel13.setText("YOU WISH TO HAVE AN INSTRUCTOR? ");
 
         INSTRUCTORYESBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        INSTRUCTORYESBUTTON.setForeground(new java.awt.Color(255, 0, 0));
         INSTRUCTORYESBUTTON.setText("YES");
 
         INSTRUCTORNOBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        INSTRUCTORNOBUTTON.setForeground(new java.awt.Color(255, 0, 0));
         INSTRUCTORNOBUTTON.setText("NO");
 
         javax.swing.GroupLayout YOUWANTINSTRUCTORLayout = new javax.swing.GroupLayout(YOUWANTINSTRUCTOR);
@@ -423,12 +447,12 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addGroup(YOUWANTINSTRUCTORLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(INSTRUCTORYESBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(INSTRUCTORNOBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         getContentPane().add(YOUWANTINSTRUCTOR, "card5");
 
-        jLabel14.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
         jLabel14.setText("PICK DATE AND TIME");
 
         SHOWTIMEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -441,6 +465,7 @@ public class GuestBooking extends javax.swing.JFrame {
         jScrollPane1.setViewportView(SHOWTIMEDATELIST);
 
         SHOWTIMEDATEBOOKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SHOWTIMEDATEBOOKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         SHOWTIMEDATEBOOKBUTTON.setText("BOOK");
 
         javax.swing.GroupLayout SHOWTIMEANDDATELayout = new javax.swing.GroupLayout(SHOWTIMEANDDATE);
@@ -472,18 +497,21 @@ public class GuestBooking extends javax.swing.JFrame {
                         .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(SHOWTIMEDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         getContentPane().add(SHOWTIMEANDDATE, "card6");
 
         jLabel15.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(102, 102, 0));
         jLabel15.setText("YOU ARE NOW BOOKED IN");
 
         jLabel16.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(102, 102, 0));
         jLabel16.setText("THANK YOU, HAVE A GOOD DAY");
 
         THANKYOUBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        THANKYOUBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         THANKYOUBUTTON.setText("THANK YOU");
 
         javax.swing.GroupLayout YOUARENOWBOOKEDINLayout = new javax.swing.GroupLayout(YOUARENOWBOOKEDIN);
@@ -512,7 +540,7 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(THANKYOUBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         getContentPane().add(YOUARENOWBOOKEDIN, "card7");
@@ -524,13 +552,16 @@ public class GuestBooking extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(DELETEBOOKINGLIST);
 
-        jLabel17.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(102, 102, 0));
         jLabel17.setText("PICK YOUR BOOKING TO DELETE");
 
         DELETEBOOKINGBACKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        DELETEBOOKINGBACKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         DELETEBOOKINGBACKBUTTON.setText("BACK");
 
         DELETEBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        DELETEBOOKINGBUTTON.setForeground(new java.awt.Color(255, 51, 51));
         DELETEBOOKINGBUTTON.setText("DELETE");
 
         javax.swing.GroupLayout DELETEBOOKINGLayout = new javax.swing.GroupLayout(DELETEBOOKING);
@@ -559,7 +590,7 @@ public class GuestBooking extends javax.swing.JFrame {
                     .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(30, Short.MAX_VALUE))
+                        .addContainerGap(37, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DELETEBOOKINGLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(DELETEBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -570,13 +601,16 @@ public class GuestBooking extends javax.swing.JFrame {
 
         getContentPane().add(DELETEBOOKING, "card8");
 
-        jLabel18.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 102, 0));
         jLabel18.setText("YOU HAVE DELETED YOUR BOOKING");
 
-        jLabel19.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(102, 102, 0));
         jLabel19.setText("HAVE A GOOD DAY");
 
         YOUHAVEDELETEDBACKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        YOUHAVEDELETEDBACKBUTTON.setForeground(new java.awt.Color(51, 255, 51));
         YOUHAVEDELETEDBACKBUTTON.setText("BACK");
         YOUHAVEDELETEDBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -609,7 +643,7 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(YOUHAVEDELETEDBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
         );
