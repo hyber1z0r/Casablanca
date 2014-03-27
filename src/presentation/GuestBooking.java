@@ -108,7 +108,7 @@ public class GuestBooking extends javax.swing.JFrame {
         GUESTLOGIN.setForeground(new java.awt.Color(102, 102, 0));
         GUESTLOGIN.setText("LOGIN");
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Aparajita", 2, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 0));
         jLabel5.setText("PLEASE LOGIN AS A GUEST");
 
@@ -156,7 +156,7 @@ public class GuestBooking extends javax.swing.JFrame {
 
         getContentPane().add(LOGIN, "card2");
 
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Aparajita", 2, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 0));
         jLabel6.setText("WELCOME");
 
@@ -215,7 +215,7 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(BOOKFACILITYBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(CHECKBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(LOGOUTBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -453,6 +453,7 @@ public class GuestBooking extends javax.swing.JFrame {
         getContentPane().add(YOUWANTINSTRUCTOR, "card5");
 
         jLabel14.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(102, 102, 0));
         jLabel14.setText("PICK DATE AND TIME");
 
         SHOWTIMEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -502,11 +503,11 @@ public class GuestBooking extends javax.swing.JFrame {
 
         getContentPane().add(SHOWTIMEANDDATE, "card6");
 
-        jLabel15.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(102, 102, 0));
         jLabel15.setText("YOU ARE NOW BOOKED IN");
 
-        jLabel16.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(102, 102, 0));
         jLabel16.setText("THANK YOU, HAVE A GOOD DAY");
 
