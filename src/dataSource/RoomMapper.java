@@ -338,8 +338,25 @@ public class RoomMapper
                 String eDate = rs.getString(3);
                 String rDate = rs.getString(6);
 
+                String s1 = sDate.substring(8, 10);
+                String s2 = sDate.substring(5, 7);
+                String s3 = sDate.substring(0, 4);
+                
+                String finalSDate = s1 + "-" + s2 + "-" + s3;
+                
+                String e1 = eDate.substring(8, 10);
+                String e2 = eDate.substring(5, 7);
+                String e3 = eDate.substring(0, 4);
+                
+                String finalEDate = e1 + "-" + e2 + "-" + e3;
+                
+                String r1 = rDate.substring(8, 10);
+                String r2 = rDate.substring(5, 7);
+                String r3 = rDate.substring(0, 4);
+                
+                String finalRDate = r1 + "-" + r2 + "-" + r3;
 
-                bookings.add(new Booking(rs.getInt(1), sDate, eDate, rs.getInt(4), rs.getString(5), rDate));
+                bookings.add(new Booking(rs.getInt(1), finalSDate, finalEDate, rs.getInt(4), rs.getString(5), finalRDate));
             }
 
         } catch (SQLException e)
