@@ -58,5 +58,9 @@ public class DBFacade {
     {
         return rm.getBookedRooms(type, con);
     }
+    public boolean confirmBooking(Booking b)
+    {
+        return rm.confirmBooking(b, con);
+    }
 }
 

@@ -377,5 +377,49 @@ public class RoomMapper
         }
         return bookings;
     }
+    
+    public boolean confirmBooking(Booking b, Connection con)
+    {
+        int rowsInserted = 0;
+
+        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, Travelagency, user, pass
+        String SQLString2 = "update bookings set deposit_paid = 'yes' where room_id = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, b.getRoom_id());
+
+
+            rowsInserted = statement.executeUpdate();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in roommapper - confirm booking rollback");
+            }
+            System.out.println("Fail in Roommapper - confirm booking");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                con.commit();
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - confirm booking");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
 
 }

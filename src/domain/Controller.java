@@ -88,4 +88,16 @@ public class Controller
         currentBList = dbf.getBookedRooms(type);
         return currentBList;
     }
+    
+    public Booking confirmBooking(int room_id)
+    {
+        currentBooking = new Booking(0, null, null, room_id, null, null);
+
+        boolean status = dbf.confirmBooking(currentBooking);
+        if (!status)
+        {
+            currentBooking = null;
+        }
+        return currentBooking;
+    }
 }
