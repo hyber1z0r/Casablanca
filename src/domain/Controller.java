@@ -89,9 +89,9 @@ public class Controller
         return currentBList;
     }
     
-    public Booking confirmBooking(int room_id)
+    public Booking confirmBooking(int room_id, String startdate)
     {
-        currentBooking = new Booking(0, null, null, room_id, null, null);
+        currentBooking = new Booking(0, startdate, null, room_id, null, null);
 
         boolean status = dbf.confirmBooking(currentBooking);
         if (!status)

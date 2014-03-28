@@ -382,8 +382,8 @@ public class RoomMapper
     {
         int rowsInserted = 0;
 
-        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, Travelagency, user, pass
-        String SQLString2 = "update bookings set deposit_paid = 'yes' where room_id = ?";
+        
+        String SQLString2 = "update bookings set deposit_paid = 'yes' where room_id = ? and start_date = ?";
         PreparedStatement statement = null;
 
         try
@@ -393,8 +393,8 @@ public class RoomMapper
             //== insert tuple
             statement = con.prepareStatement(SQLString2);
             statement.setInt(1, b.getRoom_id());
-
-
+            statement.setString(2, b.getStart_date());
+            
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
         {
