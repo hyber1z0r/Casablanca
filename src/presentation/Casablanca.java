@@ -1507,8 +1507,12 @@ public class Casablanca extends javax.swing.JFrame
     {//GEN-HEADEREND:event_STANDBYROOMACCEPTBUTTONActionPerformed
         String r_id = SHOWSTANDBYLIST.getSelectedValue().toString();
         String room_id = r_id.substring(0, r_id.length() - 45);
+        String start_date = r_id.substring(r_id.length() - 40, r_id.length() - 30);
+        String start_date2 = start_date.substring(0, 6);
+        String start_date3 = start_date.substring(8, 10);
+        String finalstartdate = start_date2 + start_date3;
         int room_id2 = Integer.parseInt(room_id);
-        Booking b = con.confirmBooking(room_id2);
+        Booking b = con.confirmBooking(room_id2, finalstartdate);
 
         if (b != null)
         {
