@@ -61,7 +61,7 @@ public class Controller
 
     public Booking createNewBooking(String start_date, String end_date, int room_id, String reg_date)
     {
-        currentBooking = new Booking(0, start_date, end_date, room_id, "No", reg_date);
+        currentBooking = new Booking(0, start_date, end_date, room_id, "no", reg_date);
 
         boolean status = dbf.saveNewBooking(currentBooking);
         if (!status)
