@@ -6,12 +6,10 @@
 package presentation;
 
 import domain.*;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultListModel;
-import javax.swing.JList;
 
 /**
  *
@@ -30,8 +28,6 @@ public class Casablanca extends javax.swing.JFrame
 
     public Casablanca()
     {
-        // setExtendedState(MAXIMIZED_BOTH); 
-        // setUndecorated(true); 
         initComponents();
         con = Controller.getInstance();
         dv = new DateValidator();
@@ -39,7 +35,6 @@ public class Casablanca extends javax.swing.JFrame
         fillChooseCombo();
         showMenuHideOthers();
         setTitle("Casablanca administration system");
-
     }
 
     /**
@@ -1517,14 +1512,12 @@ public class Casablanca extends javax.swing.JFrame
 
         if (b != null)
         {
-
             int selectedIndex = SHOWSTANDBYLIST.getSelectedIndex();
             if (selectedIndex != -1)
             {
                 DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
                 model.removeElementAt(selectedIndex);
             }
-           
         }
 
 
@@ -1557,6 +1550,93 @@ public class Casablanca extends javax.swing.JFrame
         WELCOME.setVisible(true);
     }//GEN-LAST:event_BACKBUTTONBOOKEDROOMSActionPerformed
 
+    private void fillAgencyBox()
+    {
+        TRAVELAGENCYBOX.removeAllItems();
+        TRAVELAGENCYBOX.addItem("Spies");
+        TRAVELAGENCYBOX.addItem("Falk Lauritzen");
+        TRAVELAGENCYBOX.addItem("Albatros Travel");
+        TRAVELAGENCYBOX.addItem("Travel Link");
+    }
+
+    private void fillChooseCombo()
+    {
+        CHOOSEDATECOMBOBOX.removeAllItems();
+        CHOOSEDATECOMBOBOX.addItem("1");
+        CHOOSEDATECOMBOBOX.addItem("2");
+        CHOOSEDATECOMBOBOX.addItem("5");
+        CHOOSEDATECOMBOBOX.addItem("All");
+    }
+
+    private void fillAvailList(ArrayList<Room> rooms)
+    {
+        SHOWAVAILABLELIST.setModel(new DefaultListModel());
+        DefaultListModel model = (DefaultListModel) SHOWAVAILABLELIST.getModel();
+        
+        model.removeAllElements();
+        Object[] anArray = rooms.toArray(new Object[0]);
+        
+        for (Object object : anArray)
+        {
+            model.addElement(object);
+        }
+
+    }
+
+    private void showMenuHideOthers()
+    {
+        WELCOME.setVisible(true);
+        CHOOSEDATE.setVisible(false);
+        SHOWAVAILABLEROOMS.setVisible(false);
+        BOOKROOM.setVisible(false);
+        SHOWREGINFO.setVisible(false);
+        LOGIN.setVisible(false);
+        CREATEUSERPANEL.setVisible(false);
+        SHOWBOOKEDROOMS.setVisible(false);
+        SHOWSTANDBYROOMS.setVisible(false);
+    }
+
+    private void fillStandbyList(ArrayList<Booking> standby)
+    {
+
+        SHOWSTANDBYLIST.setModel(new DefaultListModel());
+        DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
+        
+
+        model.removeAllElements();
+        Object[] anArray = new Object[standby.size()];
+        
+        for (int i = 0; i < standby.size(); i++)
+        {
+            anArray[i] = standby.get(i).getRoom_id() + "     " + standby.get(i).getStart_date() + "     " + standby.get(i).getEnd_date() + "     " + standby.get(i).getReg_date();
+        }
+        
+        for (Object object : anArray)
+        {
+            model.addElement(object);
+        }
+    }
+
+    private void fillBookedList(ArrayList<Booking> booked)
+    {
+        SHOWBOOKEDROOMSLIST.setModel(new DefaultListModel());
+        DefaultListModel model = (DefaultListModel) SHOWBOOKEDROOMSLIST.getModel();
+        
+
+        model.removeAllElements();
+        Object[] anArray = new Object[booked.size()];
+        
+        for (int i = 0; i < booked.size(); i++)
+        {
+            anArray[i] = booked.get(i).getRoom_id() + "     " + booked.get(i).getStart_date() + "     " + booked.get(i).getEnd_date() + "     " + booked.get(i).getReg_date();
+        }
+        
+        for (Object object : anArray)
+        {
+            model.addElement(object);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -1726,104 +1806,5 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane4;
     // End of variables declaration//GEN-END:variables
 
-    private void fillAgencyBox()
-    {
-        TRAVELAGENCYBOX.removeAllItems();
-        TRAVELAGENCYBOX.addItem("Spies");
-        TRAVELAGENCYBOX.addItem("Falk Lauritzen");
-        TRAVELAGENCYBOX.addItem("Albatros Travel");
-        TRAVELAGENCYBOX.addItem("Travel Link");
-    }
-
-    private void fillChooseCombo()
-    {
-        CHOOSEDATECOMBOBOX.removeAllItems();
-        CHOOSEDATECOMBOBOX.addItem("1");
-        CHOOSEDATECOMBOBOX.addItem("2");
-        CHOOSEDATECOMBOBOX.addItem("5");
-        CHOOSEDATECOMBOBOX.addItem("All");
-    }
-
-    private void fillAvailList(ArrayList<Room> rooms)
-    {
-//        SHOWAVAILABLELIST.removeAll();
-//        Object[] o = rooms.toArray(new Object[0]);
-//        SHOWAVAILABLELIST.setListData(o);
-        SHOWAVAILABLELIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWAVAILABLELIST.getModel();
-        
-        model.removeAllElements();
-        Object[] anArray = rooms.toArray(new Object[0]);
-        
-        for (Object object : anArray)
-        {
-            model.addElement(object);
-        }
-
-    }
-
-    private void showMenuHideOthers()
-    {
-        WELCOME.setVisible(true);
-        CHOOSEDATE.setVisible(false);
-        SHOWAVAILABLEROOMS.setVisible(false);
-        BOOKROOM.setVisible(false);
-        SHOWREGINFO.setVisible(false);
-        LOGIN.setVisible(false);
-        CREATEUSERPANEL.setVisible(false);
-        SHOWBOOKEDROOMS.setVisible(false);
-        SHOWSTANDBYROOMS.setVisible(false);
-    }
-
-    private void fillStandbyList(ArrayList<Booking> standby)
-    {
-//
-//        SHOWSTANDBYLIST.removeAll();
-//
-//        Object[] o = new Object[standby.size()];
-//
-//        for (int i = 0; i < standby.size(); i++)
-//        {
-//            o[i] = standby.get(i).getRoom_id() + "     " + standby.get(i).getStart_date() + "     " + standby.get(i).getEnd_date() + "     " + standby.get(i).getReg_date();
-//        }
-//
-//        SHOWSTANDBYLIST.setListData(o);
-
-        SHOWSTANDBYLIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-        
-
-        model.removeAllElements();
-        Object[] anArray = new Object[standby.size()];
-        
-        for (int i = 0; i < standby.size(); i++)
-        {
-            anArray[i] = standby.get(i).getRoom_id() + "     " + standby.get(i).getStart_date() + "     " + standby.get(i).getEnd_date() + "     " + standby.get(i).getReg_date();
-        }
-        
-        for (Object object : anArray)
-        {
-            model.addElement(object);
-        }
-    }
-
-    private void fillBookedList(ArrayList<Booking> booked)
-    {
-        SHOWBOOKEDROOMSLIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWBOOKEDROOMSLIST.getModel();
-        
-
-        model.removeAllElements();
-        Object[] anArray = new Object[booked.size()];
-        
-        for (int i = 0; i < booked.size(); i++)
-        {
-            anArray[i] = booked.get(i).getRoom_id() + "     " + booked.get(i).getStart_date() + "     " + booked.get(i).getEnd_date() + "     " + booked.get(i).getReg_date();
-        }
-        
-        for (Object object : anArray)
-        {
-            model.addElement(object);
-        }
-    }
+    
 }
