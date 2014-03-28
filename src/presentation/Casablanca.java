@@ -1521,10 +1521,10 @@ public class Casablanca extends javax.swing.JFrame
             int selectedIndex = SHOWSTANDBYLIST.getSelectedIndex();
             if (selectedIndex != -1)
             {
-                SHOWSTANDBYLIST.setModel(new DefaultListModel());
                 DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-                model.remove(selectedIndex);
+                model.removeElementAt(selectedIndex);
             }
+           
         }
 
 
