@@ -2091,24 +2091,30 @@ public class Casablanca extends javax.swing.JFrame
         {
             if (dv.isDateHigher(sDate, eDate, dateFormat))
             {
-                if (CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+                if (!dv.isBackInTime(sDate, dateFormat))
                 {
-                    rooms = con.getAllFreeRooms(sDate, eDate);
-                } else
-                {
-                    int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
-                    rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
-                }
-                if (!rooms.isEmpty())
-                {
-                    fillAvailList(rooms);
-                    CHOOSEDATE.setVisible(false);
-                    SHOWAVAILABLEROOMS.setVisible(true);
-                    SHOWAVAILROOMSFEEDBACK.setText("");
+                    if (CHOOSEDATECOMBOBOX.getSelectedItem().toString().equals("All"))
+                    {
+                        rooms = con.getAllFreeRooms(sDate, eDate);
+                    } else
+                    {
+                        int rSize = Integer.parseInt(CHOOSEDATECOMBOBOX.getSelectedItem().toString());
+                        rooms = con.getSizeFreeRooms(sDate, eDate, rSize);
+                    }
+                    if (!rooms.isEmpty())
+                    {
+                        fillAvailList(rooms);
+                        CHOOSEDATE.setVisible(false);
+                        SHOWAVAILABLEROOMS.setVisible(true);
+                        SHOWAVAILROOMSFEEDBACK.setText("");
 
-                } else
+                    } else
+                    {
+                        CHOOSEDATEFEEDBACKLABEL.setText("No available apartments!");
+                    }
+                }else
                 {
-                    CHOOSEDATEFEEDBACKLABEL.setText("No available apartments!");
+                    CHOOSEDATEFEEDBACKLABEL.setText("You cannot travel back in time!");
                 }
             } else
             {
@@ -2308,6 +2314,10 @@ public class Casablanca extends javax.swing.JFrame
                 BOOKROOMPhoneFeedback.setText("Phone no invalid");
                 phone = 0;
             }
+            if (!email.contains("@") && !email.contains("."))
+            {
+                email = "";
+            }
 
             if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
             {
@@ -2330,7 +2340,7 @@ public class Casablanca extends javax.swing.JFrame
                 BOOKROOMCOUNTGUEST.setText(guestsInserted + " Guests added!");
             } else
             {
-                BOOKROOMFeedback.setText("Failed adding guest!");
+                BOOKROOMFeedback.setText("Failed adding guest! Check input fields again.");
             }
         } else
         {
@@ -2492,10 +2502,10 @@ public class Casablanca extends javax.swing.JFrame
     {
         SHOWAVAILABLELIST.setModel(new DefaultListModel());
         DefaultListModel model = (DefaultListModel) SHOWAVAILABLELIST.getModel();
-        
+
         model.removeAllElements();
         Object[] anArray = rooms.toArray(new Object[0]);
-        
+
         for (Object object : anArray)
         {
             model.addElement(object);
@@ -2521,16 +2531,15 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWSTANDBYLIST.setModel(new DefaultListModel());
         DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-        
 
         model.removeAllElements();
         Object[] anArray = new Object[standby.size()];
-        
+
         for (int i = 0; i < standby.size(); i++)
         {
             anArray[i] = standby.get(i).getRoom_id() + "     " + standby.get(i).getStart_date() + "     " + standby.get(i).getEnd_date() + "     " + standby.get(i).getReg_date();
         }
-        
+
         for (Object object : anArray)
         {
             model.addElement(object);
@@ -2541,22 +2550,21 @@ public class Casablanca extends javax.swing.JFrame
     {
         SHOWBOOKEDROOMSLIST.setModel(new DefaultListModel());
         DefaultListModel model = (DefaultListModel) SHOWBOOKEDROOMSLIST.getModel();
-        
 
         model.removeAllElements();
         Object[] anArray = new Object[booked.size()];
-        
+
         for (int i = 0; i < booked.size(); i++)
         {
             anArray[i] = booked.get(i).getRoom_id() + "     " + booked.get(i).getStart_date() + "     " + booked.get(i).getEnd_date() + "     " + booked.get(i).getReg_date();
         }
-        
+
         for (Object object : anArray)
         {
             model.addElement(object);
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -2827,5 +2835,4 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JScrollPane jScrollPane4;
     // End of variables declaration//GEN-END:variables
 
-    
 }
