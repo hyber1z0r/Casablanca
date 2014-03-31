@@ -68,5 +68,10 @@ public class DBFacade {
     {
         return rm.saveNewTAGUEST(tg, con);
     }
+    
+    public boolean deleteGuest(Booking b)
+    {
+        return rm.deleteguests(b, con);
+    }
 }
 

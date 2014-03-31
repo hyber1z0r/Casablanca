@@ -46,10 +46,10 @@ public class Controller
     }
 
     public Guest createNewGuest(String firstname, String familyname, String address,
-            String country, int phone, String email, int travel_agency, String username, String password)
+            String country, int phone, String email, String username, String password)
     {
         //== create guest object with guest id = 0
-        currentGuest = new Guest(0, firstname, familyname, address, country, phone, email, travel_agency, username, password);
+        currentGuest = new Guest(0, firstname, familyname, address, country, phone, email, username, password);
 
         //== save and get DB-generated unique guest id
         boolean status = dbf.saveNewGuest(currentGuest);
@@ -83,13 +83,13 @@ public class Controller
         }
         return currentBG;
     }
-    
+
     public ArrayList<Booking> getBookedRooms(String type)
     {
         currentBList = dbf.getBookedRooms(type);
         return currentBList;
     }
-    
+
     public Booking confirmBooking(int room_id, String startdate)
     {
         currentBooking = new Booking(0, startdate, null, room_id, null, null);
@@ -101,17 +101,29 @@ public class Controller
         }
         return currentBooking;
     }
-    
+
     public Travelagency_guests createNewTAGUEST(int travel_id, int guest_id)
     {
         currentTAG = new Travelagency_guests(travel_id, guest_id);
-        
+
         boolean status = dbf.saveNewTAGUEST(currentTAG);
         if (!status)
         {
             currentTAG = null;
-            
+
         }
         return currentTAG;
+    }
+
+    public Booking deleteGuest(int room_id, String startdate)
+    {
+        currentBooking = new Booking(0, startdate, null, room_id, null, null);
+
+        boolean status = dbf.deleteGuest(currentBooking);
+        if (!status)
+        {
+            currentBooking = null;
+        }
+        return currentBooking;
     }
 }

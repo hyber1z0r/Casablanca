@@ -467,4 +467,55 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
+    public boolean deleteguests(Booking b, Connection con)
+    {
+        int rowsInserted = 0;
+
+        String SQLString1 = "select guest_id from bookings_guests where booking_id = (SELECT id FROM bookings where room_id = ? and start_date = ?);";
+        
+        String SQLString2
+                = "delete from guests where guest_id = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+
+            //== get booking id from room id and start_date
+            statement = con.prepareStatement(SQLString1);
+            statement.setInt(1,b.getRoom_id());
+            statement.setString(2, b.getStart_date());
+            ResultSet rs = statement.executeQuery();
+            while (rs.next())
+            {
+                // arbejd videre i morgen!
+                rs.getInt(1);
+            }
+            
+            
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback save new travelagency_guests");
+            }
+            System.out.println("Fail in Roommapper - save new travelagency_guests");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - close statement save new travelagency_guests");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
 }

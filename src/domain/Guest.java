@@ -12,15 +12,14 @@ package domain;
  */
 public class Guest
 {
-    private int guest_id, phone, travel_agency;
+    private int guest_id, phone;
     private String firstname, familyname, address, country, email, username, password;
 
     public Guest(int guest_id, String firstname, String familyname, String address, 
-            String country, int phone, String email, int travel_agency, String username, String password)
+            String country, int phone, String email, String username, String password)
     {
         this.guest_id = guest_id;
         this.phone = phone;
-        this.travel_agency = travel_agency;
         this.firstname = firstname;
         this.familyname = familyname;
         this.address = address;
@@ -48,16 +47,6 @@ public class Guest
     public void setPhone(int phone)
     {
         this.phone = phone;
-    }
-
-    public int getTravel_agency()
-    {
-        return travel_agency;
-    }
-
-    public void setTravel_agency(int travel_agency)
-    {
-        this.travel_agency = travel_agency;
     }
 
     public String getFirstname()
