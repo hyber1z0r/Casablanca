@@ -2298,6 +2298,10 @@ public class Casablanca extends javax.swing.JFrame
             {
                 travel_agency = 4;
             }
+            if (travelAgency.equals("Private booking"))
+            {
+                travel_agency = 5;
+            }
 
             if (!firstname.isEmpty() && !familyname.isEmpty())
             {
@@ -2324,6 +2328,7 @@ public class Casablanca extends javax.swing.JFrame
                 g = con.createNewGuest(firstname, familyname, address, country, phone, email,
                         travel_agency, username, password);
             }
+            
 
             if (g != null)
             {
@@ -2483,6 +2488,7 @@ public class Casablanca extends javax.swing.JFrame
     private void fillAgencyBox()
     {
         TRAVELAGENCYBOX.removeAllItems();
+        TRAVELAGENCYBOX.addItem("Private booking");
         TRAVELAGENCYBOX.addItem("Spies");
         TRAVELAGENCYBOX.addItem("Falk Lauritzen");
         TRAVELAGENCYBOX.addItem("Albatros Travel");
