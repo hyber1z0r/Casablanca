@@ -2112,7 +2112,7 @@ public class Casablanca extends javax.swing.JFrame
                     {
                         CHOOSEDATEFEEDBACKLABEL.setText("No available apartments!");
                     }
-                }else
+                } else
                 {
                     CHOOSEDATEFEEDBACKLABEL.setText("You cannot travel back in time!");
                 }
@@ -2328,21 +2328,30 @@ public class Casablanca extends javax.swing.JFrame
                 g = con.createNewGuest(firstname, familyname, address, country, phone, email,
                         travel_agency, username, password);
             }
-            
 
             if (g != null)
             {
                 guestsInserted += 1;
                 guests.add(g);
-                BOOKROOMFIRSTNAME.setText("");
-                BOOKROOMLASTNAME.setText("");
-                BOOKROOMCOUNTRY.setText("");
-                BOOKROOMADRESS.setText("");
-                BOOKROOMPHONE.setText("");
-                BOOKROOMEMAIL.setText("");
-                BOOKROOMFeedback.setText("");
-                BOOKROOMPhoneFeedback.setText("");
-                BOOKROOMCOUNTGUEST.setText(guestsInserted + " Guests added!");
+
+                // CREATE NEW TRAVELAGENCY_GUESTS
+                Travelagency_guests tg = con.createNewTAGUEST(travel_agency, g.getGuest_id());
+                if (tg != null)
+                {
+                    BOOKROOMFIRSTNAME.setText("");
+                    BOOKROOMLASTNAME.setText("");
+                    BOOKROOMCOUNTRY.setText("");
+                    BOOKROOMADRESS.setText("");
+                    BOOKROOMPHONE.setText("");
+                    BOOKROOMEMAIL.setText("");
+                    BOOKROOMFeedback.setText("");
+                    BOOKROOMPhoneFeedback.setText("");
+                    BOOKROOMCOUNTGUEST.setText(guestsInserted + " Guests added!");
+                }else
+                {
+                    BOOKROOMFeedback.setText("Failed adding guest! Failed creating Travelagency info");
+                }
+
             } else
             {
                 BOOKROOMFeedback.setText("Failed adding guest! Check input fields again.");
@@ -2357,7 +2366,7 @@ public class Casablanca extends javax.swing.JFrame
     private void STANDBYBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_STANDBYBUTTONActionPerformed
     {//GEN-HEADEREND:event_STANDBYBUTTONActionPerformed
         // GET STANDBY ROOMS IN THE SHOW STANDBY LIST
-        ArrayList<Booking> standbys = new ArrayList();
+        ArrayList<Booking> standbys = new ArrayList<>();
         standbys = con.getBookedRooms("no");
         if (!standbys.isEmpty())
         {

@@ -3,6 +3,7 @@ import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
+import domain.Travelagency_guests;
 import java.sql.Connection;
 import java.util.ArrayList;
 
@@ -61,6 +62,11 @@ public class DBFacade {
     public boolean confirmBooking(Booking b)
     {
         return rm.confirmBooking(b, con);
+    }
+    
+    public boolean saveNewTAGUEST(Travelagency_guests tg)
+    {
+        return rm.saveNewTAGUEST(tg, con);
     }
 }
 

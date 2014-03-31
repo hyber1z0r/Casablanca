@@ -9,6 +9,7 @@ import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
+import domain.Travelagency_guests;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -146,10 +147,10 @@ public class RoomMapper
                 = "select guestseq.nextval  "
                 + "from dual";
 
-        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, Travelagency, user, pass
+        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, user, pass
         String SQLString2
                 = "insert into guests "
-                + "values (?,?,?,?,?,?,?,?,?,?)";
+                + "values (?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = null;
 
         try
@@ -172,9 +173,8 @@ public class RoomMapper
             statement.setString(5, g.getCountry());
             statement.setInt(6, g.getPhone());
             statement.setString(7, g.getEmail());
-            statement.setInt(8, g.getTravel_agency());
-            statement.setString(9, g.getUsername());
-            statement.setString(10, g.getPassword());
+            statement.setString(8, g.getUsername());
+            statement.setString(9, g.getPassword());
 
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
@@ -422,4 +422,49 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
+    
+    public boolean saveNewTAGUEST(Travelagency_guests tg, Connection con)
+    {
+        int rowsInserted = 0;
+
+        String SQLString2
+                = "insert into travelagency_guests "
+                + "values (?,?)";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, tg.getTravel_id());
+            statement.setInt(2, tg.getGuest_id());
+
+            rowsInserted = statement.executeUpdate();
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback save new travelagency_guests");
+            }
+            System.out.println("Fail in Roommapper - save new travelagency_guests");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - close statement save new travelagency_guests");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
 }

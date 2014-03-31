@@ -17,6 +17,7 @@ public class Controller
     private Booking currentBooking;
     private Bookings_Guests currentBG;
     private ArrayList<Booking> currentBList;
+    private Travelagency_guests currentTAG;
 
     private Controller()
     {
@@ -99,5 +100,18 @@ public class Controller
             currentBooking = null;
         }
         return currentBooking;
+    }
+    
+    public Travelagency_guests createNewTAGUEST(int travel_id, int guest_id)
+    {
+        currentTAG = new Travelagency_guests(travel_id, guest_id);
+        
+        boolean status = dbf.saveNewTAGUEST(currentTAG);
+        if (!status)
+        {
+            currentTAG = null;
+            
+        }
+        return currentTAG;
     }
 }
