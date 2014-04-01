@@ -3,6 +3,7 @@ import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
+import domain.TodayGuest;
 import domain.Travelagency_guests;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -72,6 +73,11 @@ public class DBFacade {
     public boolean deleteGuest(Booking b)
     {
         return rm.deleteguests(b, con);
+    }
+    
+    public ArrayList<TodayGuest> getTodaysGuests(String date)
+    {
+        return rm.getTodaysGuests(date, con);
     }
 }
 

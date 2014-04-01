@@ -9,6 +9,7 @@ import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
 import domain.Room;
+import domain.TodayGuest;
 import domain.Travelagency_guests;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -532,5 +533,49 @@ public class RoomMapper
             }
         }
         return rowsInserted == guestIDs.size() + 1;
+    }
+    
+    public ArrayList<TodayGuest> getTodaysGuests(String date, Connection con)
+    {
+        ArrayList<TodayGuest> guests = new ArrayList();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
+        Statement statementFix;
+
+        String SQLString1 = "SELECT b.room_id, g.FIRSTNAME, g.familyname, g.username, g.password"
+                + " FROM BOOKINGS b INNER JOIN BOOKINGS_GUESTS bg"
+                + " ON b.ID = bg.BOOKING_ID JOIN GUESTS g"
+                + " ON bg.GUEST_ID = g.GUEST_ID"
+                + " WHERE b.START_DATE = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            statement = con.prepareStatement(SQLString1);
+            statement.setString(1, date);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                guests.add(new TodayGuest(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)));
+            }
+
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in RoomMapper - get Todays Guests");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in RoomMapper.get Todays Guests - Closing statement ");
+                System.out.println(e.getMessage());
+            }
+        }
+        return guests;
     }
 }
