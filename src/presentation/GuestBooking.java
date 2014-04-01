@@ -6,6 +6,8 @@
 
 package presentation;
 
+import domain.Controller;
+
 /**
  *
  * @author Filipovic
@@ -15,8 +17,13 @@ public class GuestBooking extends javax.swing.JFrame {
     /**
      * Creates new form GuestBooking
      */
+    
+    Controller con;
+    private String guestLoggedIn;
     public GuestBooking() {
         initComponents();
+        con = Controller.getInstance();
+        
     }
 
     /**
@@ -26,18 +33,19 @@ public class GuestBooking extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         LOGIN = new javax.swing.JPanel();
         GUESTUSERNAME = new javax.swing.JTextField();
-        GUESTPASSWORD = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         GUESTFEEDBACK = new javax.swing.JLabel();
         GUESTLOGIN = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        GUESTPASSWORD = new javax.swing.JPasswordField();
         WELCOME = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         BOOKFACILITYBUTTON = new javax.swing.JButton();
@@ -91,8 +99,10 @@ public class GuestBooking extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        GUESTUSERNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GUESTUSERNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GUESTUSERNAMEActionPerformed(evt);
             }
         });
@@ -102,20 +112,38 @@ public class GuestBooking extends javax.swing.JFrame {
         jLabel2.setText("PASSWORD");
 
         GUESTFEEDBACK.setForeground(new java.awt.Color(255, 0, 0));
-        GUESTFEEDBACK.setText("GET FEEDBACK");
 
         GUESTLOGIN.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         GUESTLOGIN.setForeground(new java.awt.Color(102, 102, 0));
         GUESTLOGIN.setText("LOGIN");
+        GUESTLOGIN.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                GUESTLOGINActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Aparajita", 2, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 0));
         jLabel5.setText("PLEASE LOGIN AS A GUEST");
 
+        GUESTPASSWORD.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                GUESTPASSWORDActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout LOGINLayout = new javax.swing.GroupLayout(LOGIN);
         LOGIN.setLayout(LOGINLayout);
         LOGINLayout.setHorizontalGroup(
             LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
+                .addContainerGap(110, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
             .addGroup(LOGINLayout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -124,15 +152,11 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GUESTLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(GUESTFEEDBACK)
-                    .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(GUESTUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(GUESTPASSWORD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(GUESTUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(GUESTPASSWORD, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                        .addComponent(GUESTFEEDBACK, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
         );
         LOGINLayout.setVerticalGroup(
             LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,11 +169,11 @@ public class GuestBooking extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(28, 28, 28)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(GUESTPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(34, 34, 34)
-                .addComponent(GUESTFEEDBACK)
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel2)
+                    .addComponent(GUESTPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addComponent(GUESTFEEDBACK, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GUESTLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -163,8 +187,10 @@ public class GuestBooking extends javax.swing.JFrame {
         BOOKFACILITYBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BOOKFACILITYBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         BOOKFACILITYBUTTON.setText("BOOK FACILITY");
-        BOOKFACILITYBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKFACILITYBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKFACILITYBUTTONActionPerformed(evt);
             }
         });
@@ -172,8 +198,10 @@ public class GuestBooking extends javax.swing.JFrame {
         CHECKBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         CHECKBOOKINGBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         CHECKBOOKINGBUTTON.setText("DELETE BOOKING");
-        CHECKBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        CHECKBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 CHECKBOOKINGBUTTONActionPerformed(evt);
             }
         });
@@ -181,8 +209,10 @@ public class GuestBooking extends javax.swing.JFrame {
         LOGOUTBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         LOGOUTBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         LOGOUTBUTTON.setText("LOGOUT");
-        LOGOUTBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LOGOUTBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 LOGOUTBUTTONActionPerformed(evt);
             }
         });
@@ -229,8 +259,10 @@ public class GuestBooking extends javax.swing.JFrame {
         VOLLEYBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         VOLLEYBALL.setForeground(new java.awt.Color(102, 102, 0));
         VOLLEYBALL.setText("VOLLEYBALL");
-        VOLLEYBALL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        VOLLEYBALL.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 VOLLEYBALLActionPerformed(evt);
             }
         });
@@ -238,8 +270,10 @@ public class GuestBooking extends javax.swing.JFrame {
         BADMINTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BADMINTON.setForeground(new java.awt.Color(102, 102, 0));
         BADMINTON.setText("BADMINTON");
-        BADMINTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BADMINTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BADMINTONActionPerformed(evt);
             }
         });
@@ -247,8 +281,10 @@ public class GuestBooking extends javax.swing.JFrame {
         TENNIS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TENNIS.setForeground(new java.awt.Color(102, 102, 0));
         TENNIS.setText("TENNIS");
-        TENNIS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        TENNIS.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 TENNISActionPerformed(evt);
             }
         });
@@ -256,8 +292,10 @@ public class GuestBooking extends javax.swing.JFrame {
         GOLF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         GOLF.setForeground(new java.awt.Color(102, 102, 0));
         GOLF.setText("GOLF");
-        GOLF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GOLF.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GOLFActionPerformed(evt);
             }
         });
@@ -265,8 +303,10 @@ public class GuestBooking extends javax.swing.JFrame {
         HANDBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         HANDBALL.setForeground(new java.awt.Color(102, 102, 0));
         HANDBALL.setText("HANDBALL");
-        HANDBALL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        HANDBALL.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 HANDBALLActionPerformed(evt);
             }
         });
@@ -274,8 +314,10 @@ public class GuestBooking extends javax.swing.JFrame {
         SWIMMING.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         SWIMMING.setForeground(new java.awt.Color(102, 102, 0));
         SWIMMING.setText("SWIMMING");
-        SWIMMING.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SWIMMING.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 SWIMMINGActionPerformed(evt);
             }
         });
@@ -283,8 +325,10 @@ public class GuestBooking extends javax.swing.JFrame {
         FITNESS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         FITNESS.setForeground(new java.awt.Color(102, 102, 0));
         FITNESS.setText("FITNESS");
-        FITNESS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        FITNESS.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 FITNESSActionPerformed(evt);
             }
         });
@@ -292,8 +336,10 @@ public class GuestBooking extends javax.swing.JFrame {
         PINGPONG.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PINGPONG.setForeground(new java.awt.Color(102, 102, 0));
         PINGPONG.setText("PING PONG");
-        PINGPONG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        PINGPONG.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 PINGPONGActionPerformed(evt);
             }
         });
@@ -301,15 +347,19 @@ public class GuestBooking extends javax.swing.JFrame {
         HILLYGROUND.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         HILLYGROUND.setForeground(new java.awt.Color(102, 102, 0));
         HILLYGROUND.setText("HILLY GROUND");
-        HILLYGROUND.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        HILLYGROUND.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 HILLYGROUNDActionPerformed(evt);
             }
         });
 
         BOOKFACILITYBACKBUTTON.setText("BACK");
-        BOOKFACILITYBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKFACILITYBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKFACILITYBACKBUTTONActionPerformed(evt);
             }
         });
@@ -458,7 +508,8 @@ public class GuestBooking extends javax.swing.JFrame {
 
         SHOWTIMEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        SHOWTIMEDATELIST.setModel(new javax.swing.AbstractListModel() {
+        SHOWTIMEDATELIST.setModel(new javax.swing.AbstractListModel()
+        {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -546,7 +597,8 @@ public class GuestBooking extends javax.swing.JFrame {
 
         getContentPane().add(YOUARENOWBOOKEDIN, "card7");
 
-        DELETEBOOKINGLIST.setModel(new javax.swing.AbstractListModel() {
+        DELETEBOOKINGLIST.setModel(new javax.swing.AbstractListModel()
+        {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -613,8 +665,10 @@ public class GuestBooking extends javax.swing.JFrame {
         YOUHAVEDELETEDBACKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         YOUHAVEDELETEDBACKBUTTON.setForeground(new java.awt.Color(51, 255, 51));
         YOUHAVEDELETEDBACKBUTTON.setText("BACK");
-        YOUHAVEDELETEDBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        YOUHAVEDELETEDBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 YOUHAVEDELETEDBACKBUTTONActionPerformed(evt);
             }
         });
@@ -714,6 +768,30 @@ public class GuestBooking extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_YOUHAVEDELETEDBACKBUTTONActionPerformed
 
+    private void GUESTLOGINActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_GUESTLOGINActionPerformed
+    {//GEN-HEADEREND:event_GUESTLOGINActionPerformed
+        String username = GUESTUSERNAME.getText();
+        String password = GUESTPASSWORD.getText();
+        boolean status = con.checkLogin(username, password);
+        if(status)
+        {
+            guestLoggedIn = username;
+            WELCOME.setVisible(true);
+            LOGIN.setVisible(false);
+        }else
+        {
+            GUESTFEEDBACK.setText("Wrong username or password!");
+            GUESTPASSWORD.setText("");
+            GUESTUSERNAME.requestFocusInWindow();
+            GUESTUSERNAME.selectAll();
+        }
+    }//GEN-LAST:event_GUESTLOGINActionPerformed
+
+    private void GUESTPASSWORDActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_GUESTPASSWORDActionPerformed
+    {//GEN-HEADEREND:event_GUESTPASSWORDActionPerformed
+
+    }//GEN-LAST:event_GUESTPASSWORDActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -763,7 +841,7 @@ public class GuestBooking extends javax.swing.JFrame {
     private javax.swing.JButton GOLF;
     private javax.swing.JLabel GUESTFEEDBACK;
     private javax.swing.JButton GUESTLOGIN;
-    private javax.swing.JTextField GUESTPASSWORD;
+    private javax.swing.JPasswordField GUESTPASSWORD;
     private javax.swing.JTextField GUESTUSERNAME;
     private javax.swing.JButton HANDBALL;
     private javax.swing.JButton HILLYGROUND;

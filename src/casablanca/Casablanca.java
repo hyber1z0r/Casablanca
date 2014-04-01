@@ -2,6 +2,7 @@ package casablanca;
 
 import domain.Controller;
 import domain.CreateUserStaff;
+import domain.Guest;
 import domain.Room;
 import java.util.ArrayList;
 
@@ -18,15 +19,18 @@ public class Casablanca
     public static void main(String[] args)
     {
 
-        String s1 = "1";
-        String s2 = "2";
+        String username = "CB-ka-87";
+        String password = "k197k";
+        Controller con = Controller.getInstance();
         
-        ArrayList<String> stringss = new ArrayList();
-        
-        stringss.add(s1);
-        stringss.add(s2);
-        
-        System.out.println(stringss.size());
+        boolean status = con.checkLogin(username, password);
+        if(status)
+        {
+            System.out.println("Login successfull");
+        }else
+        {
+            System.out.println("Wrong username/password");
+        }
     }
     
 }

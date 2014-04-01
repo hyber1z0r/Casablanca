@@ -14,11 +14,13 @@ public class DBFacade {
     
     private final RoomMapper rm;
     private final Connection con;
+    private final GuestMapper gm;
     private static DBFacade instance;
     
     private DBFacade()
     {
         rm = new RoomMapper();
+        gm = new GuestMapper();
         con = new DBConnector().getConnection();  	  
     }
     
@@ -83,6 +85,11 @@ public class DBFacade {
     public ArrayList<Guest> showRegInfo(int room_id, String start_date)
     {
         return rm.showRegInfo(room_id, start_date, con);
+    }
+    
+    public boolean checkLogin(String username, String password)
+    {
+        return gm.checkLogin(username, password, con);
     }
 }
 

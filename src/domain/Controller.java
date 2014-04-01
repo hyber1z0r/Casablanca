@@ -140,4 +140,10 @@ public class Controller
         currentGuests = dbf.showRegInfo(room_id, start_date);
         return currentGuests;
     }
+    
+    public boolean checkLogin(String username, String password)
+    {
+        boolean status = dbf.checkLogin(username, password);
+        return status;
+    }
 }
