@@ -44,8 +44,7 @@ public class Casablanca extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         LOGIN = new javax.swing.JPanel();
         USERNAME = new javax.swing.JTextField();
@@ -70,6 +69,12 @@ public class Casablanca extends javax.swing.JFrame
         jScrollPane1 = new javax.swing.JScrollPane();
         TODAYSARRIVALLIST = new javax.swing.JList();
         TODAYSARRIVALBACKBUTTON = new javax.swing.JButton();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
         CREATEUSERPANEL = new javax.swing.JPanel();
         LABEL1 = new javax.swing.JLabel();
         CREATEUSERFULLNAME = new javax.swing.JTextField();
@@ -286,10 +291,8 @@ public class Casablanca extends javax.swing.JFrame
 
         LOGIN.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        USERNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        USERNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 USERNAMEActionPerformed(evt);
             }
         });
@@ -316,7 +319,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(LOGINLayout.createSequentialGroup()
-                .addContainerGap(339, Short.MAX_VALUE)
+                .addContainerGap(437, Short.MAX_VALUE)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(LOGINLayout.createSequentialGroup()
                         .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -354,7 +357,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(GETFEEDBACK)
                 .addGap(251, 251, 251)
                 .addComponent(LOGINBUTTON)
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         getContentPane().add(LOGIN, "card2");
@@ -364,28 +367,22 @@ public class Casablanca extends javax.swing.JFrame
         LOGOUT.setText("LOG OUT");
 
         BOOKROOMBUTTON.setText("BOOK ROOM");
-        BOOKROOMBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMBUTTONActionPerformed(evt);
             }
         });
 
         STANDBYBUTTON.setText("SHOW STANDBY ROOMS");
-        STANDBYBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        STANDBYBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 STANDBYBUTTONActionPerformed(evt);
             }
         });
 
         SHOWBOOKEDBUTTON.setText("SHOW BOOKED ROOMS");
-        SHOWBOOKEDBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        SHOWBOOKEDBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SHOWBOOKEDBUTTONActionPerformed(evt);
             }
         });
@@ -394,10 +391,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel5.setText("WELCOME TO CASABLANCA HOTEL RESERVATION");
 
         TODAYSARRIVALBUTTON.setText("TODAYS ARRIVAL");
-        TODAYSARRIVALBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        TODAYSARRIVALBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TODAYSARRIVALBUTTONActionPerformed(evt);
             }
         });
@@ -407,7 +402,7 @@ public class Casablanca extends javax.swing.JFrame
         WELCOMELayout.setHorizontalGroup(
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
-                .addContainerGap(422, Short.MAX_VALUE)
+                .addContainerGap(521, Short.MAX_VALUE)
                 .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
                         .addComponent(LOGOUT)
@@ -454,13 +449,12 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(235, 235, 235)
                 .addComponent(LOGOUT)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         getContentPane().add(WELCOME, "card3");
 
-        TODAYSARRIVALLIST.setModel(new javax.swing.AbstractListModel()
-        {
+        TODAYSARRIVALLIST.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -468,13 +462,24 @@ public class Casablanca extends javax.swing.JFrame
         jScrollPane1.setViewportView(TODAYSARRIVALLIST);
 
         TODAYSARRIVALBACKBUTTON.setText("Back");
-        TODAYSARRIVALBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        TODAYSARRIVALBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TODAYSARRIVALBACKBUTTONActionPerformed(evt);
             }
         });
+
+        jLabel92.setText("ROOM #");
+
+        jLabel93.setText("FIRST NAME");
+
+        jLabel94.setText("LASTNAME");
+
+        jLabel95.setText("USERNAME");
+
+        jLabel96.setText("PASSWORD");
+
+        jLabel97.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel97.setText("TODAYS ARRIVAL");
 
         javax.swing.GroupLayout TODAYSARRIVALLayout = new javax.swing.GroupLayout(TODAYSARRIVAL);
         TODAYSARRIVAL.setLayout(TODAYSARRIVALLayout);
@@ -484,16 +489,41 @@ public class Casablanca extends javax.swing.JFrame
                 .addContainerGap(466, Short.MAX_VALUE)
                 .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
-                        .addComponent(TODAYSARRIVALBACKBUTTON)
+                        .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
+                                .addGap(549, 549, 549)
+                                .addComponent(TODAYSARRIVALBACKBUTTON))
+                            .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
+                                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel93)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel94)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel95)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel96))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
+                                .addComponent(jLabel97)
+                                .addGap(368, 368, 368)))
                         .addGap(112, 112, 112))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(293, 293, 293))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(327, 327, 327))))
         );
         TODAYSARRIVALLayout.setVerticalGroup(
             TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
-                .addGap(112, 112, 112)
+                .addGap(40, 40, 40)
+                .addComponent(jLabel97)
+                .addGap(27, 27, 27)
+                .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel92)
+                    .addComponent(jLabel93)
+                    .addComponent(jLabel94)
+                    .addComponent(jLabel95)
+                    .addComponent(jLabel96))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(102, 102, 102)
                 .addComponent(TODAYSARRIVALBACKBUTTON)
@@ -506,19 +536,15 @@ public class Casablanca extends javax.swing.JFrame
 
         LABEL1.setText("FULL NAME");
 
-        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERFULLNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERFULLNAMEActionPerformed(evt);
             }
         });
 
         CREATEUSERGENERATEBUTTON.setText("GENERATE ");
-        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERGENERATEBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERGENERATEBUTTONActionPerformed(evt);
             }
         });
@@ -527,18 +553,14 @@ public class Casablanca extends javax.swing.JFrame
 
         jLabel14.setText("PASSWORD");
 
-        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERUSERNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERUSERNAMEActionPerformed(evt);
             }
         });
 
-        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERPASSWORD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERPASSWORDActionPerformed(evt);
             }
         });
@@ -546,10 +568,8 @@ public class Casablanca extends javax.swing.JFrame
         CREATEUSERSAVEUSER.setText("SAVE USER");
 
         CREATEUSERBACKBUTTON.setText("BACK");
-        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CREATEUSERBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CREATEUSERBACKBUTTONActionPerformed(evt);
             }
         });
@@ -580,7 +600,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(CREATEUSERUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(419, Short.MAX_VALUE))
+                .addContainerGap(517, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CREATEUSERPANELLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CREATEUSERGENERATEBUTTON)
@@ -607,7 +627,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(CREATEUSERSAVEUSER)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CREATEUSERBACKBUTTON)
-                .addContainerGap(516, Short.MAX_VALUE))
+                .addContainerGap(447, Short.MAX_VALUE))
         );
 
         getContentPane().add(CREATEUSERPANEL, "card10");
@@ -623,37 +643,29 @@ public class Casablanca extends javax.swing.JFrame
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("ROOM SIZE");
 
-        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATESTARTDATE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATESTARTDATEActionPerformed(evt);
             }
         });
 
         CHOOSEDATEBACKBUTTON.setText("BACK");
-        CHOOSEDATEBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATEBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATEBACKBUTTONActionPerformed(evt);
             }
         });
 
         CHOOSEDATESEARCHBUTTON.setText("SEARCH");
-        CHOOSEDATESEARCHBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATESEARCHBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATESEARCHBUTTONActionPerformed(evt);
             }
         });
 
         CHOOSEDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        CHOOSEDATECOMBOBOX.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        CHOOSEDATECOMBOBOX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CHOOSEDATECOMBOBOXActionPerformed(evt);
             }
         });
@@ -732,25 +744,20 @@ public class Casablanca extends javax.swing.JFrame
         jLabel18.setText("SHOW AVAILABLE ROOMS");
 
         AVAILABLEROOMSBOOKBUTTON.setText("BOOK");
-        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        AVAILABLEROOMSBOOKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AVAILABLEROOMSBOOKBUTTONActionPerformed(evt);
             }
         });
 
         AVAILABLEROOMSBACKBUTTON.setText("BACK");
-        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        AVAILABLEROOMSBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AVAILABLEROOMSBACKBUTTONActionPerformed(evt);
             }
         });
 
-        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel()
-        {
+        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -813,10 +820,8 @@ public class Casablanca extends javax.swing.JFrame
 
         BOOKROOM.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -853,37 +858,29 @@ public class Casablanca extends javax.swing.JFrame
         jLabel30.setText("EMAIL");
 
         BOOKROOMCANCELBUTTON.setText("CANCEL");
-        BOOKROOMCANCELBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMCANCELBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMCANCELBUTTONActionPerformed(evt);
             }
         });
 
         BOOKROOMCONFIRMBUTTON.setText("CONFIRM");
-        BOOKROOMCONFIRMBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMCONFIRMBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMCONFIRMBUTTONActionPerformed(evt);
             }
         });
 
         TRAVELAGENCYBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        TRAVELAGENCYBOX.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        TRAVELAGENCYBOX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TRAVELAGENCYBOXActionPerformed(evt);
             }
         });
 
         BOOKROOMADDGUESTBUTTON.setText("ADD GUEST");
-        BOOKROOMADDGUESTBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BOOKROOMADDGUESTBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BOOKROOMADDGUESTBUTTONActionPerformed(evt);
             }
         });
@@ -999,7 +996,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(TRAVELAGENCYBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKROOMLayout.createSequentialGroup()
                         .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1080,10 +1077,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel44.setText("EMAIL");
 
         REGINFOFIRSTNAME.setEditable(false);
-        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAMEActionPerformed(evt);
             }
         });
@@ -1097,10 +1092,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE.setEditable(false);
 
         REGINFOROOMNUMBER.setEditable(false);
-        REGINFOROOMNUMBER.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBERActionPerformed(evt);
             }
         });
@@ -1110,19 +1103,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY.setEditable(false);
 
         REGINFOEMAIL.setEditable(false);
-        REGINFOEMAIL.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAILActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON.setText("BACK");
-        REGINFOBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTONActionPerformed(evt);
             }
         });
@@ -1193,7 +1182,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         SHOWREGINFO1Layout.setVerticalGroup(
             SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1283,10 +1272,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel52.setText("EMAIL");
 
         REGINFOFIRSTNAME1.setEditable(false);
-        REGINFOFIRSTNAME1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAME1ActionPerformed(evt);
             }
         });
@@ -1300,10 +1287,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE1.setEditable(false);
 
         REGINFOROOMNUMBER1.setEditable(false);
-        REGINFOROOMNUMBER1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBER1ActionPerformed(evt);
             }
         });
@@ -1313,19 +1298,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY1.setEditable(false);
 
         REGINFOEMAIL1.setEditable(false);
-        REGINFOEMAIL1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAIL1ActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON1.setText("BACK");
-        REGINFOBACKBUTTON1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTON1ActionPerformed(evt);
             }
         });
@@ -1491,10 +1472,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel66.setText("EMAIL");
 
         REGINFOFIRSTNAME2.setEditable(false);
-        REGINFOFIRSTNAME2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAME2ActionPerformed(evt);
             }
         });
@@ -1508,10 +1487,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE2.setEditable(false);
 
         REGINFOROOMNUMBER2.setEditable(false);
-        REGINFOROOMNUMBER2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBER2ActionPerformed(evt);
             }
         });
@@ -1521,19 +1498,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY2.setEditable(false);
 
         REGINFOEMAIL2.setEditable(false);
-        REGINFOEMAIL2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAIL2ActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON2.setText("BACK");
-        REGINFOBACKBUTTON2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTON2ActionPerformed(evt);
             }
         });
@@ -1604,7 +1577,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         SHOWREGINFO3Layout.setVerticalGroup(
             SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1694,10 +1667,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel76.setText("EMAIL");
 
         REGINFOFIRSTNAME3.setEditable(false);
-        REGINFOFIRSTNAME3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAME3ActionPerformed(evt);
             }
         });
@@ -1711,10 +1682,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE3.setEditable(false);
 
         REGINFOROOMNUMBER3.setEditable(false);
-        REGINFOROOMNUMBER3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBER3ActionPerformed(evt);
             }
         });
@@ -1724,19 +1693,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY3.setEditable(false);
 
         REGINFOEMAIL3.setEditable(false);
-        REGINFOEMAIL3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAIL3ActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON3.setText("BACK");
-        REGINFOBACKBUTTON3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTON3ActionPerformed(evt);
             }
         });
@@ -1807,7 +1772,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         SHOWREGINFO4Layout.setVerticalGroup(
             SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1897,10 +1862,8 @@ public class Casablanca extends javax.swing.JFrame
         jLabel88.setText("EMAIL");
 
         REGINFOFIRSTNAME4.setEditable(false);
-        REGINFOFIRSTNAME4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOFIRSTNAME4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOFIRSTNAME4ActionPerformed(evt);
             }
         });
@@ -1914,10 +1877,8 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOROOMSIZE4.setEditable(false);
 
         REGINFOROOMNUMBER4.setEditable(false);
-        REGINFOROOMNUMBER4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOROOMNUMBER4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOROOMNUMBER4ActionPerformed(evt);
             }
         });
@@ -1927,19 +1888,15 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOCOUNTRY4.setEditable(false);
 
         REGINFOEMAIL4.setEditable(false);
-        REGINFOEMAIL4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOEMAIL4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOEMAIL4ActionPerformed(evt);
             }
         });
 
         REGINFOBACKBUTTON4.setText("BACK");
-        REGINFOBACKBUTTON4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        REGINFOBACKBUTTON4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGINFOBACKBUTTON4ActionPerformed(evt);
             }
         });
@@ -2005,7 +1962,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                         .addComponent(REGINFOBACKBUTTON4)
                         .addGap(179, 179, 179))
                     .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
@@ -2083,27 +2040,22 @@ public class Casablanca extends javax.swing.JFrame
         jLabel11.setText("END DATE");
 
         SHOWREGINFOBUTTON.setText("SHOW REGISTRAION INFO");
-        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SHOWREGINFOBUTTONActionPerformed(evt);
             }
         });
 
         BACKBUTTONBOOKEDROOMS.setText("BACK");
-        BACKBUTTONBOOKEDROOMS.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        BACKBUTTONBOOKEDROOMS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BACKBUTTONBOOKEDROOMSActionPerformed(evt);
             }
         });
 
         jLabel15.setText("REG DATE");
 
-        SHOWBOOKEDROOMSLIST.setModel(new javax.swing.AbstractListModel()
-        {
+        SHOWBOOKEDROOMSLIST.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
@@ -2115,7 +2067,7 @@ public class Casablanca extends javax.swing.JFrame
         SHOWBOOKEDROOMSLayout.setHorizontalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addContainerGap(452, Short.MAX_VALUE)
+                .addContainerGap(550, Short.MAX_VALUE)
                 .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
                         .addComponent(jLabel9)
@@ -2148,7 +2100,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(SHOWREGINFOBUTTON))
                 .addGap(87, 87, 87)
                 .addComponent(BACKBUTTONBOOKEDROOMS)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         getContentPane().add(SHOWBOOKEDROOMS, "card5");
@@ -2156,28 +2108,22 @@ public class Casablanca extends javax.swing.JFrame
         SHOWSTANDBYROOMS.setPreferredSize(new java.awt.Dimension(1280, 720));
 
         STANDBYROOMBACKBUTTON.setText("BACK");
-        STANDBYROOMBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        STANDBYROOMBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 STANDBYROOMBACKBUTTONActionPerformed(evt);
             }
         });
 
         STANDBYROOMDECLINEBUTTON.setText("DECLINE");
-        STANDBYROOMDECLINEBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        STANDBYROOMDECLINEBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 STANDBYROOMDECLINEBUTTONActionPerformed(evt);
             }
         });
 
         STANDBYROOMACCEPTBUTTON.setText("ACCEPT");
-        STANDBYROOMACCEPTBUTTON.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        STANDBYROOMACCEPTBUTTON.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 STANDBYROOMACCEPTBUTTONActionPerformed(evt);
             }
         });
@@ -2750,10 +2696,10 @@ public class Casablanca extends javax.swing.JFrame
 
         for (int i = 0; i < todayguests.size(); i++)
         {
-            anArray[i] = todayguests.get(i).getRoom_id() + "     "
-                    + todayguests.get(i).getFirstname()  + "     " 
-                    + todayguests.get(i).getFamilyname() + "     " 
-                    + todayguests.get(i).getUsername()   + "     "
+            anArray[i] = todayguests.get(i).getRoom_id() + "                "
+                    + todayguests.get(i).getFirstname()  + "                "
+                    + todayguests.get(i).getFamilyname() + "                " 
+                    + todayguests.get(i).getUsername()   + "                "
                     + todayguests.get(i).getPassword();
         }
 
@@ -3123,6 +3069,12 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
