@@ -469,7 +469,8 @@ public class RoomMapper
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
         Statement statementFix;
 
-        String SQLString1 = "select guest_id from bookings_guests where booking_id = (SELECT id FROM bookings where room_id = ? and start_date = ?)";
+        String SQLString1 = "select guest_id from bookings_guests where booking_id = "
+                + "(SELECT id FROM bookings where room_id = ? and start_date = ?)";
 
         String SQLString2
                 = "delete from guests where guest_id = ?";
@@ -573,6 +574,87 @@ public class RoomMapper
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper.get Todays Guests - Closing statement ");
+                System.out.println(e.getMessage());
+            }
+        }
+        return guests;
+    }
+    
+    public ArrayList<Guest> showRegInfo(int room_id, String start_date, Connection con)
+    {
+        int rowsInserted = 0;
+        ArrayList<Integer> guestIDs = new ArrayList();
+        ArrayList<Guest> guests = new ArrayList();
+
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
+        Statement statementFix;
+
+        String SQLString1 = "select guest_id from bookings_guests where booking_id = "
+                + "(SELECT id FROM bookings where room_id = ? and start_date = ?)";
+        
+        String SQLString2 = "select * from guests where guest_id = ?";
+        
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get booking id from room id and start_date
+            statement = con.prepareStatement(SQLString1);
+
+            statement.setInt(1, room_id);
+            statement.setString(2, start_date);
+            ResultSet rs = statement.executeQuery();
+            // add the guest ids to arraylist
+            while (rs.next())
+            {
+                guestIDs.add(rs.getInt(1));
+            }
+
+            // get info for each guest
+            statement = con.prepareStatement(SQLString2);
+            for (Integer guestID : guestIDs)
+            {
+                statement.setInt(1, guestID);
+                ResultSet rs2 = statement.executeQuery();
+                while(rs2.next())
+                {
+                    guests.add(new Guest(rs2.getInt(1), 
+                            rs2.getString(2), 
+                            rs2.getString(3), 
+                            rs2.getString(4), 
+                            rs2.getString(5), 
+                            rs2.getInt(6), 
+                            rs2.getString(7), 
+                            rs2.getString(8), 
+                            rs2.getString(9)));
+                }
+                
+            }
+            
+
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback get Reg Info");
+            }
+            System.out.println("Fail in Roommapper - get Reg Info");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - close statement get Reg Info");
                 System.out.println(e.getMessage());
             }
         }

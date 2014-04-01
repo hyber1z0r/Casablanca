@@ -79,5 +79,10 @@ public class DBFacade {
     {
         return rm.getTodaysGuests(date, con);
     }
+    
+    public ArrayList<Guest> showRegInfo(int room_id, String start_date)
+    {
+        return rm.showRegInfo(room_id, start_date, con);
+    }
 }
 

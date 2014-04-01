@@ -19,6 +19,7 @@ public class Controller
     private ArrayList<Booking> currentBList;
     private Travelagency_guests currentTAG;
     private ArrayList<TodayGuest> currentTodayGuests;
+    private ArrayList<Guest> currentGuests;
 
     private Controller()
     {
@@ -128,9 +129,15 @@ public class Controller
         return currentBooking;
     }
     
-    public ArrayList<TodayGuest> getTodaysGuest (String date)
+    public ArrayList<TodayGuest> getTodaysGuest(String date)
     {
         currentTodayGuests = dbf.getTodaysGuests(date);
         return currentTodayGuests;
+    }
+    
+    public ArrayList<Guest> showRegInfo(int room_id, String start_date)
+    {
+        currentGuests = dbf.showRegInfo(room_id, start_date);
+        return currentGuests;
     }
 }
