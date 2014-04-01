@@ -118,7 +118,7 @@ public class Controller
     public Booking deleteGuest(int room_id, String startdate)
     {
         currentBooking = new Booking(0, startdate, null, room_id, null, null);
-
+        
         boolean status = dbf.deleteGuest(currentBooking);
         if (!status)
         {

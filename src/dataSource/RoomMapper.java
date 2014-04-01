@@ -15,12 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -341,20 +336,19 @@ public class RoomMapper
                 String s1 = sDate.substring(8, 10);
                 String s2 = sDate.substring(5, 7);
                 String s3 = sDate.substring(0, 4);
-                
+
                 String finalSDate = s1 + "-" + s2 + "-" + s3;
-                
-               
+
                 String e1 = eDate.substring(8, 10);
                 String e2 = eDate.substring(5, 7);
                 String e3 = eDate.substring(0, 4);
-                
+
                 String finalEDate = e1 + "-" + e2 + "-" + e3;
-                
+
                 String r1 = rDate.substring(8, 10);
                 String r2 = rDate.substring(5, 7);
                 String r3 = rDate.substring(0, 4);
-                
+
                 String finalRDate = r1 + "-" + r2 + "-" + r3;
 
                 bookings.add(new Booking(rs.getInt(1), finalSDate, finalEDate, rs.getInt(4), rs.getString(5), finalRDate));
@@ -377,12 +371,11 @@ public class RoomMapper
         }
         return bookings;
     }
-    
+
     public boolean confirmBooking(Booking b, Connection con)
     {
         int rowsInserted = 0;
 
-        
         String SQLString2 = "update bookings set deposit_paid = 'yes' where room_id = ? and start_date = ?";
         PreparedStatement statement = null;
 
@@ -394,7 +387,7 @@ public class RoomMapper
             statement = con.prepareStatement(SQLString2);
             statement.setInt(1, b.getRoom_id());
             statement.setString(2, b.getStart_date());
-            
+
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
         {
@@ -422,7 +415,6 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    
     public boolean saveNewTAGUEST(Travelagency_guests tg, Connection con)
     {
         int rowsInserted = 0;
@@ -467,32 +459,55 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
+
     public boolean deleteguests(Booking b, Connection con)
     {
         int rowsInserted = 0;
+        ArrayList<Integer> guestIDs = new ArrayList();
 
-        String SQLString1 = "select guest_id from bookings_guests where booking_id = (SELECT id FROM bookings where room_id = ? and start_date = ?);";
-        
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
+        Statement statementFix;
+
+        String SQLString1 = "select guest_id from bookings_guests where booking_id = (SELECT id FROM bookings where room_id = ? and start_date = ?)";
+
         String SQLString2
                 = "delete from guests where guest_id = ?";
+        
+        String SQLString3
+                = "delete from bookings where id = (SELECT id FROM bookings where room_id = ? and start_date = ?)";
         PreparedStatement statement = null;
 
         try
         {
             con.setAutoCommit(false);
-
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
             //== get booking id from room id and start_date
             statement = con.prepareStatement(SQLString1);
-            statement.setInt(1,b.getRoom_id());
+
+            statement.setInt(1, b.getRoom_id());
             statement.setString(2, b.getStart_date());
             ResultSet rs = statement.executeQuery();
+            // add the guest ids to arraylist
             while (rs.next())
             {
-                // arbejd videre i morgen!
-                rs.getInt(1);
+                guestIDs.add(rs.getInt(1));
+            }
+
+            // delete all the guests
+            statement = con.prepareStatement(SQLString2);
+            for (Integer guestID : guestIDs)
+            {
+                statement.setInt(1, guestID);
+                rowsInserted += statement.executeUpdate();
             }
             
-            
+            // delete the booking
+            statement = con.prepareStatement(SQLString3);
+            statement.setInt(1, b.getRoom_id());
+            statement.setString(2, b.getStart_date());
+            rowsInserted += statement.executeUpdate();
+
             con.commit();
         } catch (SQLException e)
         {
@@ -501,9 +516,9 @@ public class RoomMapper
                 con.rollback();
             } catch (SQLException ex)
             {
-                System.out.println("Fail in Roommapper - rollback save new travelagency_guests");
+                System.out.println("Fail in Roommapper - rollback delete Guests");
             }
-            System.out.println("Fail in Roommapper - save new travelagency_guests");
+            System.out.println("Fail in Roommapper - delete Guests");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
@@ -516,6 +531,6 @@ public class RoomMapper
                 System.out.println(e.getMessage());
             }
         }
-        return rowsInserted == 1;
+        return rowsInserted == guestIDs.size() + 1;
     }
 }

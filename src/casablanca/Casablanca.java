@@ -18,9 +18,15 @@ public class Casablanca
     public static void main(String[] args)
     {
 
-        String s = "32323";
-        String sub = s.substring(0, 1);
-        System.out.println(sub);
+        String s1 = "1";
+        String s2 = "2";
+        
+        ArrayList<String> stringss = new ArrayList();
+        
+        stringss.add(s1);
+        stringss.add(s2);
+        
+        System.out.println(stringss.size());
     }
     
 }
