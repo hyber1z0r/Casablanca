@@ -65,6 +65,7 @@ public class Casablanca extends javax.swing.JFrame
         Standbylabel = new javax.swing.JLabel();
         Bookedlabel = new javax.swing.JLabel();
         TODAYSARRIVALBUTTON = new javax.swing.JButton();
+        TODAYSLABEL = new javax.swing.JLabel();
         TODAYSARRIVAL = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TODAYSARRIVALLIST = new javax.swing.JList();
@@ -428,7 +429,8 @@ public class Casablanca extends javax.swing.JFrame
                 .addGap(18, 18, 18)
                 .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Standbylabel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Bookedlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Bookedlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         WELCOMELayout.setVerticalGroup(
@@ -447,7 +449,9 @@ public class Casablanca extends javax.swing.JFrame
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BOOKROOMBUTTON)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TODAYSARRIVALBUTTON)
+                .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TODAYSARRIVALBUTTON)
+                    .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(235, 235, 235)
                 .addComponent(LOGOUT)
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -2723,6 +2727,9 @@ public class Casablanca extends javax.swing.JFrame
             fillTodayList(todayguests);
             TODAYSARRIVAL.setVisible(true);
             WELCOME.setVisible(false);
+        }else
+        {
+            TODAYSLABEL.setText("No guests arriving today.");
         }
     }//GEN-LAST:event_TODAYSARRIVALBUTTONActionPerformed
 
@@ -2744,9 +2751,9 @@ public class Casablanca extends javax.swing.JFrame
         for (int i = 0; i < todayguests.size(); i++)
         {
             anArray[i] = todayguests.get(i).getRoom_id() + "     "
-                    + todayguests.get(i).getFirstname() + "     " 
+                    + todayguests.get(i).getFirstname()  + "     " 
                     + todayguests.get(i).getFamilyname() + "     " 
-                    + todayguests.get(i).getUsername() + "      "
+                    + todayguests.get(i).getUsername()   + "     "
                     + todayguests.get(i).getPassword();
         }
 
@@ -3015,6 +3022,7 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JButton TODAYSARRIVALBACKBUTTON;
     private javax.swing.JButton TODAYSARRIVALBUTTON;
     private javax.swing.JList TODAYSARRIVALLIST;
+    private javax.swing.JLabel TODAYSLABEL;
     private javax.swing.JComboBox TRAVELAGENCYBOX;
     private javax.swing.JButton UPDATEGUEST1;
     private javax.swing.JButton UPDATEGUEST2;
