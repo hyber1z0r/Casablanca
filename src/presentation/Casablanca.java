@@ -3112,9 +3112,9 @@ public class Casablanca extends javax.swing.JFrame
     {
         TODAYTABLE.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel) TODAYTABLE.getModel();
-        SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
+        TODAYTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
-        SHOWSTANDBYTABLE.setRowSorter(sorter);
+        TODAYTABLE.setRowSorter(sorter);
         model.addColumn("Room #");
         model.addColumn("Firstname");
         model.addColumn("Lastname");
@@ -3345,9 +3345,9 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWBOOKEDTABLE.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel();
-        SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
+        SHOWBOOKEDTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
-        SHOWSTANDBYTABLE.setRowSorter(sorter);
+        SHOWBOOKEDTABLE.setRowSorter(sorter);
         model.addColumn("Room #");
         model.addColumn("Start date");
         model.addColumn("End date");
