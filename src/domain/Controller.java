@@ -141,10 +141,10 @@ public class Controller
         return currentGuests;
     }
     
-    public boolean checkLogin(String username, String password)
+    public Guest checkLogin(String username, String password)
     {
-        boolean status = dbf.checkLogin(username, password);
-        return status;
+        Guest g = dbf.checkLogin(username, password);
+        return g;
     }
      public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, String username, String password)
     {

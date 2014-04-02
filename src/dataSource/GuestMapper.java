@@ -18,11 +18,12 @@ import java.sql.SQLException;
 public class GuestMapper
 {
 
-    public boolean checkLogin(String username, String password, Connection con)
+    public Guest checkLogin(String username, String password, Connection con)
     {
-        String SQLString = "SELECT GUEST_ID from GUESTS where upper(username) = upper(?) and password = ?";
+        String SQLString = "SELECT * from GUESTS where upper(username) = upper(?) and password = ?";
 
         PreparedStatement statement = null;
+        Guest g = null;
 
         try
         {
@@ -31,7 +32,10 @@ public class GuestMapper
             statement.setString(2, password);
             ResultSet rs = statement.executeQuery();
 
-            return rs.next();
+            if(rs.next())
+            {
+                g = new Guest(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getString(7), rs.getString(8), rs.getString(9));
+            }
 
         } catch (SQLException e)
         {
@@ -48,7 +52,7 @@ public class GuestMapper
                 System.out.println(e.getMessage());
             }
         }
-        return false;
+        return g;
     }
 
 }

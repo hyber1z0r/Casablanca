@@ -23,8 +23,8 @@ public class Casablanca
         String password = "k197k";
         Controller con = Controller.getInstance();
         
-        boolean status = con.checkLogin(username, password);
-        if(status)
+        Guest g = con.checkLogin(username, password);
+        if(g != null)
         {
             System.out.println("Login successfull");
         }else
