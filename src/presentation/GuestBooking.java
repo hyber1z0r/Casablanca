@@ -780,6 +780,9 @@ public class GuestBooking extends javax.swing.JFrame {
         if(g != null)
         {
             guestLoggedIn = g;
+            // clear password in guest in gui for safety reasons
+            g.setPassword("");
+            g.setUsername("");
             WELCOME.setVisible(true);
             LOGIN.setVisible(false);
             GUESTUSERNAME.setText("");
