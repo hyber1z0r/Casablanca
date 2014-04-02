@@ -9,7 +9,6 @@ import domain.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import javax.swing.DefaultListModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -2389,7 +2388,7 @@ public class Casablanca extends javax.swing.JFrame
     private void CHOOSEDATESEARCHBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSEDATESEARCHBUTTONActionPerformed
     {//GEN-HEADEREND:event_CHOOSEDATESEARCHBUTTONActionPerformed
         // my boookk button = search
-        ArrayList<Room> rooms = new ArrayList();
+        ArrayList<Room> rooms;
         String sDate = CHOOSEDATESTARTDATE.getText();
         String eDate = CHOOSEDATEENDDATE.getText();
         String dateFormat = "dd-MM-yy";
@@ -2579,7 +2578,7 @@ public class Casablanca extends javax.swing.JFrame
             String familyname = BOOKROOMLASTNAME.getText();
             String address = BOOKROOMADRESS.getText();
             String country = BOOKROOMCOUNTRY.getText();
-            int phone = 0;
+            int phone;
             String email = BOOKROOMEMAIL.getText();
             String travelAgency = TRAVELAGENCYBOX.getSelectedItem().toString();
             String username = null;
@@ -2668,7 +2667,7 @@ public class Casablanca extends javax.swing.JFrame
     private void STANDBYBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_STANDBYBUTTONActionPerformed
     {//GEN-HEADEREND:event_STANDBYBUTTONActionPerformed
         // GET STANDBY ROOMS IN THE SHOW STANDBY LIST
-        ArrayList<Booking> standbys = new ArrayList<>();
+        ArrayList<Booking> standbys;
         standbys = con.getBookedRooms("no");
         if (!standbys.isEmpty())
         {
@@ -2708,7 +2707,7 @@ public class Casablanca extends javax.swing.JFrame
 
     private void SHOWBOOKEDBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWBOOKEDBUTTONActionPerformed
     {//GEN-HEADEREND:event_SHOWBOOKEDBUTTONActionPerformed
-        ArrayList<Booking> booked = new ArrayList();
+        ArrayList<Booking> booked;
         booked = con.getBookedRooms("yes");
         if (!booked.isEmpty())
         {
@@ -2839,7 +2838,7 @@ public class Casablanca extends javax.swing.JFrame
         String familyname = REGINFOLASTNAME.getText();
         String address = REGINFOADRESS.getText();
         String country = REGINFOCOUNTRY.getText();
-        int phone = 0;
+        int phone;
         String email = REGINFOEMAIL.getText();
         String username = null;
         String password = null;
@@ -2895,7 +2894,7 @@ public class Casablanca extends javax.swing.JFrame
         String familyname = REGINFOLASTNAME1.getText();
         String address = REGINFOADRESS1.getText();
         String country = REGINFOCOUNTRY1.getText();
-        int phone = 0;
+        int phone;
         String email = REGINFOEMAIL1.getText();
         String username = null;
         String password = null;
@@ -2950,7 +2949,7 @@ public class Casablanca extends javax.swing.JFrame
         String familyname = REGINFOLASTNAME2.getText();
         String address = REGINFOADRESS2.getText();
         String country = REGINFOCOUNTRY2.getText();
-        int phone = 0;
+        int phone;
         String email = REGINFOEMAIL2.getText();
         String username = null;
         String password = null;
@@ -3005,7 +3004,7 @@ public class Casablanca extends javax.swing.JFrame
         String familyname = REGINFOLASTNAME3.getText();
         String address = REGINFOADRESS3.getText();
         String country = REGINFOCOUNTRY3.getText();
-        int phone = 0;
+        int phone;
         String email = REGINFOEMAIL3.getText();
         String username = null;
         String password = null;
@@ -3060,7 +3059,7 @@ public class Casablanca extends javax.swing.JFrame
         String familyname = REGINFOLASTNAME4.getText();
         String address = REGINFOADRESS4.getText();
         String country = REGINFOCOUNTRY4.getText();
-        int phone = 0;
+        int phone;
         String email = REGINFOEMAIL4.getText();
         String username = null;
         String password = null;
@@ -3344,7 +3343,7 @@ public class Casablanca extends javax.swing.JFrame
     {
 
         SHOWBOOKEDTABLE.setModel(new DefaultTableModel());
-        DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel();
+        DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel(); 
         SHOWBOOKEDTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
         SHOWBOOKEDTABLE.setRowSorter(sorter);
@@ -3384,16 +3383,7 @@ public class Casablanca extends javax.swing.JFrame
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
-            java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
-            java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
-            java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex)
         {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
@@ -3402,6 +3392,7 @@ public class Casablanca extends javax.swing.JFrame
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable()
         {
+            @Override
             public void run()
             {
                 new Casablanca().setVisible(true);
