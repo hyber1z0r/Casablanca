@@ -12,6 +12,7 @@ import java.util.Date;
 import javax.swing.DefaultListModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -2327,7 +2328,7 @@ public class Casablanca extends javax.swing.JFrame
     private void SHOWREGINFOBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SHOWREGINFOBUTTONActionPerformed
 
         ArrayList<Guest> guestinfo;
-        String r_id =  SHOWBOOKEDTABLE.getValueAt(SHOWBOOKEDTABLE.getSelectedRow(), 0).toString();
+        String r_id = SHOWBOOKEDTABLE.getValueAt(SHOWBOOKEDTABLE.getSelectedRow(), 0).toString();
         int room_id = Integer.parseInt(r_id);
         String start_date = SHOWBOOKEDTABLE.getValueAt(SHOWBOOKEDTABLE.getSelectedRow(), 1).toString();
         guestinfo = con.showRegInfo(room_id, start_date);
@@ -2369,7 +2370,7 @@ public class Casablanca extends javax.swing.JFrame
                     break;
             }
 
-        }else
+        } else
         {
             // LABEL ON BOOKED PANEL
         }
@@ -3111,6 +3112,9 @@ public class Casablanca extends javax.swing.JFrame
     {
         TODAYTABLE.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel) TODAYTABLE.getModel();
+        SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        SHOWSTANDBYTABLE.setRowSorter(sorter);
         model.addColumn("Room #");
         model.addColumn("Firstname");
         model.addColumn("Lastname");
@@ -3317,6 +3321,9 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWSTANDBYTABLE.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel) SHOWSTANDBYTABLE.getModel();
+        SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        SHOWSTANDBYTABLE.setRowSorter(sorter);
         model.addColumn("Room #");
         model.addColumn("Start date");
         model.addColumn("End date");
@@ -3338,6 +3345,9 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWBOOKEDTABLE.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel();
+        SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        SHOWSTANDBYTABLE.setRowSorter(sorter);
         model.addColumn("Room #");
         model.addColumn("Start date");
         model.addColumn("End date");
