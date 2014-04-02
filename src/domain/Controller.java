@@ -146,4 +146,15 @@ public class Controller
         boolean status = dbf.checkLogin(username, password);
         return status;
     }
+     public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, String username, String password)
+    {
+        currentGuest = new Guest(guest_id, firstname, familyname, address, Country, phone, email, username , password);
+
+        boolean status = dbf.updateguest(currentGuest);
+        if (!status)
+        {
+            currentGuest = null;
+        }
+        return currentGuest;
+    }
 }

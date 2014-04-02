@@ -660,4 +660,56 @@ public class RoomMapper
         }
         return guests;
     }
+    public boolean updateGuest(Guest g, Connection con)
+    {
+        int rowsInserted = 0;
+
+        String SQLString2 = "update guests set firstname = ?, familyname = ?,"
+                          + "address = ?, Country = ?, phone = ?, email = ?, "
+                          + "username = ?, password = ?"
+                          + "where guest_id = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setString(1, g.getFirstname());
+            statement.setString(2, g.getFamilyname());
+            statement.setString(3, g.getAddress());
+            statement.setString(4, g.getCountry());
+            statement.setInt(5, g.getPhone());
+            statement.setString(6, g.getEmail());
+            statement.setString(7, g.getUsername());
+            statement.setString(8, g.getPassword());
+            statement.setInt(9, g.getGuest_id());
+
+            rowsInserted = statement.executeUpdate();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in roommapper - confirm booking rollback");
+            }
+            System.out.println("Fail in Roommapper - confirm booking");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                con.commit();
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - confirm booking");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
 }

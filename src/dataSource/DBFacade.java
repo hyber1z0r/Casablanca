@@ -91,5 +91,9 @@ public class DBFacade {
     {
         return gm.checkLogin(username, password, con);
     }
+    public boolean updateguest(Guest g)
+    {
+        return rm.updateGuest(g, con);
+    }
 }
 
