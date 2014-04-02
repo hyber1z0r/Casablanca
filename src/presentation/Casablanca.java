@@ -10,6 +10,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -67,15 +69,10 @@ public class Casablanca extends javax.swing.JFrame
         TODAYSARRIVALBUTTON = new javax.swing.JButton();
         TODAYSLABEL = new javax.swing.JLabel();
         TODAYSARRIVAL = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TODAYSARRIVALLIST = new javax.swing.JList();
         TODAYSARRIVALBACKBUTTON = new javax.swing.JButton();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        TODAYTABLE = new javax.swing.JTable();
         CREATEUSERPANEL = new javax.swing.JPanel();
         LABEL1 = new javax.swing.JLabel();
         CREATEUSERFULLNAME = new javax.swing.JTextField();
@@ -99,14 +96,12 @@ public class Casablanca extends javax.swing.JFrame
         CHOOSEDATEDATEFORMAT2 = new javax.swing.JLabel();
         CHOOSEDATEFEEDBACKLABEL = new javax.swing.JLabel();
         SHOWAVAILABLEROOMS = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         AVAILABLEROOMSBOOKBUTTON = new javax.swing.JButton();
         AVAILABLEROOMSBACKBUTTON = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        SHOWAVAILABLELIST = new javax.swing.JList();
         SHOWAVAILROOMSFEEDBACK = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        SHOWAVAILTABLE = new javax.swing.JTable();
         BOOKROOM = new javax.swing.JPanel();
         BOOKROOMFIRSTNAME = new javax.swing.JTextField();
         BOOKROOMPHONE = new javax.swing.JTextField();
@@ -283,24 +278,16 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID4 = new javax.swing.JTextField();
         REGINFOFEEDBACK = new javax.swing.JLabel();
         SHOWBOOKEDROOMS = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         SHOWREGINFOBUTTON = new javax.swing.JButton();
         BACKBUTTONBOOKEDROOMS = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        SHOWBOOKEDROOMSLIST = new javax.swing.JList();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        SHOWBOOKEDTABLE = new javax.swing.JTable();
         SHOWSTANDBYROOMS = new javax.swing.JPanel();
         STANDBYROOMBACKBUTTON = new javax.swing.JButton();
         STANDBYROOMDECLINEBUTTON = new javax.swing.JButton();
         STANDBYROOMACCEPTBUTTON = new javax.swing.JButton();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        SHOWSTANDBYLIST = new javax.swing.JList(new DefaultListModel());
+        jScrollPane1 = new javax.swing.JScrollPane();
+        SHOWSTANDBYTABLE = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -480,14 +467,6 @@ public class Casablanca extends javax.swing.JFrame
 
         getContentPane().add(WELCOME, "card3");
 
-        TODAYSARRIVALLIST.setModel(new javax.swing.AbstractListModel()
-        {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(TODAYSARRIVALLIST);
-
         TODAYSARRIVALBACKBUTTON.setText("Back");
         TODAYSARRIVALBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
         {
@@ -497,66 +476,51 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel92.setText("ROOM #");
-
-        jLabel93.setText("FIRST NAME");
-
-        jLabel94.setText("LASTNAME");
-
-        jLabel95.setText("USERNAME");
-
-        jLabel96.setText("PASSWORD");
-
         jLabel97.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
         jLabel97.setText("TODAYS ARRIVAL");
+
+        TODAYTABLE.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String []
+            {
+                "Room #", "Firstname", "Lastname", "Username", "Password"
+            }
+        ));
+        jScrollPane5.setViewportView(TODAYTABLE);
 
         javax.swing.GroupLayout TODAYSARRIVALLayout = new javax.swing.GroupLayout(TODAYSARRIVAL);
         TODAYSARRIVAL.setLayout(TODAYSARRIVALLayout);
         TODAYSARRIVALLayout.setHorizontalGroup(
             TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
-                .addContainerGap(466, Short.MAX_VALUE)
+                .addContainerGap(409, Short.MAX_VALUE)
                 .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
-                        .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
-                                .addGap(549, 549, 549)
-                                .addComponent(TODAYSARRIVALBACKBUTTON))
-                            .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
-                                .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel93)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel94)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel95)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel96))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
-                                .addComponent(jLabel97)
-                                .addGap(368, 368, 368)))
+                        .addComponent(jLabel97)
+                        .addGap(480, 480, 480))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
+                        .addComponent(TODAYSARRIVALBACKBUTTON)
                         .addGap(112, 112, 112))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(327, 327, 327))))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(319, 319, 319))))
         );
         TODAYSARRIVALLayout.setVerticalGroup(
             TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel97)
-                .addGap(27, 27, 27)
-                .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel92)
-                    .addComponent(jLabel93)
-                    .addComponent(jLabel94)
-                    .addComponent(jLabel95)
-                    .addComponent(jLabel96))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102)
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117)
                 .addComponent(TODAYSARRIVALBACKBUTTON)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         getContentPane().add(TODAYSARRIVAL, "card12");
@@ -726,7 +690,7 @@ public class Casablanca extends javax.swing.JFrame
         CHOOSEDATELayout.setHorizontalGroup(
             CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CHOOSEDATELayout.createSequentialGroup()
-                .addContainerGap(466, Short.MAX_VALUE)
+                .addContainerGap(525, Short.MAX_VALUE)
                 .addComponent(CHOOSEDATEBACKBUTTON)
                 .addGap(106, 106, 106)
                 .addComponent(CHOOSEDATESEARCHBUTTON)
@@ -756,7 +720,7 @@ public class Casablanca extends javax.swing.JFrame
         CHOOSEDATELayout.setVerticalGroup(
             CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                .addContainerGap(333, Short.MAX_VALUE)
+                .addContainerGap(235, Short.MAX_VALUE)
                 .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -783,10 +747,6 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWAVAILABLEROOMS.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel16.setText("ROOM#");
-
-        jLabel17.setText("ROOM SIZE");
-
         jLabel18.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
         jLabel18.setText("SHOW AVAILABLE ROOMS");
 
@@ -808,14 +768,20 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        SHOWAVAILABLELIST.setModel(new javax.swing.AbstractListModel()
-        {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        SHOWAVAILABLELIST.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(SHOWAVAILABLELIST);
+        SHOWAVAILTABLE.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(SHOWAVAILTABLE);
 
         javax.swing.GroupLayout SHOWAVAILABLEROOMSLayout = new javax.swing.GroupLayout(SHOWAVAILABLEROOMS);
         SHOWAVAILABLEROOMS.setLayout(SHOWAVAILABLEROOMSLayout);
@@ -828,41 +794,32 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(SHOWAVAILROOMSFEEDBACK, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(244, 244, 244))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addGap(0, 419, Short.MAX_VALUE)
+                        .addGap(0, 531, Short.MAX_VALUE)
                         .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
                                 .addComponent(jLabel18)
                                 .addGap(521, 521, 521))
                             .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                                        .addComponent(jLabel16)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel17))
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(59, 59, 59)
                                 .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(AVAILABLEROOMSBOOKBUTTON)
                                     .addComponent(AVAILABLEROOMSBACKBUTTON))
                                 .addGap(379, 379, 379))))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWAVAILABLEROOMSLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(503, 503, 503))
         );
         SHOWAVAILABLEROOMSLayout.setVerticalGroup(
             SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(AVAILABLEROOMSBOOKBUTTON)
-                        .addGap(45, 45, 45)
-                        .addComponent(AVAILABLEROOMSBACKBUTTON))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AVAILABLEROOMSBOOKBUTTON)
+                .addGap(45, 45, 45)
+                .addComponent(AVAILABLEROOMSBACKBUTTON)
                 .addGap(25, 25, 25)
                 .addComponent(SHOWAVAILROOMSFEEDBACK, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -2214,12 +2171,6 @@ public class Casablanca extends javax.swing.JFrame
 
         SHOWBOOKEDROOMS.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel9.setText("ROOM#");
-
-        jLabel10.setText("START DATE");
-
-        jLabel11.setText("END DATE");
-
         SHOWREGINFOBUTTON.setText("SHOW REGISTRAION INFO");
         SHOWREGINFOBUTTON.addActionListener(new java.awt.event.ActionListener()
         {
@@ -2238,55 +2189,47 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel15.setText("REG DATE");
-
-        SHOWBOOKEDROOMSLIST.setModel(new javax.swing.AbstractListModel()
-        {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane4.setViewportView(SHOWBOOKEDROOMSLIST);
+        SHOWBOOKEDTABLE.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(SHOWBOOKEDTABLE);
 
         javax.swing.GroupLayout SHOWBOOKEDROOMSLayout = new javax.swing.GroupLayout(SHOWBOOKEDROOMS);
         SHOWBOOKEDROOMS.setLayout(SHOWBOOKEDROOMSLayout);
         SHOWBOOKEDROOMSLayout.setHorizontalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addContainerGap(452, Short.MAX_VALUE)
+            .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                .addContainerGap(442, Short.MAX_VALUE)
                 .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel10)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel11)
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel15)
-                        .addGap(286, 286, 286))
-                    .addComponent(BACKBUTTONBOOKEDROOMS, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(SHOWREGINFOBUTTON)))
-                .addGap(161, 161, 161))
+                        .addComponent(SHOWREGINFOBUTTON)
+                        .addGap(161, 161, 161))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
+                        .addComponent(BACKBUTTONBOOKEDROOMS)
+                        .addGap(191, 191, 191))))
         );
         SHOWBOOKEDROOMSLayout.setVerticalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9))
-                .addGap(18, 18, 18)
+                .addGap(96, 96, 96)
                 .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SHOWREGINFOBUTTON))
-                .addGap(87, 87, 87)
+                    .addComponent(SHOWREGINFOBUTTON)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(BACKBUTTONBOOKEDROOMS)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(105, 105, 105))
         );
 
         getContentPane().add(SHOWBOOKEDROOMS, "card5");
@@ -2320,78 +2263,58 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel59.setText("REG DATE");
-
-        jLabel58.setText("END DATE");
-
-        jLabel57.setText("START DATE");
-
-        jLabel56.setText("ROOM#");
-
-        SHOWSTANDBYLIST.setModel(new javax.swing.DefaultListModel()
+        SHOWSTANDBYTABLE.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
             {
-                String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-                public int getSize() { return strings.length; }
-                public Object getElementAt(int i) { return strings[i]; }
-            });
-            SHOWSTANDBYLIST.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-            jScrollPane3.setViewportView(SHOWSTANDBYLIST);
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(SHOWSTANDBYTABLE);
 
-            javax.swing.GroupLayout SHOWSTANDBYROOMSLayout = new javax.swing.GroupLayout(SHOWSTANDBYROOMS);
-            SHOWSTANDBYROOMS.setLayout(SHOWSTANDBYROOMSLayout);
-            SHOWSTANDBYROOMSLayout.setHorizontalGroup(
-                SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                    .addContainerGap(426, Short.MAX_VALUE)
-                    .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                            .addComponent(jLabel56)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel57)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel58)
-                            .addGap(44, 44, 44)
-                            .addComponent(jLabel59))
-                        .addComponent(jScrollPane3))
-                    .addGap(66, 66, 66)
-                    .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                            .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(STANDBYROOMDECLINEBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(STANDBYROOMACCEPTBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGap(345, 345, 345))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                            .addComponent(STANDBYROOMBACKBUTTON)
-                            .addGap(54, 54, 54))))
-            );
-            SHOWSTANDBYROOMSLayout.setVerticalGroup(
-                SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                    .addGap(79, 79, 79)
-                    .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel56)
-                        .addComponent(jLabel57)
-                        .addComponent(jLabel58)
-                        .addComponent(jLabel59))
-                    .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(STANDBYROOMACCEPTBUTTON)
-                            .addGap(18, 18, 18)
-                            .addComponent(STANDBYROOMDECLINEBUTTON)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(STANDBYROOMBACKBUTTON))
-                        .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 86, Short.MAX_VALUE)))
-                    .addGap(37, 37, 37))
-            );
+        javax.swing.GroupLayout SHOWSTANDBYROOMSLayout = new javax.swing.GroupLayout(SHOWSTANDBYROOMS);
+        SHOWSTANDBYROOMS.setLayout(SHOWSTANDBYROOMSLayout);
+        SHOWSTANDBYROOMSLayout.setHorizontalGroup(
+            SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
+                .addContainerGap(377, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWSTANDBYROOMSLayout.createSequentialGroup()
+                        .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(STANDBYROOMDECLINEBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(STANDBYROOMACCEPTBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(345, 345, 345))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWSTANDBYROOMSLayout.createSequentialGroup()
+                        .addComponent(STANDBYROOMBACKBUTTON)
+                        .addGap(54, 54, 54))))
+        );
+        SHOWSTANDBYROOMSLayout.setVerticalGroup(
+            SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
+                        .addComponent(STANDBYROOMACCEPTBUTTON)
+                        .addGap(18, 18, 18)
+                        .addComponent(STANDBYROOMDECLINEBUTTON))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addComponent(STANDBYROOMBACKBUTTON)
+                .addGap(37, 37, 37))
+        );
 
-            getContentPane().add(SHOWSTANDBYROOMS, "card6");
+        getContentPane().add(SHOWSTANDBYROOMS, "card6");
 
-            pack();
-        }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void USERNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USERNAMEActionPerformed
         // TODO add your handling code here:
@@ -2402,54 +2325,53 @@ public class Casablanca extends javax.swing.JFrame
     }//GEN-LAST:event_CHOOSEDATESTARTDATEActionPerformed
 
     private void SHOWREGINFOBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SHOWREGINFOBUTTONActionPerformed
-        TABPANE1.setVisible(true);
-        TABPANE1.setSelectedIndex(0);
-        SHOWBOOKEDROOMS.setVisible(false);
-        ArrayList<Guest> guestinfo;
 
-        String r_id = SHOWBOOKEDROOMSLIST.getSelectedValue().toString();
-        String room_id = r_id.substring(0, r_id.length() - 45);
-        String start_date = r_id.substring(r_id.length() - 40, r_id.length() - 30);
-        String start_date2 = start_date.substring(0, 6);
-        String start_date3 = start_date.substring(8, 10);
-        String finalstartdate = start_date2 + start_date3;
-        int room_id2 = Integer.parseInt(room_id);
-        guestinfo = con.showRegInfo(room_id2, finalstartdate);
+        ArrayList<Guest> guestinfo;
+        String r_id =  SHOWBOOKEDTABLE.getValueAt(SHOWBOOKEDTABLE.getSelectedRow(), 0).toString();
+        int room_id = Integer.parseInt(r_id);
+        String start_date = SHOWBOOKEDTABLE.getValueAt(SHOWBOOKEDTABLE.getSelectedRow(), 1).toString();
+        guestinfo = con.showRegInfo(room_id, start_date);
         if (!guestinfo.isEmpty())
         {
+            TABPANE1.setVisible(true);
+            TABPANE1.setSelectedIndex(0);
+            SHOWBOOKEDROOMS.setVisible(false);
             int length = guestinfo.size();
             switch (length)
             {
                 case 1:
-                    fillRegInfo1(guestinfo, room_id2);
+                    fillRegInfo1(guestinfo, room_id);
                     break;
                 case 2:
-                    fillRegInfo1(guestinfo, room_id2);
-                    fillRegInfo2(guestinfo, room_id2);
+                    fillRegInfo1(guestinfo, room_id);
+                    fillRegInfo2(guestinfo, room_id);
                     break;
                 case 3:
-                    fillRegInfo1(guestinfo, room_id2);
-                    fillRegInfo2(guestinfo, room_id2);
-                    fillRegInfo3(guestinfo, room_id2);
+                    fillRegInfo1(guestinfo, room_id);
+                    fillRegInfo2(guestinfo, room_id);
+                    fillRegInfo3(guestinfo, room_id);
                     break;
                 case 4:
-                    fillRegInfo1(guestinfo, room_id2);
-                    fillRegInfo2(guestinfo, room_id2);
-                    fillRegInfo3(guestinfo, room_id2);
-                    fillRegInfo4(guestinfo, room_id2);
+                    fillRegInfo1(guestinfo, room_id);
+                    fillRegInfo2(guestinfo, room_id);
+                    fillRegInfo3(guestinfo, room_id);
+                    fillRegInfo4(guestinfo, room_id);
                     break;
                 case 5:
-                    fillRegInfo1(guestinfo, room_id2);
-                    fillRegInfo2(guestinfo, room_id2);
-                    fillRegInfo3(guestinfo, room_id2);
-                    fillRegInfo4(guestinfo, room_id2);
-                    fillRegInfo5(guestinfo, room_id2);
+                    fillRegInfo1(guestinfo, room_id);
+                    fillRegInfo2(guestinfo, room_id);
+                    fillRegInfo3(guestinfo, room_id);
+                    fillRegInfo4(guestinfo, room_id);
+                    fillRegInfo5(guestinfo, room_id);
                     break;
                 default:
 
                     break;
             }
 
+        }else
+        {
+            // LABEL ON BOOKED PANEL
         }
 
 
@@ -2521,28 +2443,23 @@ public class Casablanca extends javax.swing.JFrame
 
     private void AVAILABLEROOMSBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AVAILABLEROOMSBOOKBUTTONActionPerformed
 
-        String r_id = SHOWAVAILABLELIST.getSelectedValue().toString();
+        String r_id = SHOWAVAILTABLE.getValueAt(SHOWAVAILTABLE.getSelectedRow(), 0).toString();
         if (r_id != null)
         {
-            String room_id = r_id.substring(0, r_id.length() - 6);
-            BOOKROOMROOMNUMBER.setText(room_id);
-
-            String r_size = r_id.substring(r_id.length() - 1, r_id.length());
-            BOOKROOMROOMSIZE.setText(r_size);
+            String r_size = SHOWAVAILTABLE.getValueAt(SHOWAVAILTABLE.getSelectedRow(), 1).toString();
             //CREATE BOOKING
-
-            int room_id2 = Integer.parseInt(room_id);
+            int room_id = Integer.parseInt(r_id);
             String todate = new SimpleDateFormat("dd-MM-yy").format(new Date());
             Booking b = con.createNewBooking(CHOOSEDATESTARTDATE.getText(), CHOOSEDATEENDDATE.getText(),
-                    room_id2, todate);
+                    room_id, todate);
 
             if (b != null)
             {
                 SHOWAVAILABLEROOMS.setVisible(false);
                 BOOKROOM.setVisible(true);
-
+                BOOKROOMROOMNUMBER.setText(r_id);
+                BOOKROOMROOMSIZE.setText(r_size);
                 fillAgencyBox();
-
                 guestsInserted = 0;
                 BOOKROOMCOUNTGUEST.setText("");
             }
@@ -2765,25 +2682,20 @@ public class Casablanca extends javax.swing.JFrame
 
     private void STANDBYROOMACCEPTBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_STANDBYROOMACCEPTBUTTONActionPerformed
     {//GEN-HEADEREND:event_STANDBYROOMACCEPTBUTTONActionPerformed
-        String r_id = SHOWSTANDBYLIST.getSelectedValue().toString();
-        String room_id = r_id.substring(0, r_id.length() - 45);
-        String start_date = r_id.substring(r_id.length() - 40, r_id.length() - 30);
-        String start_date2 = start_date.substring(0, 6);
-        String start_date3 = start_date.substring(8, 10);
-        String finalstartdate = start_date2 + start_date3;
-        int room_id2 = Integer.parseInt(room_id);
-        Booking b = con.confirmBooking(room_id2, finalstartdate);
 
+        DefaultTableModel model = (DefaultTableModel) SHOWSTANDBYTABLE.getModel();
+        String r_id = SHOWSTANDBYTABLE.getValueAt(SHOWSTANDBYTABLE.getSelectedRow(), 0).toString();
+        int roomid = Integer.parseInt(r_id);
+        String start_date = SHOWSTANDBYTABLE.getValueAt(SHOWSTANDBYTABLE.getSelectedRow(), 1).toString();
+        Booking b = con.confirmBooking(roomid, start_date);
         if (b != null)
         {
-            int selectedIndex = SHOWSTANDBYLIST.getSelectedIndex();
+            int selectedIndex = SHOWSTANDBYTABLE.getSelectedRow();
             if (selectedIndex != -1)
             {
-                DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-                model.removeElementAt(selectedIndex);
+                model.removeRow(selectedIndex);
             }
         }
-
 
     }//GEN-LAST:event_STANDBYROOMACCEPTBUTTONActionPerformed
 
@@ -2881,22 +2793,17 @@ public class Casablanca extends javax.swing.JFrame
     private void STANDBYROOMDECLINEBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_STANDBYROOMDECLINEBUTTONActionPerformed
     {//GEN-HEADEREND:event_STANDBYROOMDECLINEBUTTONActionPerformed
         // DECLINING STANDBY RESERVATION
-        String r_id = SHOWSTANDBYLIST.getSelectedValue().toString();
-        String room_id = r_id.substring(0, r_id.length() - 45);
-        String start_date = r_id.substring(r_id.length() - 40, r_id.length() - 30);
-        String start_date2 = start_date.substring(0, 6);
-        String start_date3 = start_date.substring(8, 10);
-        String finalstartdate = start_date2 + start_date3;
-        int room_id2 = Integer.parseInt(room_id);
-        Booking b = con.deleteGuest(room_id2, finalstartdate);
-
+        DefaultTableModel model = (DefaultTableModel) SHOWSTANDBYTABLE.getModel();
+        String r_id = SHOWSTANDBYTABLE.getValueAt(SHOWSTANDBYTABLE.getSelectedRow(), 0).toString();
+        int roomid = Integer.parseInt(r_id);
+        String start_date = SHOWSTANDBYTABLE.getValueAt(SHOWSTANDBYTABLE.getSelectedRow(), 1).toString();
+        Booking b = con.deleteGuest(roomid, start_date);
         if (b != null)
         {
-            int selectedIndex = SHOWSTANDBYLIST.getSelectedIndex();
+            int selectedIndex = SHOWSTANDBYTABLE.getSelectedRow();
             if (selectedIndex != -1)
             {
-                DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-                model.removeElementAt(selectedIndex);
+                model.removeRow(selectedIndex);
             }
         }
     }//GEN-LAST:event_STANDBYROOMDECLINEBUTTONActionPerformed
@@ -2926,305 +2833,298 @@ public class Casablanca extends javax.swing.JFrame
 
     private void UPDATEGUEST1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST1ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST1ActionPerformed
-            Guest g = null;
-            String firstname = REGINFOFIRSTNAME.getText();
-            String familyname = REGINFOLASTNAME.getText();
-            String address = REGINFOADRESS.getText();
-            String country = REGINFOCOUNTRY.getText();
-            int phone = 0;
-            String email = REGINFOEMAIL.getText();
-            String username = null;
-            String password = null;
-            int guest_id = Integer.parseInt(REGINFOGUESTID.getText());
+        Guest g = null;
+        String firstname = REGINFOFIRSTNAME.getText();
+        String familyname = REGINFOLASTNAME.getText();
+        String address = REGINFOADRESS.getText();
+        String country = REGINFOCOUNTRY.getText();
+        int phone = 0;
+        String email = REGINFOEMAIL.getText();
+        String username = null;
+        String password = null;
+        int guest_id = Integer.parseInt(REGINFOGUESTID.getText());
 
-            if (!firstname.isEmpty() && !familyname.isEmpty())
-            {
-                String fullname = firstname + familyname;
-                CreateUserStaff cus = new CreateUserStaff(fullname);
-                username = cus.getuserName();
-                password = cus.getPassword();
-            }
-            try
-            {
-                phone = Integer.parseInt(REGINFOPHONE.getText());
-            } catch (NumberFormatException e)
-            {
-                REGINFOFEEDBACK4.setText("Phone no invalid");
-                phone = 0;
-            }
-            if (!email.contains("@") && !email.contains("."))
-            {
-                email = "";
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK4.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
 
-            if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-            {
-                g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-            }
-            if (g != null)
-            {
-               String phone1 = Integer.toString(g.getPhone());
-               REGINFOFIRSTNAME.setText(g.getFirstname());
-               REGINFOLASTNAME.setText(g.getFamilyname());
-               REGINFOADRESS.setText(g.getAddress());
-               REGINFOCOUNTRY.setText(g.getCountry());
-               REGINFOPHONE.setText(phone1);
-               REGINFOEMAIL.setText(g.getEmail());
-               REGINFOUSERNAME.setText(g.getUsername());
-               SHOWREGINFOPASSWORD.setText(g.getPassword());
-               REGINFOFEEDBACK4.setText("Guest updated");
-            }
-            else
-            {
-                REGINFOFEEDBACK4.setText("Update failed - Check input fields");
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME.setText(g.getFirstname());
+            REGINFOLASTNAME.setText(g.getFamilyname());
+            REGINFOADRESS.setText(g.getAddress());
+            REGINFOCOUNTRY.setText(g.getCountry());
+            REGINFOPHONE.setText(phone1);
+            REGINFOEMAIL.setText(g.getEmail());
+            REGINFOUSERNAME.setText(g.getUsername());
+            SHOWREGINFOPASSWORD.setText(g.getPassword());
+            REGINFOFEEDBACK4.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK4.setText("Update failed - Check input fields");
+        }
 
     }//GEN-LAST:event_UPDATEGUEST1ActionPerformed
 
     private void UPDATEGUEST2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST2ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST2ActionPerformed
         Guest g = null;
-            String firstname = REGINFOFIRSTNAME1.getText();
-            String familyname = REGINFOLASTNAME1.getText();
-            String address = REGINFOADRESS1.getText();
-            String country = REGINFOCOUNTRY1.getText();
-            int phone = 0;
-            String email = REGINFOEMAIL1.getText();
-            String username = null;
-            String password = null;
-            int guest_id = Integer.parseInt(REGINFOGUESTID1.getText());
+        String firstname = REGINFOFIRSTNAME1.getText();
+        String familyname = REGINFOLASTNAME1.getText();
+        String address = REGINFOADRESS1.getText();
+        String country = REGINFOCOUNTRY1.getText();
+        int phone = 0;
+        String email = REGINFOEMAIL1.getText();
+        String username = null;
+        String password = null;
+        int guest_id = Integer.parseInt(REGINFOGUESTID1.getText());
 
-            if (!firstname.isEmpty() && !familyname.isEmpty())
-            {
-                String fullname = firstname + familyname;
-                CreateUserStaff cus = new CreateUserStaff(fullname);
-                username = cus.getuserName();
-                password = cus.getPassword();
-            }
-            try
-            {
-                phone = Integer.parseInt(REGINFOPHONE1.getText());
-            } catch (NumberFormatException e)
-            {
-                REGINFOFEEDBACK3.setText("Phone no invalid");
-                phone = 0;
-            }
-            if (!email.contains("@") && !email.contains("."))
-            {
-                email = "";
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE1.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK3.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
 
-            if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-            {
-                g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-            }
-            if (g != null)
-            {
-               String phone1 = Integer.toString(g.getPhone());
-               REGINFOFIRSTNAME1.setText(g.getFirstname());
-               REGINFOLASTNAME1.setText(g.getFamilyname());
-               REGINFOADRESS1.setText(g.getAddress());
-               REGINFOCOUNTRY1.setText(g.getCountry());
-               REGINFOPHONE1.setText(phone1);
-               REGINFOEMAIL1.setText(g.getEmail());
-               REGINFOUSERNAME1.setText(g.getUsername());
-               SHOWREGINFOPASSWORD1.setText(g.getPassword());
-               REGINFOFEEDBACK3.setText("Guest updated");
-            }
-            else
-            {
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME1.setText(g.getFirstname());
+            REGINFOLASTNAME1.setText(g.getFamilyname());
+            REGINFOADRESS1.setText(g.getAddress());
+            REGINFOCOUNTRY1.setText(g.getCountry());
+            REGINFOPHONE1.setText(phone1);
+            REGINFOEMAIL1.setText(g.getEmail());
+            REGINFOUSERNAME1.setText(g.getUsername());
+            SHOWREGINFOPASSWORD1.setText(g.getPassword());
+            REGINFOFEEDBACK3.setText("Guest updated");
+        } else
+        {
             REGINFOFEEDBACK3.setText("Update failed - Check input fields");
-            }
+        }
     }//GEN-LAST:event_UPDATEGUEST2ActionPerformed
 
     private void UPDATEGUEST3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST3ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST3ActionPerformed
         Guest g = null;
-            String firstname = REGINFOFIRSTNAME2.getText();
-            String familyname = REGINFOLASTNAME2.getText();
-            String address = REGINFOADRESS2.getText();
-            String country = REGINFOCOUNTRY2.getText();
-            int phone = 0;
-            String email = REGINFOEMAIL2.getText();
-            String username = null;
-            String password = null;
-            int guest_id = Integer.parseInt(REGINFOGUESTID2.getText());
+        String firstname = REGINFOFIRSTNAME2.getText();
+        String familyname = REGINFOLASTNAME2.getText();
+        String address = REGINFOADRESS2.getText();
+        String country = REGINFOCOUNTRY2.getText();
+        int phone = 0;
+        String email = REGINFOEMAIL2.getText();
+        String username = null;
+        String password = null;
+        int guest_id = Integer.parseInt(REGINFOGUESTID2.getText());
 
-            if (!firstname.isEmpty() && !familyname.isEmpty())
-            {
-                String fullname = firstname + familyname;
-                CreateUserStaff cus = new CreateUserStaff(fullname);
-                username = cus.getuserName();
-                password = cus.getPassword();
-            }
-            try
-            {
-                phone = Integer.parseInt(REGINFOPHONE2.getText());
-            } catch (NumberFormatException e)
-            {
-                REGINFOFEEDBACK2.setText("Phone no invalid");
-                phone = 0;
-            }
-            if (!email.contains("@") && !email.contains("."))
-            {
-                email = "";
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE2.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK2.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
 
-            if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-            {
-                g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-            }
-            if (g != null)
-            {
-               String phone1 = Integer.toString(g.getPhone());
-               REGINFOFIRSTNAME2.setText(g.getFirstname());
-               REGINFOLASTNAME2.setText(g.getFamilyname());
-               REGINFOADRESS2.setText(g.getAddress());
-               REGINFOCOUNTRY2.setText(g.getCountry());
-               REGINFOPHONE2.setText(phone1);
-               REGINFOEMAIL2.setText(g.getEmail());
-               REGINFOUSERNAME2.setText(g.getUsername());
-               SHOWREGINFOPASSWORD2.setText(g.getPassword());
-               REGINFOFEEDBACK2.setText("Guest updated");
-            }
-            else
-            {
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME2.setText(g.getFirstname());
+            REGINFOLASTNAME2.setText(g.getFamilyname());
+            REGINFOADRESS2.setText(g.getAddress());
+            REGINFOCOUNTRY2.setText(g.getCountry());
+            REGINFOPHONE2.setText(phone1);
+            REGINFOEMAIL2.setText(g.getEmail());
+            REGINFOUSERNAME2.setText(g.getUsername());
+            SHOWREGINFOPASSWORD2.setText(g.getPassword());
+            REGINFOFEEDBACK2.setText("Guest updated");
+        } else
+        {
             REGINFOFEEDBACK2.setText("Update failed - Check input fields");
-            }
+        }
     }//GEN-LAST:event_UPDATEGUEST3ActionPerformed
 
     private void UPDATEGUEST4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST4ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST4ActionPerformed
         Guest g = null;
-            String firstname = REGINFOFIRSTNAME3.getText();
-            String familyname = REGINFOLASTNAME3.getText();
-            String address = REGINFOADRESS3.getText();
-            String country = REGINFOCOUNTRY3.getText();
-            int phone = 0;
-            String email = REGINFOEMAIL3.getText();
-            String username = null;
-            String password = null;
-            int guest_id = Integer.parseInt(REGINFOGUESTID3.getText());
+        String firstname = REGINFOFIRSTNAME3.getText();
+        String familyname = REGINFOLASTNAME3.getText();
+        String address = REGINFOADRESS3.getText();
+        String country = REGINFOCOUNTRY3.getText();
+        int phone = 0;
+        String email = REGINFOEMAIL3.getText();
+        String username = null;
+        String password = null;
+        int guest_id = Integer.parseInt(REGINFOGUESTID3.getText());
 
-            if (!firstname.isEmpty() && !familyname.isEmpty())
-            {
-                String fullname = firstname + familyname;
-                CreateUserStaff cus = new CreateUserStaff(fullname);
-                username = cus.getuserName();
-                password = cus.getPassword();
-            }
-            try
-            {
-                phone = Integer.parseInt(REGINFOPHONE3.getText());
-            } catch (NumberFormatException e)
-            {
-                REGINFOFEEDBACK1.setText("Phone no invalid");
-                phone = 0;
-            }
-            if (!email.contains("@") && !email.contains("."))
-            {
-                email = "";
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE3.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK1.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
 
-            if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-            {
-                g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-            }
-            if (g != null)
-            {
-               String phone1 = Integer.toString(g.getPhone());
-               REGINFOFIRSTNAME3.setText(g.getFirstname());
-               REGINFOLASTNAME3.setText(g.getFamilyname());
-               REGINFOADRESS3.setText(g.getAddress());
-               REGINFOCOUNTRY3.setText(g.getCountry());
-               REGINFOPHONE3.setText(phone1);
-               REGINFOEMAIL3.setText(g.getEmail());
-               REGINFOUSERNAME3.setText(g.getUsername());
-               SHOWREGINFOPASSWORD3.setText(g.getPassword());
-               REGINFOFEEDBACK1.setText("Guest updated");
-            }
-            else
-            {
-                REGINFOFEEDBACK1.setText("Update failed - Check input fields");
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME3.setText(g.getFirstname());
+            REGINFOLASTNAME3.setText(g.getFamilyname());
+            REGINFOADRESS3.setText(g.getAddress());
+            REGINFOCOUNTRY3.setText(g.getCountry());
+            REGINFOPHONE3.setText(phone1);
+            REGINFOEMAIL3.setText(g.getEmail());
+            REGINFOUSERNAME3.setText(g.getUsername());
+            SHOWREGINFOPASSWORD3.setText(g.getPassword());
+            REGINFOFEEDBACK1.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK1.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST4ActionPerformed
 
     private void UPDATEGUEST5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST5ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST5ActionPerformed
         Guest g = null;
-            String firstname = REGINFOFIRSTNAME4.getText();
-            String familyname = REGINFOLASTNAME4.getText();
-            String address = REGINFOADRESS4.getText();
-            String country = REGINFOCOUNTRY4.getText();
-            int phone = 0;
-            String email = REGINFOEMAIL4.getText();
-            String username = null;
-            String password = null;
-            int guest_id = Integer.parseInt(REGINFOGUESTID4.getText());
+        String firstname = REGINFOFIRSTNAME4.getText();
+        String familyname = REGINFOLASTNAME4.getText();
+        String address = REGINFOADRESS4.getText();
+        String country = REGINFOCOUNTRY4.getText();
+        int phone = 0;
+        String email = REGINFOEMAIL4.getText();
+        String username = null;
+        String password = null;
+        int guest_id = Integer.parseInt(REGINFOGUESTID4.getText());
 
-            if (!firstname.isEmpty() && !familyname.isEmpty())
-            {
-                String fullname = firstname + familyname;
-                CreateUserStaff cus = new CreateUserStaff(fullname);
-                username = cus.getuserName();
-                password = cus.getPassword();
-            }
-            try
-            {
-                phone = Integer.parseInt(REGINFOPHONE4.getText());
-            } catch (NumberFormatException e)
-            {
-                REGINFOFEEDBACK.setText("Phone no invalid");
-                phone = 0;
-            }
-            if (!email.contains("@") && !email.contains("."))
-            {
-                email = "";
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE4.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
 
-            if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-            {
-                g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-            }
-            if (g != null)
-            {
-               String phone1 = Integer.toString(g.getPhone());
-               REGINFOFIRSTNAME4.setText(g.getFirstname());
-               REGINFOLASTNAME4.setText(g.getFamilyname());
-               REGINFOADRESS4.setText(g.getAddress());
-               REGINFOCOUNTRY4.setText(g.getCountry());
-               REGINFOPHONE4.setText(phone1);
-               REGINFOEMAIL4.setText(g.getEmail());
-               REGINFOUSERNAME4.setText(g.getUsername());
-               SHOWREGINFOPASSWORD4.setText(g.getPassword());
-               REGINFOFEEDBACK.setText("Guest updated");
-            }
-            else
-            {
-                REGINFOFEEDBACK.setText("Update failed - Check input fields");
-            }
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME4.setText(g.getFirstname());
+            REGINFOLASTNAME4.setText(g.getFamilyname());
+            REGINFOADRESS4.setText(g.getAddress());
+            REGINFOCOUNTRY4.setText(g.getCountry());
+            REGINFOPHONE4.setText(phone1);
+            REGINFOEMAIL4.setText(g.getEmail());
+            REGINFOUSERNAME4.setText(g.getUsername());
+            SHOWREGINFOPASSWORD4.setText(g.getPassword());
+            REGINFOFEEDBACK.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST5ActionPerformed
 
     private void fillTodayList(ArrayList<TodayGuest> todayguests)
     {
-        TODAYSARRIVALLIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) TODAYSARRIVALLIST.getModel();
-
-        model.removeAllElements();
-        Object[] anArray = new Object[todayguests.size()];
+        TODAYTABLE.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) TODAYTABLE.getModel();
+        model.addColumn("Room #");
+        model.addColumn("Firstname");
+        model.addColumn("Lastname");
+        model.addColumn("Username");
+        model.addColumn("Password");
+        model.setRowCount(todayguests.size());
 
         for (int i = 0; i < todayguests.size(); i++)
         {
-            anArray[i] = todayguests.get(i).getRoom_id() + "                "
-                    + todayguests.get(i).getFirstname() + "                "
-                    + todayguests.get(i).getFamilyname() + "                "
-                    + todayguests.get(i).getUsername() + "                "
-                    + todayguests.get(i).getPassword();
-        }
-
-        for (Object object : anArray)
-        {
-            model.addElement(object);
+            model.setValueAt(todayguests.get(i).getRoom_id(), i, 0);
+            model.setValueAt(todayguests.get(i).getFirstname(), i, 1);
+            model.setValueAt(todayguests.get(i).getFamilyname(), i, 2);
+            model.setValueAt(todayguests.get(i).getUsername(), i, 3);
+            model.setValueAt(todayguests.get(i).getPassword(), i, 4);
         }
     }
 
@@ -3385,15 +3285,16 @@ public class Casablanca extends javax.swing.JFrame
 
     private void fillAvailList(ArrayList<Room> rooms)
     {
-        SHOWAVAILABLELIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWAVAILABLELIST.getModel();
+        SHOWAVAILTABLE.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) SHOWAVAILTABLE.getModel();
+        model.addColumn("Room #");
+        model.addColumn("Room size");
+        model.setRowCount(rooms.size());
 
-        model.removeAllElements();
-        Object[] anArray = rooms.toArray(new Object[0]);
-
-        for (Object object : anArray)
+        for (int i = 0; i < rooms.size(); i++)
         {
-            model.addElement(object);
+            model.setValueAt(rooms.get(i).getRoomnumber(), i, 0);
+            model.setValueAt(rooms.get(i).getRoomsize(), i, 1);
         }
 
     }
@@ -3414,40 +3315,43 @@ public class Casablanca extends javax.swing.JFrame
     private void fillStandbyList(ArrayList<Booking> standby)
     {
 
-        SHOWSTANDBYLIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWSTANDBYLIST.getModel();
-
-        model.removeAllElements();
-        Object[] anArray = new Object[standby.size()];
+        SHOWSTANDBYTABLE.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) SHOWSTANDBYTABLE.getModel();
+        model.addColumn("Room #");
+        model.addColumn("Start date");
+        model.addColumn("End date");
+        model.addColumn("Registration date");
+        model.setRowCount(standby.size());
 
         for (int i = 0; i < standby.size(); i++)
         {
-            anArray[i] = standby.get(i).getRoom_id() + "     " + standby.get(i).getStart_date() + "     " + standby.get(i).getEnd_date() + "     " + standby.get(i).getReg_date();
+            model.setValueAt(standby.get(i).getRoom_id(), i, 0);
+            model.setValueAt(standby.get(i).getStart_date(), i, 1);
+            model.setValueAt(standby.get(i).getEnd_date(), i, 2);
+            model.setValueAt(standby.get(i).getReg_date(), i, 3);
         }
 
-        for (Object object : anArray)
-        {
-            model.addElement(object);
-        }
     }
 
     private void fillBookedList(ArrayList<Booking> booked)
     {
-        SHOWBOOKEDROOMSLIST.setModel(new DefaultListModel());
-        DefaultListModel model = (DefaultListModel) SHOWBOOKEDROOMSLIST.getModel();
 
-        model.removeAllElements();
-        Object[] anArray = new Object[booked.size()];
+        SHOWBOOKEDTABLE.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel();
+        model.addColumn("Room #");
+        model.addColumn("Start date");
+        model.addColumn("End date");
+        model.addColumn("Registration date");
+        model.setRowCount(booked.size());
 
         for (int i = 0; i < booked.size(); i++)
         {
-            anArray[i] = booked.get(i).getRoom_id() + "     " + booked.get(i).getStart_date() + "     " + booked.get(i).getEnd_date() + "     " + booked.get(i).getReg_date();
+            model.setValueAt(booked.get(i).getRoom_id(), i, 0);
+            model.setValueAt(booked.get(i).getStart_date(), i, 1);
+            model.setValueAt(booked.get(i).getEnd_date(), i, 2);
+            model.setValueAt(booked.get(i).getReg_date(), i, 3);
         }
 
-        for (Object object : anArray)
-        {
-            model.addElement(object);
-        }
     }
 
     /**
@@ -3604,12 +3508,12 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JTextField REGINFOUSERNAME2;
     private javax.swing.JTextField REGINFOUSERNAME3;
     private javax.swing.JTextField REGINFOUSERNAME4;
-    private javax.swing.JList SHOWAVAILABLELIST;
     private javax.swing.JPanel SHOWAVAILABLEROOMS;
     private javax.swing.JLabel SHOWAVAILROOMSFEEDBACK;
+    private javax.swing.JTable SHOWAVAILTABLE;
     private javax.swing.JButton SHOWBOOKEDBUTTON;
     private javax.swing.JPanel SHOWBOOKEDROOMS;
-    private javax.swing.JList SHOWBOOKEDROOMSLIST;
+    private javax.swing.JTable SHOWBOOKEDTABLE;
     private javax.swing.JPanel SHOWREGINFO1;
     private javax.swing.JPanel SHOWREGINFO2;
     private javax.swing.JPanel SHOWREGINFO3;
@@ -3621,8 +3525,8 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JTextField SHOWREGINFOPASSWORD2;
     private javax.swing.JTextField SHOWREGINFOPASSWORD3;
     private javax.swing.JTextField SHOWREGINFOPASSWORD4;
-    private javax.swing.JList SHOWSTANDBYLIST;
     private javax.swing.JPanel SHOWSTANDBYROOMS;
+    private javax.swing.JTable SHOWSTANDBYTABLE;
     private javax.swing.JButton STANDBYBUTTON;
     private javax.swing.JButton STANDBYROOMACCEPTBUTTON;
     private javax.swing.JButton STANDBYROOMBACKBUTTON;
@@ -3632,8 +3536,8 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JPanel TODAYSARRIVAL;
     private javax.swing.JButton TODAYSARRIVALBACKBUTTON;
     private javax.swing.JButton TODAYSARRIVALBUTTON;
-    private javax.swing.JList TODAYSARRIVALLIST;
     private javax.swing.JLabel TODAYSLABEL;
+    private javax.swing.JTable TODAYTABLE;
     private javax.swing.JComboBox TRAVELAGENCYBOX;
     private javax.swing.JButton UPDATEGUEST1;
     private javax.swing.JButton UPDATEGUEST2;
@@ -3644,17 +3548,12 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JPanel WELCOME;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -3697,10 +3596,6 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
@@ -3734,21 +3629,15 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     // End of variables declaration//GEN-END:variables
 
 }
