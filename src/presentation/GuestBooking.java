@@ -7,6 +7,7 @@
 package presentation;
 
 import domain.Controller;
+import domain.Guest;
 
 /**
  *
@@ -19,7 +20,7 @@ public class GuestBooking extends javax.swing.JFrame {
      */
     
     Controller con;
-    private String guestLoggedIn;
+    private Guest guestLoggedIn;
     public GuestBooking() {
         initComponents();
         con = Controller.getInstance();
@@ -721,7 +722,10 @@ public class GuestBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_CHECKBOOKINGBUTTONActionPerformed
 
     private void LOGOUTBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGOUTBUTTONActionPerformed
-        // TODO add your handling code here:
+        guestLoggedIn = null;
+        LOGIN.setVisible(true);
+        WELCOME.setVisible(false);
+        GUESTUSERNAME.requestFocusInWindow();
     }//GEN-LAST:event_LOGOUTBUTTONActionPerformed
 
     private void BOOKFACILITYBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOOKFACILITYBACKBUTTONActionPerformed
@@ -772,12 +776,15 @@ public class GuestBooking extends javax.swing.JFrame {
     {//GEN-HEADEREND:event_GUESTLOGINActionPerformed
         String username = GUESTUSERNAME.getText();
         String password = GUESTPASSWORD.getText();
-        boolean status = con.checkLogin(username, password);
-        if(status)
+        Guest g = con.checkLogin(username, password);
+        if(g != null)
         {
-            guestLoggedIn = username;
+            guestLoggedIn = g;
             WELCOME.setVisible(true);
             LOGIN.setVisible(false);
+            GUESTUSERNAME.setText("");
+            GUESTPASSWORD.setText("");
+            GUESTFEEDBACK.setText("");
         }else
         {
             GUESTFEEDBACK.setText("Wrong username or password!");

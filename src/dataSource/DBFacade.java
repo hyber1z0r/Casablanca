@@ -87,7 +87,7 @@ public class DBFacade {
         return rm.showRegInfo(room_id, start_date, con);
     }
     
-    public boolean checkLogin(String username, String password)
+    public Guest checkLogin(String username, String password)
     {
         return gm.checkLogin(username, password, con);
     }
