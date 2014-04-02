@@ -714,7 +714,8 @@ public class GuestBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_GUESTUSERNAMEActionPerformed
 
     private void BOOKFACILITYBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOOKFACILITYBUTTONActionPerformed
-        // TODO add your handling code here:
+        BOOKFACILITY.setVisible(true);
+        WELCOME.setVisible(false);
     }//GEN-LAST:event_BOOKFACILITYBUTTONActionPerformed
 
     private void CHECKBOOKINGBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CHECKBOOKINGBUTTONActionPerformed
@@ -729,7 +730,8 @@ public class GuestBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_LOGOUTBUTTONActionPerformed
 
     private void BOOKFACILITYBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOOKFACILITYBACKBUTTONActionPerformed
-        // TODO add your handling code here:
+        WELCOME.setVisible(true);
+        BOOKFACILITY.setVisible(false);
     }//GEN-LAST:event_BOOKFACILITYBACKBUTTONActionPerformed
 
     private void HILLYGROUNDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HILLYGROUNDActionPerformed
