@@ -117,6 +117,7 @@ public class Casablanca extends javax.swing.JFrame
         BOOKROOMADDGUESTBUTTON = new javax.swing.JButton();
         BOOKROOMCOUNTGUEST = new javax.swing.JLabel();
         BOOKROOMPhoneFeedback = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         GETFEEDBACKFORBOOKING = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -150,6 +151,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID = new javax.swing.JTextField();
         jLabel98 = new javax.swing.JLabel();
         REGINFOFEEDBACK4 = new javax.swing.JLabel();
+        WHOISTHEPAYER = new javax.swing.JLabel();
         SHOWREGINFO2 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -765,6 +767,8 @@ public class Casablanca extends javax.swing.JFrame
 
         BOOKROOMCOUNTGUEST.setText("            ");
 
+        jLabel1.setText("The first added guest is the payer");
+
         javax.swing.GroupLayout BOOKROOMLayout = new javax.swing.GroupLayout(BOOKROOM);
         BOOKROOM.setLayout(BOOKROOMLayout);
         BOOKROOMLayout.setHorizontalGroup(
@@ -815,7 +819,8 @@ public class Casablanca extends javax.swing.JFrame
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(BOOKROOMROOMNUMBER, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BOOKROOMROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(BOOKROOMROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(461, 461, 461))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKROOMLayout.createSequentialGroup()
                         .addComponent(BOOKROOMADDGUESTBUTTON)
@@ -874,7 +879,9 @@ public class Casablanca extends javax.swing.JFrame
                         .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(TRAVELAGENCYBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKROOMLayout.createSequentialGroup()
                         .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1034,13 +1041,17 @@ public class Casablanca extends javax.swing.JFrame
                 .addGap(27, 27, 27)
                 .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOPHONE, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOADRESS, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(106, 106, 106)
+                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(WHOISTHEPAYER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(REGINFOPHONE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(REGINFOADRESS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(REGINFOROOMSIZE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
                         .addGap(93, 93, 93)
                         .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1061,10 +1072,7 @@ public class Casablanca extends javax.swing.JFrame
                             .addComponent(REGINFOUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(REGINFOGUESTID, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(SHOWREGINFOPASSWORD, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))))
-                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(SHOWREGINFOPASSWORD, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
         SHOWREGINFO1Layout.setVerticalGroup(
@@ -1096,7 +1104,9 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(jLabel41)
                     .addComponent(REGINFOGUESTID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel98))
-                .addGap(216, 216, 216)
+                .addGap(50, 50, 50)
+                .addComponent(WHOISTHEPAYER)
+                .addGap(152, 152, 152)
                 .addComponent(REGINFOFEEDBACK4)
                 .addGap(51, 51, 51)
                 .addComponent(REGINFOBACKBUTTON)
@@ -2132,6 +2142,7 @@ public class Casablanca extends javax.swing.JFrame
             {
                 case 1:
                     fillRegInfo1(guestinfo, room_id);
+                    
                     break;
                 case 2:
                     fillRegInfo1(guestinfo, room_id);
@@ -2996,6 +3007,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID.setText(guestinfo.get(0).getGuest_id() + "");
         REGINFOUSERNAME.setText(guestinfo.get(0).getUsername());
         SHOWREGINFOPASSWORD.setText(guestinfo.get(0).getPassword());
+        WHOISTHEPAYER.setText(guestinfo.get(0).getFirstname() + " is the payer.");
     }
 
     private void fillRegInfo2(ArrayList<Guest> guestinfo, int room_id)
@@ -3330,7 +3342,9 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JButton UPDATEGUEST4;
     private javax.swing.JButton UPDATEGUEST5;
     private javax.swing.JPanel WELCOME;
+    private javax.swing.JLabel WHOISTHEPAYER;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
