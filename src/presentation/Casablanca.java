@@ -3238,7 +3238,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOFIRSTNAME2.setText(guestinfo.get(2).getFirstname());
         REGINFOLASTNAME2.setText(guestinfo.get(2).getFamilyname());
         REGINFOROOMNUMBER2.setText(room_id + "");
-        REGINFOADRESS1.setText(guestinfo.get(2).getAddress());
+        REGINFOADRESS2.setText(guestinfo.get(2).getAddress());
         REGINFOCOUNTRY2.setText(guestinfo.get(2).getCountry());
         REGINFOEMAIL2.setText(guestinfo.get(2).getEmail());
         REGINFOPHONE2.setText(guestinfo.get(2).getPhone() + "");
