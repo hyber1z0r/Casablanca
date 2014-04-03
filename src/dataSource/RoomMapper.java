@@ -582,7 +582,7 @@ public class RoomMapper
         ArrayList<Integer> guestIDs = new ArrayList();
         ArrayList<Guest> guests = new ArrayList();
 
-        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh'";
         Statement statementFix;
 
         String SQLString1 = "select guest_id from bookings_guests where booking_id = "

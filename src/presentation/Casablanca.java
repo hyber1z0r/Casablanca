@@ -130,7 +130,6 @@ public class Casablanca extends javax.swing.JFrame
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
@@ -139,7 +138,6 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOADRESS = new javax.swing.JTextField();
         REGINFOTRAVELAGENCY = new javax.swing.JTextField();
         REGINFOPHONE = new javax.swing.JTextField();
-        REGINFOROOMSIZE = new javax.swing.JTextField();
         REGINFOROOMNUMBER = new javax.swing.JTextField();
         REGINFOLASTNAME = new javax.swing.JTextField();
         REGINFOCOUNTRY = new javax.swing.JTextField();
@@ -153,124 +151,130 @@ public class Casablanca extends javax.swing.JFrame
         UPDATEGUEST1 = new javax.swing.JButton();
         REGINFOGUESTID = new javax.swing.JTextField();
         jLabel98 = new javax.swing.JLabel();
-        REGINFOFEEDBACK4 = new javax.swing.JLabel();
+        REGINFOFEEDBACK = new javax.swing.JLabel();
         WHOISTHEPAYER = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        REGINFOAGE = new javax.swing.JTextField();
         SHOWREGINFO2 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel92 = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
         REGINFOFIRSTNAME1 = new javax.swing.JTextField();
         REGINFOADRESS1 = new javax.swing.JTextField();
         REGINFOTRAVELAGENCY1 = new javax.swing.JTextField();
         REGINFOPHONE1 = new javax.swing.JTextField();
-        REGINFOROOMSIZE1 = new javax.swing.JTextField();
         REGINFOROOMNUMBER1 = new javax.swing.JTextField();
         REGINFOLASTNAME1 = new javax.swing.JTextField();
         REGINFOCOUNTRY1 = new javax.swing.JTextField();
         REGINFOEMAIL1 = new javax.swing.JTextField();
         REGINFOBACKBUTTON1 = new javax.swing.JButton();
-        jLabel53 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
         REGINFOUSERNAME1 = new javax.swing.JTextField();
         SHOWREGINFOPASSWORD1 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         UPDATEGUEST2 = new javax.swing.JButton();
         REGINFOGUESTID1 = new javax.swing.JTextField();
-        jLabel99 = new javax.swing.JLabel();
-        REGINFOFEEDBACK3 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
+        REGINFOFEEDBACK1 = new javax.swing.JLabel();
+        WHOISTHEPAYER1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        REGINFOAGE1 = new javax.swing.JTextField();
         SHOWREGINFO3 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        jLabel104 = new javax.swing.JLabel();
+        jLabel105 = new javax.swing.JLabel();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
         REGINFOFIRSTNAME2 = new javax.swing.JTextField();
         REGINFOADRESS2 = new javax.swing.JTextField();
         REGINFOTRAVELAGENCY2 = new javax.swing.JTextField();
         REGINFOPHONE2 = new javax.swing.JTextField();
-        REGINFOROOMSIZE2 = new javax.swing.JTextField();
         REGINFOROOMNUMBER2 = new javax.swing.JTextField();
         REGINFOLASTNAME2 = new javax.swing.JTextField();
         REGINFOCOUNTRY2 = new javax.swing.JTextField();
         REGINFOEMAIL2 = new javax.swing.JTextField();
         REGINFOBACKBUTTON2 = new javax.swing.JButton();
-        jLabel67 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
         REGINFOUSERNAME2 = new javax.swing.JTextField();
         SHOWREGINFOPASSWORD2 = new javax.swing.JTextField();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         UPDATEGUEST3 = new javax.swing.JButton();
-        jLabel100 = new javax.swing.JLabel();
         REGINFOGUESTID2 = new javax.swing.JTextField();
+        jLabel112 = new javax.swing.JLabel();
         REGINFOFEEDBACK2 = new javax.swing.JLabel();
+        WHOISTHEPAYER2 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        REGINFOAGE2 = new javax.swing.JTextField();
         SHOWREGINFO4 = new javax.swing.JPanel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel118 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jLabel120 = new javax.swing.JLabel();
         REGINFOFIRSTNAME3 = new javax.swing.JTextField();
         REGINFOADRESS3 = new javax.swing.JTextField();
         REGINFOTRAVELAGENCY3 = new javax.swing.JTextField();
         REGINFOPHONE3 = new javax.swing.JTextField();
-        REGINFOROOMSIZE3 = new javax.swing.JTextField();
         REGINFOROOMNUMBER3 = new javax.swing.JTextField();
         REGINFOLASTNAME3 = new javax.swing.JTextField();
         REGINFOCOUNTRY3 = new javax.swing.JTextField();
         REGINFOEMAIL3 = new javax.swing.JTextField();
         REGINFOBACKBUTTON3 = new javax.swing.JButton();
-        jLabel77 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
         REGINFOUSERNAME3 = new javax.swing.JTextField();
         SHOWREGINFOPASSWORD3 = new javax.swing.JTextField();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
         UPDATEGUEST4 = new javax.swing.JButton();
-        jLabel101 = new javax.swing.JLabel();
         REGINFOGUESTID3 = new javax.swing.JTextField();
-        REGINFOFEEDBACK1 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        REGINFOFEEDBACK3 = new javax.swing.JLabel();
+        WHOISTHEPAYER3 = new javax.swing.JLabel();
+        jLabel125 = new javax.swing.JLabel();
+        REGINFOAGE3 = new javax.swing.JTextField();
         SHOWREGINFO5 = new javax.swing.JPanel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        jLabel83 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
+        jLabel126 = new javax.swing.JLabel();
+        jLabel127 = new javax.swing.JLabel();
+        jLabel128 = new javax.swing.JLabel();
+        jLabel129 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
+        jLabel132 = new javax.swing.JLabel();
+        jLabel133 = new javax.swing.JLabel();
         REGINFOFIRSTNAME4 = new javax.swing.JTextField();
         REGINFOADRESS4 = new javax.swing.JTextField();
         REGINFOTRAVELAGENCY4 = new javax.swing.JTextField();
         REGINFOPHONE4 = new javax.swing.JTextField();
-        REGINFOROOMSIZE4 = new javax.swing.JTextField();
         REGINFOROOMNUMBER4 = new javax.swing.JTextField();
         REGINFOLASTNAME4 = new javax.swing.JTextField();
         REGINFOCOUNTRY4 = new javax.swing.JTextField();
         REGINFOEMAIL4 = new javax.swing.JTextField();
         REGINFOBACKBUTTON4 = new javax.swing.JButton();
-        jLabel89 = new javax.swing.JLabel();
+        jLabel134 = new javax.swing.JLabel();
         REGINFOUSERNAME4 = new javax.swing.JTextField();
         SHOWREGINFOPASSWORD4 = new javax.swing.JTextField();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
+        jLabel135 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
         UPDATEGUEST5 = new javax.swing.JButton();
-        jLabel102 = new javax.swing.JLabel();
         REGINFOGUESTID4 = new javax.swing.JTextField();
-        REGINFOFEEDBACK = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
+        REGINFOFEEDBACK4 = new javax.swing.JLabel();
+        WHOISTHEPAYER4 = new javax.swing.JLabel();
+        jLabel138 = new javax.swing.JLabel();
+        REGINFOAGE4 = new javax.swing.JTextField();
         SHOWBOOKEDROOMS = new javax.swing.JPanel();
         SHOWREGINFOBUTTON = new javax.swing.JButton();
         BACKBUTTONBOOKEDROOMS = new javax.swing.JButton();
@@ -332,7 +336,7 @@ public class Casablanca extends javax.swing.JFrame
         WELCOMELayout.setHorizontalGroup(
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
-                .addContainerGap(521, Short.MAX_VALUE)
+                .addContainerGap(443, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(430, 430, 430))
             .addGroup(WELCOMELayout.createSequentialGroup()
@@ -351,7 +355,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(Standbylabel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Bookedlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 203, Short.MAX_VALUE))
+                .addGap(0, 322, Short.MAX_VALUE))
         );
         WELCOMELayout.setVerticalGroup(
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,7 +376,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TODAYSARRIVALBUTTON)
                     .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(379, Short.MAX_VALUE))
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
         getContentPane().add(WELCOME, "card3");
@@ -409,7 +413,7 @@ public class Casablanca extends javax.swing.JFrame
         TODAYSARRIVALLayout.setHorizontalGroup(
             TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TODAYSARRIVALLayout.createSequentialGroup()
-                .addContainerGap(411, Short.MAX_VALUE)
+                .addContainerGap(528, Short.MAX_VALUE)
                 .addGroup(TODAYSARRIVALLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TODAYSARRIVALLayout.createSequentialGroup()
                         .addComponent(jLabel97)
@@ -430,7 +434,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117)
                 .addComponent(TODAYSARRIVALBACKBUTTON)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         getContentPane().add(TODAYSARRIVAL, "card12");
@@ -513,7 +517,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(CREATEUSERUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(419, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CREATEUSERPANELLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CREATEUSERGENERATEBUTTON)
@@ -540,7 +544,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(CREATEUSERSAVEUSER)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CREATEUSERBACKBUTTON)
-                .addContainerGap(516, Short.MAX_VALUE))
+                .addContainerGap(506, Short.MAX_VALUE))
         );
 
         getContentPane().add(CREATEUSERPANEL, "card10");
@@ -600,7 +604,7 @@ public class Casablanca extends javax.swing.JFrame
         CHOOSEDATELayout.setHorizontalGroup(
             CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CHOOSEDATELayout.createSequentialGroup()
-                .addContainerGap(525, Short.MAX_VALUE)
+                .addContainerGap(546, Short.MAX_VALUE)
                 .addComponent(CHOOSEDATEBACKBUTTON)
                 .addGap(106, 106, 106)
                 .addComponent(CHOOSEDATESEARCHBUTTON)
@@ -625,12 +629,12 @@ public class Casablanca extends javax.swing.JFrame
                         .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CHOOSEDATEDATEFORMAT)
                             .addComponent(CHOOSEDATEDATEFORMAT2))))
-                .addContainerGap(350, Short.MAX_VALUE))
+                .addContainerGap(428, Short.MAX_VALUE))
         );
         CHOOSEDATELayout.setVerticalGroup(
             CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                .addContainerGap(333, Short.MAX_VALUE)
+                .addContainerGap(337, Short.MAX_VALUE)
                 .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -704,7 +708,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addComponent(SHOWAVAILROOMSFEEDBACK, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(244, 244, 244))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWAVAILABLEROOMSLayout.createSequentialGroup()
-                        .addGap(0, 419, Short.MAX_VALUE)
+                        .addGap(0, 552, Short.MAX_VALUE)
                         .addGroup(SHOWAVAILABLEROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(SHOWAVAILABLEROOMSLayout.createSequentialGroup()
                                 .addComponent(jLabel18)
@@ -726,7 +730,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(jLabel18)
                 .addGap(40, 40, 40)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addComponent(AVAILABLEROOMSBOOKBUTTON)
                 .addGap(45, 45, 45)
                 .addComponent(AVAILABLEROOMSBACKBUTTON)
@@ -939,7 +943,7 @@ public class Casablanca extends javax.swing.JFrame
                             .addComponent(TRAVELAGENCYBOX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKROOMLayout.createSequentialGroup()
                         .addGroup(BOOKROOMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -969,7 +973,7 @@ public class Casablanca extends javax.swing.JFrame
         GETFEEDBACKFORBOOKINGLayout.setHorizontalGroup(
             GETFEEDBACKFORBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GETFEEDBACKFORBOOKINGLayout.createSequentialGroup()
-                .addContainerGap(435, Short.MAX_VALUE)
+                .addContainerGap(551, Short.MAX_VALUE)
                 .addGroup(GETFEEDBACKFORBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GETFEEDBACKFORBOOKINGLayout.createSequentialGroup()
                         .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -985,7 +989,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(jLabel24)
                 .addGap(47, 47, 47)
                 .addComponent(jButton1)
-                .addContainerGap(648, Short.MAX_VALUE))
+                .addContainerGap(677, Short.MAX_VALUE))
         );
 
         getContentPane().add(GETFEEDBACKFORBOOKING, "card11");
@@ -996,16 +1000,13 @@ public class Casablanca extends javax.swing.JFrame
         jLabel34.setText("FIRST NAME(S)");
 
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel35.setText("ADRESS");
+        jLabel35.setText("ADDRESS");
 
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel36.setText("PHONE");
 
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel37.setText("TRAVEL AGENCY");
-
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel40.setText("ROOM SIZE");
 
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel41.setText("ROOM#");
@@ -1028,8 +1029,6 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         REGINFOTRAVELAGENCY.setEditable(false);
-
-        REGINFOROOMSIZE.setEditable(false);
 
         REGINFOROOMNUMBER.setEditable(false);
         REGINFOROOMNUMBER.addActionListener(new java.awt.event.ActionListener()
@@ -1084,6 +1083,9 @@ public class Casablanca extends javax.swing.JFrame
         jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel98.setText("GuestID");
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("AGE");
+
         javax.swing.GroupLayout SHOWREGINFO1Layout = new javax.swing.GroupLayout(SHOWREGINFO1);
         SHOWREGINFO1.setLayout(SHOWREGINFO1Layout);
         SHOWREGINFO1Layout.setHorizontalGroup(
@@ -1093,34 +1095,44 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(REGINFOBACKBUTTON)
                 .addGap(139, 139, 139))
             .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                .addGap(379, 379, 379)
                 .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel37)
-                            .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(REGINFOFEEDBACK4)
-                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                                .addGap(409, 409, 409)
+                                .addComponent(REGINFOFEEDBACK))
+                            .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
                         .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(WHOISTHEPAYER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(REGINFOPHONE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(REGINFOADRESS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                            .addComponent(REGINFOROOMSIZE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
-                        .addGap(93, 93, 93)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO1Layout.createSequentialGroup()
+                                .addGap(517, 517, 517)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOADRESS, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))
+                            .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jLabel37)
+                                                .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel41, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(27, 27, 27)
+                                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                            .addComponent(REGINFOPHONE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                            .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                            .addComponent(REGINFOAGE)))
+                                    .addComponent(WHOISTHEPAYER, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(87, 87, 87)
                         .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1141,100 +1153,105 @@ public class Casablanca extends javax.swing.JFrame
                             .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(REGINFOGUESTID, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(SHOWREGINFOPASSWORD, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         SHOWREGINFO1Layout.setVerticalGroup(
             SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(REGINFOADRESS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOPHONE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37)
-                    .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMSIZE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel40))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel41)
-                    .addComponent(REGINFOGUESTID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel98))
-                .addGap(50, 50, 50)
-                .addComponent(WHOISTHEPAYER)
-                .addGap(152, 152, 152)
-                .addComponent(REGINFOFEEDBACK4)
-                .addGap(51, 51, 51)
-                .addComponent(REGINFOBACKBUTTON)
-                .addGap(158, 158, 158))
-            .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jLabel48)
-                .addGap(48, 48, 48)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel42)
-                    .addComponent(REGINFOLASTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UPDATEGUEST1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel43)
-                    .addComponent(REGINFOCOUNTRY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
-                    .addComponent(REGINFOEMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(REGINFOUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SHOWREGINFOPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel34)
+                            .addComponent(REGINFOFIRSTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel35)
+                            .addComponent(REGINFOADRESS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOGUESTID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel98)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOAGE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOPHONE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOTRAVELAGENCY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel37))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOROOMNUMBER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel41))
+                                .addGap(2, 2, 2)))
+                        .addGap(30, 30, 30)
+                        .addComponent(WHOISTHEPAYER, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(152, 152, 152)
+                        .addComponent(REGINFOFEEDBACK)
+                        .addGap(51, 51, 51)
+                        .addComponent(REGINFOBACKBUTTON)
+                        .addGap(158, 158, 158))
+                    .addGroup(SHOWREGINFO1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel42)
+                            .addComponent(REGINFOLASTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UPDATEGUEST1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel43)
+                            .addComponent(REGINFOCOUNTRY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(REGINFOEMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(REGINFOUSERNAME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SHOWREGINFOPASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         TABPANE1.addTab("Guest 1", SHOWREGINFO1);
 
         SHOWREGINFO2.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel38.setText("FIRST NAME(S)");
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel40.setText("FIRST NAME(S)");
 
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel39.setText("ADRESS");
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel56.setText("ADDRESS");
 
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel45.setText("PHONE");
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel57.setText("PHONE");
 
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel46.setText("TRAVEL AGENCY");
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel58.setText("TRAVEL AGENCY");
 
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel47.setText("ROOM SIZE");
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel59.setText("ROOM#");
 
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel49.setText("ROOM#");
+        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel92.setText("LAST NAME");
 
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel50.setText("LAST NAME");
+        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel93.setText("COUNTRY");
 
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel51.setText("COUNTRY");
-
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel52.setText("EMAIL");
+        jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel94.setText("EMAIL");
 
         REGINFOFIRSTNAME1.addActionListener(new java.awt.event.ActionListener()
         {
@@ -1245,8 +1262,6 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         REGINFOTRAVELAGENCY1.setEditable(false);
-
-        REGINFOROOMSIZE1.setEditable(false);
 
         REGINFOROOMNUMBER1.setEditable(false);
         REGINFOROOMNUMBER1.addActionListener(new java.awt.event.ActionListener()
@@ -1274,16 +1289,18 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel53.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel53.setText("REGISTRATION INFORMATION");
+        jLabel95.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel95.setText("REGISTRATION INFORMATION");
 
         REGINFOUSERNAME1.setEditable(false);
 
         SHOWREGINFOPASSWORD1.setEditable(false);
 
-        jLabel25.setText("USERNAME");
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText("USERNAME");
 
-        jLabel31.setText("PASSWORD");
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel15.setText("PASSWORD");
 
         UPDATEGUEST2.setText("UPDATE GUEST");
         UPDATEGUEST2.addActionListener(new java.awt.event.ActionListener()
@@ -1296,164 +1313,176 @@ public class Casablanca extends javax.swing.JFrame
 
         REGINFOGUESTID1.setEditable(false);
 
-        jLabel99.setText("GuestID");
+        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel103.setText("GuestID");
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel10.setText("AGE");
 
         javax.swing.GroupLayout SHOWREGINFO2Layout = new javax.swing.GroupLayout(SHOWREGINFO2);
         SHOWREGINFO2.setLayout(SHOWREGINFO2Layout);
         SHOWREGINFO2Layout.setHorizontalGroup(
             SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO2Layout.createSequentialGroup()
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
-                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel46)
-                                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(REGINFOFEEDBACK3)
-                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(27, 27, 27)
-                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
-                                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE))
-                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(REGINFOFIRSTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(REGINFOPHONE1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(REGINFOADRESS1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(REGINFOTRAVELAGENCY1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(REGINFOROOMSIZE1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(88, 88, 88)
-                                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                                .addGap(39, 39, 39)
-                                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel99)
-                                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                    .addComponent(REGINFOROOMNUMBER1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(REGINFOCOUNTRY1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOEMAIL1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOUSERNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                                        .addComponent(REGINFOLASTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(UPDATEGUEST2))
-                                    .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(REGINFOGUESTID1, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(SHOWREGINFOPASSWORD1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(REGINFOBACKBUTTON1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(REGINFOBACKBUTTON1)
                 .addGap(139, 139, 139))
+            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                                .addGap(409, 409, 409)
+                                .addComponent(REGINFOFEEDBACK1))
+                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel58)
+                                        .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel59, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(27, 27, 27)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(REGINFOROOMNUMBER1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOPHONE1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOTRAVELAGENCY1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOAGE1)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO2Layout.createSequentialGroup()
+                                .addGap(517, 517, 517)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(WHOISTHEPAYER1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(REGINFOFIRSTNAME1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOADRESS1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))))
+                        .addGap(87, 87, 87)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel92, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel94, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel93, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
+                            .addComponent(jLabel103, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                                .addComponent(REGINFOLASTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(UPDATEGUEST2))
+                            .addComponent(REGINFOCOUNTRY1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOEMAIL1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOUSERNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(REGINFOGUESTID1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(SHOWREGINFOPASSWORD1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         SHOWREGINFO2Layout.setVerticalGroup(
             SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel38)
-                    .addComponent(REGINFOFIRSTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel39)
-                    .addComponent(REGINFOADRESS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOPHONE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel46)
-                    .addComponent(REGINFOTRAVELAGENCY1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMSIZE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel47))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMNUMBER1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel49)
-                    .addComponent(REGINFOGUESTID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel99))
-                .addGap(216, 216, 216)
-                .addComponent(REGINFOFEEDBACK3)
-                .addGap(51, 51, 51)
-                .addComponent(REGINFOBACKBUTTON1)
-                .addGap(158, 158, 158))
-            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel53)
-                .addGap(48, 48, 48)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel50)
-                    .addComponent(REGINFOLASTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UPDATEGUEST2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel51)
-                    .addComponent(REGINFOCOUNTRY1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel52)
-                    .addComponent(REGINFOEMAIL1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(REGINFOUSERNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SHOWREGINFOPASSWORD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel95)
+                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel40)
+                            .addComponent(REGINFOFIRSTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel56)
+                            .addComponent(REGINFOADRESS1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOGUESTID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel103))
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOAGE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOPHONE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOTRAVELAGENCY1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel58))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOROOMNUMBER1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel59))
+                                .addGap(52, 52, 52)))
+                        .addComponent(WHOISTHEPAYER1)
+                        .addGap(152, 152, 152)
+                        .addComponent(REGINFOFEEDBACK1)
+                        .addGap(51, 51, 51)
+                        .addComponent(REGINFOBACKBUTTON1)
+                        .addGap(158, 158, 158))
+                    .addGroup(SHOWREGINFO2Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel92)
+                            .addComponent(REGINFOLASTNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UPDATEGUEST2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel93)
+                            .addComponent(REGINFOCOUNTRY1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel94)
+                            .addComponent(REGINFOEMAIL1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(REGINFOUSERNAME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SHOWREGINFOPASSWORD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         TABPANE1.addTab("Guest 2", SHOWREGINFO2);
 
         SHOWREGINFO3.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel54.setText("FIRST NAME(S)");
+        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel96.setText("FIRST NAME(S)");
 
-        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel55.setText("ADRESS");
+        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel104.setText("ADDRESS");
 
-        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel60.setText("PHONE");
+        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel105.setText("PHONE");
 
-        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel61.setText("TRAVEL AGENCY");
+        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel106.setText("TRAVEL AGENCY");
 
-        jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel62.setText("ROOM SIZE");
+        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel107.setText("ROOM#");
 
-        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel63.setText("ROOM#");
+        jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel108.setText("LAST NAME");
 
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel64.setText("LAST NAME");
+        jLabel109.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel109.setText("COUNTRY");
 
-        jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel65.setText("COUNTRY");
-
-        jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel66.setText("EMAIL");
+        jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel110.setText("EMAIL");
 
         REGINFOFIRSTNAME2.addActionListener(new java.awt.event.ActionListener()
         {
@@ -1464,8 +1493,6 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         REGINFOTRAVELAGENCY2.setEditable(false);
-
-        REGINFOROOMSIZE2.setEditable(false);
 
         REGINFOROOMNUMBER2.setEditable(false);
         REGINFOROOMNUMBER2.addActionListener(new java.awt.event.ActionListener()
@@ -1493,16 +1520,18 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel67.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel67.setText("REGISTRATION INFORMATION");
+        jLabel111.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel111.setText("REGISTRATION INFORMATION");
 
         REGINFOUSERNAME2.setEditable(false);
 
         SHOWREGINFOPASSWORD2.setEditable(false);
 
-        jLabel32.setText("USERNAME");
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("USERNAME");
 
-        jLabel33.setText("PASSWORD");
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel16.setText("PASSWORD");
 
         UPDATEGUEST3.setText("UPDATE GUEST");
         UPDATEGUEST3.addActionListener(new java.awt.event.ActionListener()
@@ -1513,9 +1542,13 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel100.setText("GuestID");
-
         REGINFOGUESTID2.setEditable(false);
+
+        jLabel112.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel112.setText("GuestID");
+
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel17.setText("AGE");
 
         javax.swing.GroupLayout SHOWREGINFO3Layout = new javax.swing.GroupLayout(SHOWREGINFO3);
         SHOWREGINFO3.setLayout(SHOWREGINFO3Layout);
@@ -1526,155 +1559,161 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(REGINFOBACKBUTTON2)
                 .addGap(139, 139, 139))
             .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                .addGap(379, 379, 379)
                 .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel61)
-                            .addComponent(jLabel55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel62, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel54, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(REGINFOFEEDBACK2)
-                        .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(REGINFOROOMNUMBER2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOFIRSTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOPHONE2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOADRESS2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOTRAVELAGENCY2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOROOMSIZE2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                                        .addGap(39, 39, 39)
-                                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel100)))
-                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO3Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(REGINFOGUESTID2)
-                                .addGap(156, 156, 156))
-                            .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                                    .addComponent(REGINFOLASTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(UPDATEGUEST3))
-                                .addComponent(REGINFOCOUNTRY2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(REGINFOEMAIL2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(REGINFOUSERNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(SHOWREGINFOPASSWORD2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(409, 409, 409)
+                                .addComponent(REGINFOFEEDBACK2))
+                            .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel96, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel106)
+                                        .addComponent(jLabel105, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel107, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(27, 27, 27)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(REGINFOROOMNUMBER2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOPHONE2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOTRAVELAGENCY2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOAGE2)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO3Layout.createSequentialGroup()
+                                .addGap(517, 517, 517)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(WHOISTHEPAYER2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(REGINFOFIRSTNAME2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOADRESS2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))))
+                        .addGap(87, 87, 87)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel108, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel110, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel109, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
+                            .addComponent(jLabel112, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                                .addComponent(REGINFOLASTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(UPDATEGUEST3))
+                            .addComponent(REGINFOCOUNTRY2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOEMAIL2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOUSERNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(REGINFOGUESTID2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(SHOWREGINFOPASSWORD2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         SHOWREGINFO3Layout.setVerticalGroup(
             SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel54)
-                    .addComponent(REGINFOFIRSTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel55)
-                    .addComponent(REGINFOADRESS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOPHONE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel61)
-                    .addComponent(REGINFOTRAVELAGENCY2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMSIZE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel62))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOGUESTID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel100))
-                    .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOROOMNUMBER2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel63)))
-                .addGap(220, 220, 220)
-                .addComponent(REGINFOFEEDBACK2)
-                .addGap(47, 47, 47)
-                .addComponent(REGINFOBACKBUTTON2)
-                .addGap(158, 158, 158))
-            .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel67)
-                .addGap(48, 48, 48)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel64)
-                    .addComponent(REGINFOLASTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UPDATEGUEST3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel65)
-                    .addComponent(REGINFOCOUNTRY2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel66)
-                    .addComponent(REGINFOEMAIL2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(REGINFOUSERNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SHOWREGINFOPASSWORD2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel111)
+                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel96)
+                            .addComponent(REGINFOFIRSTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel104)
+                            .addComponent(REGINFOADRESS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOGUESTID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel112))
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOAGE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel17))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOPHONE2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOTRAVELAGENCY2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel106))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOROOMNUMBER2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel107))
+                                .addGap(52, 52, 52)))
+                        .addComponent(WHOISTHEPAYER2)
+                        .addGap(152, 152, 152)
+                        .addComponent(REGINFOFEEDBACK2)
+                        .addGap(51, 51, 51)
+                        .addComponent(REGINFOBACKBUTTON2)
+                        .addGap(158, 158, 158))
+                    .addGroup(SHOWREGINFO3Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel108)
+                            .addComponent(REGINFOLASTNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UPDATEGUEST3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel109)
+                            .addComponent(REGINFOCOUNTRY2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel110)
+                            .addComponent(REGINFOEMAIL2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(REGINFOUSERNAME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SHOWREGINFOPASSWORD2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         TABPANE1.addTab("Guest 3", SHOWREGINFO3);
 
         SHOWREGINFO4.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel68.setText("FIRST NAME(S)");
+        jLabel113.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel113.setText("FIRST NAME(S)");
 
-        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel69.setText("ADRESS");
+        jLabel114.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel114.setText("ADDRESS");
 
-        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel70.setText("PHONE");
+        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel115.setText("PHONE");
 
-        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel71.setText("TRAVEL AGENCY");
+        jLabel116.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel116.setText("TRAVEL AGENCY");
 
-        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel72.setText("ROOM SIZE");
+        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel117.setText("ROOM#");
 
-        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel73.setText("ROOM#");
+        jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel118.setText("LAST NAME");
 
-        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel74.setText("LAST NAME");
+        jLabel119.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel119.setText("COUNTRY");
 
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel75.setText("COUNTRY");
-
-        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel76.setText("EMAIL");
+        jLabel120.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel120.setText("EMAIL");
 
         REGINFOFIRSTNAME3.addActionListener(new java.awt.event.ActionListener()
         {
@@ -1685,8 +1724,6 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         REGINFOTRAVELAGENCY3.setEditable(false);
-
-        REGINFOROOMSIZE3.setEditable(false);
 
         REGINFOROOMNUMBER3.setEditable(false);
         REGINFOROOMNUMBER3.addActionListener(new java.awt.event.ActionListener()
@@ -1714,16 +1751,18 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel77.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel77.setText("REGISTRATION INFORMATION");
+        jLabel121.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel121.setText("REGISTRATION INFORMATION");
 
         REGINFOUSERNAME3.setEditable(false);
 
         SHOWREGINFOPASSWORD3.setEditable(false);
 
-        jLabel78.setText("USERNAME");
+        jLabel122.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel122.setText("USERNAME");
 
-        jLabel79.setText("PASSWORD");
+        jLabel123.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel123.setText("PASSWORD");
 
         UPDATEGUEST4.setText("UPDATE GUEST");
         UPDATEGUEST4.addActionListener(new java.awt.event.ActionListener()
@@ -1734,9 +1773,13 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel101.setText("GuestID");
-
         REGINFOGUESTID3.setEditable(false);
+
+        jLabel124.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel124.setText("GuestID");
+
+        jLabel125.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel125.setText("AGE");
 
         javax.swing.GroupLayout SHOWREGINFO4Layout = new javax.swing.GroupLayout(SHOWREGINFO4);
         SHOWREGINFO4.setLayout(SHOWREGINFO4Layout);
@@ -1749,156 +1792,159 @@ public class Casablanca extends javax.swing.JFrame
             .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
                 .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
                         .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel71)
-                                    .addComponent(jLabel69, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel68, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(409, 409, 409)
+                                .addComponent(REGINFOFEEDBACK3))
                             .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(REGINFOROOMNUMBER3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOFIRSTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOPHONE3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOADRESS3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOTRAVELAGENCY3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOROOMSIZE3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                        .addGap(92, 92, 92)
-                                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                                .addGap(39, 39, 39)
-                                                .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel78, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jLabel76, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel75, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO4Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel101)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO4Layout.createSequentialGroup()
-                                        .addComponent(REGINFOLASTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(UPDATEGUEST4))
-                                    .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(REGINFOCOUNTRY3, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(REGINFOEMAIL3, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(REGINFOUSERNAME3, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(SHOWREGINFOPASSWORD3, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(REGINFOGUESTID3))
-                                        .addGap(156, 156, 156))))
-                            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                                .addGap(106, 106, 106)
-                                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                        .addGap(400, 400, 400)
-                        .addComponent(REGINFOFEEDBACK1)))
-                .addContainerGap(169, Short.MAX_VALUE))
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel116)
+                                        .addComponent(jLabel115, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel117, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(27, 27, 27)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(REGINFOROOMNUMBER3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOPHONE3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOTRAVELAGENCY3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOAGE3)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO4Layout.createSequentialGroup()
+                                .addGap(517, 517, 517)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(WHOISTHEPAYER3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(REGINFOFIRSTNAME3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOADRESS3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))))
+                        .addGap(87, 87, 87)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel118, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel122, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel123, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel120, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel119, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
+                            .addComponent(jLabel124, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
+                                .addComponent(REGINFOLASTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(UPDATEGUEST4))
+                            .addComponent(REGINFOCOUNTRY3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOEMAIL3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOUSERNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(REGINFOGUESTID3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(SHOWREGINFOPASSWORD3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         SHOWREGINFO4Layout.setVerticalGroup(
             SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel68)
-                    .addComponent(REGINFOFIRSTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel69)
-                    .addComponent(REGINFOADRESS3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOPHONE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel71)
-                    .addComponent(REGINFOTRAVELAGENCY3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMSIZE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel72))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOGUESTID3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel101))
-                    .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOROOMNUMBER3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel73)))
-                .addGap(264, 264, 264)
-                .addComponent(REGINFOFEEDBACK1)
-                .addGap(3, 3, 3)
-                .addComponent(REGINFOBACKBUTTON3)
-                .addGap(158, 158, 158))
-            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel77)
-                .addGap(48, 48, 48)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel74)
-                    .addComponent(REGINFOLASTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UPDATEGUEST4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel75)
-                    .addComponent(REGINFOCOUNTRY3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel76)
-                    .addComponent(REGINFOEMAIL3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel78)
-                    .addComponent(REGINFOUSERNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel79, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SHOWREGINFOPASSWORD3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel121)
+                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel113)
+                            .addComponent(REGINFOFIRSTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel114)
+                            .addComponent(REGINFOADRESS3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOGUESTID3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel124))
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOAGE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel125))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOPHONE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOTRAVELAGENCY3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel116))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOROOMNUMBER3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel117))
+                                .addGap(52, 52, 52)))
+                        .addComponent(WHOISTHEPAYER3)
+                        .addGap(152, 152, 152)
+                        .addComponent(REGINFOFEEDBACK3)
+                        .addGap(51, 51, 51)
+                        .addComponent(REGINFOBACKBUTTON3)
+                        .addGap(158, 158, 158))
+                    .addGroup(SHOWREGINFO4Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel118)
+                            .addComponent(REGINFOLASTNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UPDATEGUEST4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel119)
+                            .addComponent(REGINFOCOUNTRY3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel120)
+                            .addComponent(REGINFOEMAIL3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel122)
+                            .addComponent(REGINFOUSERNAME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel123, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SHOWREGINFOPASSWORD3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         TABPANE1.addTab("Guest 4", SHOWREGINFO4);
 
         SHOWREGINFO5.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel80.setText("FIRST NAME(S)");
+        jLabel126.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel126.setText("FIRST NAME(S)");
 
-        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel81.setText("ADRESS");
+        jLabel127.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel127.setText("ADDRESS");
 
-        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel82.setText("PHONE");
+        jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel128.setText("PHONE");
 
-        jLabel83.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel83.setText("TRAVEL AGENCY");
+        jLabel129.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel129.setText("TRAVEL AGENCY");
 
-        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel84.setText("ROOM SIZE");
+        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel130.setText("ROOM#");
 
-        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel85.setText("ROOM#");
+        jLabel131.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel131.setText("LAST NAME");
 
-        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel86.setText("LAST NAME");
+        jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel132.setText("COUNTRY");
 
-        jLabel87.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel87.setText("COUNTRY");
-
-        jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel88.setText("EMAIL");
+        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel133.setText("EMAIL");
 
         REGINFOFIRSTNAME4.addActionListener(new java.awt.event.ActionListener()
         {
@@ -1909,8 +1955,6 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         REGINFOTRAVELAGENCY4.setEditable(false);
-
-        REGINFOROOMSIZE4.setEditable(false);
 
         REGINFOROOMNUMBER4.setEditable(false);
         REGINFOROOMNUMBER4.addActionListener(new java.awt.event.ActionListener()
@@ -1938,16 +1982,18 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel89.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
-        jLabel89.setText("REGISTRATION INFORMATION");
+        jLabel134.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 18)); // NOI18N
+        jLabel134.setText("REGISTRATION INFORMATION");
 
         REGINFOUSERNAME4.setEditable(false);
 
         SHOWREGINFOPASSWORD4.setEditable(false);
 
-        jLabel90.setText("USERNAME");
+        jLabel135.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel135.setText("USERNAME");
 
-        jLabel91.setText("PASSWORD");
+        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel136.setText("PASSWORD");
 
         UPDATEGUEST5.setText("UPDATE GUEST");
         UPDATEGUEST5.addActionListener(new java.awt.event.ActionListener()
@@ -1958,143 +2004,155 @@ public class Casablanca extends javax.swing.JFrame
             }
         });
 
-        jLabel102.setText("GuestID");
-
         REGINFOGUESTID4.setEditable(false);
+
+        jLabel137.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel137.setText("GuestID");
+
+        jLabel138.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel138.setText("AGE");
 
         javax.swing.GroupLayout SHOWREGINFO5Layout = new javax.swing.GroupLayout(SHOWREGINFO5);
         SHOWREGINFO5.setLayout(SHOWREGINFO5Layout);
         SHOWREGINFO5Layout.setHorizontalGroup(
             SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO5Layout.createSequentialGroup()
-                .addGap(379, 379, 379)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel83)
-                            .addComponent(jLabel81, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel82, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(REGINFOFEEDBACK)
-                                .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jLabel80, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel85, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(REGINFOBACKBUTTON4)
+                .addGap(139, 139, 139))
+            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
                 .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
                         .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(REGINFOROOMNUMBER4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOFIRSTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOPHONE4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOADRESS4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOTRAVELAGENCY4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(REGINFOROOMSIZE4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(94, 94, 94)
+                            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                                .addGap(409, 409, 409)
+                                .addComponent(REGINFOFEEDBACK4))
+                            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel127, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel134, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                                .addGap(387, 387, 387)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel138, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel129)
+                                        .addComponent(jLabel128, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel130, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(27, 27, 27)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(REGINFOROOMNUMBER4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOPHONE4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOTRAVELAGENCY4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOAGE4)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWREGINFO5Layout.createSequentialGroup()
+                                .addGap(517, 517, 517)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(WHOISTHEPAYER4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(REGINFOFIRSTNAME4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                    .addComponent(REGINFOADRESS4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))))
+                        .addGap(87, 87, 87)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel131, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel135, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel136, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel133, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel132, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))
+                            .addComponent(jLabel137, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                                        .addGap(39, 39, 39)
-                                        .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel90, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel86, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel88, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel87, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(REGINFOLASTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOCOUNTRY4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOEMAIL4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(REGINFOUSERNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(SHOWREGINFOPASSWORD4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(jLabel102)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(REGINFOGUESTID4))))
-                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel89, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                        .addComponent(REGINFOBACKBUTTON4)
-                        .addGap(179, 179, 179))
-                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(UPDATEGUEST5)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(REGINFOLASTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(UPDATEGUEST5))
+                            .addComponent(REGINFOCOUNTRY4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOEMAIL4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(REGINFOUSERNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(REGINFOGUESTID4, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(SHOWREGINFOPASSWORD4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         SHOWREGINFO5Layout.setVerticalGroup(
             SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel80)
-                    .addComponent(REGINFOFIRSTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel81)
-                    .addComponent(REGINFOADRESS4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOPHONE4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel82, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel83)
-                    .addComponent(REGINFOTRAVELAGENCY4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(REGINFOROOMSIZE4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel84))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOGUESTID4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel102))
-                    .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(REGINFOROOMNUMBER4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel85)))
-                .addGap(264, 264, 264)
-                .addComponent(REGINFOFEEDBACK)
-                .addGap(3, 3, 3)
-                .addComponent(REGINFOBACKBUTTON4)
-                .addGap(158, 158, 158))
-            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jLabel89)
-                .addGap(48, 48, 48)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel86)
-                    .addComponent(REGINFOLASTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UPDATEGUEST5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel87)
-                    .addComponent(REGINFOCOUNTRY4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel88)
-                    .addComponent(REGINFOEMAIL4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel90)
-                    .addComponent(REGINFOUSERNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel91, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(SHOWREGINFOPASSWORD4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel134)
+                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel126)
+                            .addComponent(REGINFOFIRSTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel127)
+                            .addComponent(REGINFOADRESS4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                                .addGap(120, 120, 120)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOGUESTID4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel137))
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWREGINFO5Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOAGE4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel138))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOPHONE4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOTRAVELAGENCY4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel129))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(REGINFOROOMNUMBER4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel130))
+                                .addGap(52, 52, 52)))
+                        .addComponent(WHOISTHEPAYER4)
+                        .addGap(152, 152, 152)
+                        .addComponent(REGINFOFEEDBACK4)
+                        .addGap(51, 51, 51)
+                        .addComponent(REGINFOBACKBUTTON4)
+                        .addGap(158, 158, 158))
+                    .addGroup(SHOWREGINFO5Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel131)
+                            .addComponent(REGINFOLASTNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UPDATEGUEST5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel132)
+                            .addComponent(REGINFOCOUNTRY4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel133)
+                            .addComponent(REGINFOEMAIL4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel135)
+                            .addComponent(REGINFOUSERNAME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SHOWREGINFO5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel136, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(SHOWREGINFOPASSWORD4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
-
-        REGINFOFEEDBACK.getAccessibleContext().setAccessibleName("REGINFOFEEDBACK");
 
         TABPANE1.addTab("Guest 5", SHOWREGINFO5);
 
         getContentPane().add(TABPANE1, "card12");
-        TABPANE1.getAccessibleContext().setAccessibleName("Guest 1 ");
+        TABPANE1.getAccessibleContext().setAccessibleName("Guest 2");
 
         SHOWBOOKEDROOMS.setPreferredSize(new java.awt.Dimension(1280, 720));
 
@@ -2136,7 +2194,7 @@ public class Casablanca extends javax.swing.JFrame
         SHOWBOOKEDROOMSLayout.setHorizontalGroup(
             SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWBOOKEDROOMSLayout.createSequentialGroup()
-                .addContainerGap(388, Short.MAX_VALUE)
+                .addContainerGap(463, Short.MAX_VALUE)
                 .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SHOWBOOKEDROOMSLayout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2154,7 +2212,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addGroup(SHOWBOOKEDROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SHOWREGINFOBUTTON)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
                 .addComponent(BACKBUTTONBOOKEDROOMS)
                 .addGap(105, 105, 105))
         );
@@ -2210,7 +2268,7 @@ public class Casablanca extends javax.swing.JFrame
         SHOWSTANDBYROOMSLayout.setHorizontalGroup(
             SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                .addContainerGap(304, Short.MAX_VALUE)
+                .addContainerGap(398, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2233,7 +2291,7 @@ public class Casablanca extends javax.swing.JFrame
                         .addGap(18, 18, 18)
                         .addComponent(STANDBYROOMDECLINEBUTTON))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
                 .addComponent(STANDBYROOMBACKBUTTON)
                 .addGap(37, 37, 37))
         );
@@ -2300,10 +2358,6 @@ public class Casablanca extends javax.swing.JFrame
 
 
     }//GEN-LAST:event_SHOWREGINFOBUTTONActionPerformed
-
-    private void REGINFOFIRSTNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOFIRSTNAMEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOFIRSTNAMEActionPerformed
 
     private void BOOKROOMFIRSTNAMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BOOKROOMFIRSTNAMEActionPerformed
         // TODO add your handling code here:
@@ -2431,11 +2485,6 @@ public class Casablanca extends javax.swing.JFrame
         WELCOME.setVisible(true);
     }//GEN-LAST:event_CHOOSEDATEBACKBUTTONActionPerformed
 
-    private void REGINFOBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTONActionPerformed
-    {//GEN-HEADEREND:event_REGINFOBACKBUTTONActionPerformed
-        clearRegInfoAndGoBack();
-    }//GEN-LAST:event_REGINFOBACKBUTTONActionPerformed
-
     private void BOOKROOMCONFIRMBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_BOOKROOMCONFIRMBUTTONActionPerformed
     {//GEN-HEADEREND:event_BOOKROOMCONFIRMBUTTONActionPerformed
 
@@ -2482,14 +2531,6 @@ public class Casablanca extends javax.swing.JFrame
 
     private void TRAVELAGENCYBOXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TRAVELAGENCYBOXActionPerformed
     }//GEN-LAST:event_TRAVELAGENCYBOXActionPerformed
-
-    private void REGINFOROOMNUMBERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOROOMNUMBERActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOROOMNUMBERActionPerformed
-
-    private void REGINFOEMAILActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOEMAILActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOEMAILActionPerformed
 
     private void BOOKROOMADDGUESTBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_BOOKROOMADDGUESTBUTTONActionPerformed
     {//GEN-HEADEREND:event_BOOKROOMADDGUESTBUTTONActionPerformed
@@ -2652,70 +2693,6 @@ public class Casablanca extends javax.swing.JFrame
         WELCOME.setVisible(true);
     }//GEN-LAST:event_BACKBUTTONBOOKEDROOMSActionPerformed
 
-    private void REGINFOFIRSTNAME1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOFIRSTNAME1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOFIRSTNAME1ActionPerformed
-
-    private void REGINFOROOMNUMBER1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOROOMNUMBER1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOROOMNUMBER1ActionPerformed
-
-    private void REGINFOEMAIL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOEMAIL1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOEMAIL1ActionPerformed
-
-    private void REGINFOBACKBUTTON1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOBACKBUTTON1ActionPerformed
-        clearRegInfoAndGoBack();
-    }//GEN-LAST:event_REGINFOBACKBUTTON1ActionPerformed
-
-    private void REGINFOFIRSTNAME2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOFIRSTNAME2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOFIRSTNAME2ActionPerformed
-
-    private void REGINFOROOMNUMBER2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOROOMNUMBER2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOROOMNUMBER2ActionPerformed
-
-    private void REGINFOEMAIL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOEMAIL2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOEMAIL2ActionPerformed
-
-    private void REGINFOBACKBUTTON2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOBACKBUTTON2ActionPerformed
-        clearRegInfoAndGoBack();
-    }//GEN-LAST:event_REGINFOBACKBUTTON2ActionPerformed
-
-    private void REGINFOFIRSTNAME3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOFIRSTNAME3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOFIRSTNAME3ActionPerformed
-
-    private void REGINFOROOMNUMBER3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOROOMNUMBER3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOROOMNUMBER3ActionPerformed
-
-    private void REGINFOEMAIL3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOEMAIL3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOEMAIL3ActionPerformed
-
-    private void REGINFOBACKBUTTON3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOBACKBUTTON3ActionPerformed
-        clearRegInfoAndGoBack();
-    }//GEN-LAST:event_REGINFOBACKBUTTON3ActionPerformed
-
-    private void REGINFOFIRSTNAME4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOFIRSTNAME4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOFIRSTNAME4ActionPerformed
-
-    private void REGINFOROOMNUMBER4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOROOMNUMBER4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOROOMNUMBER4ActionPerformed
-
-    private void REGINFOEMAIL4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOEMAIL4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REGINFOEMAIL4ActionPerformed
-
-    private void REGINFOBACKBUTTON4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGINFOBACKBUTTON4ActionPerformed
-        clearRegInfoAndGoBack();
-    }//GEN-LAST:event_REGINFOBACKBUTTON4ActionPerformed
-
     private void STANDBYROOMDECLINEBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_STANDBYROOMDECLINEBUTTONActionPerformed
     {//GEN-HEADEREND:event_STANDBYROOMDECLINEBUTTONActionPerformed
         // DECLINING STANDBY RESERVATION
@@ -2768,6 +2745,7 @@ public class Casablanca extends javax.swing.JFrame
         String email = REGINFOEMAIL.getText();
         String username = null;
         String password = null;
+        int age = Integer.parseInt(REGINFOAGE.getText());
         int guest_id = Integer.parseInt(REGINFOGUESTID.getText());
 
         if (!firstname.isEmpty() && !familyname.isEmpty())
@@ -2782,7 +2760,7 @@ public class Casablanca extends javax.swing.JFrame
             phone = Integer.parseInt(REGINFOPHONE.getText());
         } catch (NumberFormatException e)
         {
-            REGINFOFEEDBACK4.setText("Phone no invalid");
+            REGINFOFEEDBACK.setText("Phone no invalid");
             phone = 0;
         }
         if (!email.contains("@") && !email.contains("."))
@@ -2790,9 +2768,9 @@ public class Casablanca extends javax.swing.JFrame
             email = "";
         }
 
-        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty() && age != 0)
         {
-            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, age, username, password);
         }
         if (g != null)
         {
@@ -2805,232 +2783,131 @@ public class Casablanca extends javax.swing.JFrame
             REGINFOEMAIL.setText(g.getEmail());
             REGINFOUSERNAME.setText(g.getUsername());
             SHOWREGINFOPASSWORD.setText(g.getPassword());
-            REGINFOFEEDBACK4.setText("Guest updated");
-        } else
-        {
-            REGINFOFEEDBACK4.setText("Update failed - Check input fields");
-        }
-
-    }//GEN-LAST:event_UPDATEGUEST1ActionPerformed
-
-    private void UPDATEGUEST2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST2ActionPerformed
-    {//GEN-HEADEREND:event_UPDATEGUEST2ActionPerformed
-        Guest g = null;
-        String firstname = REGINFOFIRSTNAME1.getText();
-        String familyname = REGINFOLASTNAME1.getText();
-        String address = REGINFOADRESS1.getText();
-        String country = REGINFOCOUNTRY1.getText();
-        int phone;
-        String email = REGINFOEMAIL1.getText();
-        String username = null;
-        String password = null;
-        int guest_id = Integer.parseInt(REGINFOGUESTID1.getText());
-
-        if (!firstname.isEmpty() && !familyname.isEmpty())
-        {
-            String fullname = firstname + familyname;
-            CreateUserStaff cus = new CreateUserStaff(fullname);
-            username = cus.getuserName();
-            password = cus.getPassword();
-        }
-        try
-        {
-            phone = Integer.parseInt(REGINFOPHONE1.getText());
-        } catch (NumberFormatException e)
-        {
-            REGINFOFEEDBACK3.setText("Phone no invalid");
-            phone = 0;
-        }
-        if (!email.contains("@") && !email.contains("."))
-        {
-            email = "";
-        }
-
-        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-        {
-            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-        }
-        if (g != null)
-        {
-            String phone1 = Integer.toString(g.getPhone());
-            REGINFOFIRSTNAME1.setText(g.getFirstname());
-            REGINFOLASTNAME1.setText(g.getFamilyname());
-            REGINFOADRESS1.setText(g.getAddress());
-            REGINFOCOUNTRY1.setText(g.getCountry());
-            REGINFOPHONE1.setText(phone1);
-            REGINFOEMAIL1.setText(g.getEmail());
-            REGINFOUSERNAME1.setText(g.getUsername());
-            SHOWREGINFOPASSWORD1.setText(g.getPassword());
-            REGINFOFEEDBACK3.setText("Guest updated");
-        } else
-        {
-            REGINFOFEEDBACK3.setText("Update failed - Check input fields");
-        }
-    }//GEN-LAST:event_UPDATEGUEST2ActionPerformed
-
-    private void UPDATEGUEST3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST3ActionPerformed
-    {//GEN-HEADEREND:event_UPDATEGUEST3ActionPerformed
-        Guest g = null;
-        String firstname = REGINFOFIRSTNAME2.getText();
-        String familyname = REGINFOLASTNAME2.getText();
-        String address = REGINFOADRESS2.getText();
-        String country = REGINFOCOUNTRY2.getText();
-        int phone;
-        String email = REGINFOEMAIL2.getText();
-        String username = null;
-        String password = null;
-        int guest_id = Integer.parseInt(REGINFOGUESTID2.getText());
-
-        if (!firstname.isEmpty() && !familyname.isEmpty())
-        {
-            String fullname = firstname + familyname;
-            CreateUserStaff cus = new CreateUserStaff(fullname);
-            username = cus.getuserName();
-            password = cus.getPassword();
-        }
-        try
-        {
-            phone = Integer.parseInt(REGINFOPHONE2.getText());
-        } catch (NumberFormatException e)
-        {
-            REGINFOFEEDBACK2.setText("Phone no invalid");
-            phone = 0;
-        }
-        if (!email.contains("@") && !email.contains("."))
-        {
-            email = "";
-        }
-
-        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-        {
-            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-        }
-        if (g != null)
-        {
-            String phone1 = Integer.toString(g.getPhone());
-            REGINFOFIRSTNAME2.setText(g.getFirstname());
-            REGINFOLASTNAME2.setText(g.getFamilyname());
-            REGINFOADRESS2.setText(g.getAddress());
-            REGINFOCOUNTRY2.setText(g.getCountry());
-            REGINFOPHONE2.setText(phone1);
-            REGINFOEMAIL2.setText(g.getEmail());
-            REGINFOUSERNAME2.setText(g.getUsername());
-            SHOWREGINFOPASSWORD2.setText(g.getPassword());
-            REGINFOFEEDBACK2.setText("Guest updated");
-        } else
-        {
-            REGINFOFEEDBACK2.setText("Update failed - Check input fields");
-        }
-    }//GEN-LAST:event_UPDATEGUEST3ActionPerformed
-
-    private void UPDATEGUEST4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST4ActionPerformed
-    {//GEN-HEADEREND:event_UPDATEGUEST4ActionPerformed
-        Guest g = null;
-        String firstname = REGINFOFIRSTNAME3.getText();
-        String familyname = REGINFOLASTNAME3.getText();
-        String address = REGINFOADRESS3.getText();
-        String country = REGINFOCOUNTRY3.getText();
-        int phone;
-        String email = REGINFOEMAIL3.getText();
-        String username = null;
-        String password = null;
-        int guest_id = Integer.parseInt(REGINFOGUESTID3.getText());
-
-        if (!firstname.isEmpty() && !familyname.isEmpty())
-        {
-            String fullname = firstname + familyname;
-            CreateUserStaff cus = new CreateUserStaff(fullname);
-            username = cus.getuserName();
-            password = cus.getPassword();
-        }
-        try
-        {
-            phone = Integer.parseInt(REGINFOPHONE3.getText());
-        } catch (NumberFormatException e)
-        {
-            REGINFOFEEDBACK1.setText("Phone no invalid");
-            phone = 0;
-        }
-        if (!email.contains("@") && !email.contains("."))
-        {
-            email = "";
-        }
-
-        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-        {
-            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-        }
-        if (g != null)
-        {
-            String phone1 = Integer.toString(g.getPhone());
-            REGINFOFIRSTNAME3.setText(g.getFirstname());
-            REGINFOLASTNAME3.setText(g.getFamilyname());
-            REGINFOADRESS3.setText(g.getAddress());
-            REGINFOCOUNTRY3.setText(g.getCountry());
-            REGINFOPHONE3.setText(phone1);
-            REGINFOEMAIL3.setText(g.getEmail());
-            REGINFOUSERNAME3.setText(g.getUsername());
-            SHOWREGINFOPASSWORD3.setText(g.getPassword());
-            REGINFOFEEDBACK1.setText("Guest updated");
-        } else
-        {
-            REGINFOFEEDBACK1.setText("Update failed - Check input fields");
-        }
-    }//GEN-LAST:event_UPDATEGUEST4ActionPerformed
-
-    private void UPDATEGUEST5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST5ActionPerformed
-    {//GEN-HEADEREND:event_UPDATEGUEST5ActionPerformed
-        Guest g = null;
-        String firstname = REGINFOFIRSTNAME4.getText();
-        String familyname = REGINFOLASTNAME4.getText();
-        String address = REGINFOADRESS4.getText();
-        String country = REGINFOCOUNTRY4.getText();
-        int phone;
-        String email = REGINFOEMAIL4.getText();
-        String username = null;
-        String password = null;
-        int guest_id = Integer.parseInt(REGINFOGUESTID4.getText());
-
-        if (!firstname.isEmpty() && !familyname.isEmpty())
-        {
-            String fullname = firstname + familyname;
-            CreateUserStaff cus = new CreateUserStaff(fullname);
-            username = cus.getuserName();
-            password = cus.getPassword();
-        }
-        try
-        {
-            phone = Integer.parseInt(REGINFOPHONE4.getText());
-        } catch (NumberFormatException e)
-        {
-            REGINFOFEEDBACK.setText("Phone no invalid");
-            phone = 0;
-        }
-        if (!email.contains("@") && !email.contains("."))
-        {
-            email = "";
-        }
-
-        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty())
-        {
-            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, username, password);
-        }
-        if (g != null)
-        {
-            String phone1 = Integer.toString(g.getPhone());
-            REGINFOFIRSTNAME4.setText(g.getFirstname());
-            REGINFOLASTNAME4.setText(g.getFamilyname());
-            REGINFOADRESS4.setText(g.getAddress());
-            REGINFOCOUNTRY4.setText(g.getCountry());
-            REGINFOPHONE4.setText(phone1);
-            REGINFOEMAIL4.setText(g.getEmail());
-            REGINFOUSERNAME4.setText(g.getUsername());
-            SHOWREGINFOPASSWORD4.setText(g.getPassword());
             REGINFOFEEDBACK.setText("Guest updated");
         } else
         {
             REGINFOFEEDBACK.setText("Update failed - Check input fields");
         }
+    }//GEN-LAST:event_UPDATEGUEST1ActionPerformed
+
+    private void REGINFOBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTONActionPerformed
+    {//GEN-HEADEREND:event_REGINFOBACKBUTTONActionPerformed
+        clearRegInfoAndGoBack();
+    }//GEN-LAST:event_REGINFOBACKBUTTONActionPerformed
+
+    private void REGINFOEMAILActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOEMAILActionPerformed
+    {//GEN-HEADEREND:event_REGINFOEMAILActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOEMAILActionPerformed
+
+    private void REGINFOROOMNUMBERActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOROOMNUMBERActionPerformed
+    {//GEN-HEADEREND:event_REGINFOROOMNUMBERActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOROOMNUMBERActionPerformed
+
+    private void REGINFOFIRSTNAMEActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAMEActionPerformed
+    {//GEN-HEADEREND:event_REGINFOFIRSTNAMEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOFIRSTNAMEActionPerformed
+
+    private void REGINFOFIRSTNAME1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME1ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOFIRSTNAME1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOFIRSTNAME1ActionPerformed
+
+    private void REGINFOROOMNUMBER1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOROOMNUMBER1ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOROOMNUMBER1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOROOMNUMBER1ActionPerformed
+
+    private void REGINFOEMAIL1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOEMAIL1ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOEMAIL1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOEMAIL1ActionPerformed
+
+    private void REGINFOBACKBUTTON1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON1ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOBACKBUTTON1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOBACKBUTTON1ActionPerformed
+
+    private void UPDATEGUEST2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST2ActionPerformed
+    {//GEN-HEADEREND:event_UPDATEGUEST2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UPDATEGUEST2ActionPerformed
+
+    private void REGINFOFIRSTNAME2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME2ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOFIRSTNAME2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOFIRSTNAME2ActionPerformed
+
+    private void REGINFOROOMNUMBER2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOROOMNUMBER2ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOROOMNUMBER2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOROOMNUMBER2ActionPerformed
+
+    private void REGINFOEMAIL2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOEMAIL2ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOEMAIL2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOEMAIL2ActionPerformed
+
+    private void REGINFOBACKBUTTON2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON2ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOBACKBUTTON2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOBACKBUTTON2ActionPerformed
+
+    private void UPDATEGUEST3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST3ActionPerformed
+    {//GEN-HEADEREND:event_UPDATEGUEST3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UPDATEGUEST3ActionPerformed
+
+    private void REGINFOFIRSTNAME3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME3ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOFIRSTNAME3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOFIRSTNAME3ActionPerformed
+
+    private void REGINFOROOMNUMBER3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOROOMNUMBER3ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOROOMNUMBER3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOROOMNUMBER3ActionPerformed
+
+    private void REGINFOEMAIL3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOEMAIL3ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOEMAIL3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOEMAIL3ActionPerformed
+
+    private void REGINFOBACKBUTTON3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON3ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOBACKBUTTON3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOBACKBUTTON3ActionPerformed
+
+    private void UPDATEGUEST4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST4ActionPerformed
+    {//GEN-HEADEREND:event_UPDATEGUEST4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UPDATEGUEST4ActionPerformed
+
+    private void REGINFOFIRSTNAME4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME4ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOFIRSTNAME4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOFIRSTNAME4ActionPerformed
+
+    private void REGINFOROOMNUMBER4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOROOMNUMBER4ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOROOMNUMBER4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOROOMNUMBER4ActionPerformed
+
+    private void REGINFOEMAIL4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOEMAIL4ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOEMAIL4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOEMAIL4ActionPerformed
+
+    private void REGINFOBACKBUTTON4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON4ActionPerformed
+    {//GEN-HEADEREND:event_REGINFOBACKBUTTON4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_REGINFOBACKBUTTON4ActionPerformed
+
+    private void UPDATEGUEST5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST5ActionPerformed
+    {//GEN-HEADEREND:event_UPDATEGUEST5ActionPerformed
+        // TODO add your handling code here:
     }//GEN-LAST:event_UPDATEGUEST5ActionPerformed
 
     private void fillTodayList(ArrayList<TodayGuest> todayguests)
@@ -3084,7 +2961,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOFIRSTNAME2.setText("");
         REGINFOLASTNAME2.setText("");
         REGINFOROOMNUMBER2.setText("");
-        REGINFOADRESS2.setText("");
+        REGINFOADRESS1.setText("");
         REGINFOCOUNTRY2.setText("");
         REGINFOEMAIL2.setText("");
         REGINFOPHONE2.setText("");
@@ -3132,6 +3009,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOUSERNAME.setText(guestinfo.get(0).getUsername());
         SHOWREGINFOPASSWORD.setText(guestinfo.get(0).getPassword());
         WHOISTHEPAYER.setText(guestinfo.get(0).getFirstname() + " is the payer.");
+        REGINFOAGE.setText(guestinfo.get(0).getAge() + "");
     }
 
     private void fillRegInfo2(ArrayList<Guest> guestinfo, int room_id)
@@ -3147,6 +3025,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID1.setText(guestinfo.get(1).getGuest_id() + "");
         REGINFOUSERNAME1.setText(guestinfo.get(1).getUsername());
         SHOWREGINFOPASSWORD1.setText(guestinfo.get(1).getPassword());
+        REGINFOAGE1.setText(guestinfo.get(1).getAge() + "");
     }
 
     private void fillRegInfo3(ArrayList<Guest> guestinfo, int room_id)
@@ -3155,13 +3034,14 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOFIRSTNAME2.setText(guestinfo.get(2).getFirstname());
         REGINFOLASTNAME2.setText(guestinfo.get(2).getFamilyname());
         REGINFOROOMNUMBER2.setText(room_id + "");
-        REGINFOADRESS2.setText(guestinfo.get(2).getAddress());
+        REGINFOADRESS1.setText(guestinfo.get(2).getAddress());
         REGINFOCOUNTRY2.setText(guestinfo.get(2).getCountry());
         REGINFOEMAIL2.setText(guestinfo.get(2).getEmail());
         REGINFOPHONE2.setText(guestinfo.get(2).getPhone() + "");
         REGINFOGUESTID2.setText(guestinfo.get(2).getGuest_id() + "");
         REGINFOUSERNAME2.setText(guestinfo.get(2).getUsername());
         SHOWREGINFOPASSWORD2.setText(guestinfo.get(2).getPassword());
+        REGINFOAGE2.setText(guestinfo.get(2).getAge() + "");
     }
 
     private void fillRegInfo4(ArrayList<Guest> guestinfo, int room_id)
@@ -3177,6 +3057,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID3.setText(guestinfo.get(3).getGuest_id() + "");
         REGINFOUSERNAME3.setText(guestinfo.get(3).getUsername());
         SHOWREGINFOPASSWORD3.setText(guestinfo.get(3).getPassword());
+        REGINFOAGE3.setText(guestinfo.get(3).getAge() + "");
     }
 
     private void fillRegInfo5(ArrayList<Guest> guestinfo, int room_id)
@@ -3192,6 +3073,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID4.setText(guestinfo.get(4).getGuest_id() + "");
         REGINFOUSERNAME4.setText(guestinfo.get(4).getUsername());
         SHOWREGINFOPASSWORD4.setText(guestinfo.get(4).getPassword());
+        REGINFOAGE4.setText(guestinfo.get(4).getAge() + "");
     }
 
     private void fillAgencyBox()
@@ -3370,6 +3252,11 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JTextField REGINFOADRESS2;
     private javax.swing.JTextField REGINFOADRESS3;
     private javax.swing.JTextField REGINFOADRESS4;
+    private javax.swing.JTextField REGINFOAGE;
+    private javax.swing.JTextField REGINFOAGE1;
+    private javax.swing.JTextField REGINFOAGE2;
+    private javax.swing.JTextField REGINFOAGE3;
+    private javax.swing.JTextField REGINFOAGE4;
     private javax.swing.JButton REGINFOBACKBUTTON;
     private javax.swing.JButton REGINFOBACKBUTTON1;
     private javax.swing.JButton REGINFOBACKBUTTON2;
@@ -3415,11 +3302,6 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JTextField REGINFOROOMNUMBER2;
     private javax.swing.JTextField REGINFOROOMNUMBER3;
     private javax.swing.JTextField REGINFOROOMNUMBER4;
-    private javax.swing.JTextField REGINFOROOMSIZE;
-    private javax.swing.JTextField REGINFOROOMSIZE1;
-    private javax.swing.JTextField REGINFOROOMSIZE2;
-    private javax.swing.JTextField REGINFOROOMSIZE3;
-    private javax.swing.JTextField REGINFOROOMSIZE4;
     private javax.swing.JTextField REGINFOTRAVELAGENCY;
     private javax.swing.JTextField REGINFOTRAVELAGENCY1;
     private javax.swing.JTextField REGINFOTRAVELAGENCY2;
@@ -3468,14 +3350,56 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JButton UPDATEGUEST5;
     private javax.swing.JPanel WELCOME;
     private javax.swing.JLabel WHOISTHEPAYER;
+    private javax.swing.JLabel WHOISTHEPAYER1;
+    private javax.swing.JLabel WHOISTHEPAYER2;
+    private javax.swing.JLabel WHOISTHEPAYER3;
+    private javax.swing.JLabel WHOISTHEPAYER4;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
+    private javax.swing.JLabel jLabel136;
+    private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -3484,77 +3408,39 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
