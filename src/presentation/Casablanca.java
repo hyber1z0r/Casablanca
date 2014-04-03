@@ -2827,12 +2827,63 @@ public class Casablanca extends javax.swing.JFrame
 
     private void REGINFOBACKBUTTON1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON1ActionPerformed
     {//GEN-HEADEREND:event_REGINFOBACKBUTTON1ActionPerformed
-        // TODO add your handling code here:
+        clearRegInfoAndGoBack();
     }//GEN-LAST:event_REGINFOBACKBUTTON1ActionPerformed
 
     private void UPDATEGUEST2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST2ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST2ActionPerformed
-        // TODO add your handling code here:
+        Guest g = null;
+        String firstname = REGINFOFIRSTNAME1.getText();
+        String familyname = REGINFOLASTNAME1.getText();
+        String address = REGINFOADRESS1.getText();
+        String country = REGINFOCOUNTRY1.getText();
+        int phone;
+        String email = REGINFOEMAIL1.getText();
+        String username = null;
+        String password = null;
+        int age = Integer.parseInt(REGINFOAGE1.getText());
+        int guest_id = Integer.parseInt(REGINFOGUESTID1.getText());
+
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE1.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK1.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
+
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty() && age != 0)
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, age, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME1.setText(g.getFirstname());
+            REGINFOLASTNAME1.setText(g.getFamilyname());
+            REGINFOADRESS1.setText(g.getAddress());
+            REGINFOCOUNTRY1.setText(g.getCountry());
+            REGINFOPHONE1.setText(phone1);
+            REGINFOEMAIL1.setText(g.getEmail());
+            REGINFOUSERNAME1.setText(g.getUsername());
+            SHOWREGINFOPASSWORD1.setText(g.getPassword());
+            REGINFOFEEDBACK1.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK1.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST2ActionPerformed
 
     private void REGINFOFIRSTNAME2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME2ActionPerformed
@@ -2852,12 +2903,63 @@ public class Casablanca extends javax.swing.JFrame
 
     private void REGINFOBACKBUTTON2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON2ActionPerformed
     {//GEN-HEADEREND:event_REGINFOBACKBUTTON2ActionPerformed
-        // TODO add your handling code here:
+        clearRegInfoAndGoBack();
     }//GEN-LAST:event_REGINFOBACKBUTTON2ActionPerformed
 
     private void UPDATEGUEST3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST3ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST3ActionPerformed
-        // TODO add your handling code here:
+        Guest g = null;
+        String firstname = REGINFOFIRSTNAME2.getText();
+        String familyname = REGINFOLASTNAME2.getText();
+        String address = REGINFOADRESS2.getText();
+        String country = REGINFOCOUNTRY2.getText();
+        int phone;
+        String email = REGINFOEMAIL2.getText();
+        String username = null;
+        String password = null;
+        int age = Integer.parseInt(REGINFOAGE2.getText());
+        int guest_id = Integer.parseInt(REGINFOGUESTID2.getText());
+
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE2.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK2.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
+
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty() && age != 0)
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, age, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME2.setText(g.getFirstname());
+            REGINFOLASTNAME2.setText(g.getFamilyname());
+            REGINFOADRESS2.setText(g.getAddress());
+            REGINFOCOUNTRY2.setText(g.getCountry());
+            REGINFOPHONE2.setText(phone1);
+            REGINFOEMAIL2.setText(g.getEmail());
+            REGINFOUSERNAME2.setText(g.getUsername());
+            SHOWREGINFOPASSWORD2.setText(g.getPassword());
+            REGINFOFEEDBACK2.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK2.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST3ActionPerformed
 
     private void REGINFOFIRSTNAME3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME3ActionPerformed
@@ -2877,12 +2979,63 @@ public class Casablanca extends javax.swing.JFrame
 
     private void REGINFOBACKBUTTON3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON3ActionPerformed
     {//GEN-HEADEREND:event_REGINFOBACKBUTTON3ActionPerformed
-        // TODO add your handling code here:
+        clearRegInfoAndGoBack();
     }//GEN-LAST:event_REGINFOBACKBUTTON3ActionPerformed
 
     private void UPDATEGUEST4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST4ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST4ActionPerformed
-        // TODO add your handling code here:
+        Guest g = null;
+        String firstname = REGINFOFIRSTNAME3.getText();
+        String familyname = REGINFOLASTNAME3.getText();
+        String address = REGINFOADRESS3.getText();
+        String country = REGINFOCOUNTRY3.getText();
+        int phone;
+        String email = REGINFOEMAIL3.getText();
+        String username = null;
+        String password = null;
+        int age = Integer.parseInt(REGINFOAGE3.getText());
+        int guest_id = Integer.parseInt(REGINFOGUESTID3.getText());
+
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE3.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK3.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
+
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty() && age != 0)
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, age, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME3.setText(g.getFirstname());
+            REGINFOLASTNAME3.setText(g.getFamilyname());
+            REGINFOADRESS3.setText(g.getAddress());
+            REGINFOCOUNTRY3.setText(g.getCountry());
+            REGINFOPHONE3.setText(phone1);
+            REGINFOEMAIL3.setText(g.getEmail());
+            REGINFOUSERNAME3.setText(g.getUsername());
+            SHOWREGINFOPASSWORD3.setText(g.getPassword());
+            REGINFOFEEDBACK3.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK3.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST4ActionPerformed
 
     private void REGINFOFIRSTNAME4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOFIRSTNAME4ActionPerformed
@@ -2902,12 +3055,63 @@ public class Casablanca extends javax.swing.JFrame
 
     private void REGINFOBACKBUTTON4ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_REGINFOBACKBUTTON4ActionPerformed
     {//GEN-HEADEREND:event_REGINFOBACKBUTTON4ActionPerformed
-        // TODO add your handling code here:
+        clearRegInfoAndGoBack();
     }//GEN-LAST:event_REGINFOBACKBUTTON4ActionPerformed
 
     private void UPDATEGUEST5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_UPDATEGUEST5ActionPerformed
     {//GEN-HEADEREND:event_UPDATEGUEST5ActionPerformed
-        // TODO add your handling code here:
+        Guest g = null;
+        String firstname = REGINFOFIRSTNAME4.getText();
+        String familyname = REGINFOLASTNAME4.getText();
+        String address = REGINFOADRESS4.getText();
+        String country = REGINFOCOUNTRY4.getText();
+        int phone;
+        String email = REGINFOEMAIL4.getText();
+        String username = null;
+        String password = null;
+        int age = Integer.parseInt(REGINFOAGE4.getText());
+        int guest_id = Integer.parseInt(REGINFOGUESTID4.getText());
+
+        if (!firstname.isEmpty() && !familyname.isEmpty())
+        {
+            String fullname = firstname + familyname;
+            CreateUserStaff cus = new CreateUserStaff(fullname);
+            username = cus.getuserName();
+            password = cus.getPassword();
+        }
+        try
+        {
+            phone = Integer.parseInt(REGINFOPHONE4.getText());
+        } catch (NumberFormatException e)
+        {
+            REGINFOFEEDBACK4.setText("Phone no invalid");
+            phone = 0;
+        }
+        if (!email.contains("@") && !email.contains("."))
+        {
+            email = "";
+        }
+
+        if (!firstname.isEmpty() && !familyname.isEmpty() && !address.isEmpty() && !country.isEmpty() && phone != 0 && !email.isEmpty() && age != 0)
+        {
+            g = con.updateguest(guest_id, firstname, familyname, address, country, phone, email, age, username, password);
+        }
+        if (g != null)
+        {
+            String phone1 = Integer.toString(g.getPhone());
+            REGINFOFIRSTNAME4.setText(g.getFirstname());
+            REGINFOLASTNAME4.setText(g.getFamilyname());
+            REGINFOADRESS4.setText(g.getAddress());
+            REGINFOCOUNTRY4.setText(g.getCountry());
+            REGINFOPHONE4.setText(phone1);
+            REGINFOEMAIL4.setText(g.getEmail());
+            REGINFOUSERNAME4.setText(g.getUsername());
+            SHOWREGINFOPASSWORD4.setText(g.getPassword());
+            REGINFOFEEDBACK4.setText("Guest updated");
+        } else
+        {
+            REGINFOFEEDBACK4.setText("Update failed - Check input fields");
+        }
     }//GEN-LAST:event_UPDATEGUEST5ActionPerformed
 
     private void fillTodayList(ArrayList<TodayGuest> todayguests)

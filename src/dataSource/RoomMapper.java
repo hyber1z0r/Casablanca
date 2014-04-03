@@ -578,7 +578,6 @@ public class RoomMapper
     
     public ArrayList<Guest> showRegInfo(int room_id, String start_date, Connection con)
     {
-        int rowsInserted = 0;
         ArrayList<Integer> guestIDs = new ArrayList();
         ArrayList<Guest> guests = new ArrayList();
 
