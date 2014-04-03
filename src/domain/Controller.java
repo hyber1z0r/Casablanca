@@ -20,6 +20,7 @@ public class Controller
     private Travelagency_guests currentTAG;
     private ArrayList<TodayGuest> currentTodayGuests;
     private ArrayList<Guest> currentGuests;
+    private Instructor currentInstructor;
 
     private Controller()
     {
@@ -120,7 +121,7 @@ public class Controller
     public Booking deleteGuest(int room_id, String startdate)
     {
         currentBooking = new Booking(0, startdate, null, room_id, null, null);
-        
+
         boolean status = dbf.deleteGuest(currentBooking);
         if (!status)
         {
@@ -128,25 +129,26 @@ public class Controller
         }
         return currentBooking;
     }
-    
+
     public ArrayList<TodayGuest> getTodaysGuest(String date)
     {
         currentTodayGuests = dbf.getTodaysGuests(date);
         return currentTodayGuests;
     }
-    
+
     public ArrayList<Guest> showRegInfo(int room_id, String start_date)
     {
         currentGuests = dbf.showRegInfo(room_id, start_date);
         return currentGuests;
     }
-    
+
     public Guest checkLogin(String username, String password)
     {
         Guest g = dbf.checkLogin(username, password);
         return g;
     }
-     public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, int age, String username, String password)
+
+    public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, int age, String username, String password)
     {
         currentGuest = new Guest(guest_id, firstname, familyname, address, Country, phone, email, age, username, password);
 
@@ -156,5 +158,19 @@ public class Controller
             currentGuest = null;
         }
         return currentGuest;
+    }
+
+    public Instructor createNewInstructor(int ID, int phone, String name, String lastname, String email)
+    {
+        //== create instructor object with instructor id = 0
+        currentInstructor = new Instructor(0, phone, name, lastname, email);
+
+        //== save and get DB-generated unique instructor id
+        boolean status = dbf.saveNewInstructor(currentInstructor);
+        if (!status) //fail!
+        {
+            currentInstructor = null;
+        }
+        return currentInstructor;
     }
 }

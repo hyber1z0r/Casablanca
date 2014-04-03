@@ -2,6 +2,7 @@ package dataSource;
 import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
+import domain.Instructor;
 import domain.Room;
 import domain.TodayGuest;
 import domain.Travelagency_guests;
@@ -91,9 +92,15 @@ public class DBFacade {
     {
         return gm.checkLogin(username, password, con);
     }
+    
     public boolean updateguest(Guest g)
     {
         return rm.updateGuest(g, con);
+    }
+    
+    public boolean saveNewInstructor(Instructor i)
+    {
+        return rm.saveNewInstructor(i, con);
     }
 }
 

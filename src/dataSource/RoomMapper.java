@@ -3,6 +3,7 @@ package dataSource;
 import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Guest;
+import domain.Instructor;
 import domain.Room;
 import domain.TodayGuest;
 import domain.Travelagency_guests;
@@ -704,6 +705,64 @@ public class RoomMapper
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - confirm booking");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
+    
+    public boolean saveNewInstructor(Instructor i, Connection con)
+    {
+        int rowsInserted = 0;
+
+        String SQLString1
+                = "select instructorseq.nextval  "
+                + "from dual";
+
+        String SQLString2
+                = "insert into instructor "
+                + "values (?,?,?,?,?)";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+            //== get unique guestId
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next())
+            {
+                i.setID(rs.getInt(1));
+            }
+
+            //== insert tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, i.getID());
+            statement.setString(2, i.getName());
+            statement.setString(3, i.getLastname());
+            statement.setString(4, i.getEmail());
+            statement.setInt(5, i.getPhone());
+
+            rowsInserted = statement.executeUpdate();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in roommapper - saveNewInstructor rollback");
+            }
+            System.out.println("Fail in Roommapper - saveNewInstructor");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - saveNewInstructor close statement");
                 System.out.println(e.getMessage());
             }
         }

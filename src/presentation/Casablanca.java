@@ -5,6 +5,7 @@
  */
 package presentation;
 
+import com.sun.javafx.scene.control.skin.TableColumnHeader;
 import domain.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -396,14 +397,11 @@ public class Casablanca extends javax.swing.JFrame
         TODAYTABLE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String []
             {
-                "Room #", "Firstname", "Lastname", "Username", "Password"
+
             }
         ));
         jScrollPane5.setViewportView(TODAYTABLE);
@@ -434,7 +432,7 @@ public class Casablanca extends javax.swing.JFrame
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(117, 117, 117)
                 .addComponent(TODAYSARRIVALBACKBUTTON)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         getContentPane().add(TODAYSARRIVAL, "card12");
