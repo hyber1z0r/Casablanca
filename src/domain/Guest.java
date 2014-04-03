@@ -12,14 +12,15 @@ package domain;
  */
 public class Guest
 {
-    private int guest_id, phone;
+    private int guest_id, phone, age;
     private String firstname, familyname, address, country, email, username, password;
 
     public Guest(int guest_id, String firstname, String familyname, String address, 
-            String country, int phone, String email, String username, String password)
+            String country, int phone, String email, int age, String username, String password)
     {
         this.guest_id = guest_id;
         this.phone = phone;
+        this.age = age;
         this.firstname = firstname;
         this.familyname = familyname;
         this.address = address;
@@ -27,6 +28,16 @@ public class Guest
         this.email = email;
         this.username = username;
         this.password = password;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    public void setAge(int age)
+    {
+        this.age = age;
     }
 
     public int getGuest_id()

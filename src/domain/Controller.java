@@ -48,10 +48,10 @@ public class Controller
     }
 
     public Guest createNewGuest(String firstname, String familyname, String address,
-            String country, int phone, String email, String username, String password)
+            String country, int phone, String email, int age, String username, String password)
     {
         //== create guest object with guest id = 0
-        currentGuest = new Guest(0, firstname, familyname, address, country, phone, email, username, password);
+        currentGuest = new Guest(0, firstname, familyname, address, country, phone, email, age, username, password);
 
         //== save and get DB-generated unique guest id
         boolean status = dbf.saveNewGuest(currentGuest);
@@ -146,9 +146,9 @@ public class Controller
         Guest g = dbf.checkLogin(username, password);
         return g;
     }
-     public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, String username, String password)
+     public Guest updateguest(int guest_id, String firstname, String familyname, String address, String Country, int phone, String email, int age, String username, String password)
     {
-        currentGuest = new Guest(guest_id, firstname, familyname, address, Country, phone, email, username , password);
+        currentGuest = new Guest(guest_id, firstname, familyname, address, Country, phone, email, age, username, password);
 
         boolean status = dbf.updateguest(currentGuest);
         if (!status)

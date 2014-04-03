@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dataSource;
 
 import domain.Booking;
@@ -143,10 +138,10 @@ public class RoomMapper
                 = "select guestseq.nextval  "
                 + "from dual";
 
-        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, user, pass
+        //ID, FIRSTNAME, FAMILYNAME, ADDRESS, Country, Phone, Email, age, user, pass
         String SQLString2
                 = "insert into guests "
-                + "values (?,?,?,?,?,?,?,?,?)";
+                + "values (?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = null;
 
         try
@@ -169,8 +164,9 @@ public class RoomMapper
             statement.setString(5, g.getCountry());
             statement.setInt(6, g.getPhone());
             statement.setString(7, g.getEmail());
-            statement.setString(8, g.getUsername());
-            statement.setString(9, g.getPassword());
+            statement.setInt(8, g.getAge());
+            statement.setString(9, g.getUsername());
+            statement.setString(10, g.getPassword());
 
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
@@ -627,9 +623,10 @@ public class RoomMapper
                             rs2.getString(4), 
                             rs2.getString(5), 
                             rs2.getInt(6), 
-                            rs2.getString(7), 
-                            rs2.getString(8), 
-                            rs2.getString(9)));
+                            rs2.getString(7),
+                            rs2.getInt(8),
+                            rs2.getString(9), 
+                            rs2.getString(10)));
                 }
                 
             }
@@ -666,7 +663,7 @@ public class RoomMapper
 
         String SQLString2 = "update guests set firstname = ?, familyname = ?,"
                           + "address = ?, Country = ?, phone = ?, email = ?, "
-                          + "username = ?, password = ?"
+                          + "age = ?, username = ?, password = ?"
                           + "where guest_id = ?";
         PreparedStatement statement = null;
 
@@ -682,9 +679,10 @@ public class RoomMapper
             statement.setString(4, g.getCountry());
             statement.setInt(5, g.getPhone());
             statement.setString(6, g.getEmail());
-            statement.setString(7, g.getUsername());
-            statement.setString(8, g.getPassword());
-            statement.setInt(9, g.getGuest_id());
+            statement.setInt(7, g.getAge());
+            statement.setString(8, g.getUsername());
+            statement.setString(9, g.getPassword());
+            statement.setInt(10, g.getGuest_id());
 
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)

@@ -90,7 +90,7 @@
                       <Component id="TODAYSARRIVALBUTTON" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TODAYSLABEL" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="383" max="32767" attributes="0"/>
+                  <EmptySpace pref="379" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -155,7 +155,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="409" max="32767" attributes="0"/>
+                  <EmptySpace pref="411" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel97" min="-2" max="-2" attributes="0"/>
@@ -182,7 +182,7 @@
                   <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
                   <Component id="TODAYSARRIVALBACKBUTTON" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="118" max="32767" attributes="0"/>
+                  <EmptySpace pref="115" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -443,14 +443,14 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="350" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="235" max="32767" attributes="0"/>
+                  <EmptySpace pref="333" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CHOOSEDATESTARTDATE" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -573,7 +573,7 @@
                           <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="531" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="419" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
@@ -604,7 +604,7 @@
                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Component id="jScrollPane3" min="-2" pref="461" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="79" max="32767" attributes="0"/>
                   <Component id="AVAILABLEROOMSBOOKBUTTON" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Component id="AVAILABLEROOMSBACKBUTTON" min="-2" max="-2" attributes="0"/>
@@ -709,11 +709,11 @@
                               <Component id="jLabel21" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
                               <Component id="jLabel22" min="-2" pref="123" max="-2" attributes="0"/>
                               <Component id="jLabel30" alignment="1" min="-2" pref="74" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="BOOKROOMADRESS" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="BOOKROOMPHONE" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
                               <Component id="BOOKROOMEMAIL" min="-2" pref="125" max="-2" attributes="0"/>
                               <Component id="TRAVELAGENCYBOX" min="-2" pref="125" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -739,6 +739,10 @@
                                   </Group>
                               </Group>
                               <Component id="jLabel1" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="BOOKROOMAGE" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="BOOKROOMPHONE" alignment="0" pref="125" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="461" max="-2" attributes="0"/>
                       </Group>
@@ -801,7 +805,12 @@
                               <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="BOOKROOMADRESS" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="BOOKROOMAGE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="BOOKROOMPHONE" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -977,6 +986,13 @@
             <Property name="text" type="java.lang.String" value="The first added guest is the payer"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JTextField" name="BOOKROOMAGE">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="AGE"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="GETFEEDBACKFORBOOKING">
@@ -1133,7 +1149,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="277" max="32767" attributes="0"/>
+                      <EmptySpace pref="174" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2696,7 +2712,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="486" max="32767" attributes="0"/>
+                  <EmptySpace pref="388" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
@@ -2720,7 +2736,7 @@
                       <Component id="SHOWREGINFOBUTTON" min="-2" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="69" max="32767" attributes="0"/>
+                  <EmptySpace pref="138" max="32767" attributes="0"/>
                   <Component id="BACKBUTTONBOOKEDROOMS" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
               </Group>
@@ -2783,7 +2799,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="377" max="32767" attributes="0"/>
+                  <EmptySpace pref="304" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -2814,7 +2830,7 @@
                       </Group>
                       <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="90" max="32767" attributes="0"/>
+                  <EmptySpace pref="158" max="32767" attributes="0"/>
                   <Component id="STANDBYROOMBACKBUTTON" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
