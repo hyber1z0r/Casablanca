@@ -21,6 +21,7 @@ public class Controller
     private ArrayList<TodayGuest> currentTodayGuests;
     private ArrayList<Guest> currentGuests;
     private Instructor currentInstructor;
+    private ArrayList<Instructor> currentIList;
 
     private Controller()
     {
@@ -160,10 +161,10 @@ public class Controller
         return currentGuest;
     }
 
-    public Instructor createNewInstructor(int ID, int phone, String name, String lastname, String email, String sport)
+    public Instructor createNewInstructor(int ID, String name, String lastname, String email, int phone, String sport)
     {
         //== create instructor object with instructor id = 0
-        currentInstructor = new Instructor(0, phone, name, lastname, email, sport);
+        currentInstructor = new Instructor(0, name, lastname, email, phone, sport);
 
         //== save and get DB-generated unique instructor id
         boolean status = dbf.saveNewInstructor(currentInstructor);
@@ -172,5 +173,11 @@ public class Controller
             currentInstructor = null;
         }
         return currentInstructor;
+    }
+    
+    public ArrayList<Instructor> getAllInstructors()
+    {
+        currentIList = dbf.getAllInstructors();
+        return currentIList;
     }
 }

@@ -102,5 +102,10 @@ public class DBFacade {
     {
         return rm.saveNewInstructor(i, con);
     }
+    
+    public ArrayList<Instructor> getAllInstructors()
+    {
+        return rm.getAllInstructors(con);
+    }
 }
 

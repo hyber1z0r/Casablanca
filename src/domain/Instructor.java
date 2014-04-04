@@ -14,8 +14,8 @@ public class Instructor
 {
     private int ID, phone;
     private String name, lastname, email, sport;
-
-    public Instructor(int ID, int phone, String name, String lastname, String email, String sport)
+    
+    public Instructor(int ID, String name, String lastname, String email, int phone, String sport)
     {
         this.ID = ID;
         this.phone = phone;

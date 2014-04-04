@@ -769,4 +769,38 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
+    
+    public ArrayList<Instructor> getAllInstructors(Connection con)
+    {
+        ArrayList<Instructor> i = new ArrayList();
+
+        String SQLString1 = "SELECT * FROM INSTRUCTOR";
+        PreparedStatement statement = null;
+        try
+        {
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                i.add(new Instructor(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6)));
+            }
+
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in RoomMapper - getAllInstructors");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in RoomMapper.getAllInstructors - Closing statement ");
+                System.out.println(e.getMessage());
+            }
+        }
+        return i;
+    }
 }
