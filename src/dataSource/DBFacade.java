@@ -1,6 +1,8 @@
 package dataSource;
 import domain.Booking;
 import domain.Bookings_Guests;
+import domain.Facility_Booking;
+import domain.Fbooking_Guests;
 import domain.Guest;
 import domain.Instructor;
 import domain.Room;
@@ -111,6 +113,16 @@ public class DBFacade {
     public boolean deleteInstructor(int id)
     {
         return rm.deleteInstructor(id, con);
+    }
+    
+    public boolean saveNewFBooking(Facility_Booking fb)
+    {
+        return gm.saveNewFBooking(fb, con);
+    }
+    
+    public boolean saveNewFBookingGuests(Fbooking_Guests fbg)
+    {
+        return gm.saveNewFBookingsGuests(fbg, con);
     }
 }
 

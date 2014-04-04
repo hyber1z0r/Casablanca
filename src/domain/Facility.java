@@ -12,14 +12,38 @@ package domain;
  */
 public class Facility
 {
-    private int id;
+    private int id, courts, players;
     private String name;
 
-    public Facility(int id, String name)
+    public Facility(int id, int courts, int players, String name)
     {
         this.id = id;
+        this.courts = courts;
+        this.players = players;
         this.name = name;
     }
+
+    public int getCourts()
+    {
+        return courts;
+    }
+
+    public void setCourts(int courts)
+    {
+        this.courts = courts;
+    }
+
+    public int getPlayers()
+    {
+        return players;
+    }
+
+    public void setPlayers(int players)
+    {
+        this.players = players;
+    }
+
+    
 
     public int getId()
     {

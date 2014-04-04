@@ -3364,6 +3364,9 @@ public class Casablanca extends javax.swing.JFrame
             INSTRUCTORLABEL.setText("Deleted instructor " + INSTRUCTORTABLE.getValueAt(INSTRUCTORTABLE.getSelectedRow(), 1).toString());
             DefaultTableModel model = (DefaultTableModel) INSTRUCTORTABLE.getModel();
             model.removeRow(INSTRUCTORTABLE.getSelectedRow());
+        }else
+        {
+            INSTRUCTORLABEL.setText("Failed to delete instructor!");
         }
         
     }//GEN-LAST:event_INSTRUCTORDELETEBUTTONActionPerformed
