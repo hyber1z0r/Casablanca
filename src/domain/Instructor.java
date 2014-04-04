@@ -13,15 +13,16 @@ package domain;
 public class Instructor
 {
     private int ID, phone;
-    private String name, lastname, email;
+    private String name, lastname, email, sport;
 
-    public Instructor(int ID, int phone, String name, String lastname, String email)
+    public Instructor(int ID, int phone, String name, String lastname, String email, String sport)
     {
         this.ID = ID;
         this.phone = phone;
         this.name = name;
         this.lastname = lastname;
         this.email = email;
+        this.sport = sport;
     }
 
     public int getID()
@@ -73,6 +74,17 @@ public class Instructor
     {
         this.email = email;
     }
+
+    public String getSport()
+    {
+        return sport;
+    }
+
+    public void setSport(String sport)
+    {
+        this.sport = sport;
+    }
+    
     
     
 }

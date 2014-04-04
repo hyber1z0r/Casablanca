@@ -721,7 +721,7 @@ public class RoomMapper
 
         String SQLString2
                 = "insert into instructor "
-                + "values (?,?,?,?,?)";
+                + "values (?,?,?,?,?,?)";
         PreparedStatement statement = null;
 
         try
@@ -742,6 +742,7 @@ public class RoomMapper
             statement.setString(3, i.getLastname());
             statement.setString(4, i.getEmail());
             statement.setInt(5, i.getPhone());
+            statement.setString(6, i.getSport());
 
             rowsInserted = statement.executeUpdate();
         } catch (SQLException e)
