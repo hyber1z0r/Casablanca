@@ -471,7 +471,7 @@ public class RoomMapper
 
         String SQLString2
                 = "delete from guests where guest_id = ?";
-        
+
         String SQLString3
                 = "delete from bookings where id = (SELECT id FROM bookings where room_id = ? and start_date = ?)";
         PreparedStatement statement = null;
@@ -500,7 +500,7 @@ public class RoomMapper
                 statement.setInt(1, guestID);
                 rowsInserted += statement.executeUpdate();
             }
-            
+
             // delete the booking
             statement = con.prepareStatement(SQLString3);
             statement.setInt(1, b.getRoom_id());
@@ -526,13 +526,13 @@ public class RoomMapper
                 statement.close();
             } catch (SQLException e)
             {
-                System.out.println("Fail in Roommapper - close statement save new travelagency_guests");
+                System.out.println("Fail in Roommapper - close statement delete Guests");
                 System.out.println(e.getMessage());
             }
         }
         return rowsInserted == guestIDs.size() + 1;
     }
-    
+
     public ArrayList<TodayGuest> getTodaysGuests(String date, Connection con)
     {
         ArrayList<TodayGuest> guests = new ArrayList();
@@ -576,7 +576,7 @@ public class RoomMapper
         }
         return guests;
     }
-    
+
     public ArrayList<Guest> showRegInfo(int room_id, String start_date, Connection con)
     {
         ArrayList<Integer> guestIDs = new ArrayList();
@@ -587,9 +587,9 @@ public class RoomMapper
 
         String SQLString1 = "select guest_id from bookings_guests where booking_id = "
                 + "(SELECT id FROM bookings where room_id = ? and start_date = ?)";
-        
+
         String SQLString2 = "select * from guests where guest_id = ?";
-        
+
         PreparedStatement statement = null;
 
         try
@@ -615,22 +615,21 @@ public class RoomMapper
             {
                 statement.setInt(1, guestID);
                 ResultSet rs2 = statement.executeQuery();
-                while(rs2.next())
+                while (rs2.next())
                 {
-                    guests.add(new Guest(rs2.getInt(1), 
-                            rs2.getString(2), 
-                            rs2.getString(3), 
-                            rs2.getString(4), 
-                            rs2.getString(5), 
-                            rs2.getInt(6), 
-                            rs2.getString(7), 
-                            rs2.getInt(8), 
-                            rs2.getString(9), 
+                    guests.add(new Guest(rs2.getInt(1),
+                            rs2.getString(2),
+                            rs2.getString(3),
+                            rs2.getString(4),
+                            rs2.getString(5),
+                            rs2.getInt(6),
+                            rs2.getString(7),
+                            rs2.getInt(8),
+                            rs2.getString(9),
                             rs2.getString(10)));
                 }
-                
+
             }
-            
 
             con.commit();
         } catch (SQLException e)
@@ -657,14 +656,15 @@ public class RoomMapper
         }
         return guests;
     }
+
     public boolean updateGuest(Guest g, Connection con)
     {
         int rowsInserted = 0;
 
         String SQLString2 = "update guests set firstname = ?, familyname = ?,"
-                          + "address = ?, Country = ?, phone = ?, email = ?, "
-                          + "age = ?, username = ?, password = ?"
-                          + "where guest_id = ?";
+                + "address = ?, Country = ?, phone = ?, email = ?, "
+                + "age = ?, username = ?, password = ?"
+                + "where guest_id = ?";
         PreparedStatement statement = null;
 
         try
@@ -685,6 +685,7 @@ public class RoomMapper
             statement.setInt(10, g.getGuest_id());
 
             rowsInserted = statement.executeUpdate();
+            con.commit();
         } catch (SQLException e)
         {
             try
@@ -710,7 +711,7 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
-    
+
     public boolean saveNewInstructor(Instructor i, Connection con)
     {
         int rowsInserted = 0;
@@ -745,6 +746,7 @@ public class RoomMapper
             statement.setString(6, i.getSport());
 
             rowsInserted = statement.executeUpdate();
+            con.commit();
         } catch (SQLException e)
         {
             try
@@ -769,7 +771,7 @@ public class RoomMapper
         }
         return rowsInserted == 1;
     }
-    
+
     public ArrayList<Instructor> getAllInstructors(Connection con)
     {
         ArrayList<Instructor> i = new ArrayList();
@@ -802,5 +804,49 @@ public class RoomMapper
             }
         }
         return i;
+    }
+
+    public boolean deleteInstructor(int id, Connection con)
+    {
+
+        int rowsInserted = 0;
+        String SQLString1
+                = "DELETE FROM INSTRUCTOR WHERE ID = ?";
+        PreparedStatement statement = null;
+
+        try
+        {
+            con.setAutoCommit(false);
+            //== get booking id from room id and start_date
+            statement = con.prepareStatement(SQLString1);
+
+            statement.setInt(1, id);
+            rowsInserted = statement.executeUpdate();
+
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in Roommapper - rollback delete Instructor");
+            }
+            System.out.println("Fail in Roommapper - delete Instructor");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in Roommapper - close statement delete instructor");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+
     }
 }

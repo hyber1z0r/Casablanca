@@ -161,7 +161,7 @@ public class Controller
         return currentGuest;
     }
 
-    public Instructor createNewInstructor(int ID, String name, String lastname, String email, int phone, String sport)
+    public Instructor createNewInstructor(String name, String lastname, String email, int phone, String sport)
     {
         //== create instructor object with instructor id = 0
         currentInstructor = new Instructor(0, name, lastname, email, phone, sport);
@@ -179,5 +179,10 @@ public class Controller
     {
         currentIList = dbf.getAllInstructors();
         return currentIList;
+    }
+    
+    public boolean deleteInstructor(int id)
+    {
+        return dbf.deleteInstructor(id);
     }
 }

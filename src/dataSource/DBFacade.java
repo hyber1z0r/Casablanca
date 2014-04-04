@@ -107,5 +107,10 @@ public class DBFacade {
     {
         return rm.getAllInstructors(con);
     }
+    
+    public boolean deleteInstructor(int id)
+    {
+        return rm.deleteInstructor(id, con);
+    }
 }
 

@@ -5,7 +5,6 @@
  */
 package presentation;
 
-
 import domain.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -78,6 +77,7 @@ public class Casablanca extends javax.swing.JFrame
         INSTRUCTORDELETEBUTTON = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
         CREATEINSTRUCTORCOMBO = new javax.swing.JComboBox();
+        INSTRUCTORLABEL = new javax.swing.JLabel();
         TODAYSARRIVAL = new javax.swing.JPanel();
         TODAYSARRIVALBACKBUTTON = new javax.swing.JButton();
         jLabel97 = new javax.swing.JLabel();
@@ -444,6 +444,13 @@ public class Casablanca extends javax.swing.JFrame
         jLabel39.setText("PHONE#");
 
         INSTRUCTORCREATEBUTTON.setText("CREATE");
+        INSTRUCTORCREATEBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                INSTRUCTORCREATEBUTTONActionPerformed(evt);
+            }
+        });
 
         INSTRUCTORBACKBUTTON.setText("BACK");
         INSTRUCTORBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
@@ -455,7 +462,15 @@ public class Casablanca extends javax.swing.JFrame
         });
 
         INSTRUCTORDELETEBUTTON.setText("DELETE");
+        INSTRUCTORDELETEBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                INSTRUCTORDELETEBUTTONActionPerformed(evt);
+            }
+        });
 
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel45.setText("SPORT");
 
         CREATEINSTRUCTORCOMBO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -475,28 +490,34 @@ public class Casablanca extends javax.swing.JFrame
                         .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(INSTRUCTORPANELLayout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel33)
-                                    .addComponent(jLabel38)
-                                    .addComponent(jLabel39)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, INSTRUCTORPANELLayout.createSequentialGroup()
+                                .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(INSTRUCTORPANELLayout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel33)
+                                            .addComponent(jLabel38)
+                                            .addComponent(jLabel39)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, INSTRUCTORPANELLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(INSTRUCTORFIRSTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(INSTRUCTORLASTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(INSTRUCTOREMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(INSTRUCTORCREATEBUTTON)
-                                .addComponent(INSTRUCTORPHONE, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(CREATEINSTRUCTORCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(INSTRUCTORFIRSTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(INSTRUCTORLASTNAME, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(INSTRUCTOREMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(INSTRUCTORPANELLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(INSTRUCTORCREATEBUTTON)
+                                        .addComponent(INSTRUCTORPHONE, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(CREATEINSTRUCTORCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(INSTRUCTORPANELLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(INSTRUCTORLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(89, 89, 89))))
                     .addGroup(INSTRUCTORPANELLayout.createSequentialGroup()
                         .addGap(493, 493, 493)
                         .addComponent(INSTRUCTORDELETEBUTTON)))
@@ -533,7 +554,9 @@ public class Casablanca extends javax.swing.JFrame
                             .addComponent(jLabel45)
                             .addComponent(CREATEINSTRUCTORCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(17, 17, 17)
-                        .addComponent(INSTRUCTORCREATEBUTTON)))
+                        .addComponent(INSTRUCTORCREATEBUTTON)
+                        .addGap(38, 38, 38)
+                        .addComponent(INSTRUCTORLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(4, 4, 4)
                 .addComponent(INSTRUCTORDELETEBUTTON)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
@@ -3279,7 +3302,8 @@ public class Casablanca extends javax.swing.JFrame
         if (!ilist.isEmpty())
         {
             fillInstructorList(ilist);
-        }else
+            INSTRUCTORLABEL.setText("");
+        } else
         {
             System.out.println("List is empty");
         }
@@ -3295,7 +3319,55 @@ public class Casablanca extends javax.swing.JFrame
         INSTRUCTORPANEL.setVisible(false);
     }//GEN-LAST:event_INSTRUCTORBACKBUTTONActionPerformed
 
-    
+    private void INSTRUCTORCREATEBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_INSTRUCTORCREATEBUTTONActionPerformed
+    {//GEN-HEADEREND:event_INSTRUCTORCREATEBUTTONActionPerformed
+        String name = INSTRUCTORFIRSTNAME.getText();
+        String lastname = INSTRUCTORLASTNAME.getText();
+        String email = INSTRUCTOREMAIL.getText();
+        int phone = Integer.parseInt(INSTRUCTORPHONE.getText());
+        String sport = CREATEINSTRUCTORCOMBO.getSelectedItem().toString();
+        if (!name.isEmpty() && !lastname.isEmpty() && !email.isEmpty() && phone != 0 && !sport.isEmpty())
+        {
+            Instructor i = con.createNewInstructor(name, lastname, email, phone, sport);
+            if (i != null)
+            {
+                INSTRUCTORLABEL.setText("Successfully added instructor");
+                ArrayList<Instructor> ilist = con.getAllInstructors();
+                if (!ilist.isEmpty())
+                {
+                    fillInstructorList(ilist);
+                }
+                INSTRUCTORFIRSTNAME.setText("");
+                INSTRUCTORLASTNAME.setText("");
+                INSTRUCTOREMAIL.setText("");
+                INSTRUCTORPHONE.setText("");
+                CREATEINSTRUCTORCOMBO.setSelectedIndex(0);
+            } else
+            {
+                INSTRUCTORLABEL.setText("Failed adding instructor");
+            }
+
+        } else
+        {
+            INSTRUCTORLABEL.setText("Check input fields again.");
+        }
+
+    }//GEN-LAST:event_INSTRUCTORCREATEBUTTONActionPerformed
+
+    private void INSTRUCTORDELETEBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_INSTRUCTORDELETEBUTTONActionPerformed
+    {//GEN-HEADEREND:event_INSTRUCTORDELETEBUTTONActionPerformed
+        // TODO add your handling code here:
+        int id = Integer.parseInt(INSTRUCTORTABLE.getValueAt(INSTRUCTORTABLE.getSelectedRow(), 0).toString());
+        boolean status = con.deleteInstructor(id);
+        if (status)
+        {
+            INSTRUCTORLABEL.setText("Deleted instructor " + INSTRUCTORTABLE.getValueAt(INSTRUCTORTABLE.getSelectedRow(), 1).toString());
+            DefaultTableModel model = (DefaultTableModel) INSTRUCTORTABLE.getModel();
+            model.removeRow(INSTRUCTORTABLE.getSelectedRow());
+        }
+        
+    }//GEN-LAST:event_INSTRUCTORDELETEBUTTONActionPerformed
+
     private void fillInstructorCombo()
     {
         CREATEINSTRUCTORCOMBO.removeAllItems();
@@ -3304,6 +3376,7 @@ public class Casablanca extends javax.swing.JFrame
         CREATEINSTRUCTORCOMBO.addItem("Swimming");
         CREATEINSTRUCTORCOMBO.addItem("Badminton");
     }
+
     private void fillInstructorList(ArrayList<Instructor> ilist)
     {
         INSTRUCTORTABLE.setModel(new DefaultTableModel());
@@ -3329,7 +3402,7 @@ public class Casablanca extends javax.swing.JFrame
             model.setValueAt(ilist.get(i).getEmail(), i, 5);
         }
     }
-    
+
     private void fillTodayList(ArrayList<TodayGuest> todayguests)
     {
         TODAYTABLE.setModel(new DefaultTableModel());
@@ -3672,6 +3745,7 @@ public class Casablanca extends javax.swing.JFrame
     private javax.swing.JButton INSTRUCTORDELETEBUTTON;
     private javax.swing.JTextField INSTRUCTOREMAIL;
     private javax.swing.JTextField INSTRUCTORFIRSTNAME;
+    private javax.swing.JLabel INSTRUCTORLABEL;
     private javax.swing.JTextField INSTRUCTORLASTNAME;
     private javax.swing.JPanel INSTRUCTORPANEL;
     private javax.swing.JTextField INSTRUCTORPHONE;
