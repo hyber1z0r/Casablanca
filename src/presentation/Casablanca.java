@@ -3387,13 +3387,15 @@ public class Casablanca extends javax.swing.JFrame
         INSTRUCTORTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
         INSTRUCTORTABLE.setRowSorter(sorter);
-        model.addColumn("I ID");
+        model.addColumn("ID");
         model.addColumn("Firstname");
         model.addColumn("Lastname");
         model.addColumn("Sport");
         model.addColumn("Phone");
         model.addColumn("Email");
         model.setRowCount(ilist.size());
+        
+        INSTRUCTORTABLE.getColumnModel().getColumn(0).setPreferredWidth(25);
 
         for (int i = 0; i < ilist.size(); i++)
         {
@@ -3419,6 +3421,8 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("Username");
         model.addColumn("Password");
         model.setRowCount(todayguests.size());
+        
+        TODAYTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
 
         for (int i = 0; i < todayguests.size(); i++)
         {
@@ -3632,6 +3636,8 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("End date");
         model.addColumn("Registration date");
         model.setRowCount(standby.size());
+        
+        SHOWSTANDBYTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
 
         for (int i = 0; i < standby.size(); i++)
         {
@@ -3657,6 +3663,8 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("Registration date");
         model.setRowCount(booked.size());
 
+        SHOWBOOKEDTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
+        
         for (int i = 0; i < booked.size(); i++)
         {
             model.setValueAt(booked.get(i).getRoom_id(), i, 0);
