@@ -3,28 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package presentation;
 
 import domain.Controller;
+import domain.Fbooking;
 import domain.Guest;
+import domain.GuestDates;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
  * @author Filipovic
  */
-public class GuestBooking extends javax.swing.JFrame {
+public class GuestBooking extends javax.swing.JFrame
+{
 
     /**
      * Creates new form GuestBooking
      */
-    
     Controller con;
     private Guest guestLoggedIn;
-    public GuestBooking() {
+    private int facilityID;
+
+    public GuestBooking()
+    {
         initComponents();
         con = Controller.getInstance();
-        
+
     }
 
     /**
@@ -34,7 +50,8 @@ public class GuestBooking extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -73,19 +90,23 @@ public class GuestBooking extends javax.swing.JFrame {
         SHOWTIMEANDDATE = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         SHOWDATECOMBOBOX = new javax.swing.JComboBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        SHOWTIMEDATELIST = new javax.swing.JList();
         SHOWTIMEDATEBOOKBUTTON = new javax.swing.JButton();
+        CHOOSECOURTCOMBO = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        BookTable = new javax.swing.JTable();
+        jLabel20 = new javax.swing.JLabel();
+        SHOWTIMESearch = new javax.swing.JButton();
         YOUARENOWBOOKEDIN = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         THANKYOUBUTTON = new javax.swing.JButton();
         DELETEBOOKING = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        DELETEBOOKINGLIST = new javax.swing.JList();
         jLabel17 = new javax.swing.JLabel();
         DELETEBOOKINGBACKBUTTON = new javax.swing.JButton();
         DELETEBOOKINGBUTTON = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        BookingTable = new javax.swing.JTable();
         YOUHAVEDELETED = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -100,8 +121,10 @@ public class GuestBooking extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        GUESTUSERNAME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GUESTUSERNAME.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GUESTUSERNAMEActionPerformed(evt);
             }
         });
@@ -115,8 +138,10 @@ public class GuestBooking extends javax.swing.JFrame {
         GUESTLOGIN.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         GUESTLOGIN.setForeground(new java.awt.Color(102, 102, 0));
         GUESTLOGIN.setText("LOGIN");
-        GUESTLOGIN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GUESTLOGIN.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GUESTLOGINActionPerformed(evt);
             }
         });
@@ -125,8 +150,10 @@ public class GuestBooking extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(102, 102, 0));
         jLabel5.setText("PLEASE LOGIN AS A GUEST");
 
-        GUESTPASSWORD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GUESTPASSWORD.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GUESTPASSWORDActionPerformed(evt);
             }
         });
@@ -136,7 +163,7 @@ public class GuestBooking extends javax.swing.JFrame {
         LOGINLayout.setHorizontalGroup(
             LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap(116, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
             .addGroup(LOGINLayout.createSequentialGroup()
@@ -170,29 +197,34 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(GUESTFEEDBACK, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GUESTLOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         getContentPane().add(LOGIN, "card2");
 
         jLabel6.setFont(new java.awt.Font("Aparajita", 2, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 0));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("WELCOME");
 
         BOOKFACILITYBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BOOKFACILITYBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         BOOKFACILITYBUTTON.setText("BOOK FACILITY");
-        BOOKFACILITYBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKFACILITYBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKFACILITYBUTTONActionPerformed(evt);
             }
         });
 
         CHECKBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         CHECKBOOKINGBUTTON.setForeground(new java.awt.Color(102, 102, 0));
-        CHECKBOOKINGBUTTON.setText("DELETE BOOKING");
-        CHECKBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        CHECKBOOKINGBUTTON.setText("CHECK BOOKINGS");
+        CHECKBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 CHECKBOOKINGBUTTONActionPerformed(evt);
             }
         });
@@ -200,8 +232,10 @@ public class GuestBooking extends javax.swing.JFrame {
         LOGOUTBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         LOGOUTBUTTON.setForeground(new java.awt.Color(102, 102, 0));
         LOGOUTBUTTON.setText("LOGOUT");
-        LOGOUTBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        LOGOUTBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 LOGOUTBUTTONActionPerformed(evt);
             }
         });
@@ -212,18 +246,18 @@ public class GuestBooking extends javax.swing.JFrame {
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WELCOMELayout.createSequentialGroup()
                 .addGap(235, 235, 235)
-                .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CHECKBOOKINGBUTTON)
-                    .addComponent(BOOKFACILITYBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(WELCOMELayout.createSequentialGroup()
-                .addGap(227, 227, 227)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addGroup(WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CHECKBOOKINGBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BOOKFACILITYBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 221, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(LOGOUTBUTTON)
                 .addGap(33, 33, 33))
+            .addGroup(WELCOMELayout.createSequentialGroup()
+                .addGap(141, 141, 141)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         WELCOMELayout.setVerticalGroup(
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,7 +268,7 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(BOOKFACILITYBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(CHECKBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(LOGOUTBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -248,8 +282,10 @@ public class GuestBooking extends javax.swing.JFrame {
         VOLLEYBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         VOLLEYBALL.setForeground(new java.awt.Color(102, 102, 0));
         VOLLEYBALL.setText("VOLLEYBALL");
-        VOLLEYBALL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        VOLLEYBALL.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 VOLLEYBALLActionPerformed(evt);
             }
         });
@@ -257,8 +293,10 @@ public class GuestBooking extends javax.swing.JFrame {
         BADMINTON.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         BADMINTON.setForeground(new java.awt.Color(102, 102, 0));
         BADMINTON.setText("BADMINTON");
-        BADMINTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BADMINTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BADMINTONActionPerformed(evt);
             }
         });
@@ -266,8 +304,10 @@ public class GuestBooking extends javax.swing.JFrame {
         TENNIS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         TENNIS.setForeground(new java.awt.Color(102, 102, 0));
         TENNIS.setText("TENNIS");
-        TENNIS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        TENNIS.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 TENNISActionPerformed(evt);
             }
         });
@@ -275,8 +315,10 @@ public class GuestBooking extends javax.swing.JFrame {
         GOLF.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         GOLF.setForeground(new java.awt.Color(102, 102, 0));
         GOLF.setText("GOLF");
-        GOLF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        GOLF.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 GOLFActionPerformed(evt);
             }
         });
@@ -284,8 +326,10 @@ public class GuestBooking extends javax.swing.JFrame {
         HANDBALL.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         HANDBALL.setForeground(new java.awt.Color(102, 102, 0));
         HANDBALL.setText("HANDBALL");
-        HANDBALL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        HANDBALL.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 HANDBALLActionPerformed(evt);
             }
         });
@@ -293,8 +337,10 @@ public class GuestBooking extends javax.swing.JFrame {
         SWIMMING.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         SWIMMING.setForeground(new java.awt.Color(102, 102, 0));
         SWIMMING.setText("SWIMMING");
-        SWIMMING.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SWIMMING.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 SWIMMINGActionPerformed(evt);
             }
         });
@@ -302,15 +348,19 @@ public class GuestBooking extends javax.swing.JFrame {
         FITNESS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         FITNESS.setForeground(new java.awt.Color(102, 102, 0));
         FITNESS.setText("FITNESS");
-        FITNESS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        FITNESS.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 FITNESSActionPerformed(evt);
             }
         });
 
         BOOKFACILITYBACKBUTTON.setText("BACK");
-        BOOKFACILITYBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        BOOKFACILITYBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 BOOKFACILITYBACKBUTTONActionPerformed(evt);
             }
         });
@@ -332,7 +382,7 @@ public class GuestBooking extends javax.swing.JFrame {
         BOOKFACILITYLayout.setHorizontalGroup(
             BOOKFACILITYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKFACILITYLayout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(BOOKFACILITYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BOOKFACILITYLayout.createSequentialGroup()
                         .addGroup(BOOKFACILITYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -405,7 +455,7 @@ public class GuestBooking extends javax.swing.JFrame {
                         .addComponent(SWIMMING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(BOOKFACILITYBACKBUTTON, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(19, 19, 19))
         );
@@ -429,7 +479,7 @@ public class GuestBooking extends javax.swing.JFrame {
         YOUWANTINSTRUCTORLayout.setHorizontalGroup(
             YOUWANTINSTRUCTORLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, YOUWANTINSTRUCTORLayout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
+                .addContainerGap(58, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
             .addGroup(YOUWANTINSTRUCTORLayout.createSequentialGroup()
@@ -448,27 +498,51 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addGroup(YOUWANTINSTRUCTORLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(INSTRUCTORYESBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(INSTRUCTORNOBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
         getContentPane().add(YOUWANTINSTRUCTOR, "card5");
 
         jLabel14.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(102, 102, 0));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("PICK DATE AND TIME");
 
         SHOWDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        SHOWTIMEDATELIST.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(SHOWTIMEDATELIST);
-
         SHOWTIMEDATEBOOKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         SHOWTIMEDATEBOOKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         SHOWTIMEDATEBOOKBUTTON.setText("BOOK");
+
+        CHOOSECOURTCOMBO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel3.setText("Choose date");
+
+        BookTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(BookTable);
+
+        jLabel20.setText("Choose court");
+
+        SHOWTIMESearch.setText("Search");
+        SHOWTIMESearch.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                SHOWTIMESearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout SHOWTIMEANDDATELayout = new javax.swing.GroupLayout(SHOWTIMEANDDATE);
         SHOWTIMEANDDATE.setLayout(SHOWTIMEANDDATELayout);
@@ -476,30 +550,50 @@ public class GuestBooking extends javax.swing.JFrame {
             SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
-                        .addComponent(SHOWDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                        .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(SHOWDATECOMBOBOX, 0, 124, Short.MAX_VALUE)
+                                .addComponent(CHOOSECOURTCOMBO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel20)
+                            .addComponent(SHOWTIMESearch))
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))
+                    .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         SHOWTIMEANDDATELayout.setVerticalGroup(
             SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, SHOWTIMEANDDATELayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SHOWDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(SHOWDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CHOOSECOURTCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SHOWTIMESearch))
+                    .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(13, 13, 13)
+                .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
 
         getContentPane().add(SHOWTIMEANDDATE, "card6");
@@ -531,7 +625,7 @@ public class GuestBooking extends javax.swing.JFrame {
                     .addGroup(YOUARENOWBOOKEDINLayout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         YOUARENOWBOOKEDINLayout.setVerticalGroup(
             YOUARENOWBOOKEDINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -542,46 +636,62 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(THANKYOUBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         getContentPane().add(YOUARENOWBOOKEDIN, "card7");
 
-        DELETEBOOKINGLIST.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(DELETEBOOKINGLIST);
-
-        jLabel17.setFont(new java.awt.Font("Aparajita", 2, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 102, 0));
-        jLabel17.setText("PICK YOUR BOOKING TO DELETE");
+        jLabel17.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Here's a list of your bookings");
 
         DELETEBOOKINGBACKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         DELETEBOOKINGBACKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         DELETEBOOKINGBACKBUTTON.setText("BACK");
+        DELETEBOOKINGBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                DELETEBOOKINGBACKBUTTONActionPerformed(evt);
+            }
+        });
 
         DELETEBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         DELETEBOOKINGBUTTON.setForeground(new java.awt.Color(255, 51, 51));
         DELETEBOOKINGBUTTON.setText("DELETE");
+
+        BookingTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(BookingTable);
 
         javax.swing.GroupLayout DELETEBOOKINGLayout = new javax.swing.GroupLayout(DELETEBOOKING);
         DELETEBOOKING.setLayout(DELETEBOOKINGLayout);
         DELETEBOOKINGLayout.setHorizontalGroup(
             DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addContainerGap()
                 .addGroup(DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DELETEBOOKINGBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DELETEBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DELETEBOOKINGLayout.createSequentialGroup()
-                .addContainerGap(161, Short.MAX_VALUE)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DELETEBOOKINGBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DELETEBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(62, 62, 62))
+                    .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
+                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         DELETEBOOKINGLayout.setVerticalGroup(
             DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -590,15 +700,14 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(37, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DELETEBOOKINGLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(44, 44, 44)
                         .addComponent(DELETEBOOKINGBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(DELETEBOOKINGBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(DELETEBOOKINGBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76))))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         getContentPane().add(DELETEBOOKING, "card8");
@@ -614,8 +723,10 @@ public class GuestBooking extends javax.swing.JFrame {
         YOUHAVEDELETEDBACKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         YOUHAVEDELETEDBACKBUTTON.setForeground(new java.awt.Color(51, 255, 51));
         YOUHAVEDELETEDBACKBUTTON.setText("BACK");
-        YOUHAVEDELETEDBACKBUTTON.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        YOUHAVEDELETEDBACKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 YOUHAVEDELETEDBACKBUTTONActionPerformed(evt);
             }
         });
@@ -625,7 +736,7 @@ public class GuestBooking extends javax.swing.JFrame {
         YOUHAVEDELETEDLayout.setHorizontalGroup(
             YOUHAVEDELETEDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, YOUHAVEDELETEDLayout.createSequentialGroup()
-                .addGap(0, 74, Short.MAX_VALUE)
+                .addGap(0, 80, Short.MAX_VALUE)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, YOUHAVEDELETEDLayout.createSequentialGroup()
@@ -645,7 +756,7 @@ public class GuestBooking extends javax.swing.JFrame {
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
                 .addComponent(YOUHAVEDELETEDBACKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
         );
@@ -665,7 +776,20 @@ public class GuestBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_BOOKFACILITYBUTTONActionPerformed
 
     private void CHECKBOOKINGBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CHECKBOOKINGBUTTONActionPerformed
-        // TODO add your handling code here:
+        // check and delete your bookings
+        ArrayList<Fbooking> fb;
+        fb = con.getFbookings(guestLoggedIn.getGuest_id());
+        if (!fb.isEmpty())
+        {
+            fillBookings(fb);
+            WELCOME.setVisible(false);
+            DELETEBOOKING.setVisible(true);
+        } else
+        {
+            // label say you have no bookings.
+        }
+
+
     }//GEN-LAST:event_CHECKBOOKINGBUTTONActionPerformed
 
     private void LOGOUTBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGOUTBUTTONActionPerformed
@@ -697,7 +821,18 @@ public class GuestBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_GOLFActionPerformed
 
     private void TENNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TENNISActionPerformed
-        // TODO add your handling code here:
+        // fill combobox with 6 courts
+        // fill top combobox with dates from today to leaving date
+        // fill table with data
+        fillComboTennis();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        fillTableTimes();
+        facilityID = 1;
+        // get the non free dates, start showing for the first date
+        // use the non free dates to remove from the jtable.
+
     }//GEN-LAST:event_TENNISActionPerformed
 
     private void BADMINTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BADMINTONActionPerformed
@@ -717,7 +852,7 @@ public class GuestBooking extends javax.swing.JFrame {
         String username = GUESTUSERNAME.getText();
         String password = GUESTPASSWORD.getText();
         Guest g = con.checkLogin(username, password);
-        if(g != null)
+        if (g != null)
         {
             guestLoggedIn = g;
             // clear password in guest in gui for safety reasons
@@ -728,7 +863,7 @@ public class GuestBooking extends javax.swing.JFrame {
             GUESTUSERNAME.setText("");
             GUESTPASSWORD.setText("");
             GUESTFEEDBACK.setText("");
-        }else
+        } else
         {
             GUESTFEEDBACK.setText("Wrong username or password!");
             GUESTPASSWORD.setText("");
@@ -742,16 +877,174 @@ public class GuestBooking extends javax.swing.JFrame {
 
     }//GEN-LAST:event_GUESTPASSWORDActionPerformed
 
+    private void DELETEBOOKINGBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_DELETEBOOKINGBACKBUTTONActionPerformed
+    {//GEN-HEADEREND:event_DELETEBOOKINGBACKBUTTONActionPerformed
+        WELCOME.setVisible(true);
+        DELETEBOOKING.setVisible(false);
+    }//GEN-LAST:event_DELETEBOOKINGBACKBUTTONActionPerformed
+
+    private void SHOWTIMESearchActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMESearchActionPerformed
+    {//GEN-HEADEREND:event_SHOWTIMESearchActionPerformed
+        String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
+        int court = Integer.parseInt(CHOOSECOURTCOMBO.getSelectedItem().toString());
+
+        DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
+        Date date = null;
+        try
+        {
+            date = originalFormat.parse(datestr);
+        } catch (ParseException ex)
+        {
+            ex.printStackTrace();
+        }
+        String formattedDate = targetFormat.format(date);
+
+        ArrayList<String> nonfree = con.getNonFreeDates(formattedDate, facilityID + court - 1);
+
+        System.out.println("Fjern de tider fra table der er i denne liste:");
+        for (String string : nonfree)
+        {
+            System.out.println(string);
+        }
+    }//GEN-LAST:event_SHOWTIMESearchActionPerformed
+
+    private void fillComboDates(int gID)
+    {
+        SHOWDATECOMBOBOX.removeAllItems();
+        ArrayList<GuestDates> gd = con.getGuestDates(gID);
+        String sdate = gd.get(0).getStart_date();
+        String edate = gd.get(0).getEnd_date();
+        SimpleDateFormat myFormat = new SimpleDateFormat("MMM dd");
+        try
+        {
+            Date fromDate = myFormat.parse(sdate);
+            Date toDate = myFormat.parse(edate);
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(fromDate);
+            String start = cal.getTime().toString();
+            String d = start.substring(0, 10);
+            SHOWDATECOMBOBOX.addItem(d);
+            while (cal.getTime().before(toDate))
+            {
+                cal.add(Calendar.DATE, 1);
+                String dates = cal.getTime().toString();
+                String d2 = dates.substring(0, 10);
+                SHOWDATECOMBOBOX.addItem(d2);
+            }
+        } catch (ParseException pe)
+        {
+            pe.printStackTrace();
+        }
+
+    }
+
+    private void fillTableTimes()
+    {
+        BookTable.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        BookTable.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        BookTable.setRowSorter(sorter);
+        model.addColumn("Times");
+        model.setRowCount(12);
+
+        model.setValueAt("08:00 - 09:00", 0, 0);
+        model.setValueAt("09:00 - 10:00", 1, 0);
+        model.setValueAt("10:00 - 11:00", 2, 0);
+        model.setValueAt("11:00 - 12:00", 3, 0);
+        model.setValueAt("12:00 - 13:00", 4, 0);
+        model.setValueAt("13:00 - 14:00", 5, 0);
+        model.setValueAt("14:00 - 15:00", 6, 0);
+        model.setValueAt("15:00 - 16:00", 7, 0);
+        model.setValueAt("16:00 - 17:00", 8, 0);
+        model.setValueAt("17:00 - 18:00", 9, 0);
+        model.setValueAt("18:00 - 19:00", 10, 0);
+        model.setValueAt("19:00 - 20:00", 11, 0);
+    }
+
+    private void fillComboTennis()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+        CHOOSECOURTCOMBO.addItem("2");
+        CHOOSECOURTCOMBO.addItem("3");
+        CHOOSECOURTCOMBO.addItem("4");
+        CHOOSECOURTCOMBO.addItem("5");
+        CHOOSECOURTCOMBO.addItem("6");
+    }
+
+    private void fillComboVolleyball()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+        CHOOSECOURTCOMBO.addItem("2");
+    }
+
+    private void fillComboBadminton()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+        CHOOSECOURTCOMBO.addItem("2");
+        CHOOSECOURTCOMBO.addItem("3");
+        CHOOSECOURTCOMBO.addItem("4");
+    }
+
+    private void fillComboGolf()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+    }
+
+    private void fillComboSwimming()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+    }
+
+    private void fillComboFitness()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+    }
+
+    private void fillBookings(ArrayList<Fbooking> fb)
+    {
+        BookingTable.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) BookingTable.getModel();
+        BookingTable.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        BookingTable.setRowSorter(sorter);
+        model.addColumn("Facility");
+        model.addColumn("Court #");
+        model.addColumn("Start time");
+        model.addColumn("End time");
+        model.setRowCount(fb.size());
+
+        BookingTable.getColumnModel().getColumn(0).setPreferredWidth(20);
+        BookingTable.getColumnModel().getColumn(1).setPreferredWidth(20);
+
+        for (int i = 0; i < fb.size(); i++)
+        {
+            model.setValueAt(fb.get(i).getName(), i, 0);
+            model.setValueAt(fb.get(i).getCourtno(), i, 1);
+            model.setValueAt(fb.get(i).getStart_date(), i, 2);
+            model.setValueAt(fb.get(i).getEnd_date(), i, 3);
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
+        try
+        {
 //            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
 //                if ("Nimbus".equals(info.getName())) {
 //                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -759,20 +1052,26 @@ public class GuestBooking extends javax.swing.JFrame {
 //                }
 //            }
             javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex)
+        {
             java.util.logging.Logger.getLogger(GuestBooking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        } catch (InstantiationException ex)
+        {
             java.util.logging.Logger.getLogger(GuestBooking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex)
+        {
             java.util.logging.Logger.getLogger(GuestBooking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
             java.util.logging.Logger.getLogger(GuestBooking.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 new GuestBooking().setVisible(true);
             }
         });
@@ -783,11 +1082,13 @@ public class GuestBooking extends javax.swing.JFrame {
     private javax.swing.JPanel BOOKFACILITY;
     private javax.swing.JButton BOOKFACILITYBACKBUTTON;
     private javax.swing.JButton BOOKFACILITYBUTTON;
+    private javax.swing.JTable BookTable;
+    private javax.swing.JTable BookingTable;
     private javax.swing.JButton CHECKBOOKINGBUTTON;
+    private javax.swing.JComboBox CHOOSECOURTCOMBO;
     private javax.swing.JPanel DELETEBOOKING;
     private javax.swing.JButton DELETEBOOKINGBACKBUTTON;
     private javax.swing.JButton DELETEBOOKINGBUTTON;
-    private javax.swing.JList DELETEBOOKINGLIST;
     private javax.swing.JButton FITNESS;
     private javax.swing.JButton GOLF;
     private javax.swing.JLabel GUESTFEEDBACK;
@@ -802,7 +1103,7 @@ public class GuestBooking extends javax.swing.JFrame {
     private javax.swing.JComboBox SHOWDATECOMBOBOX;
     private javax.swing.JPanel SHOWTIMEANDDATE;
     private javax.swing.JButton SHOWTIMEDATEBOOKBUTTON;
-    private javax.swing.JList SHOWTIMEDATELIST;
+    private javax.swing.JButton SHOWTIMESearch;
     private javax.swing.JButton SWIMMING;
     private javax.swing.JButton TENNIS;
     private javax.swing.JButton THANKYOUBUTTON;
@@ -824,6 +1125,8 @@ public class GuestBooking extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -831,7 +1134,7 @@ public class GuestBooking extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     // End of variables declaration//GEN-END:variables
 }

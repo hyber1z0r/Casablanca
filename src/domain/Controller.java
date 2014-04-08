@@ -185,4 +185,19 @@ public class Controller
     {
         return dbf.deleteInstructor(id);
     }
+    
+    public ArrayList<Fbooking> getFbookings(int gID)
+    {
+        return dbf.getFbookings(gID);
+    }
+    
+    public ArrayList<GuestDates> getGuestDates(int gID)
+    {
+        return dbf.getGuestDates(gID);
+    }
+    
+    public ArrayList<String> getNonFreeDates(String start_date, int FID)
+    {
+        return dbf.getNonFreeDates(start_date, FID);
+    }
 }

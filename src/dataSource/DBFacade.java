@@ -2,8 +2,10 @@ package dataSource;
 import domain.Booking;
 import domain.Bookings_Guests;
 import domain.Facility_Booking;
+import domain.Fbooking;
 import domain.Fbooking_Guests;
 import domain.Guest;
+import domain.GuestDates;
 import domain.Instructor;
 import domain.Room;
 import domain.TodayGuest;
@@ -123,6 +125,21 @@ public class DBFacade {
     public boolean saveNewFBookingGuests(Fbooking_Guests fbg)
     {
         return gm.saveNewFBookingsGuests(fbg, con);
+    }
+    
+    public ArrayList<Fbooking> getFbookings(int gID)
+    {
+        return gm.getFBookings(gID, con);
+    }
+    
+    public ArrayList<GuestDates> getGuestDates(int gID)
+    {
+        return gm.getGuestDates(gID, con);
+    }
+    
+    public ArrayList<String> getNonFreeDates(String start_date, int FID)
+    {
+        return gm.getNonFreeDates(start_date, FID, con);
     }
 }
 

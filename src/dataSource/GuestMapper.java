@@ -6,12 +6,16 @@
 package dataSource;
 
 import domain.Facility_Booking;
+import domain.Fbooking;
 import domain.Fbooking_Guests;
 import domain.Guest;
+import domain.GuestDates;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
@@ -98,9 +102,9 @@ public class GuestMapper
                 con.rollback();
             } catch (SQLException ex)
             {
-                System.out.println("Fail in Roommapper - rollback save new fbooking");
+                System.out.println("Fail in GuestMapper - rollback save new fbooking");
             }
-            System.out.println("Fail in Roommapper - save new fbooking");
+            System.out.println("Fail in GuestMapper - save new fbooking");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
@@ -109,7 +113,7 @@ public class GuestMapper
                 statement.close();
             } catch (SQLException e)
             {
-                System.out.println("Fail in Roommapper - save new fbooking");
+                System.out.println("Fail in GuestMapper - save new fbooking");
                 System.out.println(e.getMessage());
             }
         }
@@ -152,9 +156,9 @@ public class GuestMapper
                 con.rollback();
             } catch (SQLException ex)
             {
-                System.out.println("Fail in Roommapper - rollback save new fbooking_guests");
+                System.out.println("Fail in GuestMapper - rollback save new fbooking_guests");
             }
-            System.out.println("Fail in Roommapper - save new fbooking_guests");
+            System.out.println("Fail in GuestMapper - save new fbooking_guests");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
@@ -163,11 +167,154 @@ public class GuestMapper
                 statement.close();
             } catch (SQLException e)
             {
-                System.out.println("Fail in Roommapper - close statement save new fbooking_guests");
+                System.out.println("Fail in GuestMapper - close statement save new fbooking_guests");
                 System.out.println(e.getMessage());
             }
         }
         return rowsInserted == 1;
     }
 
+    public ArrayList<Fbooking> getFBookings(int gID, Connection con)
+    {
+        ArrayList<Fbooking> fb = new ArrayList();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        Statement statementFix;
+        String SQLString = "SELECT f.NAME, f.Courts, to_char(fb.start_date, 'dd-mm-yyyy hh24:mi'), to_char(fb.end_date, 'dd-mm-yyyy hh24:mi')"
+                + " FROM FACILITYBOOKING fb INNER JOIN FBOOKING_GUESTS fbg"
+                + " ON fb.ID = fbg.FID JOIN FACILITY f"
+                + " ON fb.FID = f.ID"
+                + " WHERE fbg.GID = ?";
+
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get tuples
+            statement = con.prepareStatement(SQLString);
+            statement.setInt(1, gID);
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                fb.add(new Fbooking(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getString(4)));
+            }
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in GuestMapper - rollback get fbookings");
+            }
+            System.out.println("Fail in GuestMapper - get fbookings");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - save new fbooking");
+                System.out.println(e.getMessage());
+            }
+        }
+        return fb;
+
+    }
+
+    public ArrayList<GuestDates> getGuestDates(int gID, Connection con)
+    {
+        ArrayList<GuestDates> gd = new ArrayList();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy'";
+        Statement statementFix;
+        String SQLString = "SELECT to_char(b.start_date, 'Mon. dd'), to_char(b.end_date, 'Mon. dd')"
+                + " from bookings b inner join bookings_guests bg"
+                + " on bg.booking_id = b.id join guests g"
+                + " on g.guest_id = bg.guest_id"
+                + " where g.guest_id = ?";
+
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get tuples
+            statement = con.prepareStatement(SQLString);
+            statement.setInt(1, gID);
+
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next())
+            {
+                gd.add(new GuestDates(rs.getString(1), rs.getString(2)));
+            }
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in GuestMapper - rollback getGuestDates");
+            }
+            System.out.println("Fail in GuestMapper - getGuestDates");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - getGuestDates");
+                System.out.println(e.getMessage());
+            }
+        }
+        return gd;
+    }
+    
+    public ArrayList<String> getNonFreeDates(String start_date, int FID, Connection con)
+    {
+        ArrayList<String> freeList = new ArrayList();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        Statement statementFix;
+        String SQLString = "SELECT to_char(START_DATE, 'hh24:mi') FROM FACILITYBOOKING WHERE START_DATE LIKE ? and FID = ?";
+
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get tuples
+            statement = con.prepareStatement(SQLString);
+            statement.setString(1, start_date + "%");
+            statement.setInt(2, FID);
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                freeList.add(rs.getString(1));
+            }
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in GuestMapper - getNonFreeDates");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - getNonFreeDates");
+                System.out.println(e.getMessage());
+            }
+        }
+        return freeList;
+    }
 }

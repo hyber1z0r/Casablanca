@@ -35,7 +35,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,108,0,0,2,-124"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-92,0,0,2,-118"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -51,7 +51,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="110" max="32767" attributes="0"/>
+                  <EmptySpace pref="116" max="32767" attributes="0"/>
                   <Component id="jLabel5" min="-2" pref="485" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
@@ -93,7 +93,7 @@
                   <Component id="GUESTFEEDBACK" min="-2" pref="28" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="GUESTLOGIN" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="50" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -165,21 +165,21 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="CHECKBOOKINGBUTTON" min="-2" max="-2" attributes="0"/>
-                      <Component id="BOOKFACILITYBUTTON" min="-2" pref="173" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="CHECKBOOKINGBUTTON" max="32767" attributes="0"/>
+                      <Component id="BOOKFACILITYBUTTON" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" pref="189" max="-2" attributes="0"/>
-                  <EmptySpace pref="228" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="221" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="LOGOUTBUTTON" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" pref="338" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -192,7 +192,7 @@
                   <Component id="BOOKFACILITYBUTTON" min="-2" pref="59" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="CHECKBOOKINGBUTTON" min="-2" pref="57" max="-2" attributes="0"/>
-                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                  <EmptySpace pref="90" max="32767" attributes="0"/>
                   <Component id="LOGOUTBUTTON" min="-2" pref="73" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
@@ -208,6 +208,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="66" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="WELCOME"/>
           </Properties>
         </Component>
@@ -233,7 +234,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="DELETE BOOKING"/>
+            <Property name="text" type="java.lang.String" value="CHECK BOOKINGS"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CHECKBOOKINGBUTTONActionPerformed"/>
@@ -266,7 +267,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace pref="13" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -365,7 +366,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace pref="65" max="32767" attributes="0"/>
                   <Component id="BOOKFACILITYBACKBUTTON" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
@@ -535,7 +536,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
                   <Component id="jLabel13" min="-2" pref="545" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               </Group>
@@ -558,7 +559,7 @@
                       <Component id="INSTRUCTORYESBUTTON" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                       <Component id="INSTRUCTORNOBUTTON" alignment="3" min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="135" max="32767" attributes="0"/>
+                  <EmptySpace pref="196" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -609,39 +610,63 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel14" min="-2" pref="294" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="SHOWDATECOMBOBOX" min="-2" pref="124" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="203" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="SHOWDATECOMBOBOX" pref="124" max="32767" attributes="0"/>
+                                  <Component id="CHOOSECOURTCOMBO" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                              <Component id="SHOWTIMESearch" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="283" max="-2" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <Component id="SHOWTIMEDATEBOOKBUTTON" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="34" max="32767" attributes="0"/>
-                  <Component id="SHOWTIMEDATEBOOKBUTTON" min="-2" pref="129" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                  <Component id="jLabel14" min="-2" pref="490" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="SHOWTIMEDATEBOOKBUTTON" min="-2" pref="63" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel14" min="-2" pref="49" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="SHOWDATECOMBOBOX" min="-2" pref="51" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="251" max="-2" attributes="0"/>
-                          </Group>
+                  <Component id="jLabel14" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="SHOWDATECOMBOBOX" min="-2" pref="51" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="CHOOSECOURTCOMBO" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="SHOWTIMESearch" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="221" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  <Component id="SHOWTIMEDATEBOOKBUTTON" min="-2" pref="63" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -655,6 +680,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="66" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="PICK DATE AND TIME"/>
           </Properties>
         </Component>
@@ -670,28 +696,6 @@
             </Property>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JList" name="SHOWTIMEDATELIST">
-              <Properties>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                    <StringItem index="4" value="Item 5"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
         <Component class="javax.swing.JButton" name="SHOWTIMEDATEBOOKBUTTON">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -702,6 +706,57 @@
             </Property>
             <Property name="text" type="java.lang.String" value="BOOK"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="CHOOSECOURTCOMBO">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Choose date"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="BookTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="jLabel20">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Choose court"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="SHOWTIMESearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Search"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SHOWTIMESearchActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -730,7 +785,7 @@
                           <Component id="jLabel15" min="-2" pref="375" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
+                  <EmptySpace pref="160" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -743,7 +798,7 @@
                   <Component id="jLabel16" min="-2" pref="49" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="THANKYOUBUTTON" min="-2" pref="69" max="-2" attributes="0"/>
-                  <EmptySpace pref="62" max="32767" attributes="0"/>
+                  <EmptySpace pref="118" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -794,20 +849,23 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="163" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="DELETEBOOKINGBACKBUTTON" min="-2" pref="122" max="-2" attributes="0"/>
-                      <Component id="DELETEBOOKINGBUTTON" min="-2" pref="122" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="161" max="32767" attributes="0"/>
-                  <Component id="jLabel17" min="-2" pref="473" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jScrollPane3" min="-2" pref="431" max="-2" attributes="0"/>
+                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="DELETEBOOKINGBACKBUTTON" min="-2" pref="122" max="-2" attributes="0"/>
+                              <Component id="DELETEBOOKINGBUTTON" min="-2" pref="122" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel17" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -818,54 +876,29 @@
                   <Component id="jLabel17" min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="249" max="-2" attributes="0"/>
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                           <Component id="DELETEBOOKINGBUTTON" min="-2" pref="65" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="DELETEBOOKINGBACKBUTTON" min="-2" pref="65" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane3" min="-2" pref="278" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JList" name="DELETEBOOKINGLIST">
-              <Properties>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                    <StringItem index="4" value="Item 5"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
         <Component class="javax.swing.JLabel" name="jLabel17">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Aparajita" size="36" style="2"/>
+              <Font name="Lucida Grande" size="36" style="0"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="66" red="66" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="PICK YOUR BOOKING TO DELETE"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Here&apos;s a list of your bookings"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="DELETEBOOKINGBACKBUTTON">
@@ -878,6 +911,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="BACK"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DELETEBOOKINGBACKBUTTONActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="DELETEBOOKINGBUTTON">
           <Properties>
@@ -890,6 +926,27 @@
             <Property name="text" type="java.lang.String" value="DELETE"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="BookingTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="YOUHAVEDELETED">
@@ -903,7 +960,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
                   <Component id="jLabel18" min="-2" pref="501" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               </Group>
@@ -929,7 +986,7 @@
                   <Component id="jLabel18" min="-2" pref="49" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="jLabel19" min="-2" pref="49" max="-2" attributes="0"/>
-                  <EmptySpace pref="68" max="32767" attributes="0"/>
+                  <EmptySpace pref="124" max="32767" attributes="0"/>
                   <Component id="YOUHAVEDELETEDBACKBUTTON" min="-2" pref="72" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
               </Group>
