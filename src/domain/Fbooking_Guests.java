@@ -14,7 +14,7 @@ public class Fbooking_Guests
 {
     private int GID, FID;
 
-    public Fbooking_Guests(int GID, int FID)
+    public Fbooking_Guests(int FID, int GID)
     {
         this.GID = GID;
         this.FID = FID;

@@ -22,6 +22,8 @@ public class Controller
     private ArrayList<Guest> currentGuests;
     private Instructor currentInstructor;
     private ArrayList<Instructor> currentIList;
+    private Facility_Booking currentFBooking;
+    private Fbooking_Guests currentFBooking_Guests;
 
     private Controller()
     {
@@ -199,5 +201,29 @@ public class Controller
     public ArrayList<String> getNonFreeDates(String start_date, int FID)
     {
         return dbf.getNonFreeDates(start_date, FID);
+    }
+    
+    public Facility_Booking saveNewFBooking(int FID, int IID, String start_date, String end_date, String reg_date)
+    {
+        currentFBooking = new Facility_Booking(0, FID, IID, start_date, end_date, reg_date);
+
+        boolean status = dbf.saveNewFBooking(currentFBooking);
+        if (!status)
+        {
+            currentFBooking = null;
+        }
+        return currentFBooking;
+    }
+    
+    public Fbooking_Guests saveNewFbooking_Guests(int GID)
+    {
+        currentFBooking_Guests = new Fbooking_Guests(0, GID);
+
+        boolean status = dbf.saveNewFBookingGuests(currentFBooking_Guests);
+        if (!status)
+        {
+            currentFBooking = null;
+        }
+        return currentFBooking_Guests;
     }
 }

@@ -6,7 +6,9 @@
 package presentation;
 
 import domain.Controller;
+import domain.Facility_Booking;
 import domain.Fbooking;
+import domain.Fbooking_Guests;
 import domain.Guest;
 import domain.GuestDates;
 import java.text.DateFormat;
@@ -97,6 +99,7 @@ public class GuestBooking extends javax.swing.JFrame
         BookTable = new javax.swing.JTable();
         jLabel20 = new javax.swing.JLabel();
         SHOWTIMESearch = new javax.swing.JButton();
+        SHOWTIMEBACK = new javax.swing.JButton();
         YOUARENOWBOOKEDIN = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -106,7 +109,7 @@ public class GuestBooking extends javax.swing.JFrame
         DELETEBOOKINGBACKBUTTON = new javax.swing.JButton();
         DELETEBOOKINGBUTTON = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        BookingTable = new javax.swing.JTable();
+        CheckBookingsTable = new javax.swing.JTable();
         YOUHAVEDELETED = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -513,6 +516,13 @@ public class GuestBooking extends javax.swing.JFrame
         SHOWTIMEDATEBOOKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         SHOWTIMEDATEBOOKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
         SHOWTIMEDATEBOOKBUTTON.setText("BOOK");
+        SHOWTIMEDATEBOOKBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                SHOWTIMEDATEBOOKBUTTONActionPerformed(evt);
+            }
+        });
 
         CHOOSECOURTCOMBO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -544,6 +554,15 @@ public class GuestBooking extends javax.swing.JFrame
             }
         });
 
+        SHOWTIMEBACK.setText("Back");
+        SHOWTIMEBACK.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                SHOWTIMEBACKActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SHOWTIMEANDDATELayout = new javax.swing.GroupLayout(SHOWTIMEANDDATE);
         SHOWTIMEANDDATE.setLayout(SHOWTIMEANDDATELayout);
         SHOWTIMEANDDATELayout.setHorizontalGroup(
@@ -561,7 +580,9 @@ public class GuestBooking extends javax.swing.JFrame
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SHOWTIMEDATEBOOKBUTTON, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SHOWTIMEBACK, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(28, 28, 28))
                     .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -580,14 +601,20 @@ public class GuestBooking extends javax.swing.JFrame
                     .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SHOWDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CHOOSECOURTCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SHOWTIMESearch))
+                        .addGroup(SHOWTIMEANDDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(SHOWDATECOMBOBOX, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(CHOOSECOURTCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(SHOWTIMESearch))
+                            .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(SHOWTIMEBACK)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -608,7 +635,14 @@ public class GuestBooking extends javax.swing.JFrame
 
         THANKYOUBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         THANKYOUBUTTON.setForeground(new java.awt.Color(51, 255, 0));
-        THANKYOUBUTTON.setText("THANK YOU");
+        THANKYOUBUTTON.setText("Go back");
+        THANKYOUBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                THANKYOUBUTTONActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout YOUARENOWBOOKEDINLayout = new javax.swing.GroupLayout(YOUARENOWBOOKEDIN);
         YOUARENOWBOOKEDIN.setLayout(YOUARENOWBOOKEDINLayout);
@@ -617,15 +651,15 @@ public class GuestBooking extends javax.swing.JFrame
             .addGroup(YOUARENOWBOOKEDINLayout.createSequentialGroup()
                 .addGroup(YOUARENOWBOOKEDINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(YOUARENOWBOOKEDINLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(YOUARENOWBOOKEDINLayout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(THANKYOUBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel16))
                     .addGroup(YOUARENOWBOOKEDINLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addGap(231, 231, 231)
+                        .addComponent(THANKYOUBUTTON, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         YOUARENOWBOOKEDINLayout.setVerticalGroup(
             YOUARENOWBOOKEDINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -660,7 +694,7 @@ public class GuestBooking extends javax.swing.JFrame
         DELETEBOOKINGBUTTON.setForeground(new java.awt.Color(255, 51, 51));
         DELETEBOOKINGBUTTON.setText("DELETE");
 
-        BookingTable.setModel(new javax.swing.table.DefaultTableModel(
+        CheckBookingsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
                 {null, null, null, null},
@@ -673,7 +707,7 @@ public class GuestBooking extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(BookingTable);
+        jScrollPane3.setViewportView(CheckBookingsTable);
 
         javax.swing.GroupLayout DELETEBOOKINGLayout = new javax.swing.GroupLayout(DELETEBOOKING);
         DELETEBOOKING.setLayout(DELETEBOOKINGLayout);
@@ -828,7 +862,7 @@ public class GuestBooking extends javax.swing.JFrame
         fillComboDates(guestLoggedIn.getGuest_id());
         SHOWTIMEANDDATE.setVisible(true);
         BOOKFACILITY.setVisible(false);
-        fillTableTimes();
+        initializeTableTimes();
         facilityID = 1;
         // get the non free dates, start showing for the first date
         // use the non free dates to remove from the jtable.
@@ -885,6 +919,7 @@ public class GuestBooking extends javax.swing.JFrame
 
     private void SHOWTIMESearchActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMESearchActionPerformed
     {//GEN-HEADEREND:event_SHOWTIMESearchActionPerformed
+        fillTableTimes();
         String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
         int court = Integer.parseInt(CHOOSECOURTCOMBO.getSelectedItem().toString());
 
@@ -902,12 +937,69 @@ public class GuestBooking extends javax.swing.JFrame
 
         ArrayList<String> nonfree = con.getNonFreeDates(formattedDate, facilityID + court - 1);
 
-        System.out.println("Fjern de tider fra table der er i denne liste:");
-        for (String string : nonfree)
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        for (String nonfree1 : nonfree)
         {
-            System.out.println(string);
+            for (int j = 0; j < model.getRowCount(); j++)
+            {
+                String nonfreedate = nonfree1;
+                String modeldate = model.getValueAt(j, 0).toString();
+                if (modeldate.startsWith(nonfreedate))
+                {
+                    model.removeRow(j);
+                }
+            }
         }
     }//GEN-LAST:event_SHOWTIMESearchActionPerformed
+
+    private void SHOWTIMEDATEBOOKBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMEDATEBOOKBUTTONActionPerformed
+    {//GEN-HEADEREND:event_SHOWTIMEDATEBOOKBUTTONActionPerformed
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        int court = Integer.parseInt(CHOOSECOURTCOMBO.getSelectedItem().toString());
+        int FID = facilityID + court - 1;
+        
+        
+        String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
+        DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
+        Date date = null;
+        try
+        {
+            date = originalFormat.parse(datestr);
+        } catch (ParseException ex)
+        {
+            ex.printStackTrace();
+        }
+        String formattedDate = targetFormat.format(date);
+        
+        String times = model.getValueAt(BookTable.getSelectedRow(), 0).toString();
+        String sdate = formattedDate + " " + times.substring(0, 5);
+        String edate = formattedDate + " " + times.substring(8, 13);
+        String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date());
+        Facility_Booking fb = con.saveNewFBooking(FID, 0, sdate, edate, todate);
+        if (fb != null)
+        {
+            Fbooking_Guests fbg = con.saveNewFbooking_Guests(guestLoggedIn.getGuest_id());
+            if (fbg != null)
+            {
+                YOUARENOWBOOKEDIN.setVisible(true);
+                SHOWTIMEANDDATE.setVisible(false);
+            }
+        }
+
+    }//GEN-LAST:event_SHOWTIMEDATEBOOKBUTTONActionPerformed
+
+    private void THANKYOUBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_THANKYOUBUTTONActionPerformed
+    {//GEN-HEADEREND:event_THANKYOUBUTTONActionPerformed
+        WELCOME.setVisible(true);
+        YOUARENOWBOOKEDIN.setVisible(false);
+    }//GEN-LAST:event_THANKYOUBUTTONActionPerformed
+
+    private void SHOWTIMEBACKActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMEBACKActionPerformed
+    {//GEN-HEADEREND:event_SHOWTIMEBACKActionPerformed
+        WELCOME.setVisible(true);
+        SHOWTIMEANDDATE.setVisible(false);
+    }//GEN-LAST:event_SHOWTIMEBACKActionPerformed
 
     private void fillComboDates(int gID)
     {
@@ -937,6 +1029,17 @@ public class GuestBooking extends javax.swing.JFrame
             pe.printStackTrace();
         }
 
+    }
+
+    private void initializeTableTimes()
+    {
+        BookTable.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        BookTable.setAutoCreateRowSorter(true);
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+        BookTable.setRowSorter(sorter);
+        model.addColumn("Times");
+        model.setRowCount(12);
     }
 
     private void fillTableTimes()
@@ -1010,19 +1113,19 @@ public class GuestBooking extends javax.swing.JFrame
 
     private void fillBookings(ArrayList<Fbooking> fb)
     {
-        BookingTable.setModel(new DefaultTableModel());
-        DefaultTableModel model = (DefaultTableModel) BookingTable.getModel();
-        BookingTable.setAutoCreateRowSorter(true);
+        CheckBookingsTable.setModel(new DefaultTableModel());
+        DefaultTableModel model = (DefaultTableModel) CheckBookingsTable.getModel();
+        CheckBookingsTable.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
-        BookingTable.setRowSorter(sorter);
+        CheckBookingsTable.setRowSorter(sorter);
         model.addColumn("Facility");
         model.addColumn("Court #");
         model.addColumn("Start time");
         model.addColumn("End time");
         model.setRowCount(fb.size());
 
-        BookingTable.getColumnModel().getColumn(0).setPreferredWidth(20);
-        BookingTable.getColumnModel().getColumn(1).setPreferredWidth(20);
+        CheckBookingsTable.getColumnModel().getColumn(0).setPreferredWidth(20);
+        CheckBookingsTable.getColumnModel().getColumn(1).setPreferredWidth(20);
 
         for (int i = 0; i < fb.size(); i++)
         {
@@ -1083,9 +1186,9 @@ public class GuestBooking extends javax.swing.JFrame
     private javax.swing.JButton BOOKFACILITYBACKBUTTON;
     private javax.swing.JButton BOOKFACILITYBUTTON;
     private javax.swing.JTable BookTable;
-    private javax.swing.JTable BookingTable;
     private javax.swing.JButton CHECKBOOKINGBUTTON;
     private javax.swing.JComboBox CHOOSECOURTCOMBO;
+    private javax.swing.JTable CheckBookingsTable;
     private javax.swing.JPanel DELETEBOOKING;
     private javax.swing.JButton DELETEBOOKINGBACKBUTTON;
     private javax.swing.JButton DELETEBOOKINGBUTTON;
@@ -1102,6 +1205,7 @@ public class GuestBooking extends javax.swing.JFrame
     private javax.swing.JButton LOGOUTBUTTON;
     private javax.swing.JComboBox SHOWDATECOMBOBOX;
     private javax.swing.JPanel SHOWTIMEANDDATE;
+    private javax.swing.JButton SHOWTIMEBACK;
     private javax.swing.JButton SHOWTIMEDATEBOOKBUTTON;
     private javax.swing.JButton SHOWTIMESearch;
     private javax.swing.JButton SWIMMING;

@@ -65,7 +65,8 @@ public class GuestMapper
     public boolean saveNewFBooking(Facility_Booking fb, Connection con)
     {
         int rowsInserted = 0;
-
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
+        Statement statementFix;
         String SQLString1
                 = "select facilitybseq.nextval  "
                 + "from dual";
@@ -75,7 +76,9 @@ public class GuestMapper
                 + "values (?,?,?,?,?,?)";
         PreparedStatement statement = null;
         try
-        {
+        {            
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
             con.setAutoCommit(false);
             //== get unique bookingId
             statement = con.prepareStatement(SQLString1);
@@ -91,7 +94,13 @@ public class GuestMapper
             statement.setString(2, fb.getStart_date());
             statement.setString(3, fb.getEnd_date());
             statement.setInt(4, fb.getFID());
-            statement.setInt(5, fb.getIID());
+            if (fb.getIID() != 0)
+            {
+                statement.setInt(5, fb.getIID());
+            } else
+            {
+                statement.setNull(5, java.sql.Types.INTEGER);
+            }
             statement.setString(6, fb.getReg_date());
 
             rowsInserted = statement.executeUpdate();
@@ -125,10 +134,10 @@ public class GuestMapper
         int rowsInserted = 0;
 
         String SQLString1
-                = "select max(id) from faciltybooking";
+                = "select max(id) from FACILITYBOOKING";
 
         String SQLString2
-                = "insert into fbookings_guests "
+                = "insert into FBOOKING_GUESTS "
                 + "values (?,?)";
         PreparedStatement statement = null;
 
@@ -177,7 +186,7 @@ public class GuestMapper
     public ArrayList<Fbooking> getFBookings(int gID, Connection con)
     {
         ArrayList<Fbooking> fb = new ArrayList();
-        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
         Statement statementFix;
         String SQLString = "SELECT f.NAME, f.Courts, to_char(fb.start_date, 'dd-mm-yyyy hh24:mi'), to_char(fb.end_date, 'dd-mm-yyyy hh24:mi')"
                 + " FROM FACILITYBOOKING fb INNER JOIN FBOOKING_GUESTS fbg"
@@ -276,7 +285,7 @@ public class GuestMapper
         }
         return gd;
     }
-    
+
     public ArrayList<String> getNonFreeDates(String start_date, int FID, Connection con)
     {
         ArrayList<String> freeList = new ArrayList();
