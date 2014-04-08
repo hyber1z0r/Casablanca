@@ -27,6 +27,7 @@ public class Casablanca extends javax.swing.JFrame
     DateValidator dv;
     ArrayList<Guest> guests;
     int guestsInserted = 0;
+    
 
     public Casablanca()
     {
@@ -37,6 +38,7 @@ public class Casablanca extends javax.swing.JFrame
         fillChooseCombo();
         showMenuHideOthers();
         setTitle("Casablanca administration system");
+      
     }
 
     /**
@@ -3687,14 +3689,15 @@ public class Casablanca extends javax.swing.JFrame
          */
         try
         {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Native".equals(info.getName()))
-                {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+//            { 
+//                if ("Native".equals(info.getName()))
+//                {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+            javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex)
         {
             java.util.logging.Logger.getLogger(Casablanca.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
