@@ -141,5 +141,10 @@ public class DBFacade {
     {
         return gm.getNonFreeDates(start_date, FID, con);
     }
+    
+    public boolean deleteFbooking(String start_date, int FID)
+    {
+        return gm.deleteFbooking(start_date, FID, con);
+    }
 }
 

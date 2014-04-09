@@ -18,8 +18,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -110,6 +108,7 @@ public class GuestBooking extends javax.swing.JFrame
         DELETEBOOKINGBUTTON = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         CheckBookingsTable = new javax.swing.JTable();
+        Deletebookingfeedback = new javax.swing.JLabel();
         YOUHAVEDELETED = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -693,6 +692,13 @@ public class GuestBooking extends javax.swing.JFrame
         DELETEBOOKINGBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         DELETEBOOKINGBUTTON.setForeground(new java.awt.Color(255, 51, 51));
         DELETEBOOKINGBUTTON.setText("DELETE");
+        DELETEBOOKINGBUTTON.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                DELETEBOOKINGBUTTONActionPerformed(evt);
+            }
+        });
 
         CheckBookingsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
@@ -716,6 +722,9 @@ public class GuestBooking extends javax.swing.JFrame
             .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(DELETEBOOKINGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
+                        .addComponent(Deletebookingfeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
@@ -741,7 +750,9 @@ public class GuestBooking extends javax.swing.JFrame
                     .addGroup(DELETEBOOKINGLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Deletebookingfeedback, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         getContentPane().add(DELETEBOOKING, "card8");
@@ -818,6 +829,7 @@ public class GuestBooking extends javax.swing.JFrame
             fillBookings(fb);
             WELCOME.setVisible(false);
             DELETEBOOKING.setVisible(true);
+            Deletebookingfeedback.setText("");
         } else
         {
             // label say you have no bookings.
@@ -987,8 +999,7 @@ public class GuestBooking extends javax.swing.JFrame
         DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
         int court = Integer.parseInt(CHOOSECOURTCOMBO.getSelectedItem().toString());
         int FID = facilityID + court - 1;
-        
-        
+
         String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
         DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
         DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
@@ -1001,7 +1012,7 @@ public class GuestBooking extends javax.swing.JFrame
             ex.printStackTrace();
         }
         String formattedDate = targetFormat.format(date);
-        
+
         String times = model.getValueAt(BookTable.getSelectedRow(), 0).toString();
         String sdate = formattedDate + " " + times.substring(0, 5);
         String edate = formattedDate + " " + times.substring(8, 13);
@@ -1030,6 +1041,50 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(true);
         SHOWTIMEANDDATE.setVisible(false);
     }//GEN-LAST:event_SHOWTIMEBACKActionPerformed
+
+    private void DELETEBOOKINGBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_DELETEBOOKINGBUTTONActionPerformed
+    {//GEN-HEADEREND:event_DELETEBOOKINGBUTTONActionPerformed
+        // DELETE KNAPPEN
+        // DET ER HER EN BOOKING SLETTES!
+        String start_date = CheckBookingsTable.getValueAt(CheckBookingsTable.getSelectedRow(), 2).toString();
+        int courtno = Integer.parseInt(CheckBookingsTable.getValueAt(CheckBookingsTable.getSelectedRow(), 1).toString());
+        String facility = CheckBookingsTable.getValueAt(CheckBookingsTable.getSelectedRow(), 0).toString();
+
+        int i;
+        switch (facility)
+        {
+            case "Tennis": i = 1;
+                break;
+            case "Badminton": i = 10;
+                break;
+            case "Fitness": i = 15;
+                break;
+            case "Volleyball": i = 7;
+                break;
+            case "Golf": i = 9;
+                break;
+            case "Swimming": i = 14;
+                break;
+            case "Handball": i = 16;
+                break;
+            default: i = 0;
+                break;
+        }
+
+        int FID = courtno + i - 1;
+        boolean status = con.deleteFBooking(start_date, FID);
+        
+        if (!status)
+        {
+            Deletebookingfeedback.setText("Failed delete booking");
+        }
+        else
+        {
+            Deletebookingfeedback.setText("Succesfully deleted your booking!");
+            DefaultTableModel model = (DefaultTableModel) CheckBookingsTable.getModel();
+            model.removeRow(CheckBookingsTable.getSelectedRow());
+        }
+    }//GEN-LAST:event_DELETEBOOKINGBUTTONActionPerformed
 
     private void fillComboDates(int gID)
     {
@@ -1112,7 +1167,7 @@ public class GuestBooking extends javax.swing.JFrame
         CHOOSECOURTCOMBO.addItem("1");
         CHOOSECOURTCOMBO.addItem("2");
     }
-    
+
     private void fillComboHandball()
     {
         CHOOSECOURTCOMBO.removeAllItems();
@@ -1228,6 +1283,7 @@ public class GuestBooking extends javax.swing.JFrame
     private javax.swing.JPanel DELETEBOOKING;
     private javax.swing.JButton DELETEBOOKINGBACKBUTTON;
     private javax.swing.JButton DELETEBOOKINGBUTTON;
+    private javax.swing.JLabel Deletebookingfeedback;
     private javax.swing.JButton FITNESS;
     private javax.swing.JButton GOLF;
     private javax.swing.JLabel GUESTFEEDBACK;

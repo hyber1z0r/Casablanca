@@ -226,4 +226,10 @@ public class Controller
         }
         return currentFBooking_Guests;
     }
+    
+    public boolean deleteFBooking(String start_date, int FID)
+    {
+        return dbf.deleteFbooking(start_date, FID);
+    }
+    
 }

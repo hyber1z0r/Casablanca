@@ -76,7 +76,7 @@ public class GuestMapper
                 + "values (?,?,?,?,?,?)";
         PreparedStatement statement = null;
         try
-        {            
+        {
             statementFix = con.createStatement();
             statementFix.execute(SQLdatefix);
             con.setAutoCommit(false);
@@ -326,4 +326,51 @@ public class GuestMapper
         }
         return freeList;
     }
+
+    public boolean deleteFbooking(String start_date, int FID, Connection con)
+    {
+        int rowsInserted = 0;
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
+        Statement statementFix;
+        String SQLString2
+                = "DELETE FROM FACILITYBOOKING WHERE FID = ? and START_DATE = ?";
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            con.setAutoCommit(false);
+
+            //== delete tuple
+            statement = con.prepareStatement(SQLString2);
+            statement.setInt(1, FID);
+            statement.setString(2, start_date);
+
+            rowsInserted = statement.executeUpdate();
+            con.commit();
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in GuestMapper - rollback deleteFbooking");
+            }
+            System.out.println("Fail in GuestMapper - deleteFbooking");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - deleteFbooking close statement");
+                System.out.println(e.getMessage());
+            }
+        }
+        return rowsInserted == 1;
+    }
+
 }
