@@ -870,7 +870,12 @@ public class GuestBooking extends javax.swing.JFrame
     }//GEN-LAST:event_TENNISActionPerformed
 
     private void BADMINTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BADMINTONActionPerformed
-        // TODO add your handling code here:
+        fillComboBadminton();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 7;
     }//GEN-LAST:event_BADMINTONActionPerformed
 
     private void VOLLEYBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VOLLEYBALLActionPerformed
