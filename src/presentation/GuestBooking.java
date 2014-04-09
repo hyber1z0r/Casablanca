@@ -1027,7 +1027,7 @@ public class GuestBooking extends javax.swing.JFrame
 
     private void SHOWTIMEBACKActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMEBACKActionPerformed
     {//GEN-HEADEREND:event_SHOWTIMEBACKActionPerformed
-        WELCOME.setVisible(true);
+        BOOKFACILITY.setVisible(true);
         SHOWTIMEANDDATE.setVisible(false);
     }//GEN-LAST:event_SHOWTIMEBACKActionPerformed
 
