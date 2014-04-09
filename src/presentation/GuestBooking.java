@@ -839,19 +839,39 @@ public class GuestBooking extends javax.swing.JFrame
     }//GEN-LAST:event_BOOKFACILITYBACKBUTTONActionPerformed
 
     private void FITNESSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FITNESSActionPerformed
-        // TODO add your handling code here:
+        fillComboFitness();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 15;
     }//GEN-LAST:event_FITNESSActionPerformed
 
     private void SWIMMINGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SWIMMINGActionPerformed
-        // TODO add your handling code here:
+        fillComboSwimming();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 14;
     }//GEN-LAST:event_SWIMMINGActionPerformed
 
     private void HANDBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HANDBALLActionPerformed
-        // TODO add your handling code here:
+        fillComboHandball();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 16;
     }//GEN-LAST:event_HANDBALLActionPerformed
 
     private void GOLFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOLFActionPerformed
-        // TODO add your handling code here:
+        fillComboGolf();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 9;
     }//GEN-LAST:event_GOLFActionPerformed
 
     private void TENNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TENNISActionPerformed
@@ -875,11 +895,16 @@ public class GuestBooking extends javax.swing.JFrame
         SHOWTIMEANDDATE.setVisible(true);
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
-        facilityID = 7;
+        facilityID = 10;
     }//GEN-LAST:event_BADMINTONActionPerformed
 
     private void VOLLEYBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VOLLEYBALLActionPerformed
-        // TODO add your handling code here:
+        fillComboVolleyball();
+        fillComboDates(guestLoggedIn.getGuest_id());
+        SHOWTIMEANDDATE.setVisible(true);
+        BOOKFACILITY.setVisible(false);
+        initializeTableTimes();
+        facilityID = 7;
     }//GEN-LAST:event_VOLLEYBALLActionPerformed
 
     private void YOUHAVEDELETEDBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YOUHAVEDELETEDBACKBUTTONActionPerformed
@@ -1012,7 +1037,7 @@ public class GuestBooking extends javax.swing.JFrame
         ArrayList<GuestDates> gd = con.getGuestDates(gID);
         String sdate = gd.get(0).getStart_date();
         String edate = gd.get(0).getEnd_date();
-        SimpleDateFormat myFormat = new SimpleDateFormat("MMM dd");
+        SimpleDateFormat myFormat = new SimpleDateFormat("MMM. dd", Locale.ENGLISH);
         try
         {
             Date fromDate = myFormat.parse(sdate);
@@ -1033,7 +1058,6 @@ public class GuestBooking extends javax.swing.JFrame
         {
             pe.printStackTrace();
         }
-
     }
 
     private void initializeTableTimes()
@@ -1083,6 +1107,13 @@ public class GuestBooking extends javax.swing.JFrame
     }
 
     private void fillComboVolleyball()
+    {
+        CHOOSECOURTCOMBO.removeAllItems();
+        CHOOSECOURTCOMBO.addItem("1");
+        CHOOSECOURTCOMBO.addItem("2");
+    }
+    
+    private void fillComboHandball()
     {
         CHOOSECOURTCOMBO.removeAllItems();
         CHOOSECOURTCOMBO.addItem("1");
