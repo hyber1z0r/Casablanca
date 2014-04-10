@@ -2660,6 +2660,7 @@ public class Casablanca extends javax.swing.JFrame
         CHOOSEDATE.setVisible(true);
         CHOOSEDATESTARTDATE.setText("");
         CHOOSEDATEENDDATE.setText("");
+        TODAYSLABEL.setText("");
 
     }//GEN-LAST:event_BOOKROOMBUTTONActionPerformed
 
@@ -2820,6 +2821,7 @@ public class Casablanca extends javax.swing.JFrame
         // GET STANDBY ROOMS IN THE SHOW STANDBY LIST
         ArrayList<Booking> standbys;
         standbys = con.getBookedRooms("no");
+        TODAYSLABEL.setText("");
         if (!standbys.isEmpty())
         {
             fillStandbyList(standbys);
@@ -2860,6 +2862,7 @@ public class Casablanca extends javax.swing.JFrame
     {//GEN-HEADEREND:event_SHOWBOOKEDBUTTONActionPerformed
         ArrayList<Booking> booked;
         booked = con.getBookedRooms("yes");
+        TODAYSLABEL.setText("");
         if (!booked.isEmpty())
         {
             fillBookedList(booked);
@@ -2968,6 +2971,7 @@ public class Casablanca extends javax.swing.JFrame
             REGINFOUSERNAME.setText(g.getUsername());
             SHOWREGINFOPASSWORD.setText(g.getPassword());
             REGINFOFEEDBACK.setText("Guest updated");
+            WHOISTHEPAYER.setText(g.getFirstname() + " is the payer");
         } else
         {
             REGINFOFEEDBACK.setText("Update failed - Check input fields");
@@ -3301,6 +3305,7 @@ public class Casablanca extends javax.swing.JFrame
     private void INSTRUCTORSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INSTRUCTORSActionPerformed
         // FETCH INSTRUCTORS AND FILL JTABLE
         ArrayList<Instructor> ilist = con.getAllInstructors();
+        TODAYSLABEL.setText("");
         if (!ilist.isEmpty())
         {
             fillInstructorList(ilist);
