@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import javax.swing.ButtonModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -98,6 +99,7 @@ public class GuestBooking extends javax.swing.JFrame
         jLabel20 = new javax.swing.JLabel();
         SHOWTIMESearch = new javax.swing.JButton();
         SHOWTIMEBACK = new javax.swing.JButton();
+        InstructorCheckbox = new javax.swing.JCheckBox();
         YOUARENOWBOOKEDIN = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -562,6 +564,8 @@ public class GuestBooking extends javax.swing.JFrame
             }
         });
 
+        InstructorCheckbox.setText("Instructor");
+
         javax.swing.GroupLayout SHOWTIMEANDDATELayout = new javax.swing.GroupLayout(SHOWTIMEANDDATE);
         SHOWTIMEANDDATE.setLayout(SHOWTIMEANDDATELayout);
         SHOWTIMEANDDATELayout.setHorizontalGroup(
@@ -575,7 +579,8 @@ public class GuestBooking extends javax.swing.JFrame
                                 .addComponent(SHOWDATECOMBOBOX, 0, 124, Short.MAX_VALUE)
                                 .addComponent(CHOOSECOURTCOMBO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel20)
-                            .addComponent(SHOWTIMESearch))
+                            .addComponent(SHOWTIMESearch)
+                            .addComponent(InstructorCheckbox))
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
@@ -608,6 +613,8 @@ public class GuestBooking extends javax.swing.JFrame
                                 .addComponent(jLabel20)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(CHOOSECOURTCOMBO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(InstructorCheckbox)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(SHOWTIMESearch))
                             .addGroup(SHOWTIMEANDDATELayout.createSequentialGroup()
@@ -977,6 +984,9 @@ public class GuestBooking extends javax.swing.JFrame
         }
         String formattedDate = targetFormat.format(date);
 
+        // if box is unchecked run this anyway to get rid of dates that are taken
+        ButtonModel model2 = InstructorCheckbox.getModel();
+
         ArrayList<String> nonfree = con.getNonFreeDates(formattedDate, facilityID + court - 1);
 
         DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
@@ -989,6 +999,24 @@ public class GuestBooking extends javax.swing.JFrame
                 if (modeldate.startsWith(nonfreedate))
                 {
                     model.removeRow(j);
+                }
+            }
+        }
+        // if box is checked also sort the instructor times away!
+        if (model2.isSelected())
+        {
+            ArrayList<String> nonfreeins = con.getNonFreeDatesIns(formattedDate, facilityID + court - 1);
+
+            for (String nonfree2 : nonfreeins)
+            {
+                for (int j = 0; j < model.getRowCount(); j++)
+                {
+                    String nonfreedate = nonfree2;
+                    String modeldate = model.getValueAt(j, 0).toString();
+                    if (modeldate.startsWith(nonfreedate))
+                    {
+                        model.removeRow(j);
+                    }
                 }
             }
         }
@@ -1053,32 +1081,39 @@ public class GuestBooking extends javax.swing.JFrame
         int i;
         switch (facility)
         {
-            case "Tennis": i = 1;
+            case "Tennis":
+                i = 1;
                 break;
-            case "Badminton": i = 10;
+            case "Badminton":
+                i = 10;
                 break;
-            case "Fitness": i = 15;
+            case "Fitness":
+                i = 15;
                 break;
-            case "Volleyball": i = 7;
+            case "Volleyball":
+                i = 7;
                 break;
-            case "Golf": i = 9;
+            case "Golf":
+                i = 9;
                 break;
-            case "Swimming": i = 14;
+            case "Swimming":
+                i = 14;
                 break;
-            case "Handball": i = 16;
+            case "Handball":
+                i = 16;
                 break;
-            default: i = 0;
+            default:
+                i = 0;
                 break;
         }
 
         int FID = courtno + i - 1;
         boolean status = con.deleteFBooking(start_date, FID);
-        
+
         if (!status)
         {
             Deletebookingfeedback.setText("Failed delete booking");
-        }
-        else
+        } else
         {
             Deletebookingfeedback.setText("Succesfully deleted your booking!");
             DefaultTableModel model = (DefaultTableModel) CheckBookingsTable.getModel();
@@ -1293,6 +1328,7 @@ public class GuestBooking extends javax.swing.JFrame
     private javax.swing.JButton HANDBALL;
     private javax.swing.JButton INSTRUCTORNOBUTTON;
     private javax.swing.JButton INSTRUCTORYESBUTTON;
+    private javax.swing.JCheckBox InstructorCheckbox;
     private javax.swing.JPanel LOGIN;
     private javax.swing.JButton LOGOUTBUTTON;
     private javax.swing.JComboBox SHOWDATECOMBOBOX;

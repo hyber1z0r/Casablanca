@@ -203,6 +203,11 @@ public class Controller
         return dbf.getNonFreeDates(start_date, FID);
     }
     
+    public ArrayList<String> getNonFreeDatesIns(String start_date, int FID)
+    {
+        return dbf.getNonFreeDatesIns(start_date, FID);
+    }
+    
     public Facility_Booking saveNewFBooking(int FID, int IID, String start_date, String end_date, String reg_date)
     {
         currentFBooking = new Facility_Booking(0, FID, IID, start_date, end_date, reg_date);

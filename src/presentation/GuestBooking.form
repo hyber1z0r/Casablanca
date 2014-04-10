@@ -621,6 +621,7 @@
                               </Group>
                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                               <Component id="SHOWTIMESearch" min="-2" max="-2" attributes="0"/>
+                              <Component id="InstructorCheckbox" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="283" max="-2" attributes="0"/>
@@ -661,6 +662,8 @@
                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="CHOOSECOURTCOMBO" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="InstructorCheckbox" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="SHOWTIMESearch" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -780,6 +783,11 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SHOWTIMEBACKActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="InstructorCheckbox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Instructor"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
