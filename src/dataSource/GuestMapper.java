@@ -332,7 +332,7 @@ public class GuestMapper
         ArrayList<String> freeList = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
         Statement statementFix;
-        String SQLString = "SELECT START_DATE FROM FACILITYBOOKING WHERE FID = ? AND START_DATE LIKE ? AND IID > 0";
+        String SQLString = "SELECT to_char(START_DATE, 'hh24:mi') FROM FACILITYBOOKING WHERE FID = ? AND START_DATE LIKE ? AND IID > 0";
 
         PreparedStatement statement = null;
         try

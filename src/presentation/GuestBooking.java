@@ -996,26 +996,31 @@ public class GuestBooking extends javax.swing.JFrame
             {
                 String nonfreedate = nonfree1;
                 String modeldate = model.getValueAt(j, 0).toString();
+
                 if (modeldate.startsWith(nonfreedate))
                 {
                     model.removeRow(j);
                 }
             }
         }
-        // if box is checked also sort the instructor times away!
+
         if (model2.isSelected())
         {
-            ArrayList<String> nonfreeins = con.getNonFreeDatesIns(formattedDate, facilityID + court - 1);
+            int amount = CHOOSECOURTCOMBO.getItemCount();
 
-            for (String nonfree2 : nonfreeins)
+            for (int i = 0; i < amount; i++)
             {
-                for (int j = 0; j < model.getRowCount(); j++)
+                ArrayList<String> nonfreeins = con.getNonFreeDatesIns(formattedDate, facilityID + i);
+                for (String nonfree2 : nonfreeins)
                 {
-                    String nonfreedate = nonfree2;
-                    String modeldate = model.getValueAt(j, 0).toString();
-                    if (modeldate.startsWith(nonfreedate))
+                    for (int j = 0; j < model.getRowCount(); j++)
                     {
-                        model.removeRow(j);
+                        String nonfreedate = nonfree2;
+                        String modeldate = model.getValueAt(j, 0).toString();
+                        if (modeldate.startsWith(nonfreedate))
+                        {
+                            model.removeRow(j);
+                        }
                     }
                 }
             }
