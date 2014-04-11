@@ -11,6 +11,7 @@ import domain.Fbooking;
 import domain.Fbooking_Guests;
 import domain.Guest;
 import domain.GuestDates;
+import domain.Instructor;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -864,6 +865,9 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 15;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(false);
     }//GEN-LAST:event_FITNESSActionPerformed
 
     private void SWIMMINGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SWIMMINGActionPerformed
@@ -873,6 +877,9 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 14;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(true);
     }//GEN-LAST:event_SWIMMINGActionPerformed
 
     private void HANDBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HANDBALLActionPerformed
@@ -882,6 +889,9 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 16;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(false);
     }//GEN-LAST:event_HANDBALLActionPerformed
 
     private void GOLFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GOLFActionPerformed
@@ -891,20 +901,21 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 9;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(true);
     }//GEN-LAST:event_GOLFActionPerformed
 
     private void TENNISActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TENNISActionPerformed
-        // fill combobox with 6 courts
-        // fill top combobox with dates from today to leaving date
-        // fill table with data
         fillComboTennis();
         fillComboDates(guestLoggedIn.getGuest_id());
         SHOWTIMEANDDATE.setVisible(true);
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 1;
-        // get the non free dates, start showing for the first date
-        // use the non free dates to remove from the jtable.
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(true);
 
     }//GEN-LAST:event_TENNISActionPerformed
 
@@ -915,6 +926,9 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 10;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(true);
     }//GEN-LAST:event_BADMINTONActionPerformed
 
     private void VOLLEYBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VOLLEYBALLActionPerformed
@@ -924,6 +938,9 @@ public class GuestBooking extends javax.swing.JFrame
         BOOKFACILITY.setVisible(false);
         initializeTableTimes();
         facilityID = 7;
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        model2.setSelected(false);
+        model2.setEnabled(false);
     }//GEN-LAST:event_VOLLEYBALLActionPerformed
 
     private void YOUHAVEDELETEDBACKBUTTONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YOUHAVEDELETEDBACKBUTTONActionPerformed
@@ -1050,14 +1067,49 @@ public class GuestBooking extends javax.swing.JFrame
         String sdate = formattedDate + " " + times.substring(0, 5);
         String edate = formattedDate + " " + times.substring(8, 13);
         String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date());
-        Facility_Booking fb = con.saveNewFBooking(FID, 0, sdate, edate, todate);
-        if (fb != null)
+
+        ButtonModel model2 = InstructorCheckbox.getModel();
+        if (model2.isSelected())
         {
-            Fbooking_Guests fbg = con.saveNewFbooking_Guests(guestLoggedIn.getGuest_id());
-            if (fbg != null)
+            String facility = "";
+            switch (facilityID)
             {
-                YOUARENOWBOOKEDIN.setVisible(true);
-                SHOWTIMEANDDATE.setVisible(false);
+                case 1:
+                    facility = "Tennis";
+                    break;
+                case 9:
+                    facility = "Golf";
+                    break;
+                case 10:
+                    facility = "Badminton";
+                    break;
+                case 14:
+                    facility = "Swimming";
+                    break;
+            }
+            // get name for facility, use it for getting instructorID
+            Instructor i = con.getInstructor(facility);
+            Facility_Booking fb = con.saveNewFBooking(FID, i.getID(), sdate, edate, todate);
+            if (fb != null)
+            {
+                Fbooking_Guests fbg = con.saveNewFbooking_Guests(guestLoggedIn.getGuest_id());
+                if (fbg != null)
+                {
+                    YOUARENOWBOOKEDIN.setVisible(true);
+                    SHOWTIMEANDDATE.setVisible(false);
+                }
+            }
+        } else
+        {
+            Facility_Booking fb = con.saveNewFBooking(FID, 0, sdate, edate, todate);
+            if (fb != null)
+            {
+                Fbooking_Guests fbg = con.saveNewFbooking_Guests(guestLoggedIn.getGuest_id());
+                if (fbg != null)
+                {
+                    YOUARENOWBOOKEDIN.setVisible(true);
+                    SHOWTIMEANDDATE.setVisible(false);
+                }
             }
         }
 

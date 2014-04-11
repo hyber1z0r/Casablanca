@@ -237,4 +237,10 @@ public class Controller
         return dbf.deleteFbooking(start_date, FID);
     }
     
+    public Instructor getInstructor(String facility)
+    {
+        currentInstructor = dbf.getInstructor(facility);
+        return currentInstructor;
+    }
+    
 }

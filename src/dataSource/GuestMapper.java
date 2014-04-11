@@ -10,6 +10,7 @@ import domain.Fbooking;
 import domain.Fbooking_Guests;
 import domain.Guest;
 import domain.GuestDates;
+import domain.Instructor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -388,6 +389,7 @@ public class GuestMapper
             statement.setString(2, start_date);
 
             rowsInserted = statement.executeUpdate();
+            System.out.println("Rows deleted: " + rowsInserted);
             con.commit();
         } catch (SQLException e)
         {
@@ -413,5 +415,49 @@ public class GuestMapper
         }
         return rowsInserted == 1;
     }
+    
+    public Instructor getInstructor(String facility, Connection con)
+    {
+        String SQLString = "SELECT * FROM INSTRUCTOR WHERE SPORT = ?";
+        Instructor i = null;
+        
+        PreparedStatement statement = null;
+        try
+        {
+            //== get tuple
+            statement = con.prepareStatement(SQLString);
+            statement.setString(1, facility);
+
+            ResultSet rs = statement.executeQuery();
+            while (rs.next())
+            {
+                i = new Instructor(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getString(6));
+            }
+        } catch (SQLException e)
+        {
+            try
+            {
+                con.rollback();
+            } catch (SQLException ex)
+            {
+                System.out.println("Fail in GuestMapper - rollback getInstructor");
+            }
+            System.out.println("Fail in GuestMapper - getInstructor");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - getInstructor");
+                System.out.println(e.getMessage());
+            }
+        }
+        return i;
+        
+    }
+    
 
 }

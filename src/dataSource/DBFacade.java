@@ -151,5 +151,10 @@ public class DBFacade {
     {
         return gm.deleteFbooking(start_date, FID, con);
     }
+    
+    public Instructor getInstructor(String facility)
+    {
+        return gm.getInstructor(facility, con);
+    }
 }
 
