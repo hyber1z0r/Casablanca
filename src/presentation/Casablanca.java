@@ -29,7 +29,6 @@ public class Casablanca extends javax.swing.JFrame
     DateValidator dv;
     ArrayList<Guest> guests;
     int guestsInserted = 0;
-    
 
     public Casablanca()
     {
@@ -40,7 +39,7 @@ public class Casablanca extends javax.swing.JFrame
         fillChooseCombo();
         showMenuHideOthers();
         setTitle("Casablanca administration system");
-      
+
     }
 
     /**
@@ -604,6 +603,7 @@ public class Casablanca extends javax.swing.JFrame
                 {
 
                 }
+
             ));
             jScrollPane5.setViewportView(TODAYTABLE);
 
@@ -2472,7 +2472,18 @@ public class Casablanca extends javax.swing.JFrame
                     {
                         "Title 1", "Title 2", "Title 3", "Title 4"
                     }
-                ));
+                )
+                {
+                    Class[] types = new Class []
+                    {
+                        java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                    };
+
+                    public Class getColumnClass(int columnIndex)
+                    {
+                        return types [columnIndex];
+                    }
+                });
                 jScrollPane1.setViewportView(SHOWSTANDBYTABLE);
 
                 javax.swing.GroupLayout SHOWSTANDBYROOMSLayout = new javax.swing.GroupLayout(SHOWSTANDBYROOMS);
@@ -2480,7 +2491,7 @@ public class Casablanca extends javax.swing.JFrame
                 SHOWSTANDBYROOMSLayout.setHorizontalGroup(
                     SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SHOWSTANDBYROOMSLayout.createSequentialGroup()
-                        .addContainerGap(423, Short.MAX_VALUE)
+                        .addContainerGap(377, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SHOWSTANDBYROOMSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2503,7 +2514,7 @@ public class Casablanca extends javax.swing.JFrame
                                 .addGap(18, 18, 18)
                                 .addComponent(STANDBYROOMDECLINEBUTTON))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                         .addComponent(STANDBYROOMBACKBUTTON)
                         .addGap(37, 37, 37))
                 );
@@ -3365,11 +3376,11 @@ public class Casablanca extends javax.swing.JFrame
         int phone = 0;
         if (cellno.matches(".*\\d.*"))
         {
-               phone = Integer.parseInt(INSTRUCTORPHONE.getText());
+            phone = Integer.parseInt(INSTRUCTORPHONE.getText());
         }
 
         String sport = CREATEINSTRUCTORCOMBO.getSelectedItem().toString();
-        if (!name.isEmpty() && !lastname.isEmpty() && !email.isEmpty() && phone != 0 && !sport.isEmpty() && email.contains("@") )
+        if (!name.isEmpty() && !lastname.isEmpty() && !email.isEmpty() && phone != 0 && !sport.isEmpty() && email.contains("@"))
         {
             Instructor i = con.createNewInstructor(name, lastname, email, phone, sport);
             if (i != null)
@@ -3407,11 +3418,11 @@ public class Casablanca extends javax.swing.JFrame
             INSTRUCTORLABEL.setText("Deleted instructor " + INSTRUCTORTABLE.getValueAt(INSTRUCTORTABLE.getSelectedRow(), 1).toString());
             DefaultTableModel model = (DefaultTableModel) INSTRUCTORTABLE.getModel();
             model.removeRow(INSTRUCTORTABLE.getSelectedRow());
-        }else
+        } else
         {
             INSTRUCTORLABEL.setText("Failed to delete instructor!");
         }
-        
+
     }//GEN-LAST:event_INSTRUCTORDELETEBUTTONActionPerformed
 
     private void fillInstructorCombo()
@@ -3425,7 +3436,20 @@ public class Casablanca extends javax.swing.JFrame
 
     private void fillInstructorList(ArrayList<Instructor> ilist)
     {
-        INSTRUCTORTABLE.setModel(new DefaultTableModel());
+        INSTRUCTORTABLE.setModel(new DefaultTableModel()
+        {
+            Class[] types = new Class[]
+            {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex)
+            {
+                return types[columnIndex];
+            }
+        }
+        );
         DefaultTableModel model = (DefaultTableModel) INSTRUCTORTABLE.getModel();
         INSTRUCTORTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
@@ -3437,7 +3461,7 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("Phone");
         model.addColumn("Email");
         model.setRowCount(ilist.size());
-        
+
         INSTRUCTORTABLE.getColumnModel().getColumn(0).setPreferredWidth(25);
 
         for (int i = 0; i < ilist.size(); i++)
@@ -3453,7 +3477,20 @@ public class Casablanca extends javax.swing.JFrame
 
     private void fillTodayList(ArrayList<TodayGuest> todayguests)
     {
-        TODAYTABLE.setModel(new DefaultTableModel());
+        TODAYTABLE.setModel(new DefaultTableModel()
+        {
+            Class[] types = new Class[]
+            {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex)
+            {
+                return types[columnIndex];
+            }
+        }
+        );
         DefaultTableModel model = (DefaultTableModel) TODAYTABLE.getModel();
         TODAYTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
@@ -3464,7 +3501,7 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("Username");
         model.addColumn("Password");
         model.setRowCount(todayguests.size());
-        
+
         TODAYTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
 
         for (int i = 0; i < todayguests.size(); i++)
@@ -3669,7 +3706,20 @@ public class Casablanca extends javax.swing.JFrame
     private void fillStandbyList(ArrayList<Booking> standby)
     {
 
-        SHOWSTANDBYTABLE.setModel(new DefaultTableModel());
+        SHOWSTANDBYTABLE.setModel(new DefaultTableModel()
+        {
+            Class[] types = new Class[]
+            {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex)
+            {
+                return types[columnIndex];
+            }
+        }
+        );
         DefaultTableModel model = (DefaultTableModel) SHOWSTANDBYTABLE.getModel();
         SHOWSTANDBYTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
@@ -3679,7 +3729,7 @@ public class Casablanca extends javax.swing.JFrame
         model.addColumn("End date");
         model.addColumn("Registration date");
         model.setRowCount(standby.size());
-        
+
         SHOWSTANDBYTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
 
         for (int i = 0; i < standby.size(); i++)
@@ -3695,7 +3745,20 @@ public class Casablanca extends javax.swing.JFrame
     private void fillBookedList(ArrayList<Booking> booked)
     {
 
-        SHOWBOOKEDTABLE.setModel(new DefaultTableModel());
+        SHOWBOOKEDTABLE.setModel(new DefaultTableModel()
+        {
+            Class[] types = new Class[]
+            {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            @Override
+            public Class getColumnClass(int columnIndex)
+            {
+                return types[columnIndex];
+            }
+        }
+        );
         DefaultTableModel model = (DefaultTableModel) SHOWBOOKEDTABLE.getModel();
         SHOWBOOKEDTABLE.setAutoCreateRowSorter(true);
         TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
@@ -3707,7 +3770,7 @@ public class Casablanca extends javax.swing.JFrame
         model.setRowCount(booked.size());
 
         SHOWBOOKEDTABLE.getColumnModel().getColumn(0).setPreferredWidth(35);
-        
+
         for (int i = 0; i < booked.size(); i++)
         {
             model.setValueAt(booked.get(i).getRoom_id(), i, 0);
@@ -3715,8 +3778,6 @@ public class Casablanca extends javax.swing.JFrame
             model.setValueAt(booked.get(i).getEnd_date(), i, 2);
             model.setValueAt(booked.get(i).getReg_date(), i, 3);
         }
-        
-        
 
     }
 
