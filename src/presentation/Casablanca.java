@@ -369,7 +369,7 @@ public class Casablanca extends javax.swing.JFrame
         WELCOMELayout.setHorizontalGroup(
             WELCOMELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WELCOMELayout.createSequentialGroup()
-                .addContainerGap(422, Short.MAX_VALUE)
+                .addContainerGap(521, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(430, 430, 430))
             .addGroup(WELCOMELayout.createSequentialGroup()
@@ -413,7 +413,7 @@ public class Casablanca extends javax.swing.JFrame
                     .addComponent(TODAYSLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(INSTRUCTORS)
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(280, Short.MAX_VALUE))
         );
 
         getContentPane().add(WELCOME, "card3");
