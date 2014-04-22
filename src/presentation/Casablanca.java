@@ -3361,9 +3361,15 @@ public class Casablanca extends javax.swing.JFrame
         String name = INSTRUCTORFIRSTNAME.getText();
         String lastname = INSTRUCTORLASTNAME.getText();
         String email = INSTRUCTOREMAIL.getText();
-        int phone = Integer.parseInt(INSTRUCTORPHONE.getText());
+        String cellno = INSTRUCTORPHONE.getText();
+        int phone = 0;
+        if (cellno.matches(".*\\d.*"))
+        {
+               phone = Integer.parseInt(INSTRUCTORPHONE.getText());
+        }
+
         String sport = CREATEINSTRUCTORCOMBO.getSelectedItem().toString();
-        if (!name.isEmpty() && !lastname.isEmpty() && !email.isEmpty() && phone != 0 && !sport.isEmpty())
+        if (!name.isEmpty() && !lastname.isEmpty() && !email.isEmpty() && phone != 0 && !sport.isEmpty() && email.contains("@") )
         {
             Instructor i = con.createNewInstructor(name, lastname, email, phone, sport);
             if (i != null)
@@ -3709,6 +3715,8 @@ public class Casablanca extends javax.swing.JFrame
             model.setValueAt(booked.get(i).getEnd_date(), i, 2);
             model.setValueAt(booked.get(i).getReg_date(), i, 3);
         }
+        
+        
 
     }
 
