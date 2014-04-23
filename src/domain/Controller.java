@@ -243,4 +243,8 @@ public class Controller
         return currentInstructor;
     }
     
+    public int getBookingCount(int GID, String start_date)
+    {
+        return dbf.getBookingCount(GID, start_date);
+    }
 }

@@ -389,7 +389,6 @@ public class GuestMapper
             statement.setString(2, start_date);
 
             rowsInserted = statement.executeUpdate();
-            System.out.println("Rows deleted: " + rowsInserted);
             con.commit();
         } catch (SQLException e)
         {
@@ -415,12 +414,12 @@ public class GuestMapper
         }
         return rowsInserted == 1;
     }
-    
+
     public Instructor getInstructor(String facility, Connection con)
     {
         String SQLString = "SELECT * FROM INSTRUCTOR WHERE SPORT = ?";
         Instructor i = null;
-        
+
         PreparedStatement statement = null;
         try
         {
@@ -456,8 +455,49 @@ public class GuestMapper
             }
         }
         return i;
-        
-    }
-    
 
+    }
+
+    public int getBookingCount(int GID, String start_date, Connection con)
+    {
+        int count = -1;
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        Statement statementFix;
+        String SQLString = "SELECT count(*) from facilitybooking fb "
+                + "join fbooking_guests fbg on fbg.FID = fb.ID "
+                + "where fbg.GID = ? and fb.start_date LIKE ?";
+
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get tuple
+            statement = con.prepareStatement(SQLString);
+            statement.setInt(1, GID);
+            statement.setString(2, start_date + "%");
+
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next())
+            {
+                count = rs.getInt(1);
+            }
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in GuestMapper - getBookingCount");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - getBookingCount");
+                System.out.println(e.getMessage());
+            }
+        }
+        return count;
+    }
 }

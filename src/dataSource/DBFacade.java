@@ -156,5 +156,10 @@ public class DBFacade {
     {
         return gm.getInstructor(facility, con);
     }
+    
+    public int getBookingCount(int GID, String start_date)
+    {
+        return gm.getBookingCount(GID, start_date, con);
+    }
 }
 
