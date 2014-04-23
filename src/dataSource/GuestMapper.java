@@ -504,7 +504,7 @@ public class GuestMapper
     public ArrayList<String> getGuestFBookings(int GID, String start_date, Connection con)
     {
         ArrayList<String> dates = new ArrayList<>();
-        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy hh24'";
         Statement statementFix;
         
         String SQLString = "SELECT to_char(start_date, 'hh24:mi') from facilitybooking fb "
