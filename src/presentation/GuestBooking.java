@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ButtonModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -44,7 +46,6 @@ public class GuestBooking extends javax.swing.JFrame
     {
         initComponents();
         con = Controller.getInstance();
-
     }
 
     /**
@@ -970,6 +971,10 @@ public class GuestBooking extends javax.swing.JFrame
                     }
                 }
             }
+            if (model.getRowCount() == 0)
+            {
+                SHOWDATELABEL.setText("You can't book back in time!");
+            }
 
             if (model2.isSelected())
             {
@@ -990,6 +995,11 @@ public class GuestBooking extends javax.swing.JFrame
                             }
                         }
                     }
+                }
+                removeUnavailableInsTimes();
+                if (model.getRowCount() == 0)
+                {
+                    SHOWDATELABEL.setText("Instructors most be booked with 24 hours in advance!");
                 }
             }
         }else if(count == -1)
@@ -1172,7 +1182,7 @@ public class GuestBooking extends javax.swing.JFrame
         ArrayList<GuestDates> gd = con.getGuestDates(gID);
         String sdate = gd.get(0).getStart_date();
         String edate = gd.get(0).getEnd_date();
-        SimpleDateFormat myFormat = new SimpleDateFormat("MMM. dd", Locale.ENGLISH);
+        SimpleDateFormat myFormat = new SimpleDateFormat("MMM. dd yyyy", Locale.ENGLISH);
         try
         {
             Date fromDate = myFormat.parse(sdate);
@@ -1228,6 +1238,8 @@ public class GuestBooking extends javax.swing.JFrame
         model.setValueAt("17:00 - 18:00", 9, 0);
         model.setValueAt("18:00 - 19:00", 10, 0);
         model.setValueAt("19:00 - 20:00", 11, 0);
+        
+        removeUnavailableTodayTimes();
     }
 
     private void fillComboTennis()
@@ -1304,6 +1316,89 @@ public class GuestBooking extends javax.swing.JFrame
             model.setValueAt(fb.get(i).getCourtno(), i, 1);
             model.setValueAt(fb.get(i).getStart_date(), i, 2);
             model.setValueAt(fb.get(i).getEnd_date(), i, 3);
+        }
+    }
+    
+    private void removeUnavailableTodayTimes()
+    {
+        String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date(System.currentTimeMillis() + (1 * 60 * 60 * 1000)));
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        
+        String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
+        DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
+        Date date = null;
+        try
+        {
+            date = originalFormat.parse(datestr);
+        } catch (ParseException ex)
+        {
+            ex.printStackTrace();
+        }
+        
+        String formattedDate = targetFormat.format(date);
+        
+        for (int i = model.getRowCount() - 1; i >= 0; i--)
+        {
+            String timespan = model.getValueAt(i, 0).toString();
+            String time = timespan.substring(0, 5);
+            String finaltime = formattedDate + " " + time;
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+
+            try
+            {
+                Date tid = sdf.parse(finaltime);
+                Date tidnu = sdf.parse(todate);
+                if(tid.before(tidnu))
+                {                    
+                    model.removeRow(i);
+                }
+            } catch (ParseException ex)
+            {
+                System.out.println("Couldnt parse date");
+            }
+            
+        }
+    }
+    
+    private void removeUnavailableInsTimes()
+    {
+        String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date(System.currentTimeMillis() + (24 * 60 * 60 * 1000)));
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+        
+        String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
+        DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
+        Date date = null;
+        try
+        {
+            date = originalFormat.parse(datestr);
+        } catch (ParseException ex)
+        {
+            ex.printStackTrace();
+        }
+        
+        String formattedDate = targetFormat.format(date);
+        
+        for (int i = model.getRowCount() - 1; i >= 0; i--)
+        {
+            String timespan = model.getValueAt(i, 0).toString();
+            String time = timespan.substring(0, 5);
+            String finaltime = formattedDate + " " + time;
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+
+            try
+            {
+                Date tid = sdf.parse(finaltime);
+                Date tidnu = sdf.parse(todate);
+                if(tid.before(tidnu))
+                {                    
+                    model.removeRow(i);
+                }
+            } catch (ParseException ex)
+            {
+                System.out.println("Couldnt parse date");
+            }
         }
     }
 

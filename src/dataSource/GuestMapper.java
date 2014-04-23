@@ -241,7 +241,7 @@ public class GuestMapper
         ArrayList<GuestDates> gd = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy'";
         Statement statementFix;
-        String SQLString = "SELECT to_char(b.start_date, 'Mon. dd'), to_char(b.end_date, 'Mon. dd')"
+        String SQLString = "SELECT to_char(b.start_date, 'Mon. dd yyyy'), to_char(b.end_date, 'Mon. dd yyyy')"
                 + " from bookings b inner join bookings_guests bg"
                 + " on bg.booking_id = b.id join guests g"
                 + " on g.guest_id = bg.guest_id"
