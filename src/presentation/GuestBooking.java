@@ -930,7 +930,6 @@ public class GuestBooking extends javax.swing.JFrame
 
     private void SHOWTIMESearchActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWTIMESearchActionPerformed
     {//GEN-HEADEREND:event_SHOWTIMESearchActionPerformed
-        // if der gør at man ikke må searche på den dato hvis man allerede har 4 bookings den dato.
         String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
         DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
         DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
@@ -942,7 +941,8 @@ public class GuestBooking extends javax.swing.JFrame
         {
             ex.printStackTrace();
         }
-        
+                // if der gør at man ikke må searche på den dato hvis man allerede har 4 bookings den dato.
+
         String formattedDate = targetFormat.format(date);
         int count = con.getBookingCount(guestLoggedIn.getGuest_id(), formattedDate);
         
