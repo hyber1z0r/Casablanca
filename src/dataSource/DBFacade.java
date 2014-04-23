@@ -161,5 +161,10 @@ public class DBFacade {
     {
         return gm.getBookingCount(GID, start_date, con);
     }
+    
+    public ArrayList<String> getGuestFBookings(int GID, String start_date)
+    {
+        return gm.getGuestFBookings(GID, start_date, con);
+    }
 }
 

@@ -500,4 +500,49 @@ public class GuestMapper
         }
         return count;
     }
+
+    public ArrayList<String> getGuestFBookings(int GID, String start_date, Connection con)
+    {
+        ArrayList<String> dates = new ArrayList<>();
+        String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
+        Statement statementFix;
+        
+        String SQLString = "SELECT to_char(start_date, 'hh24:mi') from facilitybooking fb "
+                + "join fbooking_guests fbg on fbg.FID = fb.ID "
+                + "where fbg.GID = ? and fb.start_date LIKE ?";
+
+        PreparedStatement statement = null;
+        try
+        {
+            statementFix = con.createStatement();
+            statementFix.execute(SQLdatefix);
+            //== get tuples
+            statement = con.prepareStatement(SQLString);
+            statement.setInt(1, GID);
+            statement.setString(2, start_date + "%");
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next())
+            {
+                System.out.println("RS HAS NEXT!");
+                dates.add(rs.getString(1));
+            }
+        } catch (SQLException e)
+        {
+            System.out.println("Fail in GuestMapper - getGuestFBookings");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fail in GuestMapper - getGuestFBookings");
+                System.out.println(e.getMessage());
+            }
+        }
+        return dates;
+    }
 }

@@ -247,4 +247,10 @@ public class Controller
     {
         return dbf.getBookingCount(GID, start_date);
     }
+    
+    
+    public ArrayList<String> getGuestFBookings(int GID, String start_date)
+    {
+        return dbf.getGuestFBookings(GID, start_date);
+    }
 }

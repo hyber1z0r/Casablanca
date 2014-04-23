@@ -941,11 +941,11 @@ public class GuestBooking extends javax.swing.JFrame
         {
             ex.printStackTrace();
         }
-                // if der gør at man ikke må searche på den dato hvis man allerede har 4 bookings den dato.
+        // if der gør at man ikke må searche på den dato hvis man allerede har 4 bookings den dato.
 
         String formattedDate = targetFormat.format(date);
         int count = con.getBookingCount(guestLoggedIn.getGuest_id(), formattedDate);
-        
+
         if (count < 4)
         {
             fillTableTimes();
@@ -976,6 +976,7 @@ public class GuestBooking extends javax.swing.JFrame
                 SHOWDATELABEL.setText("You can't book back in time!");
             }
 
+            removeGuestFBookings();
             if (model2.isSelected())
             {
                 int amount = CHOOSECOURTCOMBO.getItemCount();
@@ -1002,10 +1003,10 @@ public class GuestBooking extends javax.swing.JFrame
                     SHOWDATELABEL.setText("Instructors most be booked with 24 hours in advance!");
                 }
             }
-        }else if(count == -1)
+        } else if (count == -1)
         {
             SHOWDATELABEL.setText("Failed getting count of bookings!");
-        }else
+        } else
         {
             SHOWDATELABEL.setText("You already have 4 bookings this date, please choose another date.");
         }
@@ -1238,7 +1239,7 @@ public class GuestBooking extends javax.swing.JFrame
         model.setValueAt("17:00 - 18:00", 9, 0);
         model.setValueAt("18:00 - 19:00", 10, 0);
         model.setValueAt("19:00 - 20:00", 11, 0);
-        
+
         removeUnavailableTodayTimes();
     }
 
@@ -1318,12 +1319,12 @@ public class GuestBooking extends javax.swing.JFrame
             model.setValueAt(fb.get(i).getEnd_date(), i, 3);
         }
     }
-    
+
     private void removeUnavailableTodayTimes()
     {
         String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date(System.currentTimeMillis() + (1 * 60 * 60 * 1000)));
         DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
-        
+
         String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
         DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
         DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
@@ -1335,9 +1336,9 @@ public class GuestBooking extends javax.swing.JFrame
         {
             ex.printStackTrace();
         }
-        
+
         String formattedDate = targetFormat.format(date);
-        
+
         for (int i = model.getRowCount() - 1; i >= 0; i--)
         {
             String timespan = model.getValueAt(i, 0).toString();
@@ -1349,23 +1350,23 @@ public class GuestBooking extends javax.swing.JFrame
             {
                 Date tid = sdf.parse(finaltime);
                 Date tidnu = sdf.parse(todate);
-                if(tid.before(tidnu))
-                {                    
+                if (tid.before(tidnu))
+                {
                     model.removeRow(i);
                 }
             } catch (ParseException ex)
             {
                 System.out.println("Couldnt parse date");
             }
-            
+
         }
     }
-    
+
     private void removeUnavailableInsTimes()
     {
         String todate = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date(System.currentTimeMillis() + (24 * 60 * 60 * 1000)));
         DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
-        
+
         String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
         DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
         DateFormat targetFormat = new SimpleDateFormat("dd-MM-yy");
@@ -1377,9 +1378,9 @@ public class GuestBooking extends javax.swing.JFrame
         {
             ex.printStackTrace();
         }
-        
+
         String formattedDate = targetFormat.format(date);
-        
+
         for (int i = model.getRowCount() - 1; i >= 0; i--)
         {
             String timespan = model.getValueAt(i, 0).toString();
@@ -1391,13 +1392,47 @@ public class GuestBooking extends javax.swing.JFrame
             {
                 Date tid = sdf.parse(finaltime);
                 Date tidnu = sdf.parse(todate);
-                if(tid.before(tidnu))
-                {                    
+                if (tid.before(tidnu))
+                {
                     model.removeRow(i);
                 }
             } catch (ParseException ex)
             {
                 System.out.println("Couldnt parse date");
+            }
+        }
+    }
+
+    private void removeGuestFBookings()
+    {
+        DefaultTableModel model = (DefaultTableModel) BookTable.getModel();
+
+        String datestr = SHOWDATECOMBOBOX.getSelectedItem().toString() + " " + Calendar.getInstance().get(Calendar.YEAR);
+        DateFormat originalFormat = new SimpleDateFormat("EEE MMM dd yyyy", Locale.ENGLISH);
+        DateFormat targetFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = null;
+        try
+        {
+            date = originalFormat.parse(datestr);
+        } catch (ParseException ex)
+        {
+            ex.printStackTrace();
+        }
+
+        String formattedDate = targetFormat.format(date);
+
+        System.out.println("Date der søges på: " + formattedDate);
+        ArrayList<String> dates = con.getGuestFBookings(guestLoggedIn.getGuest_id(), formattedDate);
+        System.out.println("Size: " + dates.size());
+        for (String str : dates)
+        {
+            System.out.println("str: " + str);
+            for (int i = model.getRowCount() - 1; i >= 0; i--)
+            {
+                 if (model.getValueAt(i, 0).toString().startsWith(str))
+                 {
+                     model.removeRow(i);
+                 }
             }
         }
     }
