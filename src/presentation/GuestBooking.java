@@ -997,7 +997,7 @@ public class GuestBooking extends javax.swing.JFrame
             SHOWDATELABEL.setText("Failed getting count of bookings!");
         }else
         {
-            SHOWDATELABEL.setText("You already have 4 bookings this date, choose another.");
+            SHOWDATELABEL.setText("You already have 4 bookings this date, please choose another date.");
         }
 
 
