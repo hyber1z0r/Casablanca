@@ -466,6 +466,13 @@ public class GuestBooking extends javax.swing.JFrame
         jLabel14.setText("PICK DATE AND TIME");
 
         SHOWDATECOMBOBOX.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SHOWDATECOMBOBOX.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                SHOWDATECOMBOBOXActionPerformed(evt);
+            }
+        });
 
         SHOWTIMEDATEBOOKBUTTON.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         SHOWTIMEDATEBOOKBUTTON.setForeground(new java.awt.Color(51, 255, 0));
@@ -479,6 +486,13 @@ public class GuestBooking extends javax.swing.JFrame
         });
 
         CHOOSECOURTCOMBO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CHOOSECOURTCOMBO.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                CHOOSECOURTCOMBOActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Choose date");
 
@@ -531,6 +545,13 @@ public class GuestBooking extends javax.swing.JFrame
             });
 
             InstructorCheckbox.setText("Instructor");
+            InstructorCheckbox.addActionListener(new java.awt.event.ActionListener()
+            {
+                public void actionPerformed(java.awt.event.ActionEvent evt)
+                {
+                    InstructorCheckboxActionPerformed(evt);
+                }
+            });
 
             javax.swing.GroupLayout SHOWTIMEANDDATELayout = new javax.swing.GroupLayout(SHOWTIMEANDDATE);
             SHOWTIMEANDDATE.setLayout(SHOWTIMEANDDATELayout);
@@ -1093,6 +1114,36 @@ public class GuestBooking extends javax.swing.JFrame
             model.removeRow(CheckBookingsTable.getSelectedRow());
         }
     }//GEN-LAST:event_DELETEBOOKINGBUTTONActionPerformed
+
+    private void InstructorCheckboxActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_InstructorCheckboxActionPerformed
+    {//GEN-HEADEREND:event_InstructorCheckboxActionPerformed
+        DefaultTableModel model = (DefaultTableModel)BookTable.getModel();
+        for (int i = model.getRowCount() - 1; i >= 0; i--)
+        {
+            model.removeRow(i);
+            
+        }
+    }//GEN-LAST:event_InstructorCheckboxActionPerformed
+
+    private void CHOOSECOURTCOMBOActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_CHOOSECOURTCOMBOActionPerformed
+    {//GEN-HEADEREND:event_CHOOSECOURTCOMBOActionPerformed
+        DefaultTableModel model = (DefaultTableModel)BookTable.getModel();
+        for (int i = model.getRowCount() - 1; i >= 0; i--)
+        {
+            model.removeRow(i);
+            
+        }
+    }//GEN-LAST:event_CHOOSECOURTCOMBOActionPerformed
+
+    private void SHOWDATECOMBOBOXActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SHOWDATECOMBOBOXActionPerformed
+    {//GEN-HEADEREND:event_SHOWDATECOMBOBOXActionPerformed
+        DefaultTableModel model = (DefaultTableModel)BookTable.getModel();
+        for (int i = model.getRowCount() - 1; i >= 0; i--)
+        {
+            model.removeRow(i);
+            
+        }
+    }//GEN-LAST:event_SHOWDATECOMBOBOXActionPerformed
 
     private void fillComboDates(int gID)
     {
