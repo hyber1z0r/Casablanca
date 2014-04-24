@@ -811,6 +811,7 @@ public class GuestBooking extends javax.swing.JFrame
         model2.setSelected(false);
         model2.setEnabled(false);
         SHOWTIMEDATEBOOKBUTTON.setEnabled(false);
+        CHOOSECOURTCOMBO.setEnabled(false);
     }//GEN-LAST:event_FITNESSActionPerformed
 
     private void SWIMMINGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SWIMMINGActionPerformed
@@ -824,6 +825,7 @@ public class GuestBooking extends javax.swing.JFrame
         model2.setSelected(false);
         model2.setEnabled(true);
         SHOWTIMEDATEBOOKBUTTON.setEnabled(false);
+        
     }//GEN-LAST:event_SWIMMINGActionPerformed
 
     private void HANDBALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HANDBALLActionPerformed
@@ -1082,6 +1084,7 @@ public class GuestBooking extends javax.swing.JFrame
                 }
             }
         }
+        CHOOSECOURTCOMBO.setEnabled(true);
     }//GEN-LAST:event_SHOWTIMEDATEBOOKBUTTONActionPerformed
 
     private void THANKYOUBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_THANKYOUBUTTONActionPerformed
@@ -1094,6 +1097,7 @@ public class GuestBooking extends javax.swing.JFrame
     {//GEN-HEADEREND:event_SHOWTIMEBACKActionPerformed
         BOOKFACILITY.setVisible(true);
         SHOWTIMEANDDATE.setVisible(false);
+        CHOOSECOURTCOMBO.setEnabled(true);
     }//GEN-LAST:event_SHOWTIMEBACKActionPerformed
 
     private void DELETEBOOKINGBUTTONActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_DELETEBOOKINGBUTTONActionPerformed
