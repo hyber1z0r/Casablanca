@@ -18,10 +18,18 @@ import java.util.ArrayList;
  *
  * @author hyber
  */
-public class RoomMapper
+public class RoomMapper implements RoomMapperInterface
 {
 
-    public ArrayList<Room> getAllFreeRooms(String sDate, String eDate, Connection con)
+    private final Connection con;
+
+    public RoomMapper(Connection con)
+    {
+        this.con = con;
+    }
+
+    @Override
+    public ArrayList<Room> getAllFreeRooms(String sDate, String eDate)
     {
         ArrayList<Room> rooms = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
@@ -66,7 +74,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper.getAllFreeRooms - Closing statement ");
@@ -76,7 +87,8 @@ public class RoomMapper
         return rooms;
     }
 
-    public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize, Connection con)
+    @Override
+    public ArrayList<Room> getSizeFreeRooms(String sDate, String eDate, int rSize)
     {
         ArrayList<Room> rooms = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
@@ -121,7 +133,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper - getRooms");
@@ -131,7 +146,8 @@ public class RoomMapper
         return rooms;
     }
 
-    public boolean saveNewGuest(Guest g, Connection con)
+    @Override
+    public boolean saveNewGuest(Guest g)
     {
         int rowsInserted = 0;
 
@@ -185,7 +201,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - save new guest");
@@ -195,7 +214,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public boolean saveNewBooking(Booking b, Connection con)
+    @Override
+    public boolean saveNewBooking(Booking b)
     {
         int rowsInserted = 0;
 
@@ -244,7 +264,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - save new booking");
@@ -254,7 +277,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public boolean saveNewBookingsGuests(Bookings_Guests bg, Connection con)
+    @Override
+    public boolean saveNewBookingsGuests(Bookings_Guests bg)
     {
         int rowsInserted = 0;
 
@@ -298,7 +322,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - close statement save new booking_guests");
@@ -308,7 +335,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public ArrayList<Booking> getBookedRooms(String type, Connection con)
+    @Override
+    public ArrayList<Booking> getBookedRooms(String type)
     {
         ArrayList<Booking> bookings = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
@@ -360,7 +388,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper.getBookedRooms - Closing statement ");
@@ -370,7 +401,8 @@ public class RoomMapper
         return bookings;
     }
 
-    public boolean confirmBooking(Booking b, Connection con)
+    @Override
+    public boolean confirmBooking(Booking b)
     {
         int rowsInserted = 0;
 
@@ -403,7 +435,10 @@ public class RoomMapper
             try
             {
                 con.commit();
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - confirm booking");
@@ -413,7 +448,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public boolean saveNewTAGUEST(Travelagency_guests tg, Connection con)
+    @Override
+    public boolean saveNewTAGUEST(Travelagency_guests tg)
     {
         int rowsInserted = 0;
 
@@ -448,7 +484,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - close statement save new travelagency_guests");
@@ -458,7 +497,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public boolean deleteguests(Booking b, Connection con)
+    @Override
+    public boolean deleteguests(Booking b)
     {
         int rowsInserted = 0;
         ArrayList<Integer> guestIDs = new ArrayList();
@@ -523,7 +563,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - close statement delete Guests");
@@ -533,7 +576,8 @@ public class RoomMapper
         return rowsInserted == guestIDs.size() + 1;
     }
 
-    public ArrayList<TodayGuest> getTodaysGuests(String date, Connection con)
+    @Override
+    public ArrayList<TodayGuest> getTodaysGuests(String date)
     {
         ArrayList<TodayGuest> guests = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy'";
@@ -567,7 +611,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper.get Todays Guests - Closing statement ");
@@ -577,7 +624,8 @@ public class RoomMapper
         return guests;
     }
 
-    public ArrayList<Guest> showRegInfo(int room_id, String start_date, Connection con)
+    @Override
+    public ArrayList<Guest> showRegInfo(int room_id, String start_date)
     {
         ArrayList<Integer> guestIDs = new ArrayList();
         ArrayList<Guest> guests = new ArrayList();
@@ -647,7 +695,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - close statement get Reg Info");
@@ -657,7 +708,8 @@ public class RoomMapper
         return guests;
     }
 
-    public boolean updateGuest(Guest g, Connection con)
+    @Override
+    public boolean updateGuest(Guest g)
     {
         int rowsInserted = 0;
 
@@ -702,7 +754,10 @@ public class RoomMapper
             try
             {
                 con.commit();
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - confirm booking");
@@ -712,7 +767,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public boolean saveNewInstructor(Instructor i, Connection con)
+    @Override
+    public boolean saveNewInstructor(Instructor i)
     {
         int rowsInserted = 0;
 
@@ -762,7 +818,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - saveNewInstructor close statement");
@@ -772,7 +831,8 @@ public class RoomMapper
         return rowsInserted == 1;
     }
 
-    public ArrayList<Instructor> getAllInstructors(Connection con)
+    @Override
+    public ArrayList<Instructor> getAllInstructors()
     {
         ArrayList<Instructor> i = new ArrayList();
 
@@ -796,7 +856,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper.getAllInstructors - Closing statement ");
@@ -806,7 +869,8 @@ public class RoomMapper
         return i;
     }
 
-    public boolean deleteInstructor(int id, Connection con)
+    @Override
+    public boolean deleteInstructor(int id)
     {
 
         int rowsInserted = 0;
@@ -839,7 +903,10 @@ public class RoomMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in Roommapper - close statement delete instructor");

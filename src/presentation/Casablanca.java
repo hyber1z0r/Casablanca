@@ -815,10 +815,10 @@ public class Casablanca extends javax.swing.JFrame
                             .addComponent(CHOOSEDATEFEEDBACKLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(CHOOSEDATELayout.createSequentialGroup()
                             .addGap(530, 530, 530)
-                            .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel8))
+                            .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(34, 34, 34)
                             .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
@@ -828,12 +828,12 @@ public class Casablanca extends javax.swing.JFrame
                             .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(CHOOSEDATEDATEFORMAT)
                                 .addComponent(CHOOSEDATEDATEFORMAT2))))
-                    .addContainerGap(407, Short.MAX_VALUE))
+                    .addContainerGap(428, Short.MAX_VALUE))
             );
             CHOOSEDATELayout.setVerticalGroup(
                 CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(CHOOSEDATELayout.createSequentialGroup()
-                    .addContainerGap(235, Short.MAX_VALUE)
+                    .addContainerGap(337, Short.MAX_VALUE)
                     .addGroup(CHOOSEDATELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6)
                         .addComponent(CHOOSEDATESTARTDATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3526,6 +3526,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID.setText("");
         REGINFOUSERNAME.setText("");
         SHOWREGINFOPASSWORD.setText("");
+        REGINFOFEEDBACK.setText("");
 
         REGINFOFIRSTNAME1.setText("");
         REGINFOLASTNAME1.setText("");
@@ -3537,6 +3538,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID1.setText("");
         REGINFOUSERNAME1.setText("");
         SHOWREGINFOPASSWORD1.setText("");
+        REGINFOFEEDBACK1.setText("");
 
         REGINFOFIRSTNAME2.setText("");
         REGINFOLASTNAME2.setText("");
@@ -3548,6 +3550,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID2.setText("");
         REGINFOUSERNAME2.setText("");
         SHOWREGINFOPASSWORD2.setText("");
+        REGINFOFEEDBACK2.setText("");
 
         REGINFOFIRSTNAME3.setText("");
         REGINFOLASTNAME3.setText("");
@@ -3559,6 +3562,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID3.setText("");
         REGINFOUSERNAME3.setText("");
         SHOWREGINFOPASSWORD3.setText("");
+        REGINFOFEEDBACK3.setText("");
 
         REGINFOFIRSTNAME4.setText("");
         REGINFOLASTNAME4.setText("");
@@ -3570,6 +3574,7 @@ public class Casablanca extends javax.swing.JFrame
         REGINFOGUESTID4.setText("");
         REGINFOUSERNAME4.setText("");
         SHOWREGINFOPASSWORD4.setText("");
+        REGINFOFEEDBACK4.setText("");
 
         SHOWBOOKEDROOMS.setVisible(true);
         TABPANE1.setVisible(false);

@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class Controller
 {
 
-    private final DBFacade dbf;
     private static Controller instance = null;
     private ArrayList<Room> currentList;
     private Guest currentGuest;
@@ -24,11 +23,14 @@ public class Controller
     private ArrayList<Instructor> currentIList;
     private Facility_Booking currentFBooking;
     private Fbooking_Guests currentFBooking_Guests;
+    private final DBFacade dbf;
 
-    private Controller()
+    public Controller()
     {
-        dbf = DBFacade.getInstance();
+        dbf = new DBFacade();
     }
+
+    
 
     public static Controller getInstance()
     {

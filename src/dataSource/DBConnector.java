@@ -9,30 +9,34 @@ public class DBConnector
 
     private static final String id = "SEM2_TEST_GR01";
     private static final String pw = "SEM2_TEST_GR01";
+    private static Connection connection;
 
-    public Connection getConnection()
+    public static void initializeConnection()
     {
-        Connection con = null;
         try
         {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@datdb.cphbusiness.dk:1521:dat", id, pw);
-        } catch (ClassNotFoundException | SQLException e)
+            connection = DriverManager.getConnection("jdbc:oracle:thin:@datdb.cphbusiness.dk:1521:dat", id, pw);
+        } catch (SQLException e)
         {
             System.out.println("\n*** Remember to insert your Oracle ID and PW in the DBConnector class! ***\n");
-            System.out.println("error in DBConnector.getConnection()");
-            System.out.println(e);
+            System.out.println("Could not create a Connection in DBConnector.getConnection(): " + e);
         }
-
-        return con;
     }
 
-    public void releaseConnection(Connection con)
+    public static Connection getConnection()
+    {
+        if (connection == null)
+        {
+            initializeConnection();
+        }
+        return connection;
+    }
+
+    public static void releaseConnection(Connection con)
     {
         try
         {
-            con.close();
+            connection.close();
         } catch (SQLException e)
         {
             System.err.println(e);

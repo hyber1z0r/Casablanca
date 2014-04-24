@@ -22,10 +22,18 @@ import java.util.ArrayList;
  *
  * @author jakobgaardandersen
  */
-public class GuestMapper
+public class GuestMapper implements GuestMapperInterface
 {
+    
+    private final Connection con;
 
-    public Guest checkLogin(String username, String password, Connection con)
+    public GuestMapper(Connection con)
+    {
+        this.con = con;
+    }
+
+    @Override
+    public Guest checkLogin(String username, String password)
     {
         String SQLString = "SELECT * from GUESTS where upper(username) = upper(?) and password = ?";
 
@@ -52,7 +60,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in RoomMapper GuestMapper - checkLogin");
@@ -63,7 +74,8 @@ public class GuestMapper
     }
 
     //first save facilitybooking, then fbooking guests, if any fail rollback.
-    public boolean saveNewFBooking(Facility_Booking fb, Connection con)
+    @Override
+    public boolean saveNewFBooking(Facility_Booking fb)
     {
         int rowsInserted = 0;
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
@@ -120,7 +132,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - save new fbooking");
@@ -130,7 +145,8 @@ public class GuestMapper
         return rowsInserted == 1;
     }
 
-    public boolean saveNewFBookingsGuests(Fbooking_Guests fbg, Connection con)
+    @Override
+    public boolean saveNewFBookingsGuests(Fbooking_Guests fbg)
     {
         int rowsInserted = 0;
 
@@ -174,7 +190,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - close statement save new fbooking_guests");
@@ -184,7 +203,8 @@ public class GuestMapper
         return rowsInserted == 1;
     }
 
-    public ArrayList<Fbooking> getFBookings(int gID, Connection con)
+    @Override
+    public ArrayList<Fbooking> getFBookings(int gID)
     {
         ArrayList<Fbooking> fb = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
@@ -225,7 +245,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - save new fbooking");
@@ -236,7 +259,8 @@ public class GuestMapper
 
     }
 
-    public ArrayList<GuestDates> getGuestDates(int gID, Connection con)
+    @Override
+    public ArrayList<GuestDates> getGuestDates(int gID)
     {
         ArrayList<GuestDates> gd = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy'";
@@ -277,7 +301,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getGuestDates");
@@ -287,7 +314,8 @@ public class GuestMapper
         return gd;
     }
 
-    public ArrayList<String> getNonFreeDates(String start_date, int FID, Connection con)
+    @Override
+    public ArrayList<String> getNonFreeDates(String start_date, int FID)
     {
         ArrayList<String> freeList = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
@@ -318,7 +346,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getNonFreeDates");
@@ -328,7 +359,8 @@ public class GuestMapper
         return freeList;
     }
 
-    public ArrayList<String> getNonFreeDatesIns(String start_date, int FID, Connection con)
+    @Override
+    public ArrayList<String> getNonFreeDatesIns(String start_date, int FID)
     {
         ArrayList<String> freeList = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
@@ -359,7 +391,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getNonFreeDates");
@@ -369,7 +404,8 @@ public class GuestMapper
         return freeList;
     }
 
-    public boolean deleteFbooking(String start_date, int FID, Connection con)
+    @Override
+    public boolean deleteFbooking(String start_date, int FID)
     {
         int rowsInserted = 0;
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24:mi'";
@@ -405,7 +441,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - deleteFbooking close statement");
@@ -415,7 +454,8 @@ public class GuestMapper
         return rowsInserted == 1;
     }
 
-    public Instructor getInstructor(String facility, Connection con)
+    @Override
+    public Instructor getInstructor(String facility)
     {
         String SQLString = "SELECT * FROM INSTRUCTOR WHERE SPORT = ?";
         Instructor i = null;
@@ -447,7 +487,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getInstructor");
@@ -458,7 +501,8 @@ public class GuestMapper
 
     }
 
-    public int getBookingCount(int GID, String start_date, Connection con)
+    @Override
+    public int getBookingCount(int GID, String start_date)
     {
         int count = -1;
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yy hh24'";
@@ -491,7 +535,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getBookingCount");
@@ -501,7 +548,8 @@ public class GuestMapper
         return count;
     }
 
-    public ArrayList<String> getGuestFBookings(int GID, String start_date, Connection con)
+    @Override
+    public ArrayList<String> getGuestFBookings(int GID, String start_date)
     {
         ArrayList<String> dates = new ArrayList<>();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy hh24'";
@@ -536,7 +584,10 @@ public class GuestMapper
         {
             try
             {
-                statement.close();
+                if (statement != null)
+                {
+                    statement.close();
+                }
             } catch (SQLException e)
             {
                 System.out.println("Fail in GuestMapper - getGuestFBookings");
