@@ -2,29 +2,29 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
-
-package dataSource;
-
-import domain.Booking;
-import domain.Bookings_Guests;
-import domain.Controller;
-import domain.Guest;
-import domain.Room;
-import domain.Travelagency_guests;
-import java.sql.Connection;
-import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-/**
- *
- * @author jakobgaardandersen
- */
+// */
+//
+//package dataSource;
+//
+//import domain.Booking;
+//import domain.Bookings_Guests;
+//import domain.Controller;
+//import domain.Guest;
+//import domain.Room;
+//import domain.Travelagency_guests;
+//import java.sql.Connection;
+//import java.util.ArrayList;
+//import org.junit.After;
+//import org.junit.AfterClass;
+//import static org.junit.Assert.*;
+//import org.junit.Before;
+//import org.junit.BeforeClass;
+//import org.junit.Test;
+//
+///**
+// *
+// * @author jakobgaardandersen
+// */
 //public class RoomMapperTest
 //{
 //    Connection con;
