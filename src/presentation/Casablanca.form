@@ -104,6 +104,9 @@
         <Component class="javax.swing.JButton" name="BOOKROOMBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BOOK ROOM"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BOOKROOMBUTTONActionPerformed"/>
@@ -112,6 +115,9 @@
         <Component class="javax.swing.JButton" name="STANDBYBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="SHOW STANDBY ROOMS"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="STANDBYBUTTONActionPerformed"/>
@@ -120,6 +126,9 @@
         <Component class="javax.swing.JButton" name="SHOWBOOKEDBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="SHOW BOOKED ROOMS"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SHOWBOOKEDBUTTONActionPerformed"/>
@@ -140,6 +149,9 @@
         <Component class="javax.swing.JButton" name="TODAYSARRIVALBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="TODAYS ARRIVAL"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TODAYSARRIVALBUTTONActionPerformed"/>
@@ -150,6 +162,9 @@
         <Component class="javax.swing.JButton" name="INSTRUCTORS">
           <Properties>
             <Property name="text" type="java.lang.String" value="INSTRUCTORS"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="INSTRUCTORSActionPerformed"/>
@@ -351,6 +366,9 @@
         <Component class="javax.swing.JButton" name="INSTRUCTORCREATEBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="CREATE"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="INSTRUCTORCREATEBUTTONActionPerformed"/>
@@ -359,6 +377,9 @@
         <Component class="javax.swing.JButton" name="INSTRUCTORBACKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="INSTRUCTORBACKBUTTONActionPerformed"/>
@@ -367,6 +388,9 @@
         <Component class="javax.swing.JButton" name="INSTRUCTORDELETEBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="DELETE"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="INSTRUCTORDELETEBUTTONActionPerformed"/>
@@ -387,6 +411,9 @@
                 <StringItem index="2" value="Item 3"/>
                 <StringItem index="3" value="Item 4"/>
               </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -441,6 +468,9 @@
         <Component class="javax.swing.JButton" name="TODAYSARRIVALBACKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="Back"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TODAYSARRIVALBACKBUTTONActionPerformed"/>
@@ -476,141 +506,6 @@
             </Component>
           </SubComponents>
         </Container>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="CREATEUSERPANEL">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1280, 720]"/>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-          <CardConstraints cardName="card10"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="CREATEUSERSAVEUSER" pref="112" max="32767" attributes="0"/>
-                      <Component id="CREATEUSERBACKBUTTON" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="435" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                          <Component id="LABEL1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="CREATEUSERFULLNAME" min="-2" pref="155" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel14" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="CREATEUSERPASSWORD" min="-2" pref="155" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel13" min="-2" pref="60" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="CREATEUSERUSERNAME" min="-2" pref="155" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="500" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="CREATEUSERGENERATEBUTTON" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="552" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LABEL1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="CREATEUSERFULLNAME" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="CREATEUSERGENERATEBUTTON" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="CREATEUSERUSERNAME" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="CREATEUSERPASSWORD" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel14" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="CREATEUSERSAVEUSER" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="CREATEUSERBACKBUTTON" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="404" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="LABEL1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="FULL NAME"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="CREATEUSERFULLNAME">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CREATEUSERFULLNAMEActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="CREATEUSERGENERATEBUTTON">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="GENERATE "/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CREATEUSERGENERATEBUTTONActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="USERNAME"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="PASSWORD"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="CREATEUSERUSERNAME">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CREATEUSERUSERNAMEActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="CREATEUSERPASSWORD">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CREATEUSERPASSWORDActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="CREATEUSERSAVEUSER">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="SAVE USER"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="CREATEUSERBACKBUTTON">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="BACK"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CREATEUSERBACKBUTTONActionPerformed"/>
-          </Events>
-        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="CHOOSEDATE">
@@ -726,6 +621,9 @@
         <Component class="javax.swing.JButton" name="CHOOSEDATEBACKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CHOOSEDATEBACKBUTTONActionPerformed"/>
@@ -734,6 +632,9 @@
         <Component class="javax.swing.JButton" name="CHOOSEDATESEARCHBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="SEARCH"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CHOOSEDATESEARCHBUTTONActionPerformed"/>
@@ -748,6 +649,9 @@
                 <StringItem index="2" value="Item 3"/>
                 <StringItem index="3" value="Item 4"/>
               </StringArray>
+            </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -845,6 +749,9 @@
         <Component class="javax.swing.JButton" name="AVAILABLEROOMSBOOKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BOOK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AVAILABLEROOMSBOOKBUTTONActionPerformed"/>
@@ -853,6 +760,9 @@
         <Component class="javax.swing.JButton" name="AVAILABLEROOMSBACKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AVAILABLEROOMSBACKBUTTONActionPerformed"/>
@@ -921,48 +831,55 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="BOOKROOMPhoneFeedback" min="-2" pref="128" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel19" min="-2" pref="99" max="-2" attributes="0"/>
-                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel20" min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jLabel22" min="-2" pref="123" max="-2" attributes="0"/>
-                              <Component id="jLabel30" alignment="1" min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="BOOKROOMADRESS" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="BOOKROOMEMAIL" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Component id="TRAVELAGENCYBOX" min="-2" pref="125" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel19" min="-2" pref="99" max="-2" attributes="0"/>
+                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel20" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="jLabel21" alignment="1" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <Component id="jLabel22" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Component id="jLabel30" alignment="1" min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="BOOKROOMFIRSTNAME" min="-2" pref="125" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                                              <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                      <Component id="BOOKROOMADRESS" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Component id="BOOKROOMEMAIL" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Component id="TRAVELAGENCYBOX" min="-2" pref="125" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="BOOKROOMFIRSTNAME" min="-2" pref="125" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="BOOKROOMLASTNAME" min="-2" pref="125" max="-2" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="BOOKROOMCOUNTRY" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="BOOKROOMLASTNAME" min="-2" pref="125" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="BOOKROOMROOMNUMBER" min="-2" pref="84" max="-2" attributes="0"/>
+                                              <Component id="BOOKROOMROOMSIZE" min="-2" pref="84" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="BOOKROOMCOUNTRY" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="BOOKROOMROOMNUMBER" min="-2" pref="84" max="-2" attributes="0"/>
-                                      <Component id="BOOKROOMROOMSIZE" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="BOOKROOMAGE" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="BOOKROOMPHONE" alignment="0" pref="125" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <Component id="jLabel1" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="BOOKROOMAGE" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="BOOKROOMPHONE" alignment="0" pref="125" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" pref="256" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="461" max="-2" attributes="0"/>
@@ -1050,7 +967,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="181" max="32767" attributes="0"/>
+                  <EmptySpace pref="112" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1157,6 +1074,9 @@
         <Component class="javax.swing.JButton" name="BOOKROOMCANCELBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="CANCEL"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BOOKROOMCANCELBUTTONActionPerformed"/>
@@ -1165,6 +1085,9 @@
         <Component class="javax.swing.JButton" name="BOOKROOMCONFIRMBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="CONFIRM"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BOOKROOMCONFIRMBUTTONActionPerformed"/>
@@ -1182,6 +1105,9 @@
                 <StringItem index="3" value="Item 4"/>
               </StringArray>
             </Property>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TRAVELAGENCYBOXActionPerformed"/>
@@ -1190,6 +1116,9 @@
         <Component class="javax.swing.JButton" name="BOOKROOMADDGUESTBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="ADD GUEST"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BOOKROOMADDGUESTBUTTONActionPerformed"/>
@@ -1212,64 +1141,6 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="text" type="java.lang.String" value="AGE"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="GETFEEDBACKFORBOOKING">
-      <Properties>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1280, 720]"/>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-          <CardConstraints cardName="card11"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace pref="554" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel24" min="-2" pref="256" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="491" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="543" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="681" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel24">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tw Cen MT Condensed Extra Bold" size="18" style="2"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="YOU HAVE NOW BOOKED THE ROOM"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="GO BACK TO START MENU"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -1565,6 +1436,9 @@
             <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BACK"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOBACKBUTTONActionPerformed"/>
@@ -1603,6 +1477,9 @@
             <Component class="javax.swing.JButton" name="UPDATEGUEST1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UPDATE GUEST"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UPDATEGUEST1ActionPerformed"/>
@@ -1908,6 +1785,9 @@
             <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BACK"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOBACKBUTTON1ActionPerformed"/>
@@ -1946,6 +1826,9 @@
             <Component class="javax.swing.JButton" name="UPDATEGUEST2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UPDATE GUEST"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UPDATEGUEST2ActionPerformed"/>
@@ -2251,6 +2134,9 @@
             <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BACK"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOBACKBUTTON2ActionPerformed"/>
@@ -2289,6 +2175,9 @@
             <Component class="javax.swing.JButton" name="UPDATEGUEST3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UPDATE GUEST"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UPDATEGUEST3ActionPerformed"/>
@@ -2594,6 +2483,9 @@
             <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BACK"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOBACKBUTTON3ActionPerformed"/>
@@ -2632,6 +2524,9 @@
             <Component class="javax.swing.JButton" name="UPDATEGUEST4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UPDATE GUEST"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UPDATEGUEST4ActionPerformed"/>
@@ -2937,6 +2832,9 @@
             <Component class="javax.swing.JButton" name="REGINFOBACKBUTTON4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BACK"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="REGINFOBACKBUTTON4ActionPerformed"/>
@@ -2975,6 +2873,9 @@
             <Component class="javax.swing.JButton" name="UPDATEGUEST5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UPDATE GUEST"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UPDATEGUEST5ActionPerformed"/>
@@ -3058,6 +2959,9 @@
         <Component class="javax.swing.JButton" name="SHOWREGINFOBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="SHOW REGISTRAION INFO"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SHOWREGINFOBUTTONActionPerformed"/>
@@ -3066,6 +2970,9 @@
         <Component class="javax.swing.JButton" name="BACKBUTTONBOOKEDROOMS">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BACKBUTTONBOOKEDROOMSActionPerformed"/>
@@ -3152,6 +3059,9 @@
         <Component class="javax.swing.JButton" name="STANDBYROOMBACKBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="BACK"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="STANDBYROOMBACKBUTTONActionPerformed"/>
@@ -3160,6 +3070,9 @@
         <Component class="javax.swing.JButton" name="STANDBYROOMDECLINEBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="DECLINE"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="STANDBYROOMDECLINEBUTTONActionPerformed"/>
@@ -3168,6 +3081,9 @@
         <Component class="javax.swing.JButton" name="STANDBYROOMACCEPTBUTTON">
           <Properties>
             <Property name="text" type="java.lang.String" value="ACCEPT"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="STANDBYROOMACCEPTBUTTONActionPerformed"/>
