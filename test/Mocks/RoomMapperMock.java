@@ -112,15 +112,15 @@ public class RoomMapperMock implements RoomMapperInterface
         while (it.hasNext())
         {
             Map.Entry pairs = (Map.Entry) it.next();
-            if (pairs.getKey().equals(bg.getBooking_id()) && pairs.getValue().equals(bg.getGuest_id()))
-            {
-                System.out.println("Findes allerede!");
-                it.remove(); // avoids a ConcurrentModificationException
-                return false;
-            } else
+            if (!pairs.getKey().equals(bg.getBooking_id()) && !pairs.getValue().equals(bg.getGuest_id()))
             {
                 bguests.put(bg.getBooking_id(), bg.getGuest_id());
                 return true;
+
+            } else
+            {
+                it.remove(); // avoids a ConcurrentModificationException
+                return false;
             }
         }
         return false;
