@@ -14,14 +14,14 @@ public class Fbooking
 {
     private String name, start_date, end_date;
     private int courtno;
-
+    
     public Fbooking(String name, int courtno, String start_date, String end_date)
     {
         this.name = name;
         this.start_date = start_date;
         this.end_date = end_date;
         this.courtno = courtno;
-    }
+}
 
     public String getName()
     {
