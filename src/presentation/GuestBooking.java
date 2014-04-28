@@ -1363,12 +1363,9 @@ public class GuestBooking extends javax.swing.JFrame
 
         String formattedDate = targetFormat.format(date);
 
-        System.out.println("Date der søges på: " + formattedDate);
         ArrayList<String> dates = con.getGuestFBookings(guestLoggedIn.getGuest_id(), formattedDate);
-        System.out.println("Size: " + dates.size());
         for (String str : dates)
         {
-            System.out.println("str: " + str);
             for (int i = model.getRowCount() - 1; i >= 0; i--)
             {
                  if (model.getValueAt(i, 0).toString().startsWith(str))

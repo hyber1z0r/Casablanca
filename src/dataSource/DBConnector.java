@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class DBConnector
 {
 
-    private static final String id = "SEM2_TEST_GR01";
-    private static final String pw = "SEM2_TEST_GR01";
+    private static final String id = "SEM2_GR01";
+    private static final String pw = "SEM2_GR01";
     private static Connection connection;
 
     public static void initializeConnection()
