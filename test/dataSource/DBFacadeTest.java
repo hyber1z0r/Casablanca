@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dataSource;
 
 import Mocks.RoomMapperMock;
@@ -22,10 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -34,19 +31,45 @@ import org.junit.Test;
  */
 public class DBFacadeTest
 {
+
     DBFacade facade;
-    
+    RoomMapperMock om;
+
     public DBFacadeTest()
     {
+        om = new RoomMapperMock();
+        facade = new DBFacade(om);
     }
-    
+
     @Before
     public void setUp()
     {
-        RoomMapperMock om = new RoomMapperMock();
-        facade = new DBFacade(om);
+
+        // guests
+        Map<Integer, Guest> guests = new HashMap();
+        Guest g1 = new Guest(1, "Jakob", "Karlsen", "Gurlivej 27, 4000 Roskilde", "Denmark", 1239193, "jakob@hotmail.dk", 20, "jakobuser", "jakobpass");
+        guests.put(1, g1);
+        Guest g2 = new Guest(2, "Anders", "Jakobsen", "Ramsøvejen 27, 4132 Hedehusene", "Denmark", 3210303, "andersekaka@hotmail.dk", 23, "andersuser", "anderspass");
+        guests.put(2, g2);
+        om.setGuests(guests);
+
+        // bookings
+        Map<Integer, Booking> bookings = new HashMap();
+        Booking b1 = new Booking(1, "26-06-14", "30-06-14", 30, "no", "29-04-14");
+        bookings.put(1, b1);
+        Booking b2 = new Booking(2, "16-07-14", "21-07-14", 14, "yes", "24-04-14");
+        bookings.put(2, b2);
+        om.setBookings(bookings);
+
+        // instructors
+        Map<Integer, Instructor> ins = new HashMap();
+        Instructor i1 = new Instructor(1, "Hans", "Larsen", "hanslarsen@hotmail.com", 22993312, "Tennis");
+        Instructor i2 = new Instructor(2, "Lars", "Hansen", "larsabc123@hotmail.dk", 828381, "Swimming");
+        ins.put(1, i1);
+        ins.put(2, i2);
+        om.setInstructors(ins);
     }
-    
+
     @After
     public void tearDown()
     {
@@ -58,15 +81,6 @@ public class DBFacadeTest
     @Test
     public void testGetAllFreeRooms()
     {
-        System.out.println("getAllFreeRooms");
-        String sDate = "";
-        String eDate = "";
-        DBFacade instance = new DBFacade();
-        ArrayList<Room> expResult = null;
-        ArrayList<Room> result = instance.getAllFreeRooms(sDate, eDate);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -75,16 +89,7 @@ public class DBFacadeTest
     @Test
     public void testGetSizeFreeRooms()
     {
-        System.out.println("getSizeFreeRooms");
-        String sDate = "";
-        String eDate = "";
-        int rSize = 0;
-        DBFacade instance = new DBFacade();
-        ArrayList<Room> expResult = null;
-        ArrayList<Room> result = instance.getSizeFreeRooms(sDate, eDate, rSize);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -93,14 +98,9 @@ public class DBFacadeTest
     @Test
     public void testSaveNewGuest()
     {
-        System.out.println("saveNewGuest");
-        Guest g = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewGuest(g);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Guest g1 = new Guest(3, "Didrik", "Poulsen", "Gurlevej 12, 4622 Havdrup", "Denmark", 12313213, "asddd@gmail.dk", 20, "didrikuser", "didsdripass");
+        boolean status = facade.saveNewGuest(g1);
+        assertTrue(status);
     }
 
     /**
@@ -109,14 +109,13 @@ public class DBFacadeTest
     @Test
     public void testSaveNewBooking()
     {
-        System.out.println("saveNewBooking");
-        Booking b = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewBooking(b);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Booking b1 = new Booking(3, "26-06-14", "30-06-14", 30, "no", "29-03-14");
+        Booking b2 = new Booking(4, "16-07-14", "21-07-14", 14, "no", "24-03-14");
+        boolean status = facade.saveNewBooking(b1);
+        boolean status2 = facade.saveNewBooking(b2);
+        assertTrue(status);
+        assertTrue(status2);
+
     }
 
     /**
@@ -125,14 +124,10 @@ public class DBFacadeTest
     @Test
     public void testSaveNewBookingsGuests()
     {
-        System.out.println("saveNewBookingsGuests");
-        Bookings_Guests bg = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewBookingsGuests(bg);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Bookings_Guests bg = new Bookings_Guests(1, 1);
+        boolean status = facade.saveNewBookingsGuests(bg);
+        assertTrue(status);
+
     }
 
     /**
@@ -141,14 +136,27 @@ public class DBFacadeTest
     @Test
     public void testGetBookedRooms()
     {
-        System.out.println("getBookedRooms");
-        String type = "";
-        DBFacade instance = new DBFacade();
-        ArrayList<Booking> expResult = null;
-        ArrayList<Booking> result = instance.getBookedRooms(type);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // bookings indsat i toppen ^
+        String paid = "yes";
+        String unpaid = "no";
+        // relying on confirm booking!
+        Map<Integer, Booking> bookings = om.getAllBookings();
+        Booking b = bookings.get(2);
+        boolean status = facade.confirmBooking(b);
+
+        ArrayList<Booking> paidList = facade.getBookedRooms(paid);
+        ArrayList<Booking> unpaidList = facade.getBookedRooms(unpaid);
+
+        for (Booking booking : paidList)
+        {
+            assertTrue(booking.getId() == 2);
+        }
+
+        for (Booking booking : unpaidList)
+        {
+            assertTrue(booking.getId() == 1);
+        }
+
     }
 
     /**
@@ -157,14 +165,28 @@ public class DBFacadeTest
     @Test
     public void testConfirmBooking()
     {
-        System.out.println("confirmBooking");
-        Booking b = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.confirmBooking(b);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Map<Integer, Booking> bookings = om.getAllBookings();
+        Booking b = bookings.get(1);
+        boolean status = facade.confirmBooking(b);
+        assertTrue(status);
+
+        Map<Integer, Booking> confirmedbookings = om.getAllConfirmedBookings();
+
+        for (Booking booking : confirmedbookings.values())
+        {
+            if (booking.getId() == b.getId())
+            {
+                assertEquals(booking, b);
+            }
+        }
+
+        Map<Integer, Booking> bookingsDel = om.getAllBookings();
+
+        for (Booking books : bookingsDel.values())
+        {
+            assertNotSame(b, books);
+        }
+
     }
 
     /**
@@ -173,14 +195,12 @@ public class DBFacadeTest
     @Test
     public void testSaveNewTAGUEST()
     {
-        System.out.println("saveNewTAGUEST");
-        Travelagency_guests tg = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewTAGUEST(tg);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Travelagency_guests tg = new Travelagency_guests(1, 1);
+        Travelagency_guests tg2 = new Travelagency_guests(1, 2);
+        boolean status = facade.saveNewTAGUEST(tg);
+        assertTrue(status);
+        boolean status2 = facade.saveNewTAGUEST(tg2);
+        assertTrue(status2);
     }
 
     /**
@@ -189,14 +209,7 @@ public class DBFacadeTest
     @Test
     public void testDeleteGuest()
     {
-        System.out.println("deleteGuest");
-        Booking b = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.deleteGuest(b);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -205,14 +218,7 @@ public class DBFacadeTest
     @Test
     public void testGetTodaysGuests()
     {
-        System.out.println("getTodaysGuests");
-        String date = "";
-        DBFacade instance = new DBFacade();
-        ArrayList<TodayGuest> expResult = null;
-        ArrayList<TodayGuest> result = instance.getTodaysGuests(date);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -221,15 +227,7 @@ public class DBFacadeTest
     @Test
     public void testShowRegInfo()
     {
-        System.out.println("showRegInfo");
-        int room_id = 0;
-        String start_date = "";
-        DBFacade instance = new DBFacade();
-        ArrayList<Guest> expResult = null;
-        ArrayList<Guest> result = instance.showRegInfo(room_id, start_date);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -238,15 +236,7 @@ public class DBFacadeTest
     @Test
     public void testCheckLogin()
     {
-        System.out.println("checkLogin");
-        String username = "";
-        String password = "";
-        DBFacade instance = new DBFacade();
-        Guest expResult = null;
-        Guest result = instance.checkLogin(username, password);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -255,14 +245,23 @@ public class DBFacadeTest
     @Test
     public void testUpdateguest()
     {
-        System.out.println("updateguest");
-        Guest g = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.updateguest(g);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Map<Integer, Guest> guests = om.getAllGuests();
+        Guest g = guests.get(1);
+        String nameBefore = g.getFirstname();
+        String newName = "Kurt";
+        g.setFirstname(newName);
+        facade.updateguest(g);
+
+        Map<Integer, Guest> guestsUp = om.getAllGuests();
+
+        for (Guest guest : guestsUp.values())
+        {
+            if (guest.getGuest_id() == g.getGuest_id())
+            {
+                assertTrue(guest.getFirstname().equals(newName));
+            }
+        }
+
     }
 
     /**
@@ -271,14 +270,12 @@ public class DBFacadeTest
     @Test
     public void testSaveNewInstructor()
     {
-        System.out.println("saveNewInstructor");
-        Instructor i = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewInstructor(i);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Instructor in = new Instructor(3, "Test", "person", "test@email.com", 1234567, "Golf");
+        facade.saveNewInstructor(in);
+        ArrayList<Instructor> ins = om.getAllInstructors();
+
+        Instructor newest = ins.get(ins.size() - 1);
+        assertEquals(newest, in);
     }
 
     /**
@@ -287,13 +284,15 @@ public class DBFacadeTest
     @Test
     public void testGetAllInstructors()
     {
-        System.out.println("getAllInstructors");
-        DBFacade instance = new DBFacade();
-        ArrayList<Instructor> expResult = null;
-        ArrayList<Instructor> result = instance.getAllInstructors();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Instructor> ins = facade.getAllInstructors();
+        int expected1 = 1;
+        int expected2 = 2;
+
+        Instructor i1 = ins.get(0);
+        Instructor i2 = ins.get(1);
+
+        assertEquals(i1.getID(), expected1);
+        assertEquals(i2.getID(), expected2);
     }
 
     /**
@@ -302,14 +301,19 @@ public class DBFacadeTest
     @Test
     public void testDeleteInstructor()
     {
-        System.out.println("deleteInstructor");
-        int id = 0;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.deleteInstructor(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // check at det er den rigtige der er slettet
+        ArrayList<Instructor> ins = facade.getAllInstructors();
+        int id = ins.get(0).getID();
+
+        facade.deleteInstructor(id);
+
+        ArrayList<Instructor> ins2 = facade.getAllInstructors();
+
+        for (Instructor i : ins2)
+        {
+            assertFalse(i.getID() == id);
+        }
+
     }
 
     /**
@@ -318,14 +322,7 @@ public class DBFacadeTest
     @Test
     public void testSaveNewFBooking()
     {
-        System.out.println("saveNewFBooking");
-        Facility_Booking fb = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewFBooking(fb);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -334,14 +331,7 @@ public class DBFacadeTest
     @Test
     public void testSaveNewFBookingGuests()
     {
-        System.out.println("saveNewFBookingGuests");
-        Fbooking_Guests fbg = null;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.saveNewFBookingGuests(fbg);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -350,14 +340,7 @@ public class DBFacadeTest
     @Test
     public void testGetFbookings()
     {
-        System.out.println("getFbookings");
-        int gID = 0;
-        DBFacade instance = new DBFacade();
-        ArrayList<Fbooking> expResult = null;
-        ArrayList<Fbooking> result = instance.getFbookings(gID);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -366,14 +349,7 @@ public class DBFacadeTest
     @Test
     public void testGetGuestDates()
     {
-        System.out.println("getGuestDates");
-        int gID = 0;
-        DBFacade instance = new DBFacade();
-        ArrayList<GuestDates> expResult = null;
-        ArrayList<GuestDates> result = instance.getGuestDates(gID);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -382,15 +358,7 @@ public class DBFacadeTest
     @Test
     public void testGetNonFreeDates()
     {
-        System.out.println("getNonFreeDates");
-        String start_date = "";
-        int FID = 0;
-        DBFacade instance = new DBFacade();
-        ArrayList<String> expResult = null;
-        ArrayList<String> result = instance.getNonFreeDates(start_date, FID);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -399,15 +367,7 @@ public class DBFacadeTest
     @Test
     public void testGetNonFreeDatesIns()
     {
-        System.out.println("getNonFreeDatesIns");
-        String start_date = "";
-        int FID = 0;
-        DBFacade instance = new DBFacade();
-        ArrayList<String> expResult = null;
-        ArrayList<String> result = instance.getNonFreeDatesIns(start_date, FID);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -416,15 +376,7 @@ public class DBFacadeTest
     @Test
     public void testDeleteFbooking()
     {
-        System.out.println("deleteFbooking");
-        String start_date = "";
-        int FID = 0;
-        DBFacade instance = new DBFacade();
-        boolean expResult = false;
-        boolean result = instance.deleteFbooking(start_date, FID);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -433,14 +385,7 @@ public class DBFacadeTest
     @Test
     public void testGetInstructor()
     {
-        System.out.println("getInstructor");
-        String facility = "";
-        DBFacade instance = new DBFacade();
-        Instructor expResult = null;
-        Instructor result = instance.getInstructor(facility);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -449,15 +394,7 @@ public class DBFacadeTest
     @Test
     public void testGetBookingCount()
     {
-        System.out.println("getBookingCount");
-        int GID = 0;
-        String start_date = "";
-        DBFacade instance = new DBFacade();
-        int expResult = 0;
-        int result = instance.getBookingCount(GID, start_date);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -466,15 +403,7 @@ public class DBFacadeTest
     @Test
     public void testGetGuestFBookings()
     {
-        System.out.println("getGuestFBookings");
-        int GID = 0;
-        String start_date = "";
-        DBFacade instance = new DBFacade();
-        ArrayList<String> expResult = null;
-        ArrayList<String> result = instance.getGuestFBookings(GID, start_date);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
-    
+
 }

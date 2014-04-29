@@ -44,6 +44,21 @@ public class RoomMapperMock implements RoomMapperInterface
         this.taguests = new HashMap();
     }
 
+    public void setInstructors(Map<Integer, Instructor> ins)
+    {
+        this.instructors = ins;
+    }
+
+    public void setGuests(Map<Integer, Guest> g)
+    {
+        this.guests = g;
+    }
+
+    public void setBookings(Map<Integer, Booking> b)
+    {
+        this.bookings = b;
+    }
+
     public Map<Integer, Guest> getAllGuests()
     {
         return guests;
@@ -52,6 +67,11 @@ public class RoomMapperMock implements RoomMapperInterface
     public Map<Integer, Booking> getAllBookings()
     {
         return bookings;
+    }
+
+    public Map<Integer, Booking> getAllConfirmedBookings()
+    {
+        return confirmedbookings;
     }
 
     @Override
@@ -123,7 +143,8 @@ public class RoomMapperMock implements RoomMapperInterface
                 return false;
             }
         }
-        return false;
+        bguests.put(bg.getBooking_id(), bg.getGuest_id());
+        return true;
     }
 
     @Override
@@ -185,7 +206,8 @@ public class RoomMapperMock implements RoomMapperInterface
                 return true;
             }
         }
-        return false;
+        taguests.put(tg.getTravel_id(), tg.getGuest_id());
+        return true;
     }
 
     // in the applicatin it is only possible to delete a guest if his booking is on the standby list!

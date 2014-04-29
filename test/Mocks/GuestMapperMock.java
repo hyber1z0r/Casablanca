@@ -13,7 +13,6 @@ import domain.GuestDates;
 import domain.Instructor;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -35,7 +34,7 @@ public class GuestMapperMock implements GuestMapperInterface
         Guest g = null;
        for(Guest gs : guests.values())
        {
-           if(gs.getUsername() == username && gs.getPassword()== password)
+           if(username.equals(gs.getUsername()) && password.equals(gs.getPassword()))
                return gs;
        }
        return g;
