@@ -264,6 +264,7 @@ public class GuestMapper implements GuestMapperInterface
     {
         ArrayList<GuestDates> gd = new ArrayList();
         String SQLdatefix = "alter session set nls_date_format = 'dd-mm-yyyy'";
+        String SQLlangfix = "alter session set nls_language = 'ENGLISH'";
         Statement statementFix;
         String SQLString = "SELECT to_char(b.start_date, 'Mon. dd yyyy'), to_char(b.end_date, 'Mon. dd yyyy')"
                 + " from bookings b inner join bookings_guests bg"
@@ -276,6 +277,7 @@ public class GuestMapper implements GuestMapperInterface
         {
             statementFix = con.createStatement();
             statementFix.execute(SQLdatefix);
+            statementFix.execute(SQLlangfix);
             //== get tuples
             statement = con.prepareStatement(SQLString);
             statement.setInt(1, gID);
